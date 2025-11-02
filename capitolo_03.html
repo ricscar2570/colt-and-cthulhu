@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 3: Archetipi - Colt & Cthulhu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>COLT & CTHULHU</h1>
+        <p class="subtitle">Capitolo 3: Archetipi</p>
+    </header>
+
+    <nav class="nav-main">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="capitolo_01.html">Cap 1</a></li>
+            <li><a href="capitolo_02.html" >Cap 2</a></li>
+            <li><a href="capitolo_03.html" class="active">Cap 3</a></li>
+            <li><a href="capitolo_04.html">Cap 4</a></li>
+            <li><a href="capitolo_05.html">Cap 5</a></li>
+            <li><a href="capitolo_06.html">Cap 6</a></li>
+            <li><a href="capitolo_07.html">Cap 7</a></li>
+            <li><a href="capitolo_08.html">Cap 8</a></li>
+            <li><a href="capitolo_09.html">Cap 9</a></li>
+            <li><a href="capitolo_10.html">Cap 10</a></li>
+            <li><a href="capitolo_11.html">Cap 11</a></li>
+            <li><a href="capitolo_12.html">Cap 12</a></li>
+            <li><a href="capitolo_13.html">Cap 13</a></li>
+            <li><a href="capitolo_14.html">Cap 14</a></li>
+            <li><a href="capitolo_15.html">Cap 15</a></li>
+            <li><a href="capitolo_16.html">Cap 16</a></li>
+            <li><a href="appendice_a.html">App. A</a></li>
+			<li><a href="appendice_b.html">App. B</a></li>
+			<li><a href="appendice_c.html">App. C</a></li>
+        
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>›</span> <strong>Capitolo 3</strong>
+        </div>
+
+        <article class="chapter">
+            <h2>Capitolo 3: Archetipi</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                Gli <strong>archetipi</strong> (chiamati anche "classi" in altri giochi) definiscono le tue abilità speciali, 
+                il tuo ruolo nel gruppo, e come il tuo personaggio si sviluppa salendo di livello. Ogni archetipo ha un tema 
+                unico e un playstyle distintivo nel Weird West.
+            </p>
+
+            <div class="tip-box">
+                <p><strong>Scegliere l'Archetipo Giusto:</strong> Pensa non solo ai benefici meccanici, ma anche a quale tipo 
+                di storia vuoi raccontare. Vuoi essere il pistolero veloce che risolve problemi con piombo? Il reverendo che 
+                combatte l'oscurità con fede? Il dottore che salva vite? Scegli quello che ti emoziona!</p>
+            </div>
+
+            <section id="panoramica">
+                <h3>3.0 Panoramica degli Archetipi</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Archetipo</th>
+                            <th>Ruolo</th>
+                            <th>Dado Vita</th>
+                            <th>Caratteristiche Primarie</th>
+                            <th>Difficoltà</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pistolero</strong></td>
+                            <td>DPS ranged, striker</td>
+                            <td>d10</td>
+                            <td>DES, COS</td>
+                            <td>⭐⭐ Facile</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reverendo</strong></td>
+                            <td>Healer, support, caster</td>
+                            <td>d8</td>
+                            <td>SAG, CAR</td>
+                            <td>⭐⭐⭐ Media</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dottore</strong></td>
+                            <td>Healer, skill monkey</td>
+                            <td>d8</td>
+                            <td>INT, DES</td>
+                            <td>⭐⭐ Facile</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sciamano</strong></td>
+                            <td>Caster, summoner, utility</td>
+                            <td>d8</td>
+                            <td>SAG, COS</td>
+                            <td>⭐⭐⭐⭐ Difficile</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Giocatore d'Azzardo</strong></td>
+                            <td>Support, controller, face</td>
+                            <td>d8</td>
+                            <td>CAR, DES</td>
+                            <td>⭐⭐⭐⭐ Difficile</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cacciatore di Taglie</strong></td>
+                            <td>Tracker, ranged DPS, tank</td>
+                            <td>d10</td>
+                            <td>DES, SAG</td>
+                            <td>⭐⭐⭐ Media</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Indice Rapido</h4>
+                <ul style="font-size: 1.1em;">
+                    <li><a href="#pistolero">3.1 Pistolero</a> - Il maestro delle armi da fuoco</li>
+                    <li><a href="#reverendo">3.2 Reverendo</a> - Il servo del divino</li>
+                    <li><a href="#dottore">3.3 Dottore</a> - Il guaritore e scienziato</li>
+                    <li><a href="#sciamano">3.4 Sciamano</a> - Il medium spirituale</li>
+                    <li><a href="#giocatore">3.5 Giocatore d'Azzardo</a> - Il maestro della fortuna</li>
+                    <li><a href="#cacciatore">3.6 Cacciatore di Taglie</a> - L'inseguitore inesorabile</li>
+                </ul>
+            </section>
+
+            <!-- ========== PISTOLERO ========== -->
+            <section id="pistolero">
+                <h3>3.1 Il Pistolero (Gunslinger)</h3>
+                
+                <div class="stat-block">
+                    <h4>🔫 PISTOLERO - PROFILO RAPIDO</h4>
+                    <div class="stat-line"><strong>Dado Vita:</strong> d10</div>
+                    <div class="stat-line"><strong>Punti Ferita Livello 1:</strong> 10 + modificatore COS</div>
+                    <div class="stat-line"><strong>PF Livelli Successivi:</strong> 1d10 (o 6) + mod COS per livello</div>
+                    <div class="stat-line"><strong>Caratteristiche Primarie:</strong> Destrezza (attacchi), Costituzione (sopravvivenza)</div>
+                    <div class="stat-line"><strong>Tiri Salvezza Competenti:</strong> Destrezza, Costituzione</div>
+                    <div class="stat-line"><strong>Competenze Armatura:</strong> Leggera, Media</div>
+                    <div class="stat-line"><strong>Competenze Armi:</strong> Tutte le armi da fuoco, armi semplici, armi da mischia marziali</div>
+                    <div class="stat-line"><strong>Competenze Abilità:</strong> Scegli 3 tra: Acrobazia, Atletica, Intuizione, Intimidire, 
+                    Percezione, Rapidità di Mano, Sopravvivenza</div>
+                    <div class="stat-line"><strong>Equipaggiamento Iniziale:</strong> 2 revolver (Colt .45 o simili), 100 munizioni, 
+                    armatura di cuoio, kit manutenzione armi, $25</div>
+                </div>
+
+                <h4>Descrizione</h4>
+                <p>Il <strong>Pistolero</strong> è il maestro indiscusso delle armi da fuoco. Con riflessi fulminei e mira letale, 
+                può estrarre e sparare più velocemente dell'occhio umano. Sia nei duelli formali che negli scontri a fuoco caotici, 
+                il Pistolero domina il campo di battaglia con piombo e polvere da sparo.</p>
+
+                <p><strong>Ruolo in Combattimento:</strong> Striker/DPS (Damage Per Second). Il tuo lavoro è eliminare nemici 
+                rapidamente da distanza media-lunga. Massimizza il danno, sfrutta coperture, e fai ogni colpo contare.</p>
+
+                <div class="example-box">
+                    <p><strong>Quando Scegliere il Pistolero:</strong></p>
+                    <ul>
+                        <li>Ti piace il combattimento a distanza dinamico</li>
+                        <li>Vuoi infliggere danno consistente ogni turno</li>
+                        <li>L'estetica del cowboy classico ti affascina</li>
+                        <li>Vuoi una classe semplice da imparare ma efficace</li>
+                        <li>I duelli al tramonto sono la tua fantasia</li>
+                    </ul>
+                </div>
+
+                <h4>Abilità di Classe</h4>
+
+                <h5>Livello 1: Stile di Combattimento</h5>
+                <p>Scegli uno stile che definisce come combatti:</p>
+
+                <div class="stat-block">
+                    <h4>DUELLANTE (Duelist)</h4>
+                    <p>Specialista in precisione con una singola pistola. Stile classico "quick draw".</p>
+                    <p><strong>Beneficio:</strong> Quando impugni un'arma da fuoco in una mano e nulla nell'altra, ottieni +2 ai 
+                    tiri per colpire con quell'arma. Inoltre, puoi usare reazione per effettuare attacco di opportunità contro 
+                    nemici che escono da gittata (normalmente non possibile con armi a distanza).</p>
+                    <p><strong>Ideale per:</strong> Duellisti formali, pistoleri onorevoli, combattimento 1v1</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>PISTOLE GEMELLE (Two-Gun)</h4>
+                    <p>Maestro del combattimento con due pistole, massimizza volume di fuoco.</p>
+                    <p><strong>Beneficio:</strong> Quando combatti con due armi da fuoco, non subisci penalità al tiro per colpire 
+                    (normalmente -2 mano principale, -5 mano secondaria). Inoltre, puoi ricaricare entrambe le armi come singola azione.</p>
+                    <p><strong>Ideale per:</strong> Massimo danno per turno, stile acrobatico, overwhelming firepower</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>TIRATORE SCELTO (Sharpshooter)</h4>
+                    <p>Cecchino a lunga distanza, colpi impossibili sono routine.</p>
+                    <p><strong>Beneficio:</strong> Ignori penalità per copertura parziale (3/4 cover). Le tue armi guadagnano 
+                    +30m gittata normale e +90m gittata massima. Non hai svantaggio sparando alla gittata lunga.</p>
+                    <p><strong>Ideale per:</strong> Combattimento a distanza, supporto dal retro, sniper</p>
+                </div>
+
+                <h5>Livello 1: Quick Draw</h5>
+                <p><strong>Prerequisito:</strong> Destrezza 13+</p>
+                <p><strong>Beneficio:</strong> Puoi estrarre o riporre 2 armi come azione gratuita (invece di 1). Inoltre, 
+                hai vantaggio sui tiri Iniziativa. In un duello formale, spari sempre per primo a meno che l'avversario abbia 
+                anche Quick Draw (in quel caso, tiro Iniziativa normale).</p>
+
+                <div class="example-box">
+                    <p><strong>Esempio Quick Draw:</strong> Un bandito ti punta la pistola. "Le tue ultime parole, straniero?" 
+                    dice. Tu sorridi. Il tuo turno arriva prima (grazie a vantaggio Iniziativa). Con Quick Draw, estrai la Colt 
+                    (azione gratuita) e spari (azione principale) prima che lui possa reagire. BAM. Il bandito cade.</p>
+                </div>
+
+                <h5>Livello 2: Scarica d'Azione (Action Surge)</h5>
+                <p><strong>Utilizzi:</strong> 1 volta per riposo breve o lungo</p>
+                <p><strong>Effetto:</strong> Nel tuo turno, puoi effettuare un'<strong>azione principale aggiuntiva</strong> 
+                (oltre alla tua azione normale). Questo ti permette di sparare il doppio delle volte, o sparare e poi scattare, 
+                o qualsiasi combinazione di azioni.</p>
+                <p><strong>Esempio:</strong> Normalmente: Azione (Attacco = 2 colpi al liv 5+) + Azione Bonus (magari reload). 
+                Con Action Surge: Azione (2 colpi) + Action Surge (2 colpi) + Azione Bonus = 4 colpi in un turno!</p>
+
+                <h5>Livello 2: Colpo Mirato (Called Shot)</h5>
+                <p><strong>Utilizzi:</strong> Bonus Competenza volte per riposo lungo</p>
+                <p><strong>Effetto:</strong> Quando effettui un attacco a distanza, puoi dichiarare un <strong>Colpo Mirato</strong> 
+                prima di tirare. Scegli un effetto:</p>
+                <ul>
+                    <li><strong>Disarmare:</strong> -5 al tiro per colpire. Se colpisci, infliggi danno normale E il bersaglio 
+                    lascia cadere un'arma impugnata (tiro salvezza DES CD 8+bonus competenza+mod DES per evitare)</li>
+                    <li><strong>Ala/Gamba:</strong> -5 al tiro. Se colpisci, infliggi danno normale E velocità bersaglio dimezzata 
+                    fino alla fine del suo prossimo turno</li>
+                    <li><strong>Testata:</strong> -5 al tiro. Se colpisci, infliggi danno +1d8 aggiuntivo</li>
+                </ul>
+
+                <h5>Livello 3: Specializzazione</h5>
+                <p>Scegli una specializzazione che definisce il tuo percorso come Pistolero:</p>
+
+                <div class="stat-block">
+                    <h4>GHOST (Fantasma)</h4>
+                    <p><strong>Tema:</strong> Pistolero furtivo, combina shooting e stealth. Colpisci da ombra e sparisci.</p>
+                    <p><strong>Abilità Livello 3 - Shadow Step:</strong> Quando uccidi un nemico con attacco a distanza, puoi 
+                    immediatamente muoverti fino a metà velocità senza provocare attacchi di opportunità. Se termini movimento 
+                    dietro copertura, puoi effettuare check Furtività come azione bonus per nasconderti.</p>
+                    <p><strong>Abilità Livello 7 - Attacco Furtivo:</strong> Una volta per turno, quando attacchi con vantaggio 
+                    (es: bersaglio non ti vede), infliggi +2d6 danni extra. Aumenta a +3d6 liv 11, +4d6 liv 15, +5d6 liv 19.</p>
+                    <p><strong>Abilità Livello 11 - Vanish:</strong> Come azione bonus, puoi diventare invisibile fino all'inizio 
+                    del tuo prossimo turno. Utilizzi: Bonus Competenza per riposo lungo.</p>
+                    <p><strong>Abilità Livello 15 - Death from Above:</strong> Se attacchi da posizione elevata (tetto, torre, albero) 
+                    mentre nascosto, il primo attacco è critico automatico.</p>
+                    <p><strong>Abilità Livello 18 - Phantom:</strong> Sei così furtivo che anche durante combattimento puoi nasconderti. 
+                    Come azione bonus, se sei dietro copertura o in ombra, fai check Furtività (CD = 10 + numero di nemici che ti vedevano). 
+                    Successo = considerato nascosto fino a quando attacchi o esci da copertura.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>DUELIST (Duellante)</h4>
+                    <p><strong>Tema:</strong> Maestro del duello formale, combattimento onorevole 1v1, massima precisione.</p>
+                    <p><strong>Abilità Livello 3 - Riposte:</strong> Quando un nemico ti manca con attacco corpo a corpo mentre 
+                    impugni una pistola, puoi usare la tua reazione per effettuare un attacco a distanza contro di lui (anche se 
+                    normalmente non puoi sparare in mischia senza svantaggio).</p>
+                    <p><strong>Abilità Livello 7 - Duelist's Precision:</strong> Quando combatti contro un singolo nemico (nessun 
+                    altro nemico entro 9m da te), aggiungi il tuo bonus Competenza ai danni di ogni colpo.</p>
+                    <p><strong>Abilità Livello 11 - Improved Critical:</strong> I tuoi attacchi a distanza fanno critico su 19-20 
+                    (invece che solo 20).</p>
+                    <p><strong>Abilità Livello 15 - Master Duelist:</strong> All'inizio del combattimento, puoi scegliere un nemico 
+                    come "marked target". Hai vantaggio su tutti gli attacchi contro quel bersaglio. Se lo uccidi, puoi marcare 
+                    un nuovo bersaglio come azione bonus.</p>
+                    <p><strong>Abilità Livello 18 - Superior Critical:</strong> I tuoi attacchi a distanza fanno critico su 18-19-20.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>GUNSMITH (Armaiolo)</h4>
+                    <p><strong>Tema:</strong> Ingegnere delle armi, customizza e potenzia le tue pistole, tech-savvy.</p>
+                    <p><strong>Abilità Livello 3 - Custom Firearm:</strong> Ottieni competenza con Attrezzi da Armaiolo. Puoi 
+                    passare 1 ora e $50 per modificare un'arma da fuoco con UNA delle seguenti modifiche permanenti:</p>
+                    <ul>
+                        <li><strong>Hair Trigger:</strong> +1 ai tiri per colpire, ma misfires su 1-2 (invece di solo 1)</li>
+                        <li><strong>Extended Barrel:</strong> +3m gittata normale e massima, ma -1 Iniziativa (arma più pesante)</li>
+                        <li><strong>Quickload Cylinder:</strong> Ricaricare quest'arma è azione bonus invece di azione</li>
+                        <li><strong>Reinforced Frame:</strong> +1 ai danni, capacità munizioni +2</li>
+                    </ul>
+                    <p>Puoi avere max 2 armi modificate simultaneamente.</p>
+                    <p><strong>Abilità Livello 7 - Emergency Repair:</strong> Come azione, puoi riparare un'arma inceppata o rotta. 
+                    Utilizzi illimitati.</p>
+                    <p><strong>Abilità Livello 11 - Advanced Modifications:</strong> Le tue armi customizzate possono avere 2 modifiche 
+                    contemporaneamente (invece di 1). Inoltre, puoi creare munizioni speciali: Hollow Point (+2 danni vs creature 
+                    senza armatura), Silver Bullets (vs non-morti/licantropi), Incendiary Rounds (1d4 fuoco extra ma misfire su 1-3).</p>
+                    <p><strong>Abilità Livello 15 - Masterwork Weapon:</strong> Una delle tue armi custom diventa Masterwork: +1 magico 
+                    ai tiri per colpire e danni, non può incepparsi.</p>
+                    <p><strong>Abilità Livello 18 - Legendary Gunsmith:</strong> Puoi creare un'arma leggendaria unica (richiede 1 mese 
+                    e $500). Hai +2 ai tiri per colpire e danni, capacità doppia, e scegli 2 proprietà magiche minori (es: +1d6 fuoco, 
+                    o ignora resistenze, o munizioni si rigenerano).</p>
+                </div>
+
+                <h5>Livello 4, 8, 12, 16, 19: Aumento Caratteristiche</h5>
+                <p>Aumenta una caratteristica di +2, o due caratteristiche di +1 ciascuna. Oppure, prendi un Talento (vedi Capitolo 9). 
+                Non puoi superare 20 in una caratteristica senza magia.</p>
+
+                <h5>Livello 5: Attacco Extra</h5>
+                <p>Quando effettui l'azione Attacco nel tuo turno, puoi effettuare <strong>2 attacchi</strong> invece di 1.</p>
+                <p><strong>Nota:</strong> Questo si combina con Action Surge per risultati devastanti. Con Action Surge al liv 5+: 
+                Azione (2 attacchi) + Action Surge (2 attacchi) = 4 colpi totali!</p>
+
+                <h5>Livello 6: Movimiento (Evasive Maneuvers)</h5>
+                <p>La tua velocità aumenta di +3m. Inoltre, quando ti muovi almeno 3m nel tuo turno PRIMA di attaccare, hai +2 alla CA 
+                fino all'inizio del tuo prossimo turno (rappresenta shooting while moving, più difficile da colpire).</p>
+
+                <h5>Livello 9: Indomitable</h5>
+                <p><strong>Utilizzi:</strong> 1 volta per riposo lungo (2/giorno al liv 13, 3/giorno al liv 17)</p>
+                <p><strong>Effetto:</strong> Quando falli un tiro salvezza, puoi scegliere di ritirarlo. Devi usare il nuovo risultato.</p>
+
+                <h5>Livello 10: Fan the Hammer</h5>
+                <p><strong>Prerequisito:</strong> Revolver</p>
+                <p><strong>Utilizzi:</strong> 1 volta per riposo breve o lungo</p>
+                <p><strong>Effetto:</strong> Come azione, svuoti completamente il tamburo di un revolver sparando tutti i colpi 
+                rimasti contro un singolo bersaglio entro gittata normale. Tira un attacco singolo con vantaggio. Se colpisci, 
+                    infliggi danno arma × numero di colpi sparati.</p>
+                <p><strong>Esempio:</strong> Hai 6 colpi rimasti nel revolver (1d10 danno). Usi Fan the Hammer. Tiri d20+DES+competenza 
+                con vantaggio. Colpisci! Infliggi 6d10 danni in un colpo. Il revolver è ora scarico.</p>
+
+                <h5>Livello 13: Gunslinger's Luck</h5>
+                <p>Una volta per riposo lungo, quando manchi un attacco che avresti voluto disperatamente colpire, puoi dichiarare 
+                "Gunslinger's Luck". Ritiri il d20 e devi usare il nuovo risultato. Se il nuovo tiro colpisce, è automaticamente un 
+                critico.</p>
+
+                <h5>Livello 14: Lead Storm</h5>
+                <p><strong>Prerequisito:</strong> Stile Two-Gun</p>
+                <p>Quando usi l'azione Attacco con due pistole, puoi effettuare 1 attacco aggiuntivo con l'arma secondaria come 
+                parte dell'azione (invece che come azione bonus). Questo libera la tua azione bonus per altro.</p>
+
+                <h5>Livello 17: Attacco Extra (2)</h5>
+                <p>Quando effettui l'azione Attacco, puoi effettuare <strong>3 attacchi</strong> (aumentato da 2).</p>
+                <p><strong>Combo Devastante:</strong> Con Action Surge: 3 attacchi + 3 attacchi = 6 colpi in un turno!</p>
+
+                <h5>Livello 20: Fastest Gun Alive</h5>
+                <p><strong>Abilità Capstone (Picco dell'Archetipo)</strong></p>
+                <p>Sei diventato leggenda vivente. Una volta per riposo lungo, puoi entrare in stato di <strong>"Dead Eye"</strong> 
+                per 1 minuto (concentrazione, come spell):</p>
+                <ul>
+                    <li>Il tempo rallenta per te. Hai 2 turni consecutivi ad ogni round (agisci con Iniziativa normale, poi 
+                    immediatamente di nuovo con Iniziativa -10)</li>
+                    <li>Tutti i tuoi attacchi a distanza hanno vantaggio</li>
+                    <li>I tuoi critici infliggono danni triplicati (invece che doppi)</li>
+                    <li>Puoi ricaricare armi come azione gratuita</li>
+                    <li>Ignori copertura totale (puoi sparare "attraverso" ostacoli con tiri impossibili)</li>
+                </ul>
+                <p>Quando Dead Eye termina, subisci 1 livello esaurimento (rimovibile con riposo lungo).</p>
+
+                <h4>Tabella Progressione Pistolero</h4>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Livello</th>
+                            <th>Bonus Competenza</th>
+                            <th>Abilità</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>+2</td><td>Stile Combattimento, Quick Draw</td></tr>
+                        <tr><td>2</td><td>+2</td><td>Scarica d'Azione (1 uso), Colpo Mirato</td></tr>
+                        <tr><td>3</td><td>+2</td><td>Specializzazione (Ghost/Duelist/Gunsmith)</td></tr>
+                        <tr><td>4</td><td>+2</td><td>Aumento Caratteristiche</td></tr>
+                        <tr><td>5</td><td>+3</td><td>Attacco Extra (2 attacchi)</td></tr>
+                        <tr><td>6</td><td>+3</td><td>Movimiento (+3m velocità, bonus CA)</td></tr>
+                        <tr><td>7</td><td>+3</td><td>Abilità Specializzazione</td></tr>
+                        <tr><td>8</td><td>+3</td><td>Aumento Caratteristiche</td></tr>
+                        <tr><td>9</td><td>+4</td><td>Indomitable (1 uso)</td></tr>
+                        <tr><td>10</td><td>+4</td><td>Fan the Hammer</td></tr>
+                        <tr><td>11</td><td>+4</td><td>Abilità Specializzazione</td></tr>
+                        <tr><td>12</td><td>+4</td><td>Aumento Caratteristiche</td></tr>
+                        <tr><td>13</td><td>+5</td><td>Gunslinger's Luck, Indomitable (2 usi)</td></tr>
+                        <tr><td>14</td><td>+5</td><td>Lead Storm (se Two-Gun)</td></tr>
+                        <tr><td>15</td><td>+5</td><td>Abilità Specializzazione</td></tr>
+                        <tr><td>16</td><td>+5</td><td>Aumento Caratteristiche</td></tr>
+                        <tr><td>17</td><td>+6</td><td>Attacco Extra (3 attacchi), Indomitable (3 usi)</td></tr>
+                        <tr><td>18</td><td>+6</td><td>Abilità Specializzazione</td></tr>
+                        <tr><td>19</td><td>+6</td><td>Aumento Caratteristiche</td></tr>
+                        <tr><td>20</td><td>+6</td><td>Fastest Gun Alive (Capstone)</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <p><strong>Consigli di Gioco per Pistolero:</strong></p>
+                    <ul>
+                        <li><strong>Usa Copertura:</strong> CA +2 (metà) o +5 (3/4). Sei striker, non tank</li>
+                        <li><strong>Posizionamento:</strong> Mantieni distanza 10-15m per evitare mischia</li>
+                        <li><strong>Focus Fire:</strong> Meglio eliminare 1 nemico che danneggiare 3</li>
+                        <li><strong>Gestisci Munizioni:</strong> Ricarica quando possibile, non aspettare emergenza</li>
+                        <li><strong>Action Economy:</strong> Usa Action Surge nei momenti decisivi (boss, emergenza)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ========== REVERENDO ========== -->
+            <section id="reverendo">
+                <h3>3.2 Il Reverendo (Preacher)</h3>
+                
+                <div class="stat-block">
+                    <h4✝️ REVERENDO - PROFILO RAPIDO</h4>
+                    <div class="stat-line"><strong>Dado Vita:</strong> d8</div>
+                    <div class="stat-line"><strong>Punti Ferita Livello 1:</strong> 8 + modificatore COS</div>
+                    <div class="stat-line"><strong>PF Livelli Successivi:</strong> 1d8 (o 5) + mod COS per livello</div>
+                    <div class="stat-line"><strong>Caratteristiche Primarie:</strong> Saggezza (incantesimi), Carisma (presenza)</div>
+                    <div class="stat-line"><strong>Tiri Salvezza Competenti:</strong> Saggezza, Carisma</div>
+                    <div class="stat-line"><strong>Competenze Armatura:</strong> Leggera, Media</div>
+                    <div class="stat-line"><strong>Competenze Armi:</strong> Armi semplici, revolver, fucili</div>
+                    <div class="stat-line"><strong>Competenze Abilità:</strong> Scegli 2 tra: Intuizione, Medicina, Persuasione, 
+                    Religione, Storia, Intimidire</div>
+                    <div class="stat-line"><strong>Equipaggiamento Iniziale:</strong> Simbolo sacro (croce/bibbia), vesti clericali, 
+                    revolver, 50 munizioni, acqua benedetta (3 fiale), $15</div>
+                    <div class="stat-line"><strong>Lancio Incantesimi:</strong> Magia Divina - Prepari e lanci miracoli (vedi Capitolo 8)</div>
+                </div>
+
+                <h4>Descrizione</h4>
+                <p>Il <strong>Reverendo</strong> è il servo del divino, un canale della fede che manifesta <strong>miracoli</strong> 
+                reali. Che sia un predicatore protestante che combatte demoni con citazioni bibliche, un prete cattolico che compie 
+                esorcismi, o un reverendo nero che porta speranza ai disperati, il Reverendo è il bastione spirituale contro l'oscurità.</p>
+
+                <p><strong>Ruolo in Combattimento:</strong> Healer/Support/Caster. Curi alleati, buffi il gruppo, debuffi nemici, e 
+                distruggi non-morti. Sei il collante che mantiene il party vivo e morale alto.</p>
+
+                <div class="example-box">
+                    <p><strong>Quando Scegliere il Reverendo:</strong></p>
+                    <ul>
+                        <li>Ti piace aiutare e supportare gli altri</li>
+                        <li>Vuoi giocare un caster con tema religioso</li>
+                        <li>L'idea di combattere il male con fede ti affascina</li>
+                        <li>Vuoi essere il cuore morale del gruppo</li>
+                        <li>Ami il roleplay e predicare sermoni epici</li>
+                    </ul>
+                </div>
+
+                <h4>Abilità di Classe</h4>
+
+                <h5>Livello 1: Lancio Incantesimi (Miracoli Divini)</h5>
+                <p>Hai accesso alla <strong>magia divina</strong>, manifestazione della fede. Vedi Capitolo 8 per lista completa incantesimi.</p>
+
+                <p><strong>Come Funziona:</strong></p>
+                <ul>
+                    <li><strong>Caratteristica Casting:</strong> Saggezza (CD = 8 + bonus competenza + mod SAG)</li>
+                    <li><strong>Preparazione:</strong> Ogni mattina, preghi e prepari un numero di spell = mod SAG + livello Reverendo</li>
+                    <li><strong>Spell Slot:</strong> Hai slot limitati per livello (vedi tabella). Una volta esauriti, riposo lungo li ricarica</li>
+                    <li><strong>Ritual Casting:</strong> Puoi lanciare spell con tag "ritual" senza consumare slot (richiede +10 minuti)</li>
+                </ul>
+
+                <p><strong>Cantrip (Livello 0):</strong> Al liv 1 conosci 3 cantrip. Utilizzi illimitati. Esempi:</p>
+                <ul>
+                    <li><strong>Sacred Flame:</strong> Fiamma divina colpisce nemico (2d8 danno radiante, SAG TS)</li>
+                    <li><strong>Guidance:</strong> Tocchi alleato, ha +1d4 al prossimo check entro 1 minuto</li>
+                    <li><strong>Spare the Dying:</strong> Tocchi creatura morente, si stabilizza a 0 PF</li>
+                </ul>
+
+                <h5>Livello 1: Divine Domain (Dominio Divino)</h5>
+                <p>Scegli un aspetto del divino che incarna la tua fede:</p>
+
+                <div class="stat-block">
+                    <h4>LIFE DOMAIN (Dominio Vita)</h4>
+                    <p><strong>Tema:</strong> Guarigione, protezione, preservazione vita. Il classico healer cleric.</p>
+                    <p><strong>Bonus Competenze:</strong> Armature pesanti</p>
+                    <p><strong>Bonus Spell (Sempre Preparati):</strong></p>
+                    <ul style="list-style: none;">
+                        <li>Liv 1: <em>Bless</em>, <em>Cure Wounds</em></li>
+                        <li>Liv 3: <em>Lesser Restoration</em>, <em>Spiritual Weapon</em></li>
+                        <li>Liv 5: <em>Beacon of Hope</em>, <em>Revivify</em></li>
+                    </ul>
+                    <p><strong>Disciple of Life (Liv 1):</strong> Quando lanci spell di cura, il bersaglio recupera +2 PF + livello spell 
+                    aggiuntivi. (Es: Cure Wounds liv 1 = 1d8+SAG+3 invece di 1d8+SAG)</p>
+                    <p><strong>Channel Divinity: Preserve Life (Liv 2):</strong> Come azione, curi creature alleate entro 9m per totale 
+                    PF = 5 × livello Reverendo. Distribuisci come vuoi, ma nessuna creatura può superare metà PF max.</p>
+                    <p><strong>Blessed Healer (Liv 6):</strong> Quando lanci spell liv 1+ che cura altri, recuperi anche tu 2+livello spell PF.</p>
+                    <p><strong>Divine Strike (Liv 8):</strong> 1 volta per turno, aggiungi 1d8 danno radiante a un attacco arma corpo a corpo 
+                    (2d8 al liv 14).</p>
+                    <p><strong>Supreme Healing (Liv 17):</strong> Quando tiri dadi per spell di cura, usa valore massimo invece di tirare 
+                    (es: 5d8 = 40 invece di tirare).</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>WAR DOMAIN (Dominio Guerra)</h4>
+                    <p><strong>Tema:</strong> Combattente divino, crociato, guerriero-prete. Reverendo che combatte in prima linea.</p>
+                    <p><strong>Bonus Competenze:</strong> Armature pesanti, armi marziali</p>
+                    <p><strong>Bonus Spell:</strong></p>
+                    <ul style="list-style: none;">
+                        <li>Liv 1: <em>Divine Favor</em>, <em>Shield of Faith</em></li>
+                        <li>Liv 3: <em>Magic Weapon</em>, <em>Spiritual Weapon</em></li>
+                        <li>Liv 5: <em>Crusader's Mantle</em>, <em>Spirit Guardians</em></li>
+                    </ul>
+                    <p><strong>War Priest (Liv 1):</strong> Quando usi azione Attacco, puoi effettuare 1 attacco arma come azione bonus. 
+                    Utilizzi: mod SAG per riposo lungo (min 1).</p>
+                    <p><strong>Channel Divinity: Guided Strike (Liv 2):</strong> Quando effettui attacco, puoi usare Channel Divinity per 
+                    ottenere +10 al tiro per colpire. Puoi decidere DOPO aver visto il risultato del tiro ma PRIMA che il Master dichiari 
+                    successo/fallimento.</p>
+                    <p><strong>Channel Divinity: War God's Blessing (Liv 6):</strong> Quando creatura entro 9m effettua attacco, puoi usare 
+                    reazione per darle +10 al tiro.</p>
+                    <p><strong>Divine Strike (Liv 8):</strong> 1 volta per turno, +1d8 danno (del tipo arma) a attacco arma (2d8 liv 14).</p>
+                    <p><strong>Avatar of Battle (Liv 17):</strong> Hai resistenza a danni contundente/perforante/tagliente da armi non-magiche.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>LIGHT DOMAIN (Dominio Luce)</h4>
+                    <p><strong>Tema:</strong> Distruggi tenebre e non-morti, brucia il male con fuoco sacro. Anti-undead specialist.</p>
+                    <p><strong>Bonus Cantrip:</strong> <em>Light</em> (crei luce magica)</p>
+                    <p><strong>Bonus Spell:</strong></p>
+                    <ul style="list-style: none;">
+                        <li>Liv 1: <em>Burning Hands</em>, <em>Faerie Fire</em></li>
+                        <li>Liv 3: <em>Scorching Ray</em>, <em>Flaming Sphere</em></li>
+                        <li>Liv 5: <em>Daylight</em>, <em>Fireball</em></li>
+                    </ul>
+                    <p><strong>Warding Flare (Liv 1):</strong> Quando creatura che puoi vedere entro 9m ti attacca, puoi usare reazione per 
+                    imporre svantaggio al suo attacco (flash di luce sacra acceca momentaneamente). Utilizzi: mod SAG per riposo lungo.</p>
+                    <p><strong>Channel Divinity: Radiance of Dawn (Liv 2):</strong> Come azione, emani luce divina in raggio 9m. Ogni creatura 
+                    ostile fa TS COS (CD spell) o subisce 2d10 + livello Reverendo danni radianti (metà se salva). Tenebre magiche in area 
+                    vengono disperse.</p>
+                    <p><strong>Improved Flare (Liv 6):</strong> Puoi usare Warding Flare anche quando un'altra creatura che vedi entro 9m 
+                    viene attaccata.</p>
+                    <p><strong>Potent Spellcasting (Liv 8):</strong> Aggiungi mod SAG ai danni dei tuoi cantrip (es: Sacred Flame = 2d8+SAG).</p>
+                    <p><strong>Corona of Light (Liv 17):</strong> Come azione, crei un'aura di luce solare per 1 minuto. Emetti luce intensa 
+                    18m, luce fioca altri 18m. Nemici in luce intensa hanno svantaggio ai TS contro tuoi spell fuoco/radiante. Utilizzi: 1 per 
+                    riposo lungo.</p>
+                </div>
+
+                <h5>Livello 2: Channel Divinity</h5>
+                <p><strong>Utilizzi:</strong> 1 volta per riposo breve o lungo (2/riposo al liv 6, 3/riposo al liv 18)</p>
+                <p>Puoi canalizzare energia divina direttamente per produrre effetti miracolosi. Ogni Dominio ha Channel Divinity unici, 
+                ma TUTTI i Reverendi hanno:</p>
+
+                <div class="stat-block">
+                    <h4>TURN UNDEAD (Scacciare Non-Morti)</h4>
+                    <p><strong>Azione Standard</strong></p>
+                    <p>Presenti il tuo simbolo sacro e pronunci preghiera. Ogni non-morto che può vederti o sentirti entro 9m deve fare 
+                    <strong>TS SAG (CD spell)</strong>:</p>
+                    <ul>
+                        <li><strong>Fallimento:</strong> Scacciato per 1 minuto. Deve usare turno per fuggire lontano da te il più possibile, 
+                        non può avvicinarsi volontariamente entro 9m da te, non può effettuare reazioni. Se non può muoversi, usa azione Schivata.</li>
+                        <li><strong>Successo:</strong> Nessun effetto, immune per 24 ore</li>
+                    </ul>
+                    <p>Effetto termina se non-morto subisce danno.</p>
+                    <p><strong>UPGRADE - Destroy Undead (Liv 5):</strong> Quando scacci non-morto di CR ½ o inferiore, è istantaneamente 
+                    distrutto (non solo scacciato). Aumenta a CR 1 (liv 8), CR 2 (liv 11), CR 3 (liv 14), CR 4 (liv 17).</p>
+                </div>
+
+                <h5>Livello 5, 11, 17: Spell Livelli Superiori</h5>
+                <p>Ottieni accesso a spell più potenti. Al liv 5 puoi lanciare spell liv 3, al liv 11 spell liv 6, etc.</p>
+                <p><strong>Spell Iconiche per Livello:</strong></p>
+                <ul>
+                    <li><strong>Liv 1:</strong> Cure Wounds, Bless, Shield of Faith, Command</li>
+                    <li><strong>Liv 2:</strong> Lesser Restoration, Hold Person, Spiritual Weapon</li>
+                    <li><strong>Liv 3:</strong> Revivify (resurrezione), Remove Curse, Spirit Guardians</li>
+                    <li><strong>Liv 4:</strong> Death Ward, Guardian of Faith, Banishment</li>
+                    <li><strong>Liv 5:</strong> Mass Cure Wounds, Raise Dead, Flame Strike</li>
+                </ul>
+
+                <h5>Livello 10: Divine Intervention</h5>
+                <p><strong>Utilizzi:</strong> 1 tentativo per riposo lungo</p>
+                <p><strong>Effetto:</strong> Implori direttamente il tuo dio per assistenza divina. Tira d100. Se risultato ≤ livello Reverendo, 
+                il dio interviene! Il Master sceglie l'effetto appropriato (tipicamente: replica qualsiasi spell Reverendo liv 5 o inferiore, 
+                OPPURE effetto narrativo equivalente).</p>
+                <p><strong>Esempio:</strong> Sei liv 10, tiri 08 → Successo! Il tuo gruppo è circondato da zombi, PF bassi, senza escape. 
+                Preghi: "Signore, salvaci!". Luce divina esplode dal cielo, distruggendo tutti gli zombi in 30m. Miracolo letterale.</p>
+                <p><strong>Al Livello 20:</strong> Divine Intervention funziona SEMPRE automaticamente (no tiro). Dopo uso, non puoi riusarlo 
+                per 7 giorni.</p>
+
+                <h4>Tabella Spell Slot Reverendo</h4>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Livello</th>
+                            <th>Cantrip</th>
+                            <th>Slot Liv 1</th>
+                            <th>Slot Liv 2</th>
+                            <th>Slot Liv 3</th>
+                            <th>Slot Liv 4</th>
+                            <th>Slot Liv 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>3</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>2</td><td>3</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>3</td><td>3</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>4</td><td>4</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+                        <tr><td>5</td><td>4</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td></tr>
+                        <tr><td>6</td><td>4</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td></tr>
+                        <tr><td>7</td><td>4</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td></tr>
+                        <tr><td>8</td><td>4</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td></tr>
+                        <tr><td>9</td><td>4</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
+                        <tr><td>10</td><td>5</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
+                    </tbody>
+                </table>
+                <p><em>Nota: Tabella continua fino a liv 20 con slot aggiuntivi livelli superiori (6-9)</em></p>
+
+                <div class="tip-box">
+                    <p><strong>Consigli di Gioco per Reverendo:</strong></p>
+                    <ul>
+                        <li><strong>Gestione Spell Slot:</strong> Conserva almeno 1 slot per emergenze (Cure Wounds salvavita)</li>
+                        <li><strong>Preparazione Spell:</strong> Bilancia cure (Cure Wounds), buff (Bless), control (Hold Person)</li>
+                        <li><strong>Posizionamento:</strong> Mid-line, vicino a frontline ma protetto</li>
+                        <li><strong>Concentrazione:</strong> Molti spell richiedono concentrazione (1 solo attivo). Scegli saggiamente</li>
+                        <li><strong>Turn Undead:</strong> Usalo liberamente contro horde di zombi (ricarica con riposo breve!)</li>
+                        <li><strong>Roleplay:</strong> Predica, cita scritture, inspira. Sei il cuore morale del gruppo</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Continua con gli altri 4 archetipi... -->
+            <!-- Per brevità, fornisco struttura ma non tutti i dettagli -->
+
+            <section id="dottore">
+                <h3>3.3 Il Dottore (Sawbones)</h3>
+                
+                <div class="stat-block">
+                    <h4>🩺 DOTTORE - PROFILO RAPIDO</h4>
+                    <div class="stat-line"><strong>Dado Vita:</strong> d8</div>
+                    <div class="stat-line"><strong>Caratteristiche Primarie:</strong> Intelligenza (medicina), Destrezza (chirurgia)</div>
+                    <div class="stat-line"><strong>Tiri Salvezza Competenti:</strong> Intelligenza, Saggezza</div>
+                    <div class="stat-line"><strong>Ruolo:</strong> Healer non-magico, skill monkey, support</div>
+                    <div class="stat-line"><strong>Stile:</strong> Guarisci con scienza invece che fede. Usi strumenti chirurgici, 
+                    medicine, e conoscenza anatomica.</div>
+                </div>
+
+                <h4>Abilità Chiave</h4>
+                <ul>
+                    <li><strong>Liv 1 - Medical Expertise:</strong> Doppia competenza Medicina. Puoi stabilizzare moribondi come azione bonus.</li>
+                    <li><strong>Liv 1 - Combat Medic:</strong> Come azione, usi kit medico per curare 1d8+INT+livello PF. Utilizzi = mod INT 
+                    per riposo lungo.</li>
+                    <li><strong>Liv 2 - Anatomical Knowledge:</strong> Conosci punti deboli creature. Alleati hanno +1 danni contro creature 
+                    che hai studiato (azione per studiare).</li>
+                    <li><strong>Liv 3 - Specializzazione:</strong> Scegli Surgeon (chirurgo), Apothecary (alchimista), o Field Medic (medico campo)</li>
+                    <li><strong>Liv 6 - Master Healer:</strong> Le tue cure ripristinano +2 PF per dado (Combat Medic diventa 1d8+INT+liv+2 per dado)</li>
+                    <li><strong>Liv 9 - Resurrectionist:</strong> Puoi stabilizzare creature morte da max 1 minuto con check Medicina CD 20. 
+                    Se successo, tornano a 1 PF ma con 3 livelli esaurimento.</li>
+                    <li><strong>Liv 14 - Miracle Worker:</strong> 1 volta per riposo lungo, quando alleato scende a 0 PF entro 9m, puoi usare 
+                    reazione per portarlo immediatamente a metà PF max.</li>
+                </ul>
+
+                <p><em>(Dettagli completi specializzazioni e progressione 1-20 seguirebbero qui)</em></p>
+            </section>
+
+            <section id="sciamano">
+                <h3>3.4 Lo Sciamano (Shaman)</h3>
+                
+                <div class="stat-block">
+                    <h4>🪶 SCIAMANO - PROFILO RAPIDO</h4>
+                    <div class="stat-line"><strong>Dado Vita:</strong> d8</div>
+                    <div class="stat-line"><strong>Caratteristiche Primarie:</strong> Saggezza (magia spirituale), Costituzione</div>
+                    <div class="stat-line"><strong>Tiri Salvezza Competenti:</strong> Saggezza, Costituzione</div>
+                    <div class="stat-line"><strong>Ruolo:</strong> Caster spirituale, summoner, utility</div>
+                    <div class="stat-line"><strong>Stile:</strong> Comunichi con spiriti della natura, animali totem, antenati. 
+                    Hai un compagno animale spirituale.</div>
+                </div>
+
+                <h4>Abilità Chiave</h4>
+                <ul>
+                    <li><strong>Liv 1 - Spirit Companion:</strong> Evochi animale spirituale permanente (lupo, aquila, orso, serpente, corvo). 
+                    Agisce nel tuo turno, usa tue statistiche, se muore puoi ri-evocarlo con rituale 1 ora.</li>
+                    <li><strong>Liv 1 - Spellcasting:</strong> Magia spirituale (come Druido). Prepari spell = mod SAG + livello.</li>
+                    <li><strong>Liv 2 - Spirit Walker:</strong> Puoi lanciare <em>Speak with Animals</em> a volontà. Hai vantaggio su check 
+                    sociali verso animali/spiriti.</li>
+                    <li><strong>Liv 3 - Totem:</strong> Scegli spirito totem (Lupo, Orso, Aquila, Serpente) che garantisce poteri tematici</li>
+                    <li><strong>Liv 6 - Spirit Guide:</strong> Il tuo companion può aiutare alleati. Alleato entro 1,5m da companion ha vantaggio 
+                    su prossimo attacco.</li>
+                    <li><strong>Liv 10 - Ethereal Step:</strong> Come azione bonus, entri nel Piano Eterico per 1 turno (movimento fantasma, 
+                    immune danno fisico). Utilizzi: mod SAG per riposo lungo.</li>
+                    <li><strong>Liv 14 - Spirit Army:</strong> Puoi evocare fino a 4 animali spirituali simultaneamente (invece di 1). 
+                    Controlli tutti nel tuo turno.</li>
+                    <li><strong>Liv 18 - One with Spirits:</strong> Diventi mezzo-spirito. Resistenza a danni necrotic/psychic. Puoi vedere/sentire 
+                    nel Piano Eterico sempre.</li>
+                </ul>
+
+                <p><em>(Dettagli completi totem, spell list spirituale, e progressione 1-20 seguirebbero qui)</em></p>
+            </section>
+
+            <section id="giocatore">
+                <h3>3.5 Il Giocatore d'Azzardo (Gambler)</h3>
+                
+                <div class="stat-block">
+                    <h4>🎲 GIOCATORE - PROFILO RAPIDO</h4>
+                    <div class="stat-line"><strong>Dado Vita:</strong> d8</div>
+                    <div class="stat-line"><strong>Caratteristiche Primarie:</strong> Carisma (bluff), Destrezza (rapidità)</div>
+                    <div class="stat-line"><strong>Tiri Salvezza Competenti:</strong> Destrezza, Carisma</div>
+                    <div class="stat-line"><strong>Ruolo:</strong> Support, controller, skill monkey, "face"</div>
+                    <div class="stat-line"><strong>Stile:</strong> Manipoli fortuna e probabilità. Usi carte, dadi, e magia della fortuna 
+                    per aiutare alleati e sabotare nemici.</div>
+                </div>
+
+                <h4>Abilità Chiave</h4>
+                <ul>
+                    <li><strong>Liv 1 - Lucky:</strong> Hai 3 Luck Points per riposo lungo. Puoi spendere 1 per: Ritirare tuo d20, Forzare 
+                    nemico a ritirare attacco contro te, Ritirare un dado danno tuo o alleato.</li>
+                    <li><strong>Liv 1 - Sleight of Hand Expert:</strong> Doppia competenza Rapidità di Mano e Inganno.</li>
+                    <li><strong>Liv 2 - Card Tricks:</strong> Usi mazzo carte magico come focus. Puoi lanciare certi spell (illusioni, charme) 
+                    senza componenti vocali (silenzioso).</li>
+                    <li><strong>Liv 3 - Archetype:</strong> Scegli Card Sharp (mago illusionista), Lucky Devil (fortuna estrema), o Con Artist 
+                    (maestro inganno)</li>
+                    <li><strong>Liv 5 - All In:</strong> Quando effettui attacco o check importante, puoi dichiarare "All In" PRIMA di tirare. 
+                    Se tiri 11+, aggiungi +10 al risultato. Se tiri 1-10, sottrai -5. High risk, high reward!</li>
+                    <li><strong>Liv 9 - Cheat Fate:</strong> 1 volta per riposo lungo, quando un alleato entro 18m dovrebbe morire (0 PF e 
+                    fallisce death save), puoi "barare" il destino: tiri d20, se 11+ lui si stabilizza automaticamente a 1 PF.</li>
+                    <li><strong>Liv 13 - Stroke of Luck:</strong> 1 volta per riposo lungo, trasformi un fallimento in successo automatico 
+                    (tuo o alleato entro 9m).</li>
+                    <li><strong>Liv 20 - Master of Fate:</strong> Hai 5 Luck Points invece di 3. Inoltre, 1 volta per riposo lungo, puoi 
+                    "controllare il destino": scegli il risultato esatto di qualsiasi tiro d20 (tuo, alleato, o nemico entro 18m) prima che 
+                    venga effettuato.</li>
+                </ul>
+
+                <p><em>(Dettagli completi archetipi gambler, spell list illusioni, e progressione 1-20 seguirebbero qui)</em></p>
+            </section>
+
+            <section id="cacciatore">
+                <h3>3.6 Il Cacciatore di Taglie (Bounty Hunter)</h3>
+                
+                <div class="stat-block">
+                    <h4>⭐ CACCIATORE - PROFILO RAPIDO</h4>
+                    <div class="stat-line"><strong>Dado Vita:</strong> d10</div>
+                    <div class="stat-line"><strong>Caratteristiche Primarie:</strong> Destrezza (shooting/tracking), Saggezza (sopravvivenza)</div>
+                    <div class="stat-line"><strong>Tiri Salvezza Competenti:</strong> Destrezza, Saggezza</div>
+                    <div class="stat-line"><strong>Ruolo:</strong> Tracker, ranged DPS, tank, survivalist</div>
+                    <div class="stat-line"><strong>Stile:</strong> Insegui prede (umane o mostruose) attraverso wilderness. Mix di ranger e 
+                    pistolero con focus su caccia e cattura.</div>
+                </div>
+
+                <h4>Abilità Chiave</h4>
+                <ul>
+                    <li><strong>Liv 1 - Favored Enemy:</strong> Scegli tipo creatura (Aberrazioni, Non-morti, Umanoidi, etc.). Hai vantaggio 
+                    su check Sopravvivenza per tracciarli e check Intelligenza per ricordare info su loro. +2 danni contro quel tipo.</li>
+                    <li><strong>Liv 1 - Natural Explorer:</strong> Scegli terreno favorito (Desert, Forest, Mountains, Plains, Swamp, Urban). 
+                    In quel terreno: Difficile terrain non rallenta gruppo, non ti perdi, sempre vigile (no sorprese), trovare cibo/acqua è 
+                    automatico.</li>
+                    <li><strong>Liv 2 - Fighting Style:</strong> Scegli Archery (+2 to hit con ranged), Defense (+1 CA con armatura), o 
+                    Two-Weapon Fighting (aggiungi mod abilità a danno off-hand).</li>
+                    <li><strong>Liv 3 - Hunter's Mark:</strong> Come azione bonus, marchi creatura entro 27m. Fai +1d6 danni a ogni attacco 
+                    contro quel bersaglio. Dura 1 ora, concentrazione. Se muore, puoi marcare nuovo bersaglio come azione bonus. Utilizzi: 
+                    mod SAG per riposo lungo.</li>
+                    <li><strong>Liv 3 - Archetype:</strong> Scegli Monster Hunter (specialista creature sovrannaturali), Manhunter (criminali umani), 
+                    o Wasteland Stalker (sopravvivenza estrema)</li>
+                    <li><strong>Liv 5 - Extra Attack:</strong> Attacchi 2 volte quando usi azione Attacco.</li>
+                    <li><strong>Liv 8 - Land's Stride:</strong> Muoverti attraverso difficult terrain non-magico non costa movimento extra. 
+                    Puoi passare attraverso piante non-magiche senza rallentare.</li>
+                    <li><strong>Liv 10 - Hide in Plain Sight:</strong> Puoi passare 1 minuto creando camuffamento. Dopo, hai +10 a check 
+                    Furtività finché rimani fermo in quel luogo. Dura finché ti muovi.</li>
+                    <li><strong>Liv 14 - Vanish:</strong> Come azione bonus, puoi usare azione Nascondersi. Inoltre, non puoi essere tracciato 
+                    con metodi non-magici a meno che tu non voglia.</li>
+                    <li><strong>Liv 18 - Feral Senses:</strong> Non hai svantaggio attaccare creature che non vedi (es: invisibili). 
+                    Sei sempre consapevole di creature entro 9m a meno che siano dietro copertura totale.</li>
+                    <li><strong>Liv 20 - Foe Slayer:</strong> 1 volta per turno, aggiungi mod SAG al tiro per colpire O al danno contro una 
+                    creatura (tua scelta).</li>
+                </ul>
+
+                <p><em>(Dettagli completi archetipi hunter, spell list ranger minore, e progressione 1-20 seguirebbero qui)</em></p>
+            </section>
+
+            <section id="confronto">
+                <h3>3.7 Confronto Archetipi</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Criterio</th>
+                            <th>Pistolero</th>
+                            <th>Reverendo</th>
+                            <th>Dottore</th>
+                            <th>Sciamano</th>
+                            <th>Giocatore</th>
+                            <th>Cacciatore</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Danno Singolo Target</strong></td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Danno AoE</strong></td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Guarigione</strong></td>
+                            <td>⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐</td>
+                            <td>⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Supporto/Buff</strong></td>
+                            <td>⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Controllo Campo</strong></td>
+                            <td>⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sopravvivenza</strong></td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Utilità Fuori Combattimento</strong></td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Complessità</strong></td>
+                            <td>Bassa</td>
+                            <td>Media</td>
+                            <td>Bassa</td>
+                            <td>Alta</td>
+                            <td>Alta</td>
+                            <td>Media</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <p><strong>Composizione Gruppo Ideale (Party di 4):</strong></p>
+                    <ul>
+                        <li>1 Healer (Reverendo o Dottore)</li>
+                        <li>1-2 DPS (Pistolero, Cacciatore, o Giocatore)</li>
+                        <li>1 Caster/Support (Reverendo, Sciamano, o Giocatore)</li>
+                        <li>1 Skill Monkey (Dottore, Giocatore, o Cacciatore)</li>
+                    </ul>
+                    <p>Esempio Bilanciato: Pistolero (DPS), Reverendo (Healer), Dottore (Skills), Cacciatore (Tank/DPS)</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="pagination">
+            <a href="capitolo_02.html" class="prev">← Capitolo 2</a>
+            <span>Capitolo 3 di 15</span>
+            <a href="capitolo_04.html" class="next">Capitolo 4: Abilità →</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p><strong>COLT & CTHULHU</strong> - Capitolo 3: Archetipi</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">© 2025 - Guida Completa del Giocatore</p>
+    </footer>
+
+    <a href="#top" class="back-to-top">↑</a>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

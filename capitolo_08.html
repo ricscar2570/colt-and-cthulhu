@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 8: Sistema Magia - Colt & Cthulhu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>COLT & CTHULHU</h1>
+        <p class="subtitle">Capitolo 8: Sistema Magia e Incantesimi</p>
+    </header>
+
+    <nav class="nav-main">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="capitolo_01.html">Cap 1</a></li>
+            <li><a href="capitolo_02.html" >Cap 2</a></li>
+            <li><a href="capitolo_03.html">Cap 3</a></li>
+            <li><a href="capitolo_04.html">Cap 4</a></li>
+            <li><a href="capitolo_05.html">Cap 5</a></li>
+            <li><a href="capitolo_06.html">Cap 6</a></li>
+            <li><a href="capitolo_07.html">Cap 7</a></li>
+            <li><a href="capitolo_08.html" class="active">Cap 8</a></li>
+            <li><a href="capitolo_09.html">Cap 9</a></li>
+            <li><a href="capitolo_10.html">Cap 10</a></li>
+            <li><a href="capitolo_11.html">Cap 11</a></li>
+            <li><a href="capitolo_12.html">Cap 12</a></li>
+            <li><a href="capitolo_13.html">Cap 13</a></li>
+            <li><a href="capitolo_14.html">Cap 14</a></li>
+            <li><a href="capitolo_15.html">Cap 15</a></li>
+            <li><a href="capitolo_16.html">Cap 16</a></li>
+            <li><a href="appendice_a.html">App. A</a></li>
+			<li><a href="appendice_b.html">App. B</a></li>
+			<li><a href="appendice_c.html">App. C</a></li>
+        
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>›</span> <strong>Capitolo 8</strong>
+        </div>
+
+        <article class="chapter">
+            <h2>Capitolo 8: Sistema Magia e Incantesimi</h2>
+            
+            <div class="horror-box" style="margin-bottom: 30px;">
+                <p style="font-size: 1.1em; text-align: center;">
+                    <strong>"Nel Weird West, la magia è reale ma pericolosa.</strong><br>
+                    <strong>Alcuni la chiamano benedizione divina. Altri la chiamano patto oscuro.</strong><br>
+                    <strong>Ma tutti concordano: il potere ha sempre un prezzo."</strong>
+                </p>
+            </div>
+
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                La magia in Colt & Cthulhu non è quella dei tipici fantasy. È <strong>rara, misteriosa, e spesso pericolosa</strong>. 
+                I reverendi pregano per miracoli divini. I cultisti leggono tomi proibiti per invocare entità oltre la comprensione. 
+                Gli sciamani nativi si connettono agli spiriti della natura. Questo capitolo spiega come funziona la magia, quali 
+                spell sono disponibili, e le conseguenze del loro uso.
+            </p>
+
+            <section id="fonti-magia">
+                <h3>8.1 Fonti della Magia</h3>
+                
+                <p>Nel Weird West, la magia proviene da diverse fonti, ciascuna con filosofia e conseguenze proprie:</p>
+
+                <h4>1. Magia Divina (Divine Magic)</h4>
+                <p><strong>Praticanti:</strong> Reverendi (Clerics), Paladini (rari)</p>
+                <p><strong>Fonte:</strong> Fede in divinità (Dio cristiano, spiriti nativi, entità benigne)</p>
+                <p><strong>Natura:</strong> Benedizioni, miracoli, guarigione, protezione, smitare male</p>
+                <p><strong>Come Funziona:</strong> Preghi la tua divinità che concede potere attraverso fede. Non studi spell: 
+                <strong>li prepari ogni giorno</strong> attraverso preghiera/meditazione.</p>
+                <p><strong>Limitazioni:</strong> Devi mantenere allineamento e comportamento accettabile per la tua divinità. 
+                Trasgredire tenets = perdere poteri temporaneamente finché non espi.</p>
+                <p><strong>Stress:</strong> Magia divina NON causa stress. È benedizione pura (salvo lanciare spell maledizione/necrotic).</p>
+
+                <h4>2. Magia Arcana (Arcane Magic)</h4>
+                <p><strong>Praticanti:</strong> Occultisti (Warlocks con patto stregone), alcuni Bardi</p>
+                <p><strong>Fonte:</strong> Studio di tomi proibiti, conoscenza arcana segreta, patti con entità misteriose</p>
+                <p><strong>Natura:</strong> Manipolazione forze naturali, illusioni, evocazioni, controllo mente</p>
+                <p><strong>Come Funziona:</strong> Hai imparato spell attraverso studio (Wizard-style) O ricevuto come dono da 
+                patron (Warlock-style). Conosci spell fissati (Warlock) o scritti in libro (Wizard, se Master permette).</p>
+                <p><strong>Limitazioni:</strong> Spell slot limitati. Studiare magia oscura può corrompere.</p>
+                <p><strong>Stress:</strong> Lanciare spell arcani da tomi proibiti (Necronomicon, etc.) causa <strong>1d4 stress</strong> 
+                per spell livello 3+. Spell benigni (Mage Hand, Light) nessuno stress.</p>
+
+                <h4>3. Magia Oscura (Dark Magic / Blood Magic)</h4>
+                <p><strong>Praticanti:</strong> Cultisti, stregoni corrotti, negromanti</p>
+                <p><strong>Fonte:</strong> Patti con Grandi Antichi, Outer Gods, demoni, entità del Vuoto</p>
+                <p><strong>Natura:</strong> Necromanzia, corruzione, sacrifici, evocazioni horror cosmici</p>
+                <p><strong>Come Funziona:</strong> Simile arcane magic ma con componente materiale oscura (sangue, anime, sacrifici). 
+                Spesso richiede rituali prolungati.</p>
+                <p><strong>Limitazioni:</strong> Estremamente rischiosa. Ogni spell oscuro ha chance corruzione/possessione. 
+                Società civile perseguita praticanti.</p>
+                <p><strong>Stress:</strong> OGNI spell oscuro causa <strong>1d6-2d8 stress</strong>. Uso prolungato porta follia 
+                garantita. Ma potere immenso.</p>
+
+                <h4>4. Magia Naturale (Primal Magic)</h4>
+                <p><strong>Praticanti:</strong> Druidi (rari), Ranger, Sciamani nativi</p>
+                <p><strong>Fonte:</strong> Connessione spiriti natura, animali, elementi, terra stessa</p>
+                <p><strong>Natura:</strong> Controllo piante/animali, trasformazioni, guarigione naturale, weather control</p>
+                <p><strong>Come Funziona:</strong> Canti, danze, rituali sciamanici. Spell preparati attraverso meditazione con natura.</p>
+                <p><strong>Limitazioni:</strong> Efficace wilderness, meno in città (disconnessione da natura). Non può danneggiare 
+                natura volontariamente senza conseguenze.</p>
+                <p><strong>Stress:</strong> Nessuno stress. Magia naturale è armonica.</p>
+
+                <div class="warning-box">
+                    <p><strong>NOTA IMPORTANTE - Magia nel 1885:</strong></p>
+                    <p>La società mainstream del 1885 è <strong>scettica/ostile verso magia</strong>. Reverendi sono accettati 
+                    (miracoli = volontà Dio). Ma "stregoni", "fattucchiere", "cultisti" sono perseguitati, a volte linciati. 
+                    Se usi magia apertamente in città, aspettati:</p>
+                    <ul>
+                        <li>Fear/disgusto da civili</li>
+                        <li>Possibile arresto per "stregoneria" (anche se non esiste legge federale, molte città hanno ordinanze)</li>
+                        <li>Marshal/sceriffo ti osserva attentamente</li>
+                        <li>Chiesa locale ti demonizza</li>
+                    </ul>
+                    <p>Usa magia <strong>discretamente</strong> se non vuoi problemi. Nativi accettano sciamani, ma settler bianchi no.</p>
+                </div>
+            </section>
+
+            <section id="meccaniche-casting">
+                <h3>8.2 Meccaniche di Casting</h3>
+                
+                <h4>Spell Slots e Preparazione</h4>
+                <p>La maggior parte caster usa sistema <strong>Spell Slots</strong> (D&D 5e style):</p>
+
+                <ul>
+                    <li><strong>Spell Slots:</strong> Hai numero slots per livello spell (determinato da classe e livello). 
+                    Ogni volta lanci spell, consumi 1 slot del livello spell (o superiore).</li>
+                    <li><strong>Preparare Spell (Clerics, Druids):</strong> Ogni riposo lungo, scegli quali spell preparare 
+                    dalla lista classe. Numero spell preparabili = mod abilità casting (SAG per clerics) + livello classe. 
+                    Puoi lanciare solo spell preparati.</li>
+                    <li><strong>Spell Conosciuti (Warlocks, Rangers):</strong> Conosci numero fisso spell. Puoi lanciare 
+                    qualsiasi spell conosciuto spendendo slot appropriato. Non devi "preparare" ogni giorno.</li>
+                    <li><strong>Cantrips:</strong> Spell livello 0. Illimitati, nessun slot. Puoi lanciare a volontà.</li>
+                </ul>
+
+                <h4>Componenti Spell</h4>
+                <p>Molti spell richiedono <strong>componenti</strong> per lanciare:</p>
+
+                <ul>
+                    <li><strong>V (Verbal):</strong> Devi parlare/cantare parole magiche. Se <em>Silenced</em> o imbavagliato, 
+                    non puoi lanciare.</li>
+                    <li><strong>S (Somatic):</strong> Devi gesticolare con mani libere. Se mani legate o tieni oggetti in entrambe, 
+                    non puoi lanciare (ECCEZIONE: puoi tenere focus in 1 mano).</li>
+                    <li><strong>M (Material):</strong> Richiede componente materiale specifico. Se componente ha costo in $, devi 
+                    effettivamente averlo e consumarlo. Se no costo listato, puoi sostituire con <strong>focus spell</strong> 
+                    (simbolo sacro per clerics, component pouch per arcane).</li>
+                </ul>
+
+                <div class="example-box">
+                    <p><strong>Esempio Componenti:</strong></p>
+                    <p><strong>Cure Wounds:</strong> V, S = Devi parlare preghiera e toccare bersaglio con mano. No componente 
+                    materiale quindi non serve focus (ma molti clerics toccano con simbolo sacro per dramatica).</p>
+                    <p><strong>Revivify:</strong> V, S, M (diamanti $300 valore, che vengono consumati) = Devi avere diamanti 
+                    fisici del valore, che si disintegrano nel casting. No diamanti = no resurrection.</p>
+                </div>
+
+                <h4>Casting Time</h4>
+                <ul>
+                    <li><strong>1 Azione:</strong> Maggior parte spell. Lanci nel tuo turno usando azione standard.</li>
+                    <li><strong>1 Azione Bonus:</strong> Alcuni spell veloci (Healing Word, Misty Step). Lanci come azione bonus.</li>
+                    <li><strong>1 Reazione:</strong> Spell reattivi (Shield, Counterspell). Lanci fuori dal tuo turno come reazione 
+                    a trigger.</li>
+                    <li><strong>1 Minuto, 10 Minuti, 1 Ora, etc.:</strong> Rituali. Richiedono tempo. Non lanciabili in combattimento. 
+                    Alcuni spell hanno versione "rituale" che richiede +10 min ma non consuma slot.</li>
+                </ul>
+
+                <h4>Concentrazione</h4>
+                <p>Molti spell potenti richiedono <strong>Concentrazione</strong> per mantenere:</p>
+                <ul>
+                    <li>Puoi concentrarti su <strong>1 solo spell</strong> alla volta</li>
+                    <li>Se lanci nuovo spell concentrazione, precedente finisce immediatamente</li>
+                    <li>Se subisci danno mentre concentri, fai <strong>TS COS CD 10 o metà danno subito (quale maggiore)</strong>. 
+                    Fallimento = perdi concentrazione, spell finisce.</li>
+                    <li>Se diventi <em>Incapacitated</em> o muori = perdi concentrazione</li>
+                    <li>Puoi terminare concentrazione volontariamente come azione gratuita</li>
+                </ul>
+
+                <div class="tip-box">
+                    <p><strong>Proteggere Concentrazione:</strong> Se hai spell concentrazione attivo importante (Bless su tutto 
+                    party, Hold Person su boss), evita danno! Stai dietro copertura, usa Dodge, chiedi ally interpose. Perdere 
+                    concentrazione = sprecare spell slot prezioso.</p>
+                </div>
+
+                <h4>Spell Attack vs Saving Throw</h4>
+                <p>Spell dannosi funzionano in 2 modi:</p>
+
+                <ul>
+                    <li><strong>Spell Attack:</strong> Tu fai attacco contro CA bersaglio. Tiri <strong>d20 + mod casting + competenza</strong>. 
+                    Se ≥ CA → colpisci, infliggi danno. Se < CA → miss.
+                        <ul>
+                            <li><strong>Esempio:</strong> Guiding Bolt, Fire Bolt, Inflict Wounds</li>
+                        </ul>
+                    </li>
+                    <li><strong>Saving Throw:</strong> Bersaglio fa TS contro tua <strong>Spell Save DC</strong>. Spell Save DC = 
+                    <strong>8 + mod casting + competenza</strong>. Bersaglio tira, se ≥ DC → salva (effetto ridotto o nullo), 
+                    se < DC → fallisce (effetto pieno).
+                        <ul>
+                            <li><strong>Esempio:</strong> Fireball (TS DES), Hold Person (TS SAG), Charm Person (TS SAG)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="example-box">
+                    <p><strong>Esempio Spell Attack:</strong> Reverendo liv 5 (SAG +3, competenza +3) lancia Sacred Flame vs zombi.</p>
+                    <p>Zombi deve fare TS DES vs Spell Save DC reverendo = 8 + 3 + 3 = <strong>DC 14</strong>.</p>
+                    <p>Zombi (DES -2) tira d20 → 11. Risultato 11 - 2 = <strong>9</strong>. Fallimento!</p>
+                    <p>Zombi subisce 2d8 danno radiante. Tira 5 + 6 = <strong>11 danno</strong>. Zombi brucia in luce sacra!</p>
+                </div>
+
+                <h4>Upcast (Lanciare Spell Livello Superiore)</h4>
+                <p>Molti spell diventano più potenti se lanci usando slot superiore al livello spell. Leggi descrizione spell 
+                per dettagli.</p>
+
+                <div class="example-box">
+                    <p><strong>Esempio Upcast:</strong> <strong>Cure Wounds</strong> è spell livello 1, cura 1d8 + mod SAG.</p>
+                    <p>Se lanci usando slot livello 2, cura <strong>2d8</strong> + mod SAG.</p>
+                    <p>Se usi slot livello 3, cura <strong>3d8</strong> + mod SAG.</p>
+                    <p>Ogni livello slot sopra 1° aggiunge 1d8 cura. Utile in emergenza!</p>
+                </div>
+            </section>
+
+            <section id="liste-spell">
+                <h3>8.3 Liste Spell per Classe</h3>
+                
+                <p>Ogni classe caster ha accesso a lista spell specifica. Qui elenco spell KEY disponibili per classi Colt & Cthulhu. 
+                Per liste complete dettagliate, vedi Appendice C (Spell Complete List).</p>
+
+                <h4>Reverendo (Cleric) - Divine Magic</h4>
+                <p><strong>Abilità Casting:</strong> Saggezza (SAG)</p>
+                <p><strong>Spell Prepararati:</strong> SAG mod + livello Cleric</p>
+                <p><strong>Spell Slots:</strong> Standard progression Cleric (vedi tabella classe Cap 3)</p>
+
+                <p><strong>Spell Iconici Reverendo:</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Livello</th>
+                            <th>Spell Chiave</th>
+                            <th>Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cantrip</td>
+                            <td><strong>Sacred Flame</strong></td>
+                            <td>Fiamma radiante divina. Bersaglio fa TS DES o 1d8 radiante (scala con livello). Ignora copertura.</td>
+                        </tr>
+                        <tr>
+                            <td>Cantrip</td>
+                            <td><strong>Spare the Dying</strong></td>
+                            <td>Tocco, stabilizza creatura dying (0 PF) istantaneamente senza check Medicina.</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Cure Wounds</strong></td>
+                            <td>Tocco, cura 1d8 + SAG mod PF (upcast +1d8 per livello slot)</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Bless</strong></td>
+                            <td>Concentrazione 1 min. 3 creature alleate guadagnano +1d4 a attacchi e TS. OTTIMO buff party.</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Shield of Faith</strong></td>
+                            <td>Concentrazione 10 min. 1 creatura guadagna +2 CA. Protegge tank.</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Detect Evil and Good</strong></td>
+                            <td>Concentrazione 10 min. Senti presenza aberrazioni/non-morti/demoni entro 9m. Identifica minacce nascoste.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Lesser Restoration</strong></td>
+                            <td>Tocco, cura 1 malattia o condizione (Blinded, Deafened, Paralyzed, Poisoned). Riduce 2d6 stress.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Prayer of Healing</strong></td>
+                            <td>10 min rituale. Fino 6 creature curano 2d8 + SAG mod PF. Healing gruppo fuori combattimento.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Spiritual Weapon</strong></td>
+                            <td>Concentrazione 1 min. Crea arma spettrale che attacca come azione bonus ogni turno (1d8+SAG forza/radiante).</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Revivify</strong></td>
+                            <td>Tocco creatura morta da max 1 min. Torna a 1 PF. Richiede diamanti $300 (consumati). RESURRECTION!</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Remove Curse</strong></td>
+                            <td>Tocco, rimuove 1 maledizione da creatura/oggetto. Essenziale vs magia oscura.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Spirit Guardians</strong></td>
+                            <td>Concentrazione 10 min. Spiriti proteggono raggio 4.5m da te. Nemici in area: velocità dimezzata, 
+                            3d8 radiante (TS SAG metà). DEVASTANTE in melee.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Greater Restoration</strong></td>
+                            <td>Tocco, riduce esaurimento 1 livello, cura charm/petrify/curse, riduce 1 afflizione mentale. 
+                            Richiede diamond dust $100.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Raise Dead</strong></td>
+                            <td>Tocco morto da max 10 giorni. Riporta vita con penalità (-4 tutto per 4 riposi). Richiede diamanti $500.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><strong>Resurrection</strong></td>
+                            <td>Tocco morto da max 100 anni. Ricostruisce corpo. No penalità. Diamanti $1,000.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Channel Divinity (Feature Reverendo):</strong></p>
+                <ul>
+                    <li><strong>Turn Undead:</strong> Azione, tutti non-morti entro 9m che vedono te fanno TS SAG vs Spell DC. 
+                    Fallimento = Turned per 1 min (devono usare turno per fuggire da te, non possono avvicinarsi volontariamente, 
+                    nessuna azione/reazione salvo Dash per fuggire). A livelli alti, non-morti deboli sono DISTRUTTI istantaneamente.</li>
+                    <li><strong>Preserve Life:</strong> Azione, cura creature entro 9m per totale 5× livello Cleric PF (dividi come vuoi). 
+                    Non può curare oltre metà PF max. Emergency heal gruppo.</li>
+                </ul>
+
+                <h4>Sciamano (Druid/Ranger) - Primal Magic</h4>
+                <p><strong>Abilità Casting:</strong> Saggezza</p>
+                <p><strong>Focus:</strong> Totem naturale, piume, ossa, cristalli</p>
+
+                <p><strong>Spell Iconici Sciamano:</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Livello</th>
+                            <th>Spell Chiave</th>
+                            <th>Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cantrip</td>
+                            <td><strong>Druidcraft</strong></td>
+                            <td>Crea effetti naturali minori: predici weather, accendi/spegni piccola fiamma, fiori sbocciano, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Speak with Animals</strong></td>
+                            <td>10 min, parli con animali. Comprendi loro, loro capiscono te. Gathering intel da animali locali.</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Entangle</strong></td>
+                            <td>Concentrazione 1 min. Piante/viti in quadrato 6m afferrano creature. TS FOR o Restrained. Control campo battaglia.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Pass Without Trace</strong></td>
+                            <td>Concentrazione 1 ora. Tu + 9 creature entro 9m guadagnano <strong>+10 bonus Furtività</strong> 
+                            e non lasciano tracce. STEALTH OP!</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Call Lightning</strong></td>
+                            <td>Concentrazione 10 min. Nuvola tempesta. Ogni turno (azione), fulmina area 1.5m raggio, 3d10 fulmine 
+                            (TS DES metà). All'aperto incredibile.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Commune with Nature</strong></td>
+                            <td>Rituale 1 min. Ottieni conoscenza territorio entro 4.8 km: terreno, piante, minerali, creature, 
+                            edifici, acqua. Scouting perfetto.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Occultista (Warlock) - Arcane/Dark Magic</h4>
+                <p><strong>Abilità Casting:</strong> Carisma (patti personalità-driven)</p>
+                <p><strong>Patron:</strong> Devi avere patto con entità potente (Great Old One, Fiend, Archfey, etc.)</p>
+                <p><strong>Spell Slots:</strong> POCHI ma si ricaricano con <strong>riposo breve</strong>! (vedi tabella Cap 3)</p>
+
+                <p><strong>Spell Iconici Warlock:</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Livello</th>
+                            <th>Spell Chiave</th>
+                            <th>Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cantrip</td>
+                            <td><strong>Eldritch Blast</strong></td>
+                            <td>Raggio energia oscura. 1d10 forza, gittata 36m. Scala con livello (multipli raggi). WORKHORSE warlock.</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Hex</strong></td>
+                            <td>Concentrazione 1 ora. Maledici 1 creatura: subisce +1d6 necrotico extra ogni volta che la colpisci. 
+                            Ha svantaggio su 1 tipo check (scegli: FOR, DES, etc.). Combo con Eldritch Blast = danno enorme.</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Armor of Agathys</strong></td>
+                            <td>1 ora. Guadagni 5 PF temporanei. Creature che ti colpiscono in mischia subiscono 5 danno freddo. 
+                            Upcast = +5 temp PF e +5 danno per livello slot. Defensive warlock.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Hold Person</strong></td>
+                            <td>Concentrazione 1 min. Umanoide fa TS SAG o Paralyzed. Può ripetere TS ogni turno. Paralyze = 
+                            auto-crit entro 1.5m. BOSS KILLER.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Hunger of Hadar</strong></td>
+                            <td>Concentrazione 1 min. Sfera 6m raggio oscurità completa + tentacoli. Creature dentro: accecate, 
+                            2d6 freddo inizio turno, 2d6 acido se finiscono turno dentro. ZONA MORTE.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Contact Other Plane</strong></td>
+                            <td>Rituale. Contatti entità extraplanare (Great Old One?) per 5 domande sì/no. Risposte brevi. 
+                            INT TS CD 15 o 6d6 psichico + follia. RISCHIOSO ma info potente.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Eldritch Invocations (Feature Warlock):</strong> Warlock guadagna invocations che potenziano spell/abilità:</p>
+                <ul>
+                    <li><strong>Agonizing Blast:</strong> Aggiungi mod CAR a danno Eldritch Blast. Essenziale.</li>
+                    <li><strong>Repelling Blast:</strong> Eldritch Blast pushback bersaglio 3m se colpisce. Control.</li>
+                    <li><strong>Devil's Sight:</strong> Vedi in oscurità (anche oscurità magica) fino 36m. Combo con Darkness spell = advantage always.</li>
+                    <li><strong>Mask of Many Faces:</strong> Lancia Disguise Self at will (nessun slot). Infinite disguises.</li>
+                </ul>
+
+                <h4>Artigiano Runico (Artificer - Opzionale)</h4>
+                <p>Se Master permette, Artificer può esistere come "inventore weird science" che combina tecnologia + magia:</p>
+                <ul>
+                    <li><strong>Infuse Items:</strong> Crea oggetti magici temporanei (arma +1, armatura resistenze, etc.)</li>
+                    <li><strong>Spell List:</strong> Mix utility (Cure Wounds, Faerie Fire, Haste, etc.)</li>
+                    <li><strong>Homunculus Servant:</strong> Crea companion meccanico/magico che esplora/combatte</li>
+                </ul>
+            </section>
+
+            <section id="tomi-proibiti">
+                <h3>8.4 Tomi Proibiti e Magia Oscura</h3>
+                
+                <p>Nel Weird West, alcuni dei spell più potenti non vengono da divinità o studio accademico, ma da 
+                <strong>libri proibiti</strong> scritti da cultisti folli o entità cosmiche. Questi tomi contengono conoscenze 
+                che la mente umana non dovrebbe possedere.</p>
+
+                <h4>Il Necronomicon (Al-Azif)</h4>
+                <p><strong>Autore:</strong> Abdul al-Hazred, "Arab Folle"</p>
+                <p><strong>Contenuto:</strong> Rituali evocazione, storia Grandi Antichi, spell necromanzia/invocazione</p>
+                <p><strong>Effetti Lettura:</strong></p>
+                <ul>
+                    <li>Leggere 1 capitolo (1 settimana studio): check INT CD 18. Successo = impari 1 spell oscuro + guadagni 
+                    vantaggio permanente check Arcana su Grandi Antichi. Fallimento = 2d8 stress + possibile afflizione (follia).</li>
+                    <li>Leggere libro completo (6 mesi studio): Sblocca spell livello 8-9 oscuri (Gate, Wish versioni corrupted). 
+                    Accumuli 8d10 stress totale. Quasi certamente sviluppi multiple afflizioni.</li>
+                    <li>Ogni spell lanciato da Necronomicon causa +1d6 stress extra oltre costo normale.</li>
+                </ul>
+
+                <p><strong>Spell Unici Necronomicon:</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Spell</th>
+                            <th>Livello</th>
+                            <th>Effetto</th>
+                            <th>Costo Stress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Contact Yog-Sothoth</strong></td>
+                            <td>6</td>
+                            <td>Rituale 10 min. Contatti Yog-Sothoth per conoscenza assoluta. Fai 3 domande qualsiasi. Risposte 
+                            vere ma criptiche. INT TS CD 20 o follia permanente (Psicosi Maggiore).</td>
+                            <td>3d8</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Summon Shoggoth</strong></td>
+                            <td>7</td>
+                            <td>Evoca Shoggoth (CR 10) che obbedisce comandi per 1 ora o finché non distrutto. PERICOLO: 
+                            Se perdi concentrazione, Shoggoth attacca tutto (incluso te!). Richiede sacrificio sangue (1d6 danno necrotico auto).</td>
+                            <td>2d10</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gate to R'lyeh</strong></td>
+                            <td>9</td>
+                            <td>Rituale 1 ora. Apri portale dimensionale verso R'lyeh (città sommersa Cthulhu). Permetti entità 
+                            uscire o entrare per 1 min. ESTREMAMENTE PERICOLOSO. Tutti entro 30m fanno TS SAG CD 20 o Frightened + 2d8 stress.</td>
+                            <td>4d10</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Altri Tomi</h4>
+                <ul>
+                    <li><strong>De Vermis Mysteriis:</strong> Focalizza su vermi/decomposizione. Spell necromanzia avanzata.</li>
+                    <li><strong>Cultes des Goules:</strong> Ghoul worship. Spell trasformazione, cannibalismo rituale.</li>
+                    <li><strong>Pnakotic Manuscripts:</strong> Storia pre-umana. Spell archeologia oscura, lingue morte.</li>
+                    <li><strong>King in Yellow:</strong> (Play) Leggere causa follia progressiva. Spell illusione/charme/madness.</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Pericolo Tomi Proibiti:</strong></p>
+                    <p>Studiare questi libri è <strong>quasi garantito distruggerti mentalmente</strong>. Il potere che ottieni 
+                    è immenso ma il prezzo è la tua sanità. Molti cultisti iniziano come studiosi curiosi e finiscono come 
+                    abomini folli che servono Outer Gods.</p>
+                    <p><strong>Se trovi Necronomicon:</strong> Opzioni razionali = (1) Distruggerlo con fuoco, (2) Sigillarlo e 
+                    nasconderlo dove nessuno lo trova mai più, (3) Darlo a Reverendo che lo benedice/esorcizza.</p>
+                    <p><strong>Opzione irrazionale ma tentante:</strong> "Leggo solo UN capitolo per capire cosa affronto..." 
+                    [Famous last words]</p>
+                </div>
+            </section>
+
+            <section id="rituali">
+                <h3>8.5 Rituali e Cerimonie</h3>
+                
+                <p>Alcuni spell possono essere lanciati come <strong>rituali</strong>. Rituali richiedono +10 minuti casting time 
+                ma <strong>non consumano spell slot</strong>. Classe deve avere feature "Ritual Casting" per farlo.</p>
+
+                <p><strong>Classi con Ritual Casting:</strong></p>
+                <ul>
+                    <li><strong>Cleric:</strong> Può ritualizzare qualsiasi spell preparato che ha tag "ritual"</li>
+                    <li><strong>Druid:</strong> Come Cleric</li>
+                    <li><strong>Warlock (Pact of Tome):</strong> Può ritualizzare spell nel Book of Shadows</li>
+                </ul>
+
+                <p><strong>Spell Rituali Utili:</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Spell</th>
+                            <th>Livello</th>
+                            <th>Tempo Rituale</th>
+                            <th>Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Detect Magic</strong></td>
+                            <td>1</td>
+                            <td>11 min</td>
+                            <td>Concentrazione 10 min. Senti presenza magia entro 9m, identifichi scuola magia. Trova oggetti 
+                            magici, trappole magiche, creature invisibili.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Identify</strong></td>
+                            <td>1</td>
+                            <td>11 min</td>
+                            <td>Tocchi oggetto per 10 min. Impari proprietà magiche, come usare, se maledetto, spell affectanti. 
+                            ESSENZIALE per loot magico.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Comprehend Languages</strong></td>
+                            <td>1</td>
+                            <td>11 min</td>
+                            <td>1 ora. Comprendi qualsiasi lingua parlata sentita, leggi qualsiasi lingua scritta vista. 
+                            Decifrare codici, lingue morte, iscrizioni cultiste.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Augury</strong></td>
+                            <td>2</td>
+                            <td>12 min</td>
+                            <td>Chiedi divinità riguardo risultato azione specifica prossime 30 min. Risposta: "Weal" (bene), 
+                            "Woe" (male), "Weal and woe" (both), o "Nothing" (nessun risultato significativo). Predire futuro.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Silence</strong></td>
+                            <td>2</td>
+                            <td>12 min</td>
+                            <td>Concentrazione 10 min. Sfera 6m raggio: nessun suono può essere creato o passare attraverso. 
+                            Creatures dentro deafened, nessuno spell verbal. Stealth infiltration.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Leomund's Tiny Hut</strong></td>
+                            <td>3</td>
+                            <td>13 min</td>
+                            <td>8 ore. Cupola immobile 3m raggio. Interno confortevole (temperatura), blocca spell/attacchi da fuori, 
+                            impedisce creature entrare. RIPOSO SICURO wilderness!</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Cerimonie Religiose</h4>
+                <p>Reverendi possono compiere cerimonie religiose (non spell, ma eventi narrativi importanti):</p>
+                <ul>
+                    <li><strong>Matrimonio:</strong> Unire 2 persone. Costo $5-10 donazione. Bonus morale agli sposi (+1 TS vs paura per 1 settimana).</li>
+                    <li><strong>Funerale:</strong> Seppellire morto con benedizione. Previene corpo diventare non-morto (generalmente). Costo $2-5.</li>
+                    <li><strong>Battesimo:</strong> Benedire neonato. Protezione simbolica. Bambino guadagna +1 TS vs possessione fino età adulta (folklore).</li>
+                    <li><strong>Esorcismo:</strong> Rituale complesso (1-8 ore) per scacciare demone possessore. Richiede check SAG contestati, 
+                    rischio danno per exorcist e posseduto. Vedi sezione Possessione (Cap 10).</li>
+                    <li><strong>Consacrazione Terra:</strong> Benedire area (casa, cimitero, chiesa) per respingere male. Non-morti/demoni 
+                    hanno svantaggio entrare area consacrata. Dura finché luogo profanato (violenza, sacrifici oscuri, etc.).</li>
+                </ul>
+            </section>
+
+            <section id="conseguenze-magia">
+                <h3>8.6 Conseguenze e Corruzione</h3>
+                
+                <h4>Stress da Magia</h4>
+                <p>Come menzionato, alcuni tipi magia causano stress:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo Magia</th>
+                            <th>Stress per Spell</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Magia Divina (benigna)</td>
+                            <td>0 stress</td>
+                        </tr>
+                        <tr>
+                            <td>Magia Divina (maledizioni/necrotica)</td>
+                            <td>1d4 stress</td>
+                        </tr>
+                        <tr>
+                            <td>Magia Naturale</td>
+                            <td>0 stress</td>
+                        </tr>
+                        <tr>
+                            <td>Magia Arcana (spell normali)</td>
+                            <td>0 stress</td>
+                        </tr>
+                        <tr>
+                            <td>Magia Arcana (spell liv 3+, oscuri)</td>
+                            <td>1d4 stress</td>
+                        </tr>
+                        <tr>
+                            <td>Magia Oscura (tomi proibiti)</td>
+                            <td>1d6-2d8 stress (dipende spell)</td>
+                        </tr>
+                        <tr>
+                            <td>Evocazione Grandi Antichi</td>
+                            <td>2d10-4d10 stress</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Corruzione (Opzionale - Master Discrezione)</h4>
+                <p>Se usi magia oscura ripetutamente, Master può tracciare <strong>Corruption Points</strong>:</p>
+                <ul>
+                    <li>Ogni volta lanci spell oscuro da tomo proibito: +1 Corruption</li>
+                    <li>Ogni volta fai patto con entità malvagia: +1d4 Corruption</li>
+                    <li>Ogni volta sacrifici innocente per potere: +1d6 Corruption</li>
+                </ul>
+
+                <p><strong>Effetti Corruption:</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Corruption Points</th>
+                            <th>Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-5</td>
+                            <td><strong>Minore:</strong> Tic nervosi, incubi, paranoia leggera. -1 a check CAR vs non-cultisti (sembri... wrong).</td>
+                        </tr>
+                        <tr>
+                            <td>6-10</td>
+                            <td><strong>Moderata:</strong> Allucinazioni occasionali, cambio personalità (più crudele/cinico). 
+                            Svantaggio TS vs possessione. Animali ti evitano (sentono wrongness).</td>
+                        </tr>
+                        <tr>
+                            <td>11-15</td>
+                            <td><strong>Grave:</strong> Mutazioni fisiche minori (occhi cambiano colore, pelle pallida innaturale, 
+                            dita troppo lunghe). Hai tendenze violente. Devi fare TS SAG CD 13 per non commettere atto crudele quando tentato.</td>
+                        </tr>
+                        <tr>
+                            <td>16-20</td>
+                            <td><strong>Avanzata:</strong> Mutazioni ovvie (tentacoli piccoli, pelle squamata, terzo occhio). 
+                            Civili ti attaccano on sight (abominio). Perdi capacità empatia (allineamento shift verso Evil). 
+                            Outer Gods comunicano con te direttamente (voices in head).</td>
+                        </tr>
+                        <tr>
+                            <td>21+</td>
+                            <td><strong>TOTALE:</strong> Trasformazione completa in servitore Grandi Antichi. Perdi controllo personaggio. 
+                            Diventi NPC/mostro controllato Master. Essenzialmente "morte" alternativa.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Ridurre Corruption:</strong></p>
+                <ul>
+                    <li><strong>Greater Restoration:</strong> Riduce 1d4 Corruption (oltre curare afflizione)</li>
+                    <li><strong>Atonement Quest:</strong> Compiere missione sacra assegnata da divinità buona. 1-4 settimane, 
+                    riduce 1d6 Corruption se completata</li>
+                    <li><strong>Wish:</strong> Può rimuovere tutta Corruption ma spell stesso (Wish) può backfire orribilmente</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Il Prezzo del Potere:</strong></p>
+                    <p>Magia oscura offre potere incredibile. Spell che possono cambiare battaglia, vincere guerre, resuscitare 
+                    morti senza limiti. Ma il prezzo è la tua umanità.</p>
+                    <p>Molti giocatori sono tentati: "Uso solo 1 spell oscuro per salvare party, poi smetto." Ma potere corrompe. 
+                    "Solo 1 volta di più..." E così inizia spirale.</p>
+                    <p><strong>Master:</strong> Usa corruzione narrativamente. Mostra lentamente cambiamenti. Altri PG notano? 
+                    "Ehi, stai bene? I tuoi occhi sembrano... diversi." NPC reagiscono negativamente. Crea tensione interna party.</p>
+                    <p><strong>Giocatori:</strong> Se scegliete via oscura, embrace it. Roleplay la caduta. È tragedia shakespeariana. 
+                    Ma sappiate: redemption è possibile ma difficile. E alcuni giocatori scelgono abbracciare oscurità completamente → 
+                    diventare villain! (con permesso Master, ovviamente).</p>
+                </div>
+            </section>
+
+            <section id="contromagic">
+                <h3>8.7 Contromisure alla Magia</h3>
+                
+                <p>Come combattere magia quando sei mundane? O se sei caster, come difenderti da altri casters?</p>
+
+                <h4>Spell Anti-Magia</h4>
+                <ul>
+                    <li><strong>Counterspell (Spell liv 3):</strong> Reazione quando creatura entro 18m lancia spell. Interrompi 
+                    automaticamente se spell liv 3 o meno. Se superiore, check abilità casting CD 10 + livello spell. Successo = 
+                    spell annullato. Upcast Counterspell per cancellare spell alto. ESSENZIALE vs caster nemici!</li>
+                    <li><strong>Dispel Magic (Spell liv 3):</strong> Azione, tocca creatura/oggetto/effetto magico. Se spell liv 3 
+                    o meno = finisce automaticamente. Se superiore, check abilità casting CD 10 + livello spell. Rimuove buff nemici, 
+                    annulla trappole magiche, etc.</li>
+                    <li><strong>Antimagic Field (Spell liv 8):</strong> Concentrazione 1 ora. Sfera 3m raggio centrata su te si muove 
+                    con te. NESSUNA magia funziona dentro (tuoi spell inclusi!). Spell attivi soppressi, spell non possono essere 
+                    lanciati, oggetti magici diventano mundane. HARD COUNTER casters ma anche neutralizza te.</li>
+                    <li><strong>Globe of Invulnerability (Spell liv 6):</strong> Concentrazione 1 min. Barriera 3m raggio. Spell liv 5 
+                    o meno non possono affectare interno (lanciati da fuori). Spell liv 6+ passano normalmente. Protegge party da AoE.</li>
+                </ul>
+
+                <h4>Oggetti Anti-Magia</h4>
+                <ul>
+                    <li><strong>Amuleto Protezione:</strong> Vantaggio su TS vs spell. Raro, costo $500-1,000.</li>
+                    <li><strong>Manette Anti-Magia:</strong> Imprigionato non può lanciare spell (componenti somatic/verbal impossibili). 
+                    Marshal usa vs caster arrestati.</li>
+                    <li><strong>Mantle of Spell Resistance:</strong> Hai resistenza danno magia (metà danno da spell). Leggendario, 
+                    $5,000+.</li>
+                    <li><strong>Ring of Counterspell:</strong> 1 carica/giorno. Come reazione, usi carica per Counterspell automatico 
+                    (come spell liv 3). Molto raro, $2,000.</li>
+                </ul>
+
+                <h4>Tattiche Mundane vs Caster</h4>
+                <p>Se non hai magia, puoi ancora combattere casters:</p>
+                <ul>
+                    <li><strong>Interrompi Concentrazione:</strong> Molti spell potenti = concentrazione. Colpisci caster → TS COS 
+                    per mantenere. Danno costante = spell cade.</li>
+                    <li><strong>Grapple:</strong> Afferrare caster = componenti somatic impossibili (mani non libere). Maggior parte 
+                    spell non lanciabili. Casters spesso hanno FOR bassa → facile grapple.</li>
+                    <li><strong>Silence:</strong> Se puoi ingaggiare silenziosamente (stealth + gag), caster non può spell verbal. 
+                    Alternativa: Silence spell (ironicamente necessita magia per contrastare magia).</li>
+                    <li><strong>Range:</strong> Sniper caster da lontano. Maggior parte spell offensivi hanno gittata max 36m. 
+                    Sharps rifle? 180m. Shoot from outside spell range.</li>
+                    <li><strong>Sorpresa:</strong> Caster sorpreso non può Shield/reaction. Ambush = possibilità one-shot prima reagiscono.</li>
+                    <li><strong>Focus Fire:</strong> Elimina caster per primo. Healer/controller party nemico = priorità #1. 
+                    Dead caster = no spell.</li>
+                </ul>
+
+                <div class="tip-box">
+                    <p><strong>Filosofia Anti-Caster:</strong> "Puoi lanciare Fireball? Ottimo. Io posso metterti proiettile in 
+                    testa prima che finisci incantation." Magia è potente ma <strong>bullet è più veloce</strong>. Iniziativa, 
+                    sorpresa, e focus fire sono tue armi migliori.</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="pagination">
+            <a href="capitolo_07.html" class="prev">← Capitolo 7</a>
+            <span>Capitolo 8 di 15</span>
+            <a href="capitolo_09.html" class="next">Capitolo 9: Talenti →</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p><strong>COLT & CTHULHU</strong> - Capitolo 8: Sistema Magia e Incantesimi</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">© 2025 - Guida Completa del Giocatore</p>
+    </footer>
+
+    <a href="#top" class="back-to-top">↑</a>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

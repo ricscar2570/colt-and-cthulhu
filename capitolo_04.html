@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 4: Abilità e Competenze - Colt & Cthulhu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>COLT & CTHULHU</h1>
+        <p class="subtitle">Capitolo 4: Abilità e Competenze</p>
+    </header>
+
+    <nav class="nav-main">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="capitolo_01.html">Cap 1</a></li>
+            <li><a href="capitolo_02.html" >Cap 2</a></li>
+            <li><a href="capitolo_03.html">Cap 3</a></li>
+            <li><a href="capitolo_04.html" class="active">Cap 4</a></li>
+            <li><a href="capitolo_05.html">Cap 5</a></li>
+            <li><a href="capitolo_06.html">Cap 6</a></li>
+            <li><a href="capitolo_07.html">Cap 7</a></li>
+            <li><a href="capitolo_08.html">Cap 8</a></li>
+            <li><a href="capitolo_09.html">Cap 9</a></li>
+            <li><a href="capitolo_10.html">Cap 10</a></li>
+            <li><a href="capitolo_11.html">Cap 11</a></li>
+            <li><a href="capitolo_12.html">Cap 12</a></li>
+            <li><a href="capitolo_13.html">Cap 13</a></li>
+            <li><a href="capitolo_14.html">Cap 14</a></li>
+            <li><a href="capitolo_15.html">Cap 15</a></li>
+            <li><a href="capitolo_16.html">Cap 16</a></li>
+            <li><a href="appendice_a.html">App. A</a></li>
+			<li><a href="appendice_b.html">App. B</a></li>
+			<li><a href="appendice_c.html">App. C</a></li>
+        
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>›</span> <strong>Capitolo 4</strong>
+        </div>
+
+        <article class="chapter">
+            <h2>Capitolo 4: Abilità e Competenze</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                Le <strong>abilità</strong> rappresentano l'addestramento specifico del tuo personaggio in diversi campi. 
+                Ogni abilità è associata a una caratteristica e viene usata per risolvere situazioni che richiedono esperienza, 
+                pratica, o talento particolare. Questo capitolo spiega come funzionano i check abilità, descrive tutte le 17 abilità 
+                del gioco, e fornisce esempi pratici.
+            </p>
+
+            <section id="come-funzionano">
+                <h3>4.1 Come Funzionano i Check Abilità</h3>
+                
+                <p>Un <strong>check abilità</strong> (ability check) è un tiro di dado per determinare se hai successo in un compito 
+                che richiede quell'abilità specifica. La formula è semplice:</p>
+
+                <div class="stat-block" style="text-align: center; font-size: 1.3em;">
+                    <p><strong>d20 + Modificatore Caratteristica + Bonus Competenza (se competente) + Altri Modificatori</strong></p>
+                </div>
+
+                <h4>Quando Tirare</h4>
+                <p>Il Master chiede un check quando:</p>
+                <ul>
+                    <li>L'esito è <strong>incerto</strong> (non automatico successo o fallimento)</li>
+                    <li>C'è <strong>rischio</strong> o conseguenze per fallimento</li>
+                    <li>C'è <strong>pressione temporale</strong> o stress</li>
+                </ul>
+
+                <div class="example-box">
+                    <p><strong>Esempi:</strong></p>
+                    <ul>
+                        <li><strong>CHECK:</strong> "Scalare muro di 6m sotto pioggia con inseguitori" → Check Atletica</li>
+                        <li><strong>NO CHECK:</strong> "Scalare scala a pioli in edificio sicuro" → Automatico successo</li>
+                        <li><strong>NO CHECK:</strong> "Scalare muro liscio 15m senza equipaggiamento" → Automatico fallimento (impossibile)</li>
+                    </ul>
+                </div>
+
+                <h4>Competenza (Proficiency)</h4>
+                <p>Se sei <strong>competente</strong> in un'abilità (dal tuo background, archetipo, o razza), aggiungi il 
+                <strong>bonus competenza</strong> al tiro. Il bonus competenza aumenta con il livello:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Livello Personaggio</th>
+                            <th>Bonus Competenza</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1-4</td><td>+2</td></tr>
+                        <tr><td>5-8</td><td>+3</td></tr>
+                        <tr><td>9-12</td><td>+4</td></tr>
+                        <tr><td>13-16</td><td>+5</td></tr>
+                        <tr><td>17-20</td><td>+6</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>Competenza Esperta (Expertise)</h4>
+                <p>Alcune classi (es: Dottore, Giocatore d'Azzardo) ottengono <strong>expertise</strong> in certe abilità. 
+                Questo significa <strong>doppio bonus competenza</strong>.</p>
+
+                <div class="example-box">
+                    <p><strong>Esempio Calcolo:</strong></p>
+                    <p>Sei un Dottore livello 5 con INT 16 (+3). Hai competenza in Medicina e expertise in Medicina.</p>
+                    <ul>
+                        <li><strong>Bonus Competenza liv 5:</strong> +3</li>
+                        <li><strong>Expertise:</strong> +3 × 2 = +6</li>
+                        <li><strong>Modificatore INT:</strong> +3</li>
+                        <li><strong>TOTALE Check Medicina:</strong> d20 + 3 (INT) + 6 (expertise) = <strong>d20+9</strong></li>
+                    </ul>
+                </div>
+
+                <h4>Classe Difficoltà (CD)</h4>
+                <p>Ogni check ha una <strong>Classe Difficoltà (CD)</strong> che devi eguagliare o superare per avere successo. 
+                Il Master decide la CD in base alla difficoltà del compito:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CD</th>
+                            <th>Difficoltà</th>
+                            <th>Esempio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>5</td><td>Molto Facile</td><td>Notare cavallo in prateria aperta</td></tr>
+                        <tr><td>10</td><td>Facile</td><td>Scalare roccia con buoni appigli</td></tr>
+                        <tr><td>13</td><td>Media</td><td>Convincere mercante a sconto 10%</td></tr>
+                        <tr><td>15</td><td>Difficile</td><td>Scassinare serratura complessa</td></tr>
+                        <tr><td>18</td><td>Molto Difficile</td><td>Camminare su corda tesa durante tempesta</td></tr>
+                        <tr><td>20</td><td>Quasi Impossibile</td><td>Persuadere nemico giurato ad allearsi</td></tr>
+                        <tr><td>25</td><td>Impossibile (Eroico)</td><td>Saltare canyon 10m senza rincorsa</td></tr>
+                        <tr><td>30</td><td>Leggendario</td><td>Convincere Shoggoth a non mangiare città</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>Vantaggio e Svantaggio</h4>
+                <p>In circostanze favorevoli o sfavorevoli, potresti avere <strong>vantaggio</strong> o <strong>svantaggio</strong>:</p>
+                <ul>
+                    <li><strong>Vantaggio:</strong> Tira 2d20, prendi il risultato <strong>più alto</strong></li>
+                    <li><strong>Svantaggio:</strong> Tira 2d20, prendi il risultato <strong>più basso</strong></li>
+                </ul>
+
+                <p><strong>IMPORTANTE:</strong> Vantaggio e svantaggio non si sommano. Se hai sia vantaggio che svantaggio (da fonti 
+                multiple), si annullano a vicenda e tiri 1d20 normale.</p>
+
+                <div class="example-box">
+                    <p><strong>Esempio Vantaggio:</strong></p>
+                    <p>Stai cercando di scassinare serratura con <strong>kit scasso di qualità</strong> (vantaggio) mentre un alleato 
+                    <strong>fa guardia e ti avverte di pericoli</strong> (altro vantaggio). Hai vantaggio totale (non doppio vantaggio, 
+                    semplicemente vantaggio). Tiri 2d20: <strong>7, 18</strong>. Prendi 18!</p>
+                </div>
+
+                <h4>Check Passivo</h4>
+                <p>Per alcune abilità (principalmente Percezione e Intuizione), il Master può usare il tuo <strong>punteggio passivo</strong> 
+                invece di chiederti un tiro. Il punteggio passivo è:</p>
+
+                <div class="stat-block" style="text-align: center; font-size: 1.2em;">
+                    <p><strong>10 + tutti i modificatori che applicheresti a un check normale</strong></p>
+                </div>
+
+                <p><strong>Esempio:</strong> Hai Percezione +5. La tua Percezione Passiva è <strong>15</strong>. Se un nemico si nasconde 
+                con Furtività check 14, lo noti automaticamente senza tirare.</p>
+
+                <h4>Check Gruppo</h4>
+                <p>Quando l'intero gruppo tenta la stessa azione (es: tutti attraversano fiume, tutti si nascondono), il Master può 
+                chiamare un <strong>check gruppo</strong>:</p>
+                <ul>
+                    <li>Tutti tirano il check individualmente</li>
+                    <li>Se <strong>almeno metà</strong> del gruppo ha successo, il gruppo nel complesso ha successo</li>
+                </ul>
+
+                <h4>Aiutare (Help Action)</h4>
+                <p>Puoi aiutare un alleato in un check se:</p>
+                <ul>
+                    <li>Sei competente in quell'abilità, OPPURE</li>
+                    <li>Il Master giudica che puoi assistere ragionevolmente</li>
+                </ul>
+                <p><strong>Effetto:</strong> L'alleato ha <strong>vantaggio</strong> sul check.</p>
+
+                <div class="tip-box">
+                    <p><strong>Quando NON puoi aiutare:</strong> Se il compito richiede precisione individuale (es: scassinare serratura, 
+                    chirurgia, tiro di precisione), solo 1 persona può provare. Aiutare non è sempre possibile!</p>
+                </div>
+            </section>
+
+            <section id="lista-abilita">
+                <h3>4.2 Le 17 Abilità</h3>
+                
+                <p>Colt & Cthulhu usa <strong>17 abilità</strong>, ciascuna associata a una caratteristica primaria. Alcune abilità 
+                possono usare caratteristiche alternative in circostanze specifiche (indicato tra parentesi).</p>
+
+                <!-- ACROBAZIA -->
+                <div class="stat-block">
+                    <h4>ACROBAZIA (Destrezza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Equilibrio, agilità, coordinazione motoria complessa, 
+                    evitare cadute, contorsionismo.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Mantenersi in equilibrio su superfici strette, fare capriole 
+                    per evitare attacchi, atterrare senza danno da cadute, liberarsi da manette/corde, volteggiare sopra ostacoli.</div>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Camminare su trave larga 15cm</li>
+                        <li>CD 13: Fare capriola attraverso finestra stretta durante inseguimento</li>
+                        <li>CD 15: Camminare su corda tesa tra edifici</li>
+                        <li>CD 18: Atterrare senza danno da caduta 6m</li>
+                        <li>CD 20: Liberarsi da corde mentre legato (senza attrezzi)</li>
+                    </ul>
+                    <div class="stat-line"><strong>Variante:</strong> <em>Acrobazia (Forza)</em> per imprese atletiche acrobatiche 
+                    che richiedono forza (es: salto mortale con armatura pesante).</div>
+                </div>
+
+                <div class="example-box">
+                    <p><strong>Esempio Acrobazia:</strong> Stai correndo sui tetti di Deadwood inseguito da banditi. Devi saltare 
+                    un gap di 3m tra edifici. Il Master chiede check <strong>Atletica CD 12</strong> per il salto. Superi! Ora devi 
+                    atterrare su tetto inclinato bagnato dalla pioggia senza scivolare giù. Check <strong>Acrobazia CD 15</strong>. 
+                    Tiri 13+2 (DES) = 15. Esatto! Atterri con grazia e continui a correre.</p>
+                </div>
+
+                <!-- ADDESTRARE ANIMALI -->
+                <div class="stat-block">
+                    <h4>ADDESTRARE ANIMALI (Saggezza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Comunicare con animali, calmarli, addestrarli, cavalcare.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Calmare cavallo spaventato, addestrare cane da guardia, 
+                    intuire intenzioni animale, cavalcare animale non addestrato, far eseguire trick complessi.</div>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Calmare cavallo domestico spaventato da tuono</li>
+                        <li>CD 13: Cavalcare cavallo selvaggio senza essere disarcionato</li>
+                        <li>CD 15: Addestrare cane a cercare persona specifica (richiede 1 settimana)</li>
+                        <li>CD 18: Calmare lupo selvatico e convincerlo a non attaccare</li>
+                        <li>CD 20: Far eseguire trick complesso a animale (es: aquila recupera oggetto specifico)</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <p><strong>Esempio Addestrare Animali:</strong> Il tuo gruppo trova un cavallo selvaggio mustang nelle praterie. 
+                    Vuoi domarlo per usarlo come mount. Il Master chiede check <strong>Addestrare Animali CD 15</strong> (azione 
+                    che richiede 1 ora). Tiri 12 + 3 (SAG) + 2 (competenza) = 17. Successo! Dopo un'ora di lavoro paziente, il 
+                    mustang accetta la sella. È ancora un po' irrequieto, ma ti permette di cavalcarlo.</p>
+                </div>
+
+                <!-- ATLETICA -->
+                <div class="stat-block">
+                    <h4>ATLETICA (Forza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Sforzi fisici che richiedono forza, resistenza, e 
+                    coordinazione atletica.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Scalare, nuotare, saltare, sfondare porte, lottare 
+                    (grapple), spingere/tirare oggetti pesanti, marce forzate.</div>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Scalare parete roccia con buoni appigli</li>
+                        <li>CD 13: Nuotare contro corrente per 30m</li>
+                        <li>CD 15: Saltare gap 3m con rincorsa</li>
+                        <li>CD 18: Sfondare porta di legno rinforzata con spalmate</li>
+                        <li>CD 20: Scalare parete liscia 9m con corda ma senza appigli</li>
+                    </ul>
+                    <div class="stat-line"><strong>Grapple (Afferrare):</strong> Check Atletica contestato vs Atletica o Acrobazia 
+                    del bersaglio. Se vinci, lo afferri (velocità 0, svantaggio attacchi).</div>
+                </div>
+
+                <!-- FURTIVITÀ -->
+                <div class="stat-block">
+                    <h4>FURTIVITÀ (Destrezza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Muoversi silenziosamente, nascondersi, evitare rilevamento.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Intrufolarsi in edificio, seguire qualcuno senza essere visto, 
+                    nascondersi in ombra, muoversi silenziosamente, tendere imboscata.</div>
+                    <div class="stat-line"><strong>CD:</strong> Tipicamente contestato vs <strong>Percezione Passiva</strong> 
+                    dell'osservatore. Se il tuo check Furtività supera la loro Percezione Passiva, non ti vedono/sentono.</div>
+                    <div class="stat-line"><strong>Condizioni Furtività:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li><strong>Puoi nasconderti SOLO se:</strong> Sei fortemente oscurato (oscurità, nebbia fitta) O dietro 
+                        copertura (albero, muro, etc.) che blocca linea di vista.</li>
+                        <li><strong>Svantaggio se:</strong> Armatura pesante, terreno rumoroso (ghiaia, foglie secche), torcia accesa.</li>
+                        <li><strong>Vantaggio se:</strong> Buio, nebbia, folla rumorosa, camuffamento.</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <p><strong>Esempio Furtività:</strong> Vuoi intrufolarti nel saloon di notte per rubare documenti. Scassi 
+                    finestra posteriore ed entri. Il Master chiede check <strong>Furtività</strong>. Tiri 14 + 4 (DES) + 2 (competenza) 
+                    = 20. Il barista dorme al piano superiore con <strong>Percezione Passiva 12</strong>. Il tuo 20 supera il 12 → 
+                    entri silenziosamente. Ora devi attraversare stanza con pavimento di legno cigolante. Altro check Furtività: 
+                    tiri 8 + 4 + 2 = 14. Ancora superiore a 12 → nessun rumore. Rubi i documenti e esci senza incidenti.</p>
+                </div>
+
+                <!-- INGANNO -->
+                <div class="stat-block">
+                    <h4>INGANNO (Carisma)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Mentire convincentemente, bluffare, travestirsi, 
+                    nascondere intenzioni.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Mentire senza essere scoperto, bluffare al poker, 
+                    travestirsi da altra persona, fingere emozioni, creare falsa identità.</div>
+                    <div class="stat-line"><strong>CD:</strong> Tipicamente contestato vs <strong>Intuizione</strong> del bersaglio. 
+                    Se il tuo Inganno supera la loro Intuizione, ti credono.</div>
+                    <div class="stat-line"><strong>Modificatori:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li><strong>Vantaggio se:</strong> Menzogna plausibile, evidenze che ti supportano, bersaglio vuole crederti.</li>
+                        <li><strong>Svantaggio se:</strong> Menzogna assurda, contraddici fatti noti, bersaglio è sospettoso.</li>
+                        <li>CD +5 se bersaglio ha motivo forte per non fidarsi (es: li hai traditi prima)</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <p><strong>Esempio Inganno:</strong> Sei circondato da banditi che chiedono dove hai nascosto l'oro. Menti: 
+                    "L'ho sepolto vicino al vecchio mulino, 5 miglia a nord!". Il Master chiede check <strong>Inganno</strong> 
+                    contestato contro la loro <strong>Intuizione</strong>. Tiri 15 + 3 (CAR) + 2 (competenza) = 20. Il capo bandito 
+                    tira Intuizione: 8 + 0 (SAG) = 8. Il tuo 20 schiaccia il suo 8 → ti crede! I banditi galoppano verso nord, 
+                    permettendoti di scappare a sud.</p>
+                </div>
+
+                <!-- INTIMIDIRE -->
+                <div class="stat-block">
+                    <h4>INTIMIDIRE (Carisma o Forza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Spaventare o costringere altri attraverso minacce, 
+                    violenza implicita, o presenza intimidatoria.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Estorcere informazioni, far scappare nemici deboli, 
+                    costringere arresa, impressionare con dimostrazione forza.</div>
+                    <div class="stat-line"><strong>Caratteristica:</strong> Normalmente Carisma (intimidazione verbale/psicologica), 
+                    ma puoi usare Forza per intimidazione fisica (es: spaccare tavolo con pugno per impressionare).</div>
+                    <div class="stat-line"><strong>CD:</strong> Tipicamente vs Saggezza del bersaglio (forza mentale).</div>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Intimidire civile comune</li>
+                        <li>CD 13: Far parlare bandito catturato</li>
+                        <li>CD 15: Costringere nemico ferito ad arrendersi invece di combattere</li>
+                        <li>CD 18: Intimidire boss gang veterano</li>
+                        <li>CD 20+: Intimidire non-morto o creatura senza paura (quasi impossibile)</li>
+                    </ul>
+                </div>
+
+                <!-- INTRATTENERE -->
+                <div class="stat-block">
+                    <h4>INTRATTENERE (Carisma)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Performance artistica - musica, danza, teatro, storytelling, 
+                    oratoria.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Guadagnare denaro con performance, distrarre folla, 
+                    ispirare alleati, impressionare nobile con recita.</div>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Performance decente in saloon, guadagni $5</li>
+                        <li>CD 13: Performance buona, pubblico applaude, guadagni $15</li>
+                        <li>CD 15: Performance memorabile, folla chiede encore, guadagni $30</li>
+                        <li>CD 18: Performance eccezionale, diventi famoso localmente, guadagni $50+</li>
+                        <li>CD 20: Performance leggendaria, la gente parlerà di te per anni</li>
+                    </ul>
+                    <div class="stat-line"><strong>Specializzazioni:</strong> Specifica strumento (chitarra, piano), stile 
+                    (canto, danza), o oratorio (predicare, storytelling).</div>
+                </div>
+
+                <!-- INTUIZIONE -->
+                <div class="stat-block">
+                    <h4>INTUIZIONE (Saggezza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Leggere intenzioni, motivazioni, e onestà di altri. 
+                    Capire se qualcuno mente o nasconde qualcosa.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Determinare se qualcuno mente (vs Inganno), capire 
+                    emozioni vere, predire comportamento, leggere linguaggio corpo.</div>
+                    <div class="stat-line"><strong>Intuizione Passiva:</strong> Come Percezione Passiva, il Master può usare 
+                    la tua Intuizione Passiva automaticamente quando qualcuno cerca di ingannarti.</div>
+                    <div class="stat-line"><strong>CD:</strong> Tipicamente contestato vs Inganno o CD fissa se leggi situazione:</div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Capire emozione superficiale (arrabbiato, felice, triste)</li>
+                        <li>CD 13: Determinare se qualcuno nasconde qualcosa</li>
+                        <li>CD 15: Predire prossima mossa in negoziazione</li>
+                        <li>CD 18: Capire motivazione profonda nascosta</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <p><strong>Esempio Intuizione:</strong> Il sindaco ti assume per investigare omicidi. Ti dice: "È stato sicuramente 
+                    un vagabondo di passaggio". Qualcosa nel suo tono sembra strano. Il Master chiede check <strong>Intuizione</strong> 
+                    segreto (non sai la CD). Tiri 14 + 2 (SAG) + 2 (competenza) = 18. CD era 15. Il Master: "Ti accorgi che il sindaco 
+                    deglutisce nervosamente e evita contatto visivo quando dice 'vagabondo'. È chiaramente nervoso riguardo qualcosa. 
+                    Forse sa più di quanto dica." Ora puoi investigare il sindaco...</p>
+                </div>
+
+                <!-- INVESTIGARE -->
+                <div class="stat-block">
+                    <h4>INVESTIGARE (Intelligenza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Deduzione logica, trovare indizi nascosti, analizzare 
+                    scene crimine, ricerca informazioni.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Cercare indizi in scena crimine, decifrare codici, 
+                    trovare passaggi segreti, ricerca in biblioteca, seguire tracce cartacee (non fisiche, quelle sono Sopravvivenza).</div>
+                    <div class="stat-line"><strong>Differenza con Percezione:</strong> Percezione = notare (sensi). Investigare = 
+                    analizzare (logica).</div>
+                    <ul style="margin-left: 40px;">
+                        <li><strong>Percezione:</strong> "Noti impronte sul pavimento"</li>
+                        <li><strong>Investigare:</strong> "Analizzando le impronte, deduci che sono state fatte 2 ore fa da stivali 
+                        militari taglia 10, persona che zoppica sulla gamba destra"</li>
+                    </ul>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Trovare indizio ovvio in scena crimine (arma abbandonata)</li>
+                        <li>CD 13: Trovare passaggio segreto cercando attivamente</li>
+                        <li>CD 15: Decifrare lettera in codice semplice</li>
+                        <li>CD 18: Ricostruire sequenza eventi da indizi frammentari</li>
+                        <li>CD 20: Trovare dettaglio microscopico cruciale (fibra tessuto su corpo)</li>
+                    </ul>
+                </div>
+
+                <!-- MEDICINA -->
+                <div class="stat-block">
+                    <h4>MEDICINA (Intelligenza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Conoscenza medica, curare ferite, diagnosticare malattie, 
+                    chirurgia da campo.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Stabilizzare moribondi, diagnosticare malattia/veleno, 
+                    curare ferite con kit medico, autopsie, chirurgia, riconoscere sintomi.</div>
+                    <div class="stat-line"><strong>Stabilizzare Moribondo:</strong> Azione standard, check Medicina CD 10. 
+                    Successo = creatura a 0 PF si stabilizza (non muore).</div>
+                    <div class="stat-line"><strong>Curare con Kit Medico:</strong> Azione 1 minuto, usa 1 carica kit medico. 
+                    Check Medicina CD 13: Successo = bersaglio recupera 1d6 + mod INT PF. (Alcune classi come Dottore hanno 
+                    abilità che potenziano questo).</div>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Stabilizzare moribondo, diagnosticare influenza comune</li>
+                        <li>CD 13: Curare ferita con bendaggi, riconoscere sintomi avvelenamento</li>
+                        <li>CD 15: Chirurgia da campo (estrarre pallottola), diagnosticare malattia rara</li>
+                        <li>CD 18: Autopsia per determinare causa morte esatta, trattare veleno esotico</li>
+                        <li>CD 20: Chirurgia maggiore (amputazione, riparare organo danneggiato)</li>
+                    </ul>
+                </div>
+
+                <!-- NATURA -->
+                <div class="stat-block">
+                    <h4>NATURA (Intelligenza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Conoscenza botanica, zoologica, geologica, meteorologica. 
+                    Sapere su mondo naturale.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Identificare piante/animali, sapere proprietà erbe, 
+                    prevedere tempo meteorologico, riconoscere minerali, sapere habitat creature.</div>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Riconoscere pianta comune (quercia, cactus)</li>
+                        <li>CD 13: Identificare traccia animale (lupo, orso, cervo)</li>
+                        <li>CD 15: Riconoscere erba medicinale o velenosa</li>
+                        <li>CD 18: Identificare minerale prezioso (oro, argento) vs pirite</li>
+                        <li>CD 20: Sapere debolezza creatura naturale rara (Wendigo vulnerabile fuoco?)</li>
+                    </ul>
+                </div>
+
+                <!-- PERCEZIONE -->
+                <div class="stat-block">
+                    <h4>PERCEZIONE (Saggezza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Consapevolezza ambientale, notare dettagli, individuare 
+                    pericoli. La più usata!</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Individuare nemici nascosti, notare trappole, sentire rumori 
+                    sospetti, vedere dettagli lontani, essere vigile durante guardia.</div>
+                    <div class="stat-line"><strong>Percezione Passiva:</strong> 10 + mod SAG + bonus competenza (se competente). 
+                    Il Master usa questo come baseline per notare cose automaticamente senza check.</div>
+                    <div class="stat-line"><strong>Sensi Speciali:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li><strong>Vista:</strong> Notare movimento, leggere labbra, vedere dettagli</li>
+                        <li><strong>Udito:</strong> Sentire passi, conversazioni distanti, rumori sospetti</li>
+                        <li><strong>Olfatto:</strong> Odore fumo, profumo, decomposizione</li>
+                        <li><strong>Tatto:</strong> Vibrazioni terra, cambio temperatura</li>
+                    </ul>
+                    <div class="stat-line"><strong>CD:</strong> Tipicamente contestato vs Furtività di creature nascoste, 
+                    o CD fissa per notare oggetti:</div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Notare porta chiaramente visibile</li>
+                        <li>CD 13: Sentire conversazione sussurrata dietro porta</li>
+                        <li>CD 15: Individuare tripwire di trappola prima di calpestarlo</li>
+                        <li>CD 18: Notare dettaglio minuscolo (spostamento lieve oggetto su scrivania)</li>
+                        <li>CD 20: Vedere/sentire qualcosa estremamente nascosto o distante</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <p><strong>Percezione è Critica per Sopravvivenza!</strong> Tutti i personaggi dovrebbero avere almeno 
+                    Percezione +3 (mod SAG positivo). Molte trappole e imboscate mortali possono essere evitate con buona Percezione. 
+                    Se nessuno nel party ha Percezione decente, siete in grave pericolo.</p>
+                </div>
+
+                <!-- PERSUASIONE -->
+                <div class="stat-block">
+                    <h4>PERSUASIONE (Carisma)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Convincere altri attraverso eloquenza, logica, fascino, 
+                    o appeal emotivo.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Negoziare prezzi, convincere PNG ad aiutare, calmare 
+                    situazione tesa, flirtare, ispirare folla, advocacy in tribunale.</div>
+                    <div class="stat-line"><strong>Differenza con Inganno:</strong> Persuasione è <strong>onesta</strong> (anche 
+                    se parziale). Inganno è <strong>menzogna</strong>.</div>
+                    <div class="stat-line"><strong>Attitudine PNG:</strong> La CD dipende da attitudine iniziale del PNG:</div>
+                    <ul style="margin-left: 40px;">
+                        <li><strong>Ostile:</strong> CD 20+ (vuole farti del male)</li>
+                        <li><strong>Diffidente:</strong> CD 15-20 (sospettoso)</li>
+                        <li><strong>Neutrale:</strong> CD 10-15 (indifferente)</li>
+                        <li><strong>Amichevole:</strong> CD 5-10 (ben disposto)</li>
+                        <li><strong>Utile:</strong> CD 0-5 (farebbe favori ragionevoli senza check)</li>
+                    </ul>
+                    <div class="stat-line"><strong>Successo:</strong> Migliora attitudine di 1 gradino (Diffidente → Neutrale) 
+                    E convinci PNG a fare richiesta ragionevole.</div>
+                    <div class="stat-line"><strong>Fallimento per 5+:</strong> Peggiora attitudine di 1 gradino!</div>
+                </div>
+
+                <div class="example-box">
+                    <p><strong>Esempio Persuasione:</strong> Il commerciante vuole $50 per Winchester. Tu hai solo $40. 
+                    Provi a negoziare. Commerciante è Neutrale (CD 13). Tiri Persuasione: 11 + 3 (CAR) + 2 (competenza) = 16. 
+                    Successo! "Va bene, $40. Ma solo perché sei un cliente fedele." Se avessi fallito per 5+ (tirando 7 o meno), 
+                    sarebbe diventato Diffidente e avrebbe rifiutato di venderti QUALSIASI cosa.</p>
+                </div>
+
+                <!-- RAPIDITÀ DI MANO -->
+                <div class="stat-block">
+                    <h4>RAPIDITÀ DI MANO (Destrezza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Destrezza manuale fine, prestidigitazione, pickpocketing, 
+                    manipolare oggetti sotto osservazione.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Rubare portafoglio, nascondere oggetto (arma, carta), 
+                    scassinare serratura, disarmare trappola, trick con carte, piazzare oggetto su qualcuno.</div>
+                    <div class="stat-line"><strong>CD:</strong> Tipicamente contestato vs <strong>Percezione</strong> dell'osservatore. 
+                    Se osservatori multipli, usa Percezione Passiva più alta.</div>
+                    <div class="stat-line"><strong>Vantaggio se:</strong> Osservatore distratto, folla, scarsa illuminazione.</div>
+                    <div class="stat-line"><strong>Svantaggio se:</strong> Osservatore vigile/sospettoso, illuminazione forte, 
+                    oggetto grande/pesante.</div>
+                    <div class="stat-line"><strong>Scassinare Serrature:</strong> Richiede kit scasso. CD dipende da complessità:</div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Serratura semplice (cassetto, baule economico)</li>
+                        <li>CD 13: Serratura media (porta casa normale)</li>
+                        <li>CD 15: Serratura buona (banca, cassaforte)</li>
+                        <li>CD 18: Serratura eccellente (vault, prigione alta sicurezza)</li>
+                        <li>CD 20+: Serratura magistrale o magica</li>
+                    </ul>
+                </div>
+
+                <!-- RELIGIONE -->
+                <div class="stat-block">
+                    <h4>RELIGIONE (Intelligenza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Conoscenza teologica, rituali religiosi, simbolismo sacro, 
+                    storia chiese, riconoscere non-morti/celestiali/fiends.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Riconoscere simbolo religioso/cultista, sapere debolezze 
+                    non-morti, conoscere rituali esorcismo, identificare reliquia sacra, sapere dogmi/credenze.</div>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Riconoscere simbolo cristiano/ebraico/ecc comune</li>
+                        <li>CD 13: Sapere debolezze base vampiri (sole, acqua benedetta, paletto cuore)</li>
+                        <li>CD 15: Riconoscere simbolo cultista oscuro specifico (Yellow Sign, etc.)</li>
+                        <li>CD 18: Conoscere rituale esorcismo completo</li>
+                        <li>CD 20: Identificare reliquia leggendaria (Arca Alleanza, Santo Graal)</li>
+                    </ul>
+                </div>
+
+                <!-- SOPRAVVIVENZA -->
+                <div class="stat-block">
+                    <h4>SOPRAVVIVENZA (Saggezza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Competenza wilderness - tracciare, cacciare, trovare 
+                    cibo/acqua, navigare, prevedere tempo.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Seguire tracce, cacciare/pescare, trovare acqua potabile, 
+                    costruire riparo, orientarsi senza mappa, prevedere tempeste, evitare pericoli naturali.</div>
+                    <div class="stat-line"><strong>Tracciare:</strong> CD dipende da freschezza traccia e terreno:</div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Traccia fresca (1 ora) su terreno morbido (fango, neve)</li>
+                        <li>CD 13: Traccia recente (3 ore) su terreno normale</li>
+                        <li>CD 15: Traccia vecchia (12 ore) o terreno difficile (roccia)</li>
+                        <li>CD 18: Traccia molto vecchia (24+ ore) o obliterata parzialmente</li>
+                        <li>CD 20+: Traccia giorni fa o dopo pioggia/vento forte</li>
+                    </ul>
+                    <div class="stat-line"><strong>Foraging (Cercare Cibo):</strong> Check Sopravvivenza per trovare cibo/acqua 
+                    per gruppo. CD 15 in ambiente normale, CD 10 in ambiente ricco (foresta con fiume), CD 20 in ambiente ostile 
+                    (deserto). Successo = trovi cibo/acqua per 1d6 persone per 1 giorno.</div>
+                </div>
+
+                <!-- STORIA -->
+                <div class="stat-block">
+                    <h4>STORIA (Intelligenza)</h4>
+                    <div class="stat-line"><strong>Descrizione:</strong> Conoscenza eventi storici, culture antiche, leggende, 
+                    guerre, nazioni, figure storiche.</div>
+                    <div class="stat-line"><strong>Usata per:</strong> Ricordare fatto storico rilevante, conoscere storia locale, 
+                    identificare artefatto antico, sapere leggende su luoghi/creature, contestualizzare eventi.</div>
+                    <div class="stat-line"><strong>Esempi CD:</strong></div>
+                    <ul style="margin-left: 40px;">
+                        <li>CD 10: Ricordare evento storico maggiore (Guerra Civile terminata 1865)</li>
+                        <li>CD 13: Sapere storia di città famosa (Deadwood fondata 1876 dopo oro)</li>
+                        <li>CD 15: Conoscere leggenda locale (la Miniera Maledetta ha storia 100 anni)</li>
+                        <li>CD 18: Ricordare dettaglio oscuro (trattato specifico con tribù nativa)</li>
+                        <li>CD 20: Sapere informazione quasi persa (nome vero di cultista 300 anni fa)</li>
+                    </ul>
+                </div>
+
+                <h4>Tabella Riassuntiva Abilità</h4>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Abilità</th>
+                            <th>Caratteristica</th>
+                            <th>Uso Principale</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Acrobazia</td><td>DES</td><td>Equilibrio, capriole, contorsionismo</td></tr>
+                        <tr><td>Addestrare Animali</td><td>SAG</td><td>Calmare, addestrare, cavalcare animali</td></tr>
+                        <tr><td>Atletica</td><td>FOR</td><td>Scalare, nuotare, saltare, grapple</td></tr>
+                        <tr><td>Furtività</td><td>DES</td><td>Nascondersi, muoversi silenziosamente</td></tr>
+                        <tr><td>Inganno</td><td>CAR</td><td>Mentire, bluffare, travestirsi</td></tr>
+                        <tr><td>Intimidire</td><td>CAR/FOR</td><td>Spaventare, minacciare, costringere</td></tr>
+                        <tr><td>Intrattenere</td><td>CAR</td><td>Musica, danza, oratoria, performance</td></tr>
+                        <tr><td>Intuizione</td><td>SAG</td><td>Leggere intenzioni, rilevare menzogne</td></tr>
+                        <tr><td>Investigare</td><td>INT</td><td>Trovare indizi, deduzione, analisi</td></tr>
+                        <tr><td>Medicina</td><td>INT</td><td>Curare ferite, diagnosticare, chirurgia</td></tr>
+                        <tr><td>Natura</td><td>INT</td><td>Conoscenza piante/animali/geologia</td></tr>
+                        <tr><td>Percezione</td><td>SAG</td><td>Notare dettagli, individuare pericoli</td></tr>
+                        <tr><td>Persuasione</td><td>CAR</td><td>Convincere, negoziare, ispirare</td></tr>
+                        <tr><td>Rapidità di Mano</td><td>DES</td><td>Pickpocket, scassinare, prestidigitazione</td></tr>
+                        <tr><td>Religione</td><td>INT</td><td>Conoscenza teologica, simboli sacri</td></tr>
+                        <tr><td>Sopravvivenza</td><td>SAG</td><td>Tracciare, cacciare, foraging, navigare</td></tr>
+                        <tr><td>Storia</td><td>INT</td><td>Eventi storici, leggende, culture</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="competenze-tools">
+                <h3>4.3 Competenze Strumenti</h3>
+                
+                <p>Oltre alle abilità, puoi avere <strong>competenza con strumenti</strong> specifici. Quando usi uno strumento 
+                con cui sei competente, aggiungi bonus competenza al check.</p>
+
+                <h4>Strumenti Comuni nel Weird West</h4>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Strumento</th>
+                            <th>Costo</th>
+                            <th>Uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Kit Scasso</strong></td>
+                            <td>$25</td>
+                            <td>Scassinare serrature. Check Rapidità di Mano + comp strumento</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kit Medico</strong></td>
+                            <td>$5 (10 usi)</td>
+                            <td>Curare ferite. Check Medicina + comp strumento</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Attrezzi Armaiolo</strong></td>
+                            <td>$20</td>
+                            <td>Riparare/modificare armi da fuoco</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Attrezzi Fabbro</strong></td>
+                            <td>$20</td>
+                            <td>Forgiare/riparare metallo, ferri cavallo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Attrezzi Carpentiere</strong></td>
+                            <td>$8</td>
+                            <td>Costruire/riparare strutture legno</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Attrezzi Minatore</strong></td>
+                            <td>$10</td>
+                            <td>Scavare efficacemente, identificare minerali</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kit Travestimento</strong></td>
+                            <td>$25</td>
+                            <td>Creare travestimenti. Check Inganno + comp strumento</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kit Avvelenatore</strong></td>
+                            <td>$50</td>
+                            <td>Creare/identificare veleni</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Attrezzi Erborista</strong></td>
+                            <td>$5</td>
+                            <td>Identificare/preparare rimedi erboristici</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Carte da Gioco</strong></td>
+                            <td>$0.50</td>
+                            <td>Giocare poker, fare tricks. Check Rapidità di Mano o Inganno</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Strumenti Musicali</strong></td>
+                            <td>$5-100</td>
+                            <td>Suonare. Check Intrattenere + comp strumento</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box">
+                    <p><strong>Usando Strumenti Senza Competenza:</strong> Puoi ancora tentare di usare strumenti con cui non sei 
+                    competente, ma NON aggiungi bonus competenza e potresti avere svantaggio (decisione Master).</p>
+                    <p><strong>Esempio:</strong> Provi a scassinare serratura senza competenza Kit Scasso. Tiri Rapidità di Mano 
+                    con svantaggio, senza aggiungere bonus competenza. CD è la stessa, ma sei molto meno probabile a succedere.</p>
+                </div>
+            </section>
+
+            <section id="consigli">
+                <h3>4.4 Consigli per Usare le Abilità</h3>
+                
+                <h4>Per i Giocatori</h4>
+                <ul>
+                    <li><strong>Descrivi Azioni, Non Chiedere Check:</strong> Invece di "Faccio check Percezione", dì "Guardo 
+                    attentamente attorno alla stanza cercando trappole". Il Master poi decide se serve check.</li>
+                    <li><strong>Sii Creativo:</strong> Le abilità possono essere usate in modi non convenzionali. Vuoi intimidire 
+                    bandito? Potresti usare FOR (Atletica) per piegare barra ferro davanti a lui invece di minacce verbali (CAR Intimidire).</li>
+                    <li><strong>Lavorate di Squadra:</strong> Usa azione Aiutare per dare vantaggio a alleati in check cruciali.</li>
+                    <li><strong>Accetta Fallimenti:</strong> Fallire check non è fine del mondo. Crea tensione e complicazioni interessanti!</li>
+                </ul>
+
+                <h4>Per i Master</h4>
+                <ul>
+                    <li><strong>Non Chiedere Check per Tutto:</strong> Se esito è scontato o irrilevante, non tirare. "Scalare 
+                    la scala?" → No check, successo automatico.</li>
+                    <li><strong>Un Check per Situazione:</strong> Non far ritirare lo stesso check ripetutamente. Se fallisci a 
+                    scassinare serratura, non puoi ritentare immediatamente a meno che situazione cambi (es: nuovo strumento, 
+                    alleato aiuta).</li>
+                    <li><strong>Conseguenze Interessanti:</strong> Fallimenti dovrebbero essere interessanti, non solo "niente succede". 
+                    Fallisci Furtività? Guardia ti sente E suona allarme. Fallisci Atletica scalando? Cadi e subisci danno.</li>
+                    <li><strong>Varia le CD:</strong> Non tutto è CD 15. Usa la tabella difficoltà per riflettere realismo.</li>
+                </ul>
+
+                <div class="example-box">
+                    <p><strong>Esempio Abilità in Azione (Sequenza Completa):</strong></p>
+                    <p><strong>Setup:</strong> Il gruppo deve infiltrarsi nel quartier generale di una gang per rubare documenti 
+                    incriminanti. Pianificano approccio notturno.</p>
+                    
+                    <p><strong>Fase 1 - Ricognizione:</strong> Il Cacciatore fa check <strong>Percezione CD 13</strong> per studiare 
+                    pattern delle guardie. Tira 15+4+2=21. Successo! Master: "Noti che le guardie cambiano turno ogni 2 ore. 
+                    C'è una finestra di 30 secondi quando il retro è non presidiato."</p>
+                    
+                    <p><strong>Fase 2 - Infiltrazione:</strong> Il gruppo si avvicina di notte. Check <strong>Furtività GRUPPO 
+                    vs Percezione Passiva guardia (14)</strong>. Pistolero: 18, Dottore: 16, Reverendo: 11, Cacciatore: 19. 
+                    Tre su quattro succedono → gruppo passa! Il Reverendo fa un po' di rumore (armatura media) ma gli altri 
+                    coprono.</p>
+                    
+                    <p><strong>Fase 3 - Scassinare:</strong> Porta posteriore è chiusa. Il Dottore (esperto kit scasso) fa check 
+                    <strong>Rapidità di Mano CD 15</strong>. Tira 12+3+4 (expertise)=19. Porta si apre silenziosamente!</p>
+                    
+                    <p><strong>Fase 4 - Trovare Documenti:</strong> All'interno, check <strong>Investigare CD 13</strong> per 
+                    trovare cassaforte nascosta. Pistolero (INT -1, no competenza): 14-1=13. Esatto! Trova cassaforte dietro 
+                    quadro.</p>
+                    
+                    <p><strong>Fase 5 - Aprire Cassaforte:</strong> Check <strong>Rapidità di Mano CD 18</strong> (cassaforte 
+                    buona). Dottore: 15+3+4=22. Clic. Cassaforte aperta! Prendono documenti.</p>
+                    
+                    <p><strong>Fase 6 - Complicazione:</strong> Mentre escono, guardia torna in anticipo! Check <strong>Furtività 
+                    vs Percezione</strong>. Reverendo fa 9-1=8 (armatura media). Guardia (Percezione Passiva 14) lo sente! 
+                    "Ehi, chi va là?!"</p>
+                    
+                    <p><strong>Fase 7 - Bluff:</strong> Il Reverendo pensa veloce. Usa <strong>Inganno CD 13</strong>: "Sono il 
+                    nuovo recluta, sto facendo il giro!" Tira 10+2+2=14. Guardia esita... "Ah sì? Non ti avevo visto prima... 
+                    Va bene, continua." Gruppo scappa!</p>
+                    
+                    <p><strong>Risultato:</strong> Missione successo! Nessun combattimento, ma molta tensione. Ogni check aveva 
+                    conseguenze e faceva avanzare la storia.</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="pagination">
+            <a href="capitolo_03.html" class="prev">← Capitolo 3</a>
+            <span>Capitolo 4 di 15</span>
+            <a href="capitolo_05.html" class="next">Capitolo 5: Stress e Sanità →</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p><strong>COLT & CTHULHU</strong> - Capitolo 4: Abilità e Competenze</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">© 2025 - Guida Completa del Giocatore</p>
+    </footer>
+
+    <a href="#top" class="back-to-top">↑</a>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

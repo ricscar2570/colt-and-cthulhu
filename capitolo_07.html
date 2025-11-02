@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 7: Sistema di Combattimento - Colt & Cthulhu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>COLT & CTHULHU</h1>
+        <p class="subtitle">Capitolo 7: Sistema di Combattimento</p>
+    </header>
+
+    <nav class="nav-main">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="capitolo_01.html">Cap 1</a></li>
+            <li><a href="capitolo_02.html" >Cap 2</a></li>
+            <li><a href="capitolo_03.html">Cap 3</a></li>
+            <li><a href="capitolo_04.html">Cap 4</a></li>
+            <li><a href="capitolo_05.html">Cap 5</a></li>
+            <li><a href="capitolo_06.html">Cap 6</a></li>
+            <li><a href="capitolo_07.html"class="active">Cap 7</a></li>
+            <li><a href="capitolo_08.html">Cap 8</a></li>
+            <li><a href="capitolo_09.html">Cap 9</a></li>
+            <li><a href="capitolo_10.html">Cap 10</a></li>
+            <li><a href="capitolo_11.html">Cap 11</a></li>
+            <li><a href="capitolo_12.html">Cap 12</a></li>
+            <li><a href="capitolo_13.html">Cap 13</a></li>
+            <li><a href="capitolo_14.html">Cap 14</a></li>
+            <li><a href="capitolo_15.html">Cap 15</a></li>
+            <li><a href="capitolo_16.html">Cap 16</a></li>
+            <li><a href="appendice_a.html">App. A</a></li>
+			<li><a href="appendice_b.html">App. B</a></li>
+			<li><a href="appendice_c.html">App. C</a></li>
+        
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>›</span> <strong>Capitolo 7</strong>
+        </div>
+
+        <article class="chapter">
+            <h2>Capitolo 7: Sistema di Combattimento</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                Il Weird West è pericoloso. Duelli al tramonto, scontri a fuoco nei saloon, imboscate nel deserto, e battaglie 
+                contro orrori innominabili fanno parte della vita quotidiana. Questo capitolo spiega <strong>come funziona il 
+                combattimento</strong> in Colt & Cthulhu: iniziativa, turni, azioni, movimento, copertura, e situazioni speciali.
+            </p>
+
+            <div class="tip-box">
+                <p><strong>Filosofia di Design:</strong> Il combattimento in Colt & Cthulhu è <strong>letale, veloce, e tattico</strong>. 
+                Un singolo colpo ben piazzato può uccidere. La copertura è vitale. Il posizionamento conta. Non sei eroe invincibile: 
+                sei umano fragile in mondo ostile. Pianifica, usa tattica, e quando necessario... <strong>fuggi</strong>.</p>
+            </div>
+
+            <section id="struttura-combattimento">
+                <h3>7.1 Struttura del Combattimento</h3>
+                
+                <p>Quando inizia il combattimento, il gioco passa da narrativa fluida a struttura <strong>round-by-round</strong>. 
+                Ogni round rappresenta circa <strong>6 secondi</strong> di tempo reale.</p>
+
+                <h4>Fasi Combattimento</h4>
+                <ol style="font-size: 1.1em;">
+                    <li><strong>Sorpresa</strong> (se applicabile) - Determina se qualcuno è colto di sorpresa</li>
+                    <li><strong>Iniziativa</strong> - Determina ordine turni</li>
+                    <li><strong>Round Combat</strong> - Tutti agiscono in ordine iniziativa</li>
+                    <li><strong>Inizio Round Successivo</strong> - Ripeti fino a combattimento finisce</li>
+                </ol>
+
+                <h4>1. Sorpresa</h4>
+                <p>Se un lato imbosca l'altro, il Master determina chi è <strong>sorpreso</strong>:</p>
+                <ul>
+                    <li><strong>Attaccanti:</strong> Fanno check Furtività (gruppo, tutti tirano)</li>
+                    <li><strong>Difensori:</strong> Usano Percezione Passiva (il Master confronta vs check Furtività)</li>
+                    <li><strong>Risultato:</strong> Chi non nota attaccanti è <strong>Sorpreso</strong> per il primo round</li>
+                </ul>
+
+                <p><strong>Effetti Sorpresa:</strong></p>
+                <ul>
+                    <li>Non puoi muoverti o effettuare azioni nel primo round</li>
+                    <li>Non puoi effettuare reazioni fino a dopo il tuo primo turno</li>
+                    <li>Attaccanti hanno vantaggio su attacchi contro di te</li>
+                </ul>
+
+                <div class="example-box">
+                    <p><strong>Esempio Sorpresa:</strong></p>
+                    <p>Il tuo gruppo tende imboscata a banditi nel canyon. Fate check Furtività gruppo:</p>
+                    <ul>
+                        <li>Pistolero: 18 (successo)</li>
+                        <li>Reverendo: 8 (fallimento, armatura media rumorosa)</li>
+                        <li>Cacciatore: 22 (successo)</li>
+                        <li>Dottore: 15 (successo)</li>
+                    </ul>
+                    <p>3 su 4 succedono → Gruppo ha successo sorpresa! I banditi (Percezione Passiva 12) sono sorpresi. 
+                    Nel primo round, banditi non possono agire. Il vostro gruppo spara liberamente con vantaggio. Devastante!</p>
+                </div>
+
+                <h4>2. Iniziativa</h4>
+                <p>Tutti (PG e nemici) tirano <strong>Iniziativa</strong> all'inizio combattimento:</p>
+
+                <div class="stat-block" style="text-align: center; font-size: 1.2em;">
+                    <p><strong>Iniziativa = d20 + Modificatore DES + Bonus Speciali</strong></p>
+                </div>
+
+                <p><strong>Ordine di Gioco:</strong> Dal risultato più alto al più basso. In caso pareggio, va prima chi ha 
+                DES più alta. Se ancora pareggio, tira d20 per decidere.</p>
+
+                <p><strong>Vantaggi Iniziativa:</strong> Alcuni feature danno vantaggio su iniziativa:</p>
+                <ul>
+                    <li><strong>Pistolero - Quick Draw:</strong> Vantaggio iniziativa</li>
+                    <li><strong>Barbarian Rage (se presente):</strong> Vantaggio iniziativa</li>
+                    <li><strong>Alert feat:</strong> +5 iniziativa, non puoi essere sorpreso</li>
+                </ul>
+
+                <div class="tip-box">
+                    <p><strong>Agire per Primo Salva Vite:</strong> Nei gunfight, chi spara prima spesso vince. Investi in DES 
+                    alta e feature che migliorano iniziativa. La differenza tra iniziativa 15 e 20 può essere la vita o la morte.</p>
+                </div>
+
+                <h4>3. Round di Combattimento</h4>
+                <p>Ogni round, tutti hanno un <strong>turno</strong>. Nel tuo turno, puoi fare:</p>
+                <ul>
+                    <li><strong>1 Azione</strong> (Attack, Cast Spell, Dash, etc.)</li>
+                    <li><strong>1 Azione Bonus</strong> (se hai abilità che la garantisce)</li>
+                    <li><strong>Movimento</strong> (fino alla tua velocità, es: 9m)</li>
+                    <li><strong>1 Azione Gratuita</strong> (interagire oggetto, breve frase)</li>
+                    <li><strong>Reazioni</strong> (durante turni altrui, se innescate)</li>
+                </ul>
+
+                <p>Puoi fare queste cose in <strong>qualsiasi ordine</strong>. Esempio: Movimento → Azione → Movimento (dividi 
+                movimento), oppure Azione Bonus → Azione → Movimento.</p>
+            </section>
+
+            <section id="azioni-combattimento">
+                <h3>7.2 Azioni in Combattimento</h3>
+                
+                <h4>Azioni Principali</h4>
+
+                <div class="stat-block">
+                    <h4>ATTACK (Attacco)</h4>
+                    <p><strong>Azione Standard</strong></p>
+                    <p>Effettui un attacco con arma o incantesimo. Se hai <strong>Extra Attack</strong> (feature di classe), 
+                    puoi attaccare multipli con singola azione Attack.</p>
+                    <p><strong>Procedura:</strong></p>
+                    <ol>
+                        <li>Dichiara bersaglio entro gittata</li>
+                        <li>Tira <strong>d20 + modificatore abilità + bonus competenza</strong> (se competente con arma)</li>
+                        <li>Confronta vs <strong>CA</strong> (Classe Armatura) bersaglio</li>
+                        <li>Se ≥ CA → Colpo! Tira danni</li>
+                        <li>Se < CA → Manchi</li>
+                        <li>Se 20 naturale → <strong>Critico</strong>! Danni doppi</li>
+                        <li>Se 1 naturale → <strong>Fumble</strong>! (Misfire per armi fuoco)</li>
+                    </ol>
+                    <p><strong>Modificatori Attacco:</strong></p>
+                    <ul>
+                        <li><strong>Armi Mischia:</strong> d20 + FOR + competenza (o DES se Finesse)</li>
+                        <li><strong>Armi Distanza:</strong> d20 + DES + competenza</li>
+                        <li><strong>Spell Attack:</strong> d20 + mod casting + competenza</li>
+                    </ul>
+                </div>
+
+                <div class="stat-block">
+                    <h4>CAST A SPELL (Lanciare Incantesimo)</h4>
+                    <p><strong>Azione Standard</strong> (salvo spell specifichino diverso)</p>
+                    <p>Lanci un incantesimo. Alcuni spell sono azione bonus, reazione, o richiedono tempo maggiore. Leggi descrizione spell.</p>
+                    <p><strong>Concentrazione:</strong> Molti spell richiedono concentrazione. Puoi concentrarti su 1 solo spell 
+                    alla volta. Se subisci danno mentre concentri, fai TS COS CD 10 o metà danno subito (quale più alta) o perdi spell.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>DASH (Scatto)</h4>
+                    <p><strong>Azione Standard</strong></p>
+                    <p>Guadagni movimento extra = tua velocità. Se velocità 9m, Dash ti dà altri 9m (totale 18m questo turno).</p>
+                    <p><strong>Uso:</strong> Fuggire, inseguire, riposizionarti rapidamente.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>DISENGAGE (Disimpegno)</h4>
+                    <p><strong>Azione Standard</strong></p>
+                    <p>Il tuo movimento questo turno <strong>non provoca attacchi di opportunità</strong>.</p>
+                    <p><strong>Uso:</strong> Ritirarsi da mischia senza essere colpito. Vitale per sopravvivenza.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>DODGE (Schivata)</h4>
+                    <p><strong>Azione Standard</strong></p>
+                    <p>Fino inizio tuo prossimo turno:</p>
+                    <ul>
+                        <li>Attacchi contro di te hanno <strong>svantaggio</strong></li>
+                        <li>Fai TS DES con <strong>vantaggio</strong></li>
+                    </ul>
+                    <p><strong>Uso:</strong> Sopravvivere turno quando sotto fuoco pesante. "Heads down!"</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>HELP (Aiutare)</h4>
+                    <p><strong>Azione Standard</strong></p>
+                    <p>Aiuti alleato in compito o attacco:</p>
+                    <ul>
+                        <li><strong>Help Attack:</strong> Alleato entro 1.5m ha <strong>vantaggio</strong> sul prossimo attacco 
+                        contro nemico entro 1.5m da te (distrai nemico)</li>
+                        <li><strong>Help Check:</strong> Alleato ha vantaggio su check abilità che stai aiutando (es: aiuti a 
+                        spingere masso pesante)</li>
+                    </ul>
+                </div>
+
+                <div class="stat-block">
+                    <h4>HIDE (Nascondersi)</h4>
+                    <p><strong>Azione Standard</strong></p>
+                    <p>Fai check <strong>Furtività</strong> per nasconderti. Devi essere dietro copertura o fortemente oscurato. 
+                    Se successo vs Percezione Passiva nemici, sei nascosto (nemici non sanno dove sei, attacchi contro te svantaggio, 
+                    tuoi attacchi vantaggio).</p>
+                    <p><strong>Rogue:</strong> Può Hide come <strong>azione bonus</strong> invece standard (Cunning Action).</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>READY (Preparare Azione)</h4>
+                    <p><strong>Azione Standard</strong></p>
+                    <p>Prepari azione da compiere come <strong>reazione</strong> quando trigger specifico accade:</p>
+                    <ol>
+                        <li>Decidi che azione prepari (Attack, Cast Spell, Dash, etc.)</li>
+                        <li>Decidi trigger chiaro ("Quando quella porta si apre", "Quando nemico entra in gittata")</li>
+                        <li>Quando trigger accade, usi reazione per compiere azione preparata</li>
+                    </ol>
+                    <p><strong>Esempio:</strong> "Preparo di sparare quando il bandito esce dalla porta." Quando esce, usi reazione 
+                    per sparare.</p>
+                    <p><strong>Spell:</strong> Se prepari spell, devi concentrare. Se trigger non accade, spell è sprecato.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>SEARCH (Cercare)</h4>
+                    <p><strong>Azione Standard</strong></p>
+                    <p>Fai check <strong>Percezione</strong> o <strong>Investigare</strong> per trovare qualcosa (nemico nascosto, 
+                    trappola, oggetto nascosto).</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>USE OBJECT (Usare Oggetto)</h4>
+                    <p><strong>Azione Standard</strong> (o Gratuita se semplice)</p>
+                    <p>Interagisci con oggetto ambiente o inventario:</p>
+                    <ul>
+                        <li><strong>Gratuita:</strong> Estrarre arma, aprire porta non chiusa, raccogliere oggetto</li>
+                        <li><strong>Azione:</strong> Cercare in zaino oggetto specifico, usare kit medico, azionare leva complessa, 
+                        accendere lanterna in combattimento</li>
+                    </ul>
+                </div>
+
+                <h4>Azioni Bonus</h4>
+                <p>Azioni bonus sono concesse da <strong>feature di classe, spell, o situazioni specifiche</strong>. Non puoi fare 
+                azione bonus a meno che qualcosa specificamente te la dia.</p>
+
+                <p><strong>Esempi Azioni Bonus:</strong></p>
+                <ul>
+                    <li><strong>Two-Weapon Fighting:</strong> Se attacchi con arma Light in mano principale, puoi attaccare con 
+                    arma Light in off-hand come azione bonus (senza aggiungere mod abilità a danno, salvo feature specifiche)</li>
+                    <li><strong>Cunning Action (Rogue):</strong> Dash, Disengage, o Hide come azione bonus</li>
+                    <li><strong>Quickload (Gunsmith feature):</strong> Ricaricare arma customizzata come azione bonus</li>
+                    <li><strong>Healing Word (Spell):</strong> Spell cura che è casting time azione bonus</li>
+                </ul>
+
+                <h4>Reazioni</h4>
+                <p>Hai <strong>1 reazione per round</strong>. Si ricarica all'inizio del tuo turno. Reazioni sono trigger da eventi 
+                specifici.</p>
+
+                <p><strong>Reazioni Comuni:</strong></p>
+                <ul>
+                    <li><strong>Attacco di Opportunità:</strong> Quando nemico esce da tua reach senza Disengage, puoi fare 1 attacco 
+                    mischia contro di lui</li>
+                    <li><strong>Azione Preparata:</strong> Quando trigger che hai specificato accade</li>
+                    <li><strong>Shield Spell:</strong> Quando vieni colpito, lancia Shield per +5 CA (se hai spell)</li>
+                    <li><strong>Riposte (Duelist feature):</strong> Quando nemico ti manca in mischia, spari come reazione</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Attacchi di Opportunità nel Gunfight:</strong> Normalmente, armi distanza NON fanno attacchi di 
+                    opportunità. ECCEZIONE: Pistolero con Dueling fighting style può sparare come opportunity attack quando nemico 
+                    esce da reach (rappresenta quick-draw fulmineo a bruciapelo).</p>
+                </div>
+            </section>
+
+            <section id="movimento-copertura">
+                <h3>7.3 Movimento e Posizionamento</h3>
+                
+                <h4>Movimento Base</h4>
+                <p>Ogni personaggio ha una <strong>velocità di movimento</strong> (tipicamente 9m per umani). Nel tuo turno, 
+                puoi muoverti fino a questa distanza.</p>
+
+                <p><strong>Dividere Movimento:</strong> Puoi dividere movimento prima e dopo azione. Esempio: Muovi 4.5m → Spara → 
+                Muovi altri 4.5m (totale 9m).</p>
+
+                <h4>Terreno Difficile</h4>
+                <p>Alcune aree (macerie, fango, boscaglia fitta, scale) sono <strong>terreno difficile</strong>. Ogni metro 
+                movimento costa <strong>2 metri</strong> velocità.</p>
+                <p><strong>Esempio:</strong> Velocità 9m. Attraversi 4.5m terreno difficile → consuma 9m movimento (4.5 × 2). 
+                Non puoi muoverti ulteriormente questo turno.</p>
+
+                <h4>Salti</h4>
+                <ul>
+                    <li><strong>Salto Lungo (con rincorsa 3m):</strong> Salti distanza = FOR in metri. FOR 14 = salti 4.2m</li>
+                    <li><strong>Salto Lungo (senza rincorsa):</strong> Metà distanza</li>
+                    <li><strong>Salto Alto (con rincorsa):</strong> Altezza = 1m + mod FOR × 0.3m. FOR +2 = salti 1.6m alto</li>
+                </ul>
+                <p>Salti lunghi/difficili possono richiedere check Atletica o Acrobazia.</p>
+
+                <h4>Scalare e Nuotare</h4>
+                <p>Scalare superficie con appigli o nuotare in acqua calma costa <strong>1 metro extra per metro</strong> movimento 
+                (velocità dimezzata). Superfici difficili (lisce, corrente forte) richiedono check Atletica.</p>
+
+                <h4>Prone (A Terra)</h4>
+                <p>Puoi buttarti <strong>prono</strong> (a terra) usando 0 metri movimento. Alzarti da prono costa <strong>metà velocità</strong>.</p>
+                
+                <p><strong>Effetti Prono:</strong></p>
+                <ul>
+                    <li><strong>Vantaggio Difensivo:</strong> Attacchi <strong>a distanza</strong> contro di te hanno <strong>svantaggio</strong> 
+                    (sei bersaglio piccolo)</li>
+                    <li><strong>Svantaggio Offensivo:</strong> I tuoi attacchi hanno <strong>svantaggio</strong></li>
+                    <li><strong>Vulnerabilità Mischia:</strong> Attacchi <strong>mischia</strong> contro di te hanno <strong>vantaggio</strong> 
+                    (sei facile da colpire da vicino)</li>
+                </ul>
+
+                <p><strong>Tattica:</strong> In gunfight a distanza, buttarti prono dietro copertura bassa (muro 1m) ti rende 
+                molto difficile da colpire. È "take cover" classico western!</p>
+
+                <h4>Copertura (VITALE!)</h4>
+                <p>La copertura è <strong>più importante che armatura</strong> nel Weird West. Nasconderti dietro oggetti solidi 
+                ti protegge da proiettili.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo Copertura</th>
+                            <th>Bonus CA</th>
+                            <th>Bonus TS DES</th>
+                            <th>Esempi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mezza Copertura</strong></td>
+                            <td>+2 CA</td>
+                            <td>+2 TS DES</td>
+                            <td>Barile, albero stretto, altra creatura, angolo muro, finestra bassa</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3/4 Copertura</strong></td>
+                            <td>+5 CA</td>
+                            <td>+5 TS DES</td>
+                            <td>Muro con feritoia, tronco grosso, carro rovesciato, porta con spioncino</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Copertura Totale</strong></td>
+                            <td>Non colpibile</td>
+                            <td>Automatico successo</td>
+                            <td>Completamente dietro muro solido, dentro bunker chiuso, sottoterra</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Come Funziona:</strong> Per avere copertura, deve esserci ostacolo tra te e attaccante che copre 
+                almeno metà del tuo corpo (mezza copertura) o 3/4 del tuo corpo (3/4 copertura).</p>
+
+                <div class="example-box">
+                    <p><strong>Esempio Copertura in Gunfight:</strong></p>
+                    <p>Sei in shootout in saloon. CA base 13 (cuoio + DES). Senza copertura, sei bersaglio facile.</p>
+                    <p><strong>Scenario 1:</strong> Ti nascondi dietro <strong>bar di legno</strong> (3/4 copertura). 
+                    CA effettiva = 13 + 5 = <strong>18</strong>! Bandito deve tirare 18+ per colpirti. Probabilità colpo scende 
+                    drasticamente!</p>
+                    <p><strong>Scenario 2:</strong> Corri tra barili (mezza copertura). CA = 13 + 2 = 15. Meglio che niente.</p>
+                    <p><strong>Scenario 3:</strong> Stai in mezzo strada senza copertura. CA = 13. Bandito tira 14 → colpo! 
+                    Subisci 1d10+2 = 9 danno. Ahi!</p>
+                    <p><strong>Lezione:</strong> USA SEMPRE COPERTURA!</p>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>Tattica Copertura:</strong></p>
+                    <ul>
+                        <li><strong>Peek and Shoot:</strong> Stai dietro copertura totale. Nel tuo turno, muovi out 1.5m, spara, 
+                        muovi back dietro copertura. Nemici hanno solo 1 turno per colpirti (senza copertura quel momento).</li>
+                        <li><strong>Leapfrog:</strong> Un alleato copre (spara) mentre tu corri verso copertura successiva. 
+                        Alternati. Avanza mentre minimizzi esposizione.</li>
+                        <li><strong>Suppressing Fire:</strong> Spara verso nemici dietro copertura. Anche se non colpisci, li 
+                        tieni "heads down" (Intimidire check per farli usare azione Dodge invece attaccare).</li>
+                    </ul>
+                </div>
+
+                <h4>Oscuramento</h4>
+                <p>Diverso da copertura fisica, l'<strong>oscuramento</strong> rende difficile vederti:</p>
+                <ul>
+                    <li><strong>Leggermente Oscurato:</strong> Dim light, nebbia leggera, fogliame moderato. Svantaggio su check 
+                    Percezione che dipendono da vista.</li>
+                    <li><strong>Fortemente Oscurato:</strong> Oscurità, nebbia opaca, fogliame denso. Creature dentro sono 
+                    effettivamente <strong>cieche</strong> per creature fuori (non vedono).</li>
+                </ul>
+            </section>
+
+            <section id="condizioni">
+                <h3>7.4 Condizioni di Stato</h3>
+                
+                <p>Le condizioni sono stati alterati che influenzano cosa puoi fare. Ecco le più comuni:</p>
+
+                <div class="stat-block">
+                    <h4>BLINDED (Accecato)</h4>
+                    <ul>
+                        <li>Fallisci automaticamente check che richiedono vista</li>
+                        <li>Attacchi contro di te hanno <strong>vantaggio</strong></li>
+                        <li>I tuoi attacchi hanno <strong>svantaggio</strong></li>
+                    </ul>
+                    <p><strong>Cause:</strong> Flash bang, sabbia negli occhi, Blindness spell, oscurità totale senza darkvision</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>CHARMED (Ammaliato)</h4>
+                    <ul>
+                        <li>Non puoi attaccare charmer o targetarlo con abilità dannose</li>
+                        <li>Charmer ha vantaggio su check sociali verso di te</li>
+                    </ul>
+                    <p><strong>Cause:</strong> Charm Person spell, vampiro charm, sirena canto</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>DEAFENED (Assordato)</h4>
+                    <ul>
+                        <li>Non puoi sentire</li>
+                        <li>Fallisci automaticamente check che richiedono udito</li>
+                    </ul>
+                    <p><strong>Cause:</strong> Dynamite esplosione vicina, Thunderwave spell, danno orecchie</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>FRIGHTENED (Spaventato)</h4>
+                    <ul>
+                        <li>Svantaggio su check abilità e attacchi mentre fonte paura è in linea di vista</li>
+                        <li>Non puoi muoverti <strong>volontariamente verso</strong> fonte paura</li>
+                    </ul>
+                    <p><strong>Cause:</strong> Fear spell, intimidazione estrema, vedere orrore cosmico (Shoggoth, etc.)</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>GRAPPLED (Afferrato)</h4>
+                    <ul>
+                        <li>Velocità diventa <strong>0</strong></li>
+                        <li>Non puoi beneficiare bonus velocità</li>
+                        <li>Finisce se grappler è incapacitato o forza separa te e grappler</li>
+                    </ul>
+                    <p><strong>Liberarsi:</strong> Azione, check Atletica o Acrobazia vs CD 8 + FOR grappler + bonus competenza</p>
+                    <p><strong>Cause:</strong> Nemico usa azione Grapple e vince check contestato, tentacoli, lazo</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>INCAPACITATED (Incapacitato)</h4>
+                    <ul>
+                        <li>Non puoi effettuare azioni o reazioni</li>
+                    </ul>
+                    <p><strong>Cause:</strong> Stun, paralisi, unconscious, morte</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>INVISIBLE (Invisibile)</h4>
+                    <ul>
+                        <li>Impossibile vedere senza aiuto magico</li>
+                        <li>Considerato fortemente oscurato per nasconderti</li>
+                        <li>Attacchi contro di te hanno <strong>svantaggio</strong></li>
+                        <li>I tuoi attacchi hanno <strong>vantaggio</strong></li>
+                    </ul>
+                    <p><strong>Cause:</strong> Invisibility spell, pozione invisibilità, abilità speciali creature</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>PARALYZED (Paralizzato)</h4>
+                    <ul>
+                        <li>Incapacitato (non puoi agire)</li>
+                        <li>Non puoi muoverti o parlare</li>
+                        <li>Fallisci automaticamente TS FOR e DES</li>
+                        <li>Attacchi contro di te hanno vantaggio</li>
+                        <li>Attacchi entro 1.5m sono <strong>critici automatici</strong></li>
+                    </ul>
+                    <p><strong>Cause:</strong> Hold Person spell, veleni paralizzanti, ghoul tocco, vampiro stake al cuore</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>POISONED (Avvelenato)</h4>
+                    <ul>
+                        <li>Svantaggio su attacchi e check abilità</li>
+                    </ul>
+                    <p><strong>Cause:</strong> Poison spell, veleni naturali (serpente, scorpione), veleni alchemici, 
+                    cibo avariato</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>PRONE (Prono/A Terra)</h4>
+                    <ul>
+                        <li>Puoi solo strisciare (velocità dimezzata) o alzarti (costa metà movimento)</li>
+                        <li>Svantaggio su attacchi</li>
+                        <li>Attacchi contro di te: <strong>vantaggio</strong> se attaccante entro 1.5m, <strong>svantaggio</strong> 
+                        se oltre</li>
+                    </ul>
+                    <p><strong>Cause:</strong> Buttarsi volontariamente, shove, essere knockback, trip</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>RESTRAINED (Trattenuto)</h4>
+                    <ul>
+                        <li>Velocità diventa <strong>0</strong></li>
+                        <li>Attacchi contro di te hanno <strong>vantaggio</strong></li>
+                        <li>I tuoi attacchi hanno <strong>svantaggio</strong></li>
+                        <li>TS DES hanno <strong>svantaggio</strong></li>
+                    </ul>
+                    <p><strong>Cause:</strong> Lazo, Entangle spell, rete, tentacoli, catene</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>STUNNED (Stordito)</h4>
+                    <ul>
+                        <li>Incapacitato</li>
+                        <li>Non puoi muoverti</li>
+                        <li>Parli a fatica</li>
+                        <li>Fallisci automaticamente TS FOR e DES</li>
+                        <li>Attacchi contro di te hanno vantaggio</li>
+                    </ul>
+                    <p><strong>Cause:</strong> Stunning Strike, shock elettrico, colpo testa critico (Master discrezione)</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>UNCONSCIOUS (Privo Sensi)</h4>
+                    <ul>
+                        <li>Incapacitato</li>
+                        <li>Non puoi muoverti o parlare</li>
+                        <li>Non sei consapevole dintorni</li>
+                        <li>Lasci cadere ciò che stai tenendo</li>
+                        <li>Cadi prone automaticamente</li>
+                        <li>Fallisci automaticamente TS FOR e DES</li>
+                        <li>Attacchi contro di te hanno vantaggio</li>
+                        <li>Attacchi entro 1.5m sono <strong>critici automatici</strong></li>
+                    </ul>
+                    <p><strong>Cause:</strong> 0 PF, Sleep spell, cloroformio, knockout</p>
+                </div>
+            </section>
+
+            <section id="danno-morte">
+                <h3>7.5 Danno, Morte, e Guarigione</h3>
+                
+                <h4>Subire Danno</h4>
+                <p>Quando subisci danno, riduci i tuoi <strong>Punti Ferita (PF)</strong> correnti di quella quantità. Se PF 
+                scendono a 0 o meno, cadi unconscious e rischi morte.</p>
+
+                <h4>Tipi Danno</h4>
+                <p>Esistono diversi tipi danno. Alcuni importanti nel Weird West:</p>
+                <ul>
+                    <li><strong>Perforante:</strong> Proiettili, frecce, pugnali. Il più comune.</li>
+                    <li><strong>Tagliente:</strong> Spade, machete, artigli.</li>
+                    <li><strong>Contundente:</strong> Pugni, club, cadute, esplosioni forza.</li>
+                    <li><strong>Fuoco:</strong> Molotov, dynamite, lanciafiamme, draghi (se esistono).</li>
+                    <li><strong>Radiante:</strong> Magia santa, spell divini, argento benedetto vs non-morti.</li>
+                    <li><strong>Necrotico:</strong> Magia oscura, tocco non-morti, drain vita.</li>
+                    <li><strong>Psichico:</strong> Attacchi mentali, horror cosmici, mind blast.</li>
+                    <li><strong>Veleno:</strong> Veleni naturali o alchemici.</li>
+                </ul>
+
+                <p><strong>Resistenza/Immunità/Vulnerabilità:</strong></p>
+                <ul>
+                    <li><strong>Resistenza:</strong> Subisci metà danno quel tipo (arrotonda giù)</li>
+                    <li><strong>Immunità:</strong> Non subisci danno quel tipo</li>
+                    <li><strong>Vulnerabilità:</strong> Subisci danno doppio quel tipo</li>
+                </ul>
+
+                <div class="example-box">
+                    <p><strong>Esempio Resistenza:</strong> Uno zombi ha resistenza a danno perforante (i proiettili passano 
+                    attraverso senza fermare). Spari con Colt (1d10 perforante), tiri 8 danno. Zombi subisce solo 8 ÷ 2 = 
+                    <strong>4 danno</strong>. Frustrante! Serve fuoco o headshots.</p>
+                </div>
+
+                <h4>Scendere a 0 PF</h4>
+                <p>Quando scendi a 0 PF:</p>
+                <ol>
+                    <li>Cadi <strong>Unconscious</strong></li>
+                    <li>Lasci cadere tutto ciò che tieni</li>
+                    <li>Inizi a fare <strong>Death Saves</strong> (tiri salvezza morte)</li>
+                </ol>
+
+                <p><strong>Danno Massivo:</strong> Se singolo colpo ti porta a 0 PF E danno rimanente ≥ PF max, muori 
+                istantaneamente. Esempio: Hai 12 PF attuali, 20 PF max. Subisci 35 danno → vai a 0 e rimangono 23 danno extra. 
+                23 > 20 PF max → <strong>morte istantanea</strong> (esploso, decapitato, etc.).</p>
+
+                <h4>Death Saves (Tiri Salvezza Morte)</h4>
+                <p>Quando sei a 0 PF unconscious, all'inizio di ogni tuo turno tiri <strong>d20 puro</strong> (nessun modificatore):</p>
+                <ul>
+                    <li><strong>10+:</strong> Successo. Segna 1 successo.</li>
+                    <li><strong>9 o meno:</strong> Fallimento. Segna 1 fallimento.</li>
+                    <li><strong>20 naturale:</strong> Ti stabilizzi a 1 PF! Ti svegli!</li>
+                    <li><strong>1 naturale:</strong> Conta come 2 fallimenti!</li>
+                </ul>
+
+                <p><strong>Risultato:</strong></p>
+                <ul>
+                    <li><strong>3 Successi:</strong> Ti <strong>stabilizzi</strong>. Smetti di fare death save, ma rimani unconscious 
+                    a 0 PF finché non recuperi PF.</li>
+                    <li><strong>3 Fallimenti:</strong> <strong>Muori</strong>.</li>
+                </ul>
+
+                <p><strong>Reset:</strong> Se recuperi PF (anche 1), successi/fallimenti si resettano.</p>
+
+                <p><strong>Danno a 0 PF:</strong> Se subisci danno mentre a 0 PF:</p>
+                <ul>
+                    <li><strong>Da fonte normale:</strong> Segna 1 fallimento</li>
+                    <li><strong>Da critico:</strong> Segna 2 fallimenti</li>
+                    <li><strong>Da danno ≥ PF max:</strong> Muori istantaneamente</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Coup de Grâce (Colpo di Grazia):</strong> Se nemico è entro 1.5m da te unconscious, può usare 
+                    azione per effettuare attacco automatico critico. Questo probabilmente ti uccide istantaneamente (2 fallimenti 
+                    automatici da critico, più possibile danno massivo). <strong>Gli alleati devono proteggerti quando sei down!</strong></p>
+                </div>
+
+                <h4>Stabilizzazione</h4>
+                <p>Alleato può stabilizzarti (fermare death save) con:</p>
+                <ul>
+                    <li><strong>Check Medicina CD 10:</strong> Azione standard. Successo = stabilizzato.</li>
+                    <li><strong>Kit Medico:</strong> Azione standard, consuma 1 uso kit. Stabilizza automaticamente (no check).</li>
+                    <li><strong>Spare the Dying cantrip:</strong> Tocco, stabilizza istantaneamente.</li>
+                    <li><strong>Qualsiasi Healing:</strong> Se ricevi anche solo 1 PF cura, ti stabilizzi e svegli.</li>
+                </ul>
+
+                <h4>Morte Permanente</h4>
+                <p>Quando muori, il personaggio è morto. Fine. TUTTAVIA, magia può riportarti:</p>
+                <ul>
+                    <li><strong>Revivify</strong> (Spell liv 3): Riporta morto che è morto da max 1 minuto. Costa 300$ diamanti 
+                    (consumati). PG torna a 1 PF.</li>
+                    <li><strong>Raise Dead</strong> (Spell liv 5): Riporta morto da max 10 giorni. Costa $500 diamanti. Torna 
+                    con penalità (-4 a tutto per 4 riposi lunghi).</li>
+                    <li><strong>Resurrection</strong> (Spell liv 7): Riporta morto da max 100 anni. Ricostruisce corpo. Costa 
+                    $1,000 diamanti.</li>
+                    <li><strong>True Resurrection</strong> (Spell liv 9): Riporta morto da max 200 anni, anche senza corpo. 
+                    Costa $25,000 diamanti + rare components.</li>
+                </ul>
+
+                <p>Nel Weird West, resurrezione è <strong>rara e costosa</strong>. Non dare per scontato che morte sia reversibile. 
+                La maggior parte città non ha clerics abbastanza potenti. Potresti dover viaggiare centinaia miglia per trovare 
+                qualcuno che lanci Raise Dead.</p>
+
+                <h4>Guarigione</h4>
+                
+                <p><strong>Durante Combattimento:</strong></p>
+                <ul>
+                    <li><strong>Cure Wounds (Spell):</strong> 1d8 + mod SAG PF</li>
+                    <li><strong>Healing Word (Spell, azione bonus):</strong> 1d4 + mod SAG PF</li>
+                    <li><strong>Pozione Healing:</strong> Azione, bevi, recuperi 2d4+2 PF</li>
+                    <li><strong>Second Wind (Fighter feature):</strong> Azione bonus, recuperi 1d10 + livello PF</li>
+                </ul>
+
+                <p><strong>Fuori Combattimento:</strong></p>
+                <ul>
+                    <li><strong>Kit Medico:</strong> 1 minuto, check Medicina CD 13, recuperi 1d6 + mod INT PF (Dottori fanno molto meglio)</li>
+                    <li><strong>Riposo Breve (1 ora):</strong> Spendi Hit Dice. Tiri 1 o più Hit Dice (es: 2d10), aggiungi mod COS 
+                    per ogni dado, recuperi quel totale PF. Hit Dice si ricaricano con riposo lungo.</li>
+                    <li><strong>Riposo Lungo (8 ore):</strong> Recuperi tutti PF, metà Hit Dice totali (arrotonda giù, min 1)</li>
+                </ul>
+
+                <div class="tip-box">
+                    <p><strong>Gestire PF in Combattimento:</strong></p>
+                    <ul>
+                        <li><strong>Non aspettare 0 PF per curare:</strong> Se sei sotto metà PF, considera curar ti o ritirar ti.</li>
+                        <li><strong>Healing Word > Cure Wounds:</strong> In combattimento, azione bonus è meglio. Salva azione per attaccare.</li>
+                        <li><strong>Porta Pozioni:</strong> Ogni PG dovrebbe avere almeno 2-3 pozioni healing. Salvano vita quando healer è down.</li>
+                        <li><strong>Focus Fire:</strong> Meglio eliminare 1 nemico (meno attacchi incoming) che danneggiare tutti.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="duelli">
+                <h3>7.6 Duelli e Situazioni Speciali</h3>
+                
+                <h4>Duello Formale (Shootout Classico)</h4>
+                <p>Il duello one-on-one è icona del West. Due pistoleri si fronteggiano, mani sulle pistole, pronti al quick-draw. 
+                Al segnale, chi spara prima vince.</p>
+
+                <p><strong>Regole Duello:</strong></p>
+                <ol>
+                    <li><strong>Accordo:</strong> Entrambi concordano duello. Spettatori fanno spazio, strada si svuota.</li>
+                    <li><strong>Distanza:</strong> Tipicamente 10-15 metri. Troppo vicino = dangerous, troppo lontano = disonorevole.</li>
+                    <li><strong>Iniziativa Speciale:</strong> Invece iniziativa normale, entrambi fanno <strong>Quick Draw Contest</strong>:
+                        <ul>
+                            <li>Tira <strong>d20 + DES + bonus competenza</strong></li>
+                            <li>Chi ha Quick Draw feature ha <strong>vantaggio</strong></li>
+                            <li>Chi tira più alto spara per primo</li>
+                        </ul>
+                    </li>
+                    <li><strong>Primo Colpo:</strong> Chi vince iniziativa fa attacco con <strong>vantaggio</strong> (nervi d'acciaio, 
+                    momentum psicologico).</li>
+                    <li><strong>Secondo Colpo:</strong> Se primo non uccide, secondo risponde (attacco normale).</li>
+                    <li><strong>Fine:</strong> Duello finisce quando uno cade o si arrende. Sparare a avversario che si è arreso = disonorevole 
+                    (possibile arrest per murder).</li>
+                </ol>
+
+                <div class="example-box">
+                    <p><strong>Esempio Duello:</strong></p>
+                    <p>Il tuo Pistolero (DES +4, Quick Draw feature) affronta bandito (DES +2, no Quick Draw) nel main street di Deadwood 
+                    alle 6pm. Sole al tramonto.</p>
+                    
+                    <p><strong>Quick Draw Contest:</strong></p>
+                    <ul>
+                        <li><strong>Tu:</strong> Tiri 2d20 (vantaggio da Quick Draw) → 15, 8. Prendi 15. +4 DES +2 comp = <strong>21</strong></li>
+                        <li><strong>Bandito:</strong> Tira d20 → 14. +2 DES +2 comp = <strong>18</strong></li>
+                    </ul>
+                    
+                    <p>Tu vinci! Spari per primo con vantaggio.</p>
+                    
+                    <p><strong>Tuo Attacco:</strong> Tiri 2d20 (vantaggio) → 18, 9. Prendi 18. +4 DES +2 comp = <strong>24</strong>. 
+                    CA bandito 13 → COLPO! Tiri danno Colt: 1d10+4 → 8+4 = <strong>12 danno</strong>.</p>
+                    
+                    <p>Bandito aveva 18 PF. Scende a 6 PF. Ancora in piedi!</p>
+                    
+                    <p><strong>Risposta Bandito:</strong> Spara. Tira d20 → 11. +2 DES +2 comp = 15. Tua CA 14 → COLPO! Subisci 
+                    1d10+2 → 7+2 = 9 danno. Ahi!</p>
+                    
+                    <p>Spettatori trattengono fiato. Entrambi feriti. Chi cade per primo?</p>
+                    
+                    <p>(Combattimento continua finché uno scende a 0 PF o si arrende)</p>
+                </div>
+
+                <h4>Underwater Combat</h4>
+                <p>Se combatti immerso in acqua:</p>
+                <ul>
+                    <li><strong>Movimento:</strong> Nuotare richiede check Atletica. Velocità dimezzata (terreno difficile).</li>
+                    <li><strong>Attacchi Mischia:</strong> Svantaggio (resistenza acqua) a meno che arma perforante (lancia, pugnale)</li>
+                    <li><strong>Attacchi Distanza:</strong> Armi da fuoco NON funzionano sott'acqua (polvere si bagna). Archi/balestre 
+                    hanno svantaggio e gittata ridotta a 1/4.</li>
+                    <li><strong>Spell:</strong> Spell fuoco fanno metà danno. Spell fulmini doppio danno (acqua conduce).</li>
+                    <li><strong>Respirare:</strong> Puoi trattenere respiro per <strong>1 + mod COS minuti</strong> (min 30 sec). 
+                    Dopo, inizi soffocare (vedi sotto).</li>
+                </ul>
+
+                <h4>Suffocamento</h4>
+                <p>Quando finisci aria (annegamento, soffocamento, seppellimento vivo):</p>
+                <ol>
+                    <li>Puoi sopravvivere numero round = 1 + mod COS (min 1 round)</li>
+                    <li>Dopo, scendi a 0 PF</li>
+                    <li>Non puoi stabilizzarti finché non respiri di nuovo</li>
+                    <li>Inizi death saves come normale, ma fallisci automaticamente 1 per round</li>
+                </ol>
+                <p>Suffocamento è <strong>morte veloce</strong>. Hai pochissimo tempo.</p>
+
+                <h4>Cadere</h4>
+                <p>Cadere da altezza causa danno:</p>
+                <ul>
+                    <li><strong>Per ogni 3m caduti:</strong> 1d6 danno contundente</li>
+                    <li><strong>Max danno:</strong> 20d6 (60m caduta = probabilmente mortale)</li>
+                </ul>
+                <p><strong>Atterrare Sicuro:</strong> Check Acrobazia CD 15 riduce danno caduta 3m a 0. Per ogni 3m addizionali, 
+                CD aumenta +5 (9m = CD 20, 12m = CD 25, etc.). Successo = danno dimezzato.</p>
+
+                <h4>Fuoco</h4>
+                <p>Se prendi fuoco (Molotov, dragon's breath, immolarti):</p>
+                <ul>
+                    <li>Subisci <strong>1d6 danno fuoco</strong> all'inizio di ogni tuo turno</li>
+                    <li>Puoi usare <strong>azione</strong> per spegnere: TS DES CD 10 o rotolarti/immergi in acqua = automatico successo</li>
+                    <li>Alleato entro reach può usare azione per aiutarti spegnere (coperta, roll, etc.) = automatico successo</li>
+                </ul>
+                <p>Oggetti infiammabili (legno, tessuti) prendono fuoco facilmente. Edifici di legno (maggior parte nel West) = 
+                fire hazard grave!</p>
+            </section>
+
+            <section id="combattimento-montato">
+                <h3>7.7 Combattimento Montato</h3>
+                
+                <p>Combattere a cavallo è arte western classica. Cavalry charge, drive-by shooting, inseguimenti epici!</p>
+
+                <h4>Cavalcare Mount</h4>
+                <p>Montare/smontare costa <strong>metà movimento</strong>. Quando cavalchi mount addestrato (cavallo, etc.):</p>
+                <ul>
+                    <li><strong>Movimento Mount:</strong> Mount si muove nel tuo turno. Controlli dove va. Usa velocità mount (tipicamente 18m), 
+                    non la tua.</li>
+                    <li><strong>Azioni:</strong> Tu puoi effettuare azioni normalmente (attaccare, spell, etc.) mentre cavalchi.</li>
+                    <li><strong>Controllo:</strong> Nessun check necessario per mount addestrato in situazioni normali. Mount addestrato 
+                    evita combattimento.</li>
+                </ul>
+
+                <h4>Controlled vs Independent Mount</h4>
+                <ul>
+                    <li><strong>Controlled Mount:</strong> Mount addestrato. Non ha turno proprio. Si muove quando tu vuoi nel tuo turno. 
+                    Può solo Dash, Disengage, Dodge (no Attack). La maggior parte cavalli da sella.</li>
+                    <li><strong>Independent Mount:</strong> Mount intelligente (warhorse, mount magico). Ha turno proprio nell'ordine 
+                    iniziativa. Può attaccare. Tu decidi azioni nel suo turno.</li>
+                </ul>
+
+                <h4>Combattimento Montato</h4>
+                <ul>
+                    <li><strong>Vantaggio Mobilità:</strong> Passa vicino a nemico, attacca, continua muovere. Kiting. Nemico a piedi 
+                    non può inseguire.</li>
+                    <li><strong>Vantaggio Elevazione:</strong> Quando attacchi creature <strong>Medium o più piccole</strong> da 
+                    mount <strong>Large</strong> (cavallo), hai vantaggio su attacchi mischia.</li>
+                    <li><strong>Trampling:</strong> Warhorse può calpestare (attacco) creature prone.</li>
+                    <li><strong>Armi:</strong> Armi 2-mani (fucile, lancia) richiedono 2 mani. Significa non tieni redini. Mount 
+                    addestrato continua senza controllo (MA se mount si spaventa, check Addestrare Animali CD 10 per mantenere controllo).</li>
+                </ul>
+
+                <h4>Essere Disarcionato</h4>
+                <p>Se mount knockout, muore, spaventa, o tu subisci danno massiccio, puoi essere disarcionato:</p>
+                <ul>
+                    <li><strong>TS DES CD 10:</strong> Successo = rimani in sella. Fallimento = cadi, atterri prone entro 1.5m da mount, 
+                    subisci 1d6 danno contundente.</li>
+                    <li><strong>CD aumenta:</strong> Mount si muove più di metà velocità nel turno (+5 CD). Mount salta ostacolo (+5 CD).</li>
+                </ul>
+
+                <h4>Inseguimenti a Cavallo</h4>
+                <p>Quando insegui nemici a cavallo (o fuggi):</p>
+                <ol>
+                    <li>Ogni round, entrambi lati muovono alla velocità mount</li>
+                    <li>Se velocità uguale, distanza rimane costante</li>
+                    <li>Se velocità diversa, distanza cambia (veloce avvicina/sfugge lento)</li>
+                    <li>Periodicamente (ogni 3 rounds?), check Addestrare Animali CD 13. Successo = mount sprint +3m questo round. 
+                    Fallimento = mount rallenta, perdi 3m.</li>
+                </ol>
+
+                <div class="example-box">
+                    <p><strong>Esempio Chase:</strong> Fuggi da posse (5 deputy a cavallo). Tutti hanno riding horse velocità 18m.</p>
+                    <p><strong>Round 1-3:</strong> Movimento uguale. Distanza 60m rimane costante.</p>
+                    <p><strong>Round 4:</strong> Master chiama check Addestrare Animali. Tu: 16 (successo) → +3m. Deputy leader: 
+                    11 (fallimento) → -3m. Distanza passa da 60m a 66m!</p>
+                    <p><strong>Round 7:</strong> Distanza ora 75m (fuori gittata pistola normale). Sei salvo... per ora.</p>
+                    <p>Inseguimenti sono tensione pura! Chase music suona!</p>
+                </div>
+            </section>
+
+            <section id="consigli-tattici">
+                <h3>7.8 Consigli Tattici per Sopravvivere</h3>
+                
+                <h4>Per Tutti i Giocatori</h4>
+                <ul>
+                    <li><strong>Usa Copertura:</strong> Non puoi dirlo abbastanza. Copertura 3/4 (+5 CA) è differenza tra vita e morte.</li>
+                    <li><strong>Focus Fire:</strong> Concentra attacchi gruppo su 1 nemico alla volta. Nemico morto = 0 attacchi. 
+                    Nemico ferito = ancora full attacks.</li>
+                    <li><strong>Posizionamento:</strong> Non stare clumpati (fireball/dynamite kill tutti). Spread out ma mantieni 
+                    supporto.</li>
+                    <li><strong>Comunicazione:</strong> "Focus il leader!", "Covering fire!", "I'm reloading!". Team coordination vince battaglie.</li>
+                    <li><strong>Know When to Fold:</strong> Non ogni combattimento è vincibile. Se odds sono contro, <strong>fuggi</strong>. 
+                    Live to fight another day.</li>
+                    <li><strong>Conserva Risorse:</strong> Non bruciare tutte spell/abilità nel primo combattimento. Giornata avventura 
+                    = multipli combattimenti. Economizza.</li>
+                </ul>
+
+                <h4>Per Gunslinger/Ranged</h4>
+                <ul>
+                    <li><strong>Mantieni Distanza:</strong> Ideale 10-15m. Troppo vicino = rischio melee. Troppo lontano = penalità gittata.</li>
+                    <li><strong>High Ground:</strong> Shoot da posizione elevata quando possibile (vantaggio su attacchi se Master permette).</li>
+                    <li><strong>Reload Prima:</strong> Ricaricare in round calmo meglio che mid-firefight.</li>
+                    <li><strong>Munizioni Speciali:</strong> Salva silver/blessed bullets per non-morti/boss. Non sprecare su mooks.</li>
+                    <li><strong>Movimento:</strong> Non stare fermo. Shoot-move-shoot. Bersaglio mobile più difficile colpire.</li>
+                </ul>
+
+                <h4>Per Tank/Melee</h4>
+                <ul>
+                    <li><strong>Protect Squishies:</strong> Tuo job è essere tra nemici e alleati squishy (healer, caster). Bodyguard.</li>
+                    <li><strong>Grapple/Control:</strong> Afferrare nemici forti o shove loro via da alleati.</li>
+                    <li><strong>Doorways:</strong> Combatti in chokepoint (doorway, canyon stretto). Forza 1v1 instead massa.</li>
+                    <li><strong>Don't Chase:</strong> Non inseguire nemici lontano da gruppo. È trap. Rimani vicino agli alleati.</li>
+                </ul>
+
+                <h4>Per Healer/Support</h4>
+                <ul>
+                    <li><strong>Stay Back:</strong> Sei troppo prezioso per morire. Dietro frontline, copertura piena.</li>
+                    <li><strong>Healing Word > Cure Wounds:</strong> In combattimento, azione bonus lascia azione per altro. 
+                    Salva Cure Wounds per fuori combattimento.</li>
+                    <li><strong>Buff Pre-Fight:</strong> Lancia Bless, Shield of Faith, etc. PRIMA combattimento se possibile. 
+                    Non sprecare turno 1.</li>
+                    <li><strong>Save Revivify:</strong> Se hai spell slot 3, conserva almeno 1 per Revivify emergency. Resurrezione 
+                    mid-battle salva tutto.</li>
+                    <li><strong>Channel Divinity:</strong> Turn Undead può eliminare horde zombi istantaneamente. Non esitare.</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Il Weird West è Letale:</strong> Non sei supereroe. Sei umano fragile. Singolo colpo critico può 
+                    ucciderti. Shoggoth può mangiare gruppo intero. NON affrontare ogni minaccia frontalmente. Strategia, astuzia, 
+                    e occasionale codardia sono strumenti sopravvivenza.</p>
+                    <p><strong>"Discretion is the better part of valor."</strong> Se vedi Great Old One manifestarsi... RUN.</p>
+                </div>
+            </section>
+        </article>
+
+        <div class="pagination">
+            <a href="capitolo_06.html" class="prev">← Capitolo 6</a>
+            <span>Capitolo 7 di 15</span>
+            <a href="capitolo_08.html" class="next">Capitolo 8: Magia →</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p><strong>COLT & CTHULHU</strong> - Capitolo 7: Sistema di Combattimento</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">© 2025 - Guida Completa del Giocatore</p>
+    </footer>
+
+    <a href="#top" class="back-to-top">↑</a>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

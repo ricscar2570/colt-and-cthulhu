@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitolo 14: Regole Avanzate - Colt & Cthulhu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>COLT & CTHULHU</h1>
+        <p class="subtitle">Capitolo 14: Regole Avanzate e Varianti Opzionali</p>
+    </header>
+
+   <nav class="nav-main">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="capitolo_01.html">Cap 1</a></li>
+            <li><a href="capitolo_02.html" >Cap 2</a></li>
+            <li><a href="capitolo_03.html">Cap 3</a></li>
+            <li><a href="capitolo_04.html">Cap 4</a></li>
+            <li><a href="capitolo_05.html">Cap 5</a></li>
+            <li><a href="capitolo_06.html">Cap 6</a></li>
+            <li><a href="capitolo_07.html">Cap 7</a></li>
+            <li><a href="capitolo_08.html">Cap 8</a></li>
+            <li><a href="capitolo_09.html">Cap 9</a></li>
+            <li><a href="capitolo_10.html">Cap 10</a></li>
+            <li><a href="capitolo_11.html">Cap 11</a></li>
+            <li><a href="capitolo_12.html">Cap 12</a></li>
+            <li><a href="capitolo_13.html">Cap 13</a></li>
+            <li><a href="capitolo_14.html" class="active">Cap 14</a></li>
+            <li><a href="capitolo_15.html">Cap 15</a></li>
+            <li><a href="capitolo_16.html">Cap 16</a></li>
+            <li><a href="appendice_a.html">App. A</a></li>
+			<li><a href="appendice_b.html">App. B</a></li>
+			<li><a href="appendice_c.html">App. C</a></li>
+        
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>›</span> <strong>Capitolo 14</strong>
+        </div>
+
+        <article class="chapter">
+            <h2>Capitolo 14: Regole Avanzate e Varianti Opzionali</h2>
+            
+            <p style="font-size: 1.1em; margin-bottom: 30px;">
+                Questo capitolo presenta <strong>varianti opzionali</strong>, <strong>houserules</strong>, e <strong>sistemi avanzati</strong> 
+                che i Master possono implementare per personalizzare la loro campagna. Ogni sezione è modulare: usa solo ciò che migliora 
+                il tuo tavolo, ignora il resto.
+            </p>
+
+            <div class="warning-box">
+                <p><strong>IMPORTANTE:</strong> Queste regole sono <strong>OPZIONALI</strong>. Le regole core (Cap 1-13) sono sufficienti 
+                per giocare. Implementa varianti solo se migliorano esperienza tavolo. Discussione Session Zero raccomandato prima adottare 
+                modifiche significative.</p>
+            </div>
+
+            <section id="combat-variants">
+                <h3>14.1 Varianti Combattimento</h3>
+                
+                <h4>A. Chiamare Colpi (Called Shots)</h4>
+                <p><strong>Quando Usare:</strong> Per giocatori che vogliono targeting tattico specifico (headshots, disarm, ecc.)</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>Dichiara "called shot" prima attacco roll</li>
+                    <li>Attack roll con <strong>svantaggio</strong></li>
+                    <li>Se colpisce, effetto speciale secondo target:</li>
+                </ul>
+
+                <table class="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Target</th>
+                            <th>CD</th>
+                            <th>Effetto se Successo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Testa</strong></td>
+                            <td>AC +4</td>
+                            <td>Danno normale + target TS COS CD 12 o Stordito fino fine prossimo turno</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Braccio/Arma</strong></td>
+                            <td>AC +3</td>
+                            <td>Danno normale + target dropa 1 oggetto held (scelta attaccante)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gamba</strong></td>
+                            <td>AC +2</td>
+                            <td>Danno normale + target velocità ridotta metà fino fine prossimo turno</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Occhi</strong></td>
+                            <td>AC +5</td>
+                            <td>Danno dimezzato + target Blinded 1 round (TS COS CD 13 nega)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Oggetto (pistola, lanterna, etc.)</strong></td>
+                            <td>AC oggetto (10-15)</td>
+                            <td>Oggetto destroyed/damaged (Master discretion). No danno creatura.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Pro:</strong> Tactical depth, cinematic moments ("I shoot gun out of his hand!")</p>
+                <p><strong>Contro:</strong> Slows combat, può essere abused (sempre headshots). Bilanciare carefully.</p>
+
+                <h4>B. Ferite Durevoli (Lingering Injuries)</h4>
+                <p><strong>Quando Usare:</strong> Per campagne gritty, realistiche. Enfatizza pericolo combattimento.</p>
+                <p><strong>Trigger:</strong> Quando PG ridotto a 0 PF, roll d20:</p>
+                <ul>
+                    <li><strong>1-5:</strong> Injury permanente (roll Lingering Injury Table)</li>
+                    <li><strong>6-15:</strong> Solo unconscious come normale</li>
+                    <li><strong>16-20:</strong> Nessun effetto extra (lucky!)</li>
+                </ul>
+
+                <p><strong>Lingering Injury Table (d20):</strong></p>
+                <table class="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Roll</th>
+                            <th>Injury</th>
+                            <th>Effetto</th>
+                            <th>Cura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-2</td>
+                            <td><strong>Occhio Perso</strong></td>
+                            <td>Svantaggio Percezione (vista) e attack rolls oltre 9m</td>
+                            <td>Permanente. Eyepatch cosmetic.</td>
+                        </tr>
+                        <tr>
+                            <td>3-4</td>
+                            <td><strong>Braccio Rotto</strong></td>
+                            <td>Non può usare braccio (no two-handed weapons, shield, etc.) per 6 settimane</td>
+                            <td>6 settimane rest + Medicina check DC 15</td>
+                        </tr>
+                        <tr>
+                            <td>5-6</td>
+                            <td><strong>Gamba Rotta</strong></td>
+                            <td>Velocità ridotta metà, svantaggio DES checks per 6 settimane</td>
+                            <td>6 settimane rest + Medicina check DC 15</td>
+                        </tr>
+                        <tr>
+                            <td>7-8</td>
+                            <td><strong>Costole Incrinate</strong></td>
+                            <td>-2 max PF per livello per 4 settimane</td>
+                            <td>4 settimane rest</td>
+                        </tr>
+                        <tr>
+                            <td>9-10</td>
+                            <td><strong>Cicatrice Interna</strong></td>
+                            <td>Svantaggio TS COS per 2 settimane</td>
+                            <td>2 settimane rest</td>
+                        </tr>
+                        <tr>
+                            <td>11-12</td>
+                            <td><strong>Commozione Cerebrale</strong></td>
+                            <td>Svantaggio INT/SAG checks per 1 settimana</td>
+                            <td>1 settimana rest</td>
+                        </tr>
+                        <tr>
+                            <td>13-14</td>
+                            <td><strong>Dita Perse (mano)</strong></td>
+                            <td>-2 checks Destrezza Manuale (lockpicking, sleight of hand) permanente</td>
+                            <td>Permanente</td>
+                        </tr>
+                        <tr>
+                            <td>15-16</td>
+                            <td><strong>Orecchio Danneggiato</strong></td>
+                            <td>Svantaggio Percezione (udito) permanente</td>
+                            <td>Permanente. Può mitigare con speaking trumpet device.</td>
+                        </tr>
+                        <tr>
+                            <td>17-18</td>
+                            <td><strong>Infezione</strong></td>
+                            <td>Malattia: ogni 24 ore, TS COS DC 12 o lose 1d4 max PF fino curata</td>
+                            <td>Lesser Restoration O 1 settimana antibiotics + Medicina DC 15</td>
+                        </tr>
+                        <tr>
+                            <td>19-20</td>
+                            <td><strong>Cicatrice Brutta</strong></td>
+                            <td>Svantaggio Persuasione, vantaggio Intimidire (scar intimidating). Cosmetico altrimenti.</td>
+                            <td>Permanente</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Pro:</strong> Combattimento feel pericoloso, consequence weight, character scars tell stories</p>
+                <p><strong>Contro:</strong> Can feel punishing, slows healing, giocatori potrebbero avoid combat (problem se campagna combat-heavy)</p>
+
+                <h4>C. Momentum Initiative (Alternativa Iniziativa Standard)</h4>
+                <p><strong>Quando Usare:</strong> Per combattimenti più fluidi, dinamici, side-based (Western-style shootouts).</p>
+                <p><strong>Meccanica:</strong></p>
+                <ol>
+                    <li>Inizio combat: Ogni LATO (party vs enemies) roll 1d20 + mod DES highest member</li>
+                    <li>Lato con roll più alto va primo. TUTTO il lato agisce, poi lato opposto</li>
+                    <li>Dentro lato, players/NPCs decidono ordine fra loro dinamicamente</li>
+                    <li>Fine round, NO re-roll. Sides alternate ogni round.</li>
+                    <li><strong>Momentum Rule:</strong> Se side elimina TUTTI nemici durante turno prima che nemici agiscano → Surprise round bonus! 
+                    Momentum side può act AGAIN immediatamente (simulate ambush/domination).</li>
+                </ol>
+
+                <p><strong>Pro:</strong> Faster setup, teamwork encouraged (coordinate attacks), cinematic, less tracking individual initiative</p>
+                <p><strong>Contro:</strong> Less tactical control individual, può feel unfair se one side domina, harder con multiple factions (3+ sides)</p>
+
+                <h4>D. Firearms Misfire & Jamming</h4>
+                <p><strong>Quando Usare:</strong> Per realism storico. Firearms 1885 = unreliable, especially cheap/damaged guns.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>Ogni attack roll con firearm: <strong>Natural 1-2 = Misfire</strong></li>
+                    <li>Gun jams, non spara. Arma inutilizzabile finché cleared.</li>
+                    <li><strong>Clear jam:</strong> Azione (1 turno intero dedicato pulire/unjam). Può tentare come azione bonus MA check DES DC 15 
+                    (success = cleared, fallimento = ancora jammed, prova next turno).</li>
+                    <li><strong>Cheap/Damaged Guns:</strong> Master può increase misfire range. Gun damaged/poorly maintained = Natural 1-3 OR 1-4 misfire.</li>
+                    <li><strong>Well-Maintained Guns:</strong> Se player spend tempo cleaning gun (10 min + gunsmith tools) può reduce misfire a SOLO natural 1.</li>
+                </ul>
+
+                <p><strong>Misfire Critico (Opcional - Natural 1):</strong> Non solo jam, ma weapon damaged. Richiede gunsmith repair ($2-10, 1 giorno) 
+                prima usare again. Molto punishing!</p>
+
+                <p><strong>Pro:</strong> Realism, incentiva maintenance gear, tension (gun può fail momento critico)</p>
+                <p><strong>Contro:</strong> Frustrating per gunslinger, slows combat, può feel cheap se misfire during boss fight</p>
+
+                <h4>E. Cover Dettagliato (Espansione Regole Cover)</h4>
+                <p><strong>Regola Base D&D:</strong> Half cover +2 AC, Three-quarters cover +5 AC.</p>
+                <p><strong>Variante Avanzata:</strong></p>
+
+                <table class="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Cover</th>
+                            <th>Bonus AC</th>
+                            <th>Bonus TS DES</th>
+                            <th>Esempi</th>
+                            <th>Note Speciali</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Light Cover</strong></td>
+                            <td>+1 AC</td>
+                            <td>-</td>
+                            <td>Brush, thin wood</td>
+                            <td>Concealment più che protezione. Bullets penetrano.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Half Cover</strong></td>
+                            <td>+2 AC</td>
+                            <td>+2 TS DES</td>
+                            <td>Barrel, wagon, tree trunk</td>
+                            <td>Standard D&D.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Three-Quarters Cover</strong></td>
+                            <td>+5 AC</td>
+                            <td>+5 TS DES</td>
+                            <td>Wall con window, portcullis, thick wall</td>
+                            <td>Standard D&D.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total Cover</strong></td>
+                            <td>Cannot be targeted</td>
+                            <td>Auto-pass (not in blast)</td>
+                            <td>Dietro solid wall, inside building</td>
+                            <td>Immune ranged attacks. Deve emerge per attack.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bulletproof Cover</strong></td>
+                            <td>+5 AC</td>
+                            <td>+5 TS DES + Resistance bullet damage</td>
+                            <td>Steel plate, thick stone, armored wagon</td>
+                            <td>Bullets non penetrano. Melee/esplosivi normally.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Concealment (Smoke/Dark)</strong></td>
+                            <td>Attack vs te ha svantaggio</td>
+                            <td>-</td>
+                            <td>Smoke grenade, darkness, fog</td>
+                            <td>Non fisico protection. Blindsight/tremorsense ignora.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Cover Degradation (Opzionale):</strong> Cover può essere destroyed. Ogni cover ha PF:</p>
+                <ul>
+                    <li><strong>Barrel:</strong> 10 PF</li>
+                    <li><strong>Wooden Wall:</strong> 20 PF</li>
+                    <li><strong>Stone Wall:</strong> 50 PF</li>
+                    <li><strong>Steel Plate:</strong> 80 PF</li>
+                </ul>
+                <p>Attacchi che miss target dietro cover invece colpiscono cover. Quando cover ridotto 0 PF → destroyed, no more bonus.</p>
+
+                <p><strong>Pro:</strong> Tactical combat, environment matters, encourage positioning</p>
+                <p><strong>Contro:</strong> Tracking cover HP tedious, slows combat, può favor ranged heavily</p>
+            </section>
+
+            <section id="stress-variants">
+                <h3>14.2 Varianti Sistema Stress</h3>
+                
+                <h4>A. Stress Permanente (Trauma)</h4>
+                <p><strong>Quando Usare:</strong> Campagne long-term dove stress accumula over time, PTSD themes.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>Quando PG reach 100 stress → non automaticamente morto. Instead, gain <strong>1 Trauma permanente</strong> e reset stress a 0.</li>
+                    <li>Trauma = afflizione mentale permanente (NO cura via riposo. Richiede therapy extended 1+ mesi O magic Greater Restoration).</li>
+                    <li>Ogni Trauma → roll Trauma Table O Master sceglie thematicamente:</li>
+                </ul>
+
+                <p><strong>Trauma Table (d12):</strong></p>
+                <table class="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Roll</th>
+                            <th>Trauma</th>
+                            <th>Effetto Meccanico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>PTSD (Flashbacks)</strong></td>
+                            <td>1/sessione, Master può trigger flashback (evento simile trauma originale). TS SAG CD 15 O incapacitated 1 round 
+                            (revive trauma).</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Paranoia Cronica</strong></td>
+                            <td>Svantaggio Intuizione checks. Difficoltà trust anyone, anche alleati.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Fobia Specifica</strong></td>
+                            <td>Scegli trigger (tentacoli, blood, buio, altezze). Quando esposto, auto-fail stress check + gain 1d6 stress.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>Depressione Maggiore</strong></td>
+                            <td>-2 tutti checks INT/SAG/CAR. Difficoltà concentrate, motivazione low.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Insonnia Permanente</strong></td>
+                            <td>Long rest non recupera stress. Require 2 consecutive long rests per recuperare stress (primo rest = solo PF).</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><strong>Dissociazione</strong></td>
+                            <td>1/giorno, Master può roll d20. Natural 1-3 → perdi cognizione 10 min, "black out", non ricordi dopo.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><strong>Tic Nervoso</strong></td>
+                            <td>Svantaggio check Furtività e Persuasione (social). Visibile nervousness.</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><strong>Rage Issues</strong></td>
+                            <td>Quando stressed (50+ stress), TS SAG CD 13 quando provocato O enter rage (attack provocatore, 1 min duration, 
+                            svantaggio distinguish friend/foe).</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><strong>Amnesia Parziale</strong></td>
+                            <td>Lose memory evento traumatico originale. -2 check recall related info. Può recover memory via therapy.</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><strong>Addiction (Alcol/Oppio)</strong></td>
+                            <td>Richiede drink/dose ogni 8 ore O gain 1d4 stress + svantaggio tutti checks finché consumed. Cost $1-5/giorno habit.</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><strong>Agorafobia</strong></td>
+                            <td>Paura spazi aperti/crowds. Svantaggio tutti checks quando outside/in crowd (10+ persone).</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><strong>Nihilismo Cosmico</strong></td>
+                            <td>Realized insignificance humanity. -2 Ispirazione max (hard regain motivation). Vantaggio stress check 
+                            (nothing matters, detached).</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Multiple Trauma:</strong> PG può accumulate multiple Trauma (reach 100 stress again → altro Trauma, reset stress). 
+                After 3+ Trauma → PG likely unplayable (ritiro, NPC, insane asylum). Consider retirement OR heroic sacrifice.</p>
+
+                <p><strong>Cura Trauma:</strong></p>
+                <ul>
+                    <li><strong>Therapy Extended:</strong> 1-3 mesi downtime con psychologist/reverendo. Cost $50-200 totale. End, TS SAG CD 15. 
+                    Success = 1 Trauma removed. Fallimento = può retry dopo altri 1 mese.</li>
+                    <li><strong>Greater Restoration (spell liv 5):</strong> Può rimuovere 1 Trauma. Costly (300 gp diamond consumed).</li>
+                    <li><strong>Narrative Resolution:</strong> Master può allow Trauma removal se PG confront fear narrativamente (face fobia 
+                    e overcome, rescue friend da similar trauma, etc.). Cathartic moment.</li>
+                </ul>
+
+                <p><strong>Pro:</strong> Long-term consequences, character development arcs, PTSD representation, tension permanente</p>
+                <p><strong>Contro:</strong> Can feel punishing, giocatori attached characters difficoltà accept permanent damage, requires mature themes</p>
+
+                <h4>B. Stress Contagioso (Panic Spreads)</h4>
+                <p><strong>Quando Usare:</strong> Group horror dynamics, mass panic scenarios.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>Quando PG fail stress check (gain stress), ALTRI PG nearby (entro 9m) devono roll TS SAG:
+                        <ul>
+                            <li>CD = 8 + stress gained da PG originale</li>
+                            <li>Fallimento = gain metà stress (round up)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Esempio:</strong> Alice sees Cthulhu, fail stress check, gain 8 stress. Bob e Carol entro 9m devono TS SAG CD 16. 
+                    Bob fail → gain 4 stress (watching Alice panic terrifies him too). Carol pass → immune.</li>
+                    <li><strong>Chain Reaction:</strong> Se Bob ora panic e fail check, Carol deve roll again. Può cascade!</li>
+                </ul>
+
+                <p><strong>Immunity:</strong> PG con stress <20 immune contagion (calm, stable). Solo stressed PG (20+ stress) vulnerable.</p>
+
+                <p><strong>Pro:</strong> Group horror feel, panic realistic, encourage party support each other (calming, Medicina check reduce stress)</p>
+                <p><strong>Contro:</strong> Can snowball TPK via stress, slows gameplay (multiple rolls), punishes party separation</p>
+
+                <h4>C. Stress Boon (Power Through Fear)</h4>
+                <p><strong>Quando Usare:</strong> Per bilanciare stress negativity con potential benefit. "What doesn't kill you..."</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>Quando PG ha 50+ stress MA non ancora Broken, può scegliere "Push Through" durante check/combat.</li>
+                    <li>Dichiari "Push Through" prima roll. Gain <strong>Vantaggio</strong> su roll MA anche gain <strong>1d4 stress</strong> 
+                    immediatamente dopo (regardless success/failure roll).</li>
+                    <li>Rappresenta: adrenalina, desperate focus, fighting through terror.</li>
+                    <li><strong>Limit:</strong> 1 uso per short rest. Corpo/mente può only push so far.</li>
+                </ul>
+
+                <p><strong>Variant - Stress Rage:</strong> A 70+ stress, PG entra "Stress Rage" (similar Barbarian Rage ma mentally triggered). 
+                Gain temp 10 PF, vantaggio attacchi melee, resistenza physico damage, MA svantaggio AC (reckless) e ogni turno rage gain 1 stress. 
+                Duration 1 min OR finché voluntary end. Can only use 1/long rest.</p>
+
+                <p><strong>Pro:</strong> Stress non solo penalty, player agency, dramatic moments ("I push through pain!")</p>
+                <p><strong>Contro:</strong> Può encourage stacking stress deliberately (farm vantaggio), trivialize stress if overused</p>
+            </section>
+
+            <section id="exploration-variants">
+                <h3>14.3 Varianti Esplorazione e Viaggio</h3>
+                
+                <h4>A. Viaggio Dettagliato (Hex Crawl Style)</h4>
+                <p><strong>Quando Usare:</strong> Campagne sandbox, West exploration, mapping territorio.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ol>
+                    <li><strong>Hex Map:</strong> Master divide map in hexagons (ogni hex = 10 km diameter).</li>
+                    <li><strong>Travel:</strong> Party si muove 1 hex per 4 ore travel (standard pace). Forced march = 2 hex/giorno ma TS COS 
+                    DC 12 ogni hex extra O gain exhaustion.</li>
+                    <li><strong>Ogni Hex:</strong> Roll d20 encounter check:
+                        <ul>
+                            <li>1-5: Encounter (hostile, neutral, O friendly - roll specific table)</li>
+                            <li>6-10: Discovery (location interessante, resource, NPC)</li>
+                            <li>11-15: Hazard (terrain dangerous, weather, ecc.)</li>
+                            <li>16-20: Nothing (uneventful travel)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Resource Management:</strong> Traccia rations, water, ammo. Deserto = 1 gallon water/persona/giorno (4 kg). 
+                    Senza acqua = exhaustion ogni 24 ore.</li>
+                    <li><strong>Navigation:</strong> Sopravvivenza check DC 12 ogni giorno. Fallimento = party lost, wander random hex 
+                    (non progress toward destination).</li>
+                </ol>
+
+                <p><strong>Pro:</strong> Exploration feel real, map revealed gradualmente, resource scarcity tension</p>
+                <p><strong>Contro:</strong> Tedious tracking, può slow story pacing, non tutti giocatori enjoy logistics</p>
+
+                <h4>B. Inseguimenti (Chase Scenes)</h4>
+                <p><strong>Quando Usare:</strong> Escaping enemies, chasing banditi, Western chase trope.</p>
+                <p><strong>Meccanica Chase Semplificata:</strong></p>
+                <ol>
+                    <li><strong>Chase Track:</strong> Linear track 10 "segments". Pursuer starts segment 0, Quarry starts segment 5 (head start).</li>
+                    <li><strong>Ogni Round:</strong> Entrambe sides roll:
+                        <ul>
+                            <li><strong>On Foot:</strong> Athletics OR Acrobatics check</li>
+                            <li><strong>Mounted:</strong> Animal Handling check</li>
+                            <li><strong>Vehicle:</strong> Appropriate tool check (land vehicle, etc.)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Movimento:</strong>
+                        <ul>
+                            <li>Check ≥20: Move 3 segments</li>
+                            <li>Check 15-19: Move 2 segments</li>
+                            <li>Check 10-14: Move 1 segment</li>
+                            <li>Check ≤9: No movimento (stumble, wrong turn, etc.)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Complications:</strong> Natural 1 on check = Complication (roll Complication Table OR Master improvise): 
+                    obstacle, civilian, trap, etc.</li>
+                    <li><strong>End Chase:</strong>
+                        <ul>
+                            <li>Pursuer catches Quarry (same segment) → combat OR negotiation</li>
+                            <li>Quarry escapes (reach segment 10) → lost, safe</li>
+                        </ul>
+                    </li>
+                    <li><strong>Actions Durante Chase:</strong> Può use azione attack (ranged solo, svantaggio), use item, O cast spell MA 
+                    svantaggio check movimento quel round.</li>
+                </ol>
+
+                <p><strong>Complication Table (d12):</strong></p>
+                <ol>
+                    <li><strong>Fence/Wall:</strong> TS DES CD 13 O lose 1 segment</li>
+                    <li><strong>Crowded Street:</strong> Check svantaggio questo round (weaving through people)</li>
+                    <li><strong>Loose Ground:</strong> TS DES CD 12 O prone (lose azione stand, no movimento)</li>
+                    <li><strong>Dead End:</strong> Must backtrack (automaticamente lose 1 segment)</li>
+                    <li><strong>Innocent Bystander:</strong> Collision. TS DES CD 13 O knock over civilian. Gain -2 next check (guilt/distraction). 
+                    Se fail + chase in città = potenziale wanted status.</li>
+                    <li><strong>Gunfire Nearby:</strong> Distraction. TS SAG CD 11 O lose 1 segment (flinch/duck)</li>
+                    <li><strong>Mount Spooked:</strong> (Se mounted) Animal Handling DC 15 O mount refuse move, no progress</li>
+                    <li><strong>Dropped Item:</strong> Drop random item (Master sceglie O roll). Può stop retrieve (lose 1 segment) O abandon.</li>
+                    <li><strong>Terrain Hazard:</strong> Cactus, ditch, rubble. 1d4 danno + TS DES CD 12 O lose 1 segment</li>
+                    <li><strong>Split Path:</strong> Choose wrong path (50% chance). Wrong = lose 2 segments backtrack.</li>
+                    <li><strong>Third Party:</strong> Another faction (law, bandits, creature) enters chase! Now 3-way.</li>
+                    <li><strong>Lucky Break:</strong> Trovare shortcut, mount surge energy. Gain +5 bonus next check.</li>
+                </ol>
+
+                <p><strong>Pro:</strong> Dynamic, tension, cinematic Western chase feel</p>
+                <p><strong>Contro:</strong> Abstraction può feel gamey, richiede prep Complication table/track</p>
+
+                <h4>C. Condizioni Meteo Avverse</h4>
+                <p><strong>Quando Usare:</strong> Add environmental challenge, realism, atmosphere.</p>
+
+                <p><strong>Weather Effects Table:</strong></p>
+                <table class="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Weather</th>
+                            <th>Effetto Meccanico</th>
+                            <th>Durata Tipica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Sole/Caldo Estremo</strong></td>
+                            <td>1 gallon acqua extra/giorno O gain exhaustion ogni 4 ore. TS COS DC 12 ogni ora sotto sole diretto O gain 1 stress.</td>
+                            <td>Estate, deserto</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Freddo Estremo</strong></td>
+                            <td>Senza gear inverno (cold weather clothes), TS COS DC 10 ogni ora O gain exhaustion. Acqua freezes.</td>
+                            <td>Inverno, montagne, notti</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pioggia Pesante</strong></td>
+                            <td>Visibilità ridotta 30m. Svantaggio Percezione (vista). Terrain diventa difficult. Firearms: +2 CD misfire.</td>
+                            <td>1d4 ore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tempesta (Thunder)</strong></td>
+                            <td>Come pioggia + lighting strikes. Ogni ora, 10% chance lightning colpisce area party (4d10 lightning damage, 
+                            TS DES CD 15 metà). Cavalli spooked (Animal Handling DC 13 O flee).</td>
+                            <td>1d4 ore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nebbia Fitta</strong></td>
+                            <td>Visibilità 9m. Heavily obscured beyond. Svantaggio attacchi ranged oltre 9m. Navigation check +5 CD.</td>
+                            <td>Morning 1d4 ore OR fino wind</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dust Storm</strong></td>
+                            <td>Visibilità 3m. Tutti checks svantaggio (dust in eyes). 1d4 danno ogni 10 min exposed (without bandana/cover). 
+                            Firearms jam on Natural 1-4.</td>
+                            <td>1d6 ore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tornado (Rare)</strong></td>
+                            <td>Devastante. TS FOR CD 15 ogni round entro 30m tornado O pulled toward (3m closer). Se raggiunto tornado = 
+                            8d6 bludgeoning + flung 2d10 × 3m. Structures destroyed.</td>
+                            <td>10-30 min, track movement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Neve Pesante</strong></td>
+                            <td>Terrain difficult. Visibilità 15m. Tracce coprono in 1 ora (Sopravvivenza tracking +5 CD). Risk hypothermia 
+                            (vedi Freddo Estremo).</td>
+                            <td>1d12 ore</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Pro:</strong> Atmosphere, environmental hazard, tactical consideration (seek shelter, timing travel)</p>
+                <p><strong>Contro:</strong> Può feel arbitrary (DM rolls bad weather constantly = frustrating), tracking effects tedious</p>
+            </section>
+
+            <section id="social-variants">
+                <h3>14.4 Varianti Interazioni Sociali</h3>
+                
+                <h4>A. Reputazione Fazioni (Faction Reputation)</h4>
+                <p><strong>Quando Usare:</strong> Campagne con multiple fazioni (Law, Outlaws, Cultisti, Natives, etc.). Scelte hanno consequence reputazione.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>Track reputazione party con ogni major faction. Scale: -10 (Hated) a +10 (Revered).</li>
+                    <li>Azioni influenzano reputation:
+                        <ul>
+                            <li>Help faction = +1 reputation</li>
+                            <li>Major quest complete = +2 a +5</li>
+                            <li>Betray/attack faction = -2 a -5</li>
+                            <li>Kill member faction = -1 per member</li>
+                        </ul>
+                    </li>
+                    <li>Reputation modifica interactions:</li>
+                </ul>
+
+                <table class="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Reputation</th>
+                            <th>Livello</th>
+                            <th>Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-10 a -6</td>
+                            <td><strong>Hated</strong></td>
+                            <td>Faction attacks on sight. Bounty $500+ testa. Impossible negotiate.</td>
+                        </tr>
+                        <tr>
+                            <td>-5 a -3</td>
+                            <td><strong>Hostile</strong></td>
+                            <td>Faction refuse help. May attack se provoked. Svantaggio Persuasione checks.</td>
+                        </tr>
+                        <tr>
+                            <td>-2 a +2</td>
+                            <td><strong>Neutral</strong></td>
+                            <td>Standard interactions. No bonus/penalty.</td>
+                        </tr>
+                        <tr>
+                            <td>+3 a +5</td>
+                            <td><strong>Friendly</strong></td>
+                            <td>Faction helpful. Vantaggio Persuasione. Discount services 10%. May offer jobs.</td>
+                        </tr>
+                        <tr>
+                            <td>+6 a +10</td>
+                            <td><strong>Revered</strong></td>
+                            <td>Faction deeply loyal. Free lodging. Discount 25%. Backup in combat se chiamati. Faction leader grants audience.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Conflicting Reputation:</strong> Help Outlaws (+reputation) MA Law lose reputation equivalente (-reputation). 
+                Scelte forzano party choose sides. Cannot please everyone!</p>
+
+                <p><strong>Pro:</strong> Consequence choices, world feels reactive, political intrigue</p>
+                <p><strong>Contro:</strong> Tracking tedious multiple factions, può lock party out content se alienate faction needed</p>
+
+                <h4>B. Duelli Sociali (Verbal Sparring)</h4>
+                <p><strong>Quando Usare:</strong> Debate, negotiation, courtroom, political intrigue.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ol>
+                    <li><strong>Setup:</strong> Each side (party representative vs NPC) ha "Social HP" = 10 + CAR mod + proficiency bonus (se proficient Persuasione/Inganno/Intimidire).</li>
+                    <li><strong>Rounds:</strong> Alternating turns. Attivo speaker fa check (Persuasione, Inganno, OR Intimidire) contestato vs opponent's Intuizione.</li>
+                    <li><strong>Damage:</strong>
+                        <ul>
+                            <li>Win by 1-4: Deal 1 Social damage</li>
+                            <li>Win by 5-9: Deal 2 Social damage</li>
+                            <li>Win by 10+: Deal 3 Social damage + opponent svantaggio next check ("verbally demolished")</li>
+                            <li>Tie: No damage either side (stalemate argument)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Victory:</strong> Reduce opponent Social HP a 0 = win debate. Opponent concede argument/negotiation favorable terms.</li>
+                    <li><strong>Dirty Tricks:</strong> Può use azione "Low Blow" (insult, bring up sensitive topic). Automatic 1 damage MA opponent 
+                    gain vantaggio next check (angered, motivated). Risk backfire.</li>
+                </ol>
+
+                <p><strong>Pro:</strong> Structure roleplay, mechanical resolution social conflict, feel cinematic</p>
+                <p><strong>Contro:</strong> Abstraction può undermine roleplay (dice decide non RP quality), alcuni giocatori dislike "combat" social</p>
+
+                <h4>C. Lingue e Barriere Linguistiche</h4>
+                <p><strong>Quando Usare:</strong> West multiculturale (Inglese, Spagnolo, lingue native, Cinese, etc.). Communication challenge.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>Track lingue conosciute party (English = default. Spanish/Native languages = background dependent).</li>
+                    <li>Quando interact NPC altra lingua:
+                        <ul>
+                            <li><strong>Non conosci lingua:</strong> Cannot communicate verbalmente. Richiede pantomime/gestures (Persuasione DC +5) 
+                            OR interprete (find translator NPC, $5-20/giorno fee).</li>
+                            <li><strong>Basic Knowledge (INT check DC 15):</strong> Comprendi gist, parole chiave. Miss nuance. 50% chance 
+                            misunderstand complex info.</li>
+                            <li><strong>Fluent:</strong> Normal communication.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Learn Language:</strong> Downtime training (250 giorni × 8 ore/giorno) con teacher ($1/giorno fee) O immersione 
+                    (vivi con speakers 6+ mesi).</li>
+                </ul>
+
+                <p><strong>Lingue Comuni Weird West:</strong></p>
+                <ul>
+                    <li><strong>English:</strong> Dominant, most NPCs</li>
+                    <li><strong>Spanish:</strong> Southwest (California, Texas, Arizona, New Mexico)</li>
+                    <li><strong>Sioux/Lakota:</strong> Plains tribes</li>
+                    <li><strong>Apache:</strong> Southwest tribes</li>
+                    <li><strong>Navajo:</strong> Southwest</li>
+                    <li><strong>Cantonese:</strong> Chinatowns (railroad workers, miners)</li>
+                    <li><strong>French:</strong> Louisiana, Canada trappers</li>
+                    <li><strong>German:</strong> Immigrant communities</li>
+                </ul>
+
+                <p><strong>Pro:</strong> Realism, cultural depth, challenges party find translators OR learn language</p>
+                <p><strong>Contro:</strong> Può frustrate giocatori (locked out convos), tedious se overused, può alienate multilingual players 
+                (feels like penalty conoscere solo Inglese IRL)</p>
+            </section>
+
+            <section id="magic-variants">
+                <h3>14.5 Varianti Magia e Occulto</h3>
+                
+                <h4>A. Magia Selvaggia (Wild Magic Surge) - Adattato Weird West</h4>
+                <p><strong>Quando Usare:</strong> Magic unstable, unpredictable. West = frontier, magic laws weakened.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>Ogni spell cast (liv 1+), caster roll d20.</li>
+                    <li><strong>Natural 1:</strong> Wild Magic Surge! Roll Wild Magic Table.</li>
+                    <li><strong>Optional Escalation:</strong> Se Master vuole più instability, dopo ogni surge, threshold aumenta. Prossimo surge 
+                    su Natural 1-2, poi 1-3, etc. Reset dopo long rest OR exorcism ritual.</li>
+                </ul>
+
+                <p><strong>Wild Magic Table Weird West (d20):</strong></p>
+                <ol>
+                    <li><strong>Spell Backfire:</strong> Spell colpisce caster invece target. Salva se applicabile.</li>
+                    <li><strong>Ghost Manifestation:</strong> Spirit random appare entro 9m, hostile, 1 min. (Ghost stat, Cap 10).</li>
+                    <li><strong>Eldrich Whispers:</strong> Caster sente voices 1 min, gain 1d6 stress, svantaggio concentration checks.</li>
+                    <li><strong>Tentacle Sprout:</strong> Caster cresce tentacle da back 1 ora (cosmetic MA unnerving others, +2 Intimidire).</li>
+                    <li><strong>Reality Flicker:</strong> Caster e target swap positions (teleport swap).</li>
+                    <li><strong>Age Shift:</strong> Caster age ±1d10 anni (cosmetic, non affetta stats MA disturbing).</li>
+                    <li><strong>Spell Amplified:</strong> Spell effect doppio (damage, duration, range, Master discretion).</li>
+                    <li><strong>Spell Fizzle:</strong> Spell fail, slot consumed, no effect.</li>
+                    <li><strong>Polymorph Self:</strong> Caster trasforma random beast (1 min). Roll d6: 1-2 rat, 3-4 coyote, 5-6 crow. 
+                    Retain mental stats.</li>
+                    <li><strong>Color Splash:</strong> Caster e tutto entro 3m coperto bright colored powder (pink, neon green, etc.). 
+                    Lavabile MA visible 1 ora. Svantaggio Furtività.</li>
+                    <li><strong>Summoning Accidental:</strong> Random creature summon entro 9m (Master sceglie CR 1-3, durata 1 min, attitude random).</li>
+                    <li><strong>Gravity Reverse:</strong> All creatures/objects entro 9m caster fall "up" 3m poi crash down. 1d6 danno ciascuno.</li>
+                    <li><strong>Fireworks:</strong> Bright flash + loud bang. Tutti entro 9m Blinded + Deafened 1 round (TS COS CD 13 nega). 
+                    Alerts enemies 300m radius.</li>
+                    <li><strong>Language Scramble:</strong> Caster può solo speak random lingua 10 min (roll random da lista, possibilmente unknow 
+                    da party).</li>
+                    <li><strong>Grow/Shrink:</strong> Caster size aumenta/diminuisce 1 categoria 1 ora (Enlarge/Reduce effect).</li>
+                    <li><strong>Mirror Image:</strong> 1d4 duplicati illusori caster appaiono, Mirror Image spell effect, 1 min.</li>
+                    <li><strong>Spell Ricochet:</strong> Spell colpisce target MA poi bounce random target entro 9m (amico O nemico), same effect.</li>
+                    <li><strong>Weather Change:</strong> Local weather shift dramatically (rain → sole, sole → tempesta) 10 min.</li>
+                    <li><strong>Plant Growth:</strong> Vegetation entro 9m cresce rapidly (Difficult terrain, vines grab, 1 min).</li>
+                    <li><strong>Telepathy Burst:</strong> Caster thoughts broadcast everyone entro 18m per 1 min. No privacy. Embarrassing.</li>
+                </ol>
+
+                <p><strong>Pro:</strong> Unpredictability, humor, risk magic use, thematic chaos frontier</p>
+                <p><strong>Contro:</strong> Can derail serious moments, frustrating caster, slows gameplay (roll table each spell)</p>
+
+                <h4>B. Costi Occulti (Occult Casting Tax)</h4>
+                <p><strong>Quando Usare:</strong> Magic dangerous, corruptive. Lovecraftian theme "forbidden knowledge price".</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>Ogni spell cast (liv 1+) da spell list "occult" (Warlock, alcuni Cleric dark domain, Necromancy wizard), caster gain 
+                    <strong>1 Corruption point</strong>.</li>
+                    <li>Corruption accumulate. Track separate da stress.</li>
+                    <li>Effects Corruption:</li>
+                </ul>
+
+                <table class="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Corruption Points</th>
+                            <th>Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-10</td>
+                            <td>Nessun effetto visibile. Subtle wrongness (eyes darker, skin paler).</td>
+                        </tr>
+                        <tr>
+                            <td>11-20</td>
+                            <td>Minor mutations: nails blacken, teeth sharper, whispers at night. -1 CAR checks non-occult NPCs.</td>
+                        </tr>
+                        <tr>
+                            <td>21-30</td>
+                            <td>Visible corruption: eyes glow faintly dark, veins visible black. -2 CAR checks. Animals spooked (svantaggio Animal Handling).</td>
+                        </tr>
+                        <tr>
+                            <td>31-40</td>
+                            <td>Major mutation: extra finger, tentacle limb, OR scale patches. Church refuses service. -4 CAR checks.</td>
+                        </tr>
+                        <tr>
+                            <td>41-50</td>
+                            <td>Monstrous: clearly inhuman features. Attacked on sight by law/church. Cannot pass normale società. 
+                            Deve hide OR embrace monstruous existence.</td>
+                        </tr>
+                        <tr>
+                            <td>51+</td>
+                            <td>Transformation complete: become NPC aberrazione. Lose control PG. Master controlla. Serve Great Old One now.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Ridurre Corruption:</strong></p>
+                <ul>
+                    <li><strong>Atonement Ritual:</strong> Reverendo potente (liv 9+) può perform ritual. Cost $500, 1 settimana, rimuove 1d10 Corruption. 
+                    Painful (2d10 danno psychic, no save).</li>
+                    <li><strong>Greater Restoration:</strong> Spell rimuove 1d4 Corruption.</li>
+                    <li><strong>Redeem Narrativamente:</strong> Heroic sacrifice OR destroy cult OR banish Great Old One = Master discretion remove 
+                    10-20 Corruption (catharsis).</li>
+                </ul>
+
+                <p><strong>Pro:</strong> Consequence magic oscura, body horror, player choice risk/reward, thematic Lovecraft</p>
+                <p><strong>Contro:</strong> Punishing caster specific archetypes (Warlock gets screwed), tedious tracking, può make magic users 
+                unplayable high level</p>
+
+                <h4>C. Rituali Collaborativi (Group Ritual Casting)</h4>
+                <p><strong>Quando Usare:</strong> Big spell require multiple caster cooperate. Epic moments, cultist rituals.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ol>
+                    <li><strong>Lead Caster:</strong> 1 PG lead ritual, deve know spell being cast.</li>
+                    <li><strong>Participants:</strong> Up to 4 altri caster assist. Need NOT know spell MA devono have spell slots available.</li>
+                    <li><strong>Contributi:</strong> Ogni participant contribuisce 1+ spell slot (loro choice livello). Total contributo = 
+                    enhanced spell power.</li>
+                    <li><strong>Casting Time:</strong> Ritual time = spell casting time × (numero participants + 1). Ritual Circle spell 1 azione = 
+                    5 participants = 5 rounds (30 sec) casting.</li>
+                    <li><strong>Effetti:</strong>
+                        <ul>
+                            <li>Spell cast livello = lead caster slot + tutti contributi slots. Max liv 9.</li>
+                            <li>Esempio: Lead cast Fireball (liv 3 slot). 2 participants contribuiscono 1 liv slot each. Total = liv 3+1+1 = liv 5 
+                            Fireball (10d6 danno invece 8d6).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Risk:</strong> Se ritual interrupted (attaccati, concentration broken), TUTTI participants lose slot contributed 
+                    MA spell fizzle.</li>
+                </ol>
+
+                <p><strong>Pro:</strong> Teamwork caster, scale epic rituals, thematic cult activity</p>
+                <p><strong>Contro:</strong> Coordination tedious, può trivialize boss fight (nova all slots 1 massive spell), balance concerns</p>
+            </section>
+
+            <section id="death-variants">
+                <h3>14.6 Varianti Morte e Resurrezione</h3>
+                
+                <h4>A. Morte Permanente (Hardcore Mode)</h4>
+                <p><strong>Quando Usare:</strong> Campagne grittier, higher stakes, permadeath accepted tavolo.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>NO resurrection spells (Revivify, Raise Dead, Resurrection, True Resurrection) disponibili.</li>
+                    <li>PG muore → <strong>morto permanentemente</strong>.</li>
+                    <li>Player roll nuovo PG, introduce narrativamente.</li>
+                </ul>
+
+                <p><strong>Mitigation:</strong></p>
+                <ul>
+                    <li><strong>Heroic Death:</strong> Player può dichiarare "Heroic Sacrifice". PG muore MA automaticamente success 1 major goal 
+                    (kill boss, save party, complete ritual). Narrative closure.</li>
+                    <li><strong>Legacy:</strong> Nuovo PG può essere related morto (sibling, child, mentor's student). Inherit some gear/relationships.</li>
+                </ul>
+
+                <p><strong>Pro:</strong> Tension massimo, choices matter profondamente, emotional weight</p>
+                <p><strong>Contro:</strong> Devastating players attached character, può cause ragequit, not fun alcuni tavoli</p>
+
+                <h4>B. Resurrection con Costo (Costly Return)</h4>
+                <p><strong>Quando Usare:</strong> Middle ground permadeath vs easy rez. Death serious MA non game over.</p>
+                <p><strong>Meccanica (Variante "Critical Role" style):</strong></p>
+                <ol>
+                    <li>Resurrection spell cast (Revivify, Raise Dead, etc.) = NON automatico success.</li>
+                    <li><strong>Resurrection Challenge:</strong>
+                        <ul>
+                            <li>Caster roll spell attack vs DC = 10 + giorni target dead</li>
+                            <li>3 party member contribuiscono "plea" (RP moment: memoria, offerta, preghiera). Ognuno roll check rilevante 
+                            (Persuasione, Religione, Performance, etc.) DC 15. Success = +3 bonus resurrection roll.</li>
+                            <li>Caster roll. Success = target ritorna MA con consequence (roll Resurrection Consequence Table).</li>
+                            <li>Failure = target gone permanently. Soul refused return OR claimed by entity.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p><strong>Resurrection Consequence Table (d10):</strong></p>
+                <ol>
+                    <li><strong>Memory Loss:</strong> Forget random 1d4 settimane memories. Gaps disturbing.</li>
+                    <li><strong>Weakened:</strong> -2 max PF per livello permanente finché complete quest atonement (Master design).</li>
+                    <li><strong>Marked by Death:</strong> Non-morti sense you (attraction). Svantaggio Furtività vs non-morti.</li>
+                    <li><strong>Debt Spiritual:</strong> Owe favor a entity powerful (Reverend's god, psychopomp, etc.). Called in future.</li>
+                    <li><strong>Aged:</strong> Age 1d10 anni. Cosmetic MA disturbing.</li>
+                    <li><strong>Haunted:</strong> Ghost morto follow you. Invisible others. Occasionally speaks, distracts. -1 concentration checks.</li>
+                    <li><strong>Phobia Acquired:</strong> Gain fobia related death (se killed by fire = pyrophobia). Auto-fail stress check quando esposto.</li>
+                    <li><strong>Fragile Soul:</strong> Next resurrection attempt +5 CD. Soul weakening.</li>
+                    <li><strong>Partial Return:</strong> Resurrect MA manca parte (dito, eye, memoria importante). Permanent loss.</li>
+                    <li><strong>Changed:</strong> Personality shift subtle. Player sceglie 1 trait/ideal cambiato. Not same person.</li>
+                </ol>
+
+                <p><strong>Pro:</strong> Death serious ma non punitive impossibile, RP opportunities (pleas emotional), thematic cost</p>
+                <p><strong>Contro:</strong> Slows game (resurrection scene può require 15-30 min), still può fail (frustrating), consequences 
+                accumulate multiple deaths</p>
+
+                <h4>C. Revenant Option (Ritorno come Fantasma/Non-Morto)</h4>
+                <p><strong>Quando Usare:</strong> Alternative resurrection. PG muore ma unfinished business.</p>
+                <p><strong>Meccanica:</strong></p>
+                <ul>
+                    <li>PG muore. Invece roll nuovo PG OR resurrect, player sceglie: <strong>ritorna come Revenant</strong> (Ghost/Undead hybrid).</li>
+                    <li><strong>Revenant Traits:</strong>
+                        <ul>
+                            <li>Type change: Undead</li>
+                            <li>Resistenza: necrotic, poison immune</li>
+                            <li>Vulnerabile: radiant danno (doubled)</li>
+                            <li><strong>Unfinished Business:</strong> Deve complete 1 major goal (vendetta, protect loved one, destroy artifact). 
+                            Finché incomplete, cannot rest (no death).</li>
+                            <li><strong>Ethereal:</strong> 1/giorno, become incorporeal 1 min (come Ghost). Pass walls, immune physico damage MA 
+                            cannot attack.</li>
+                            <li><strong>Time Limit:</strong> Revenant dura 1 anno. Dopo 1 anno, se goal incomplete → final death, soul dispersed.</li>
+                        </ul>
+                    </li>
+                    <li>Se completa goal → soul trova peace, PG "dies" final. Player roll nuovo PG OR Master allow transition Revenant → 
+                    resurrected normale (reward completion).</li>
+                </ul>
+
+                <p><strong>Pro:</strong> Thematic Western (ghosts common), urgency (1 anno limit), player agency choice</p>
+                <p><strong>Contro:</strong> Can break setting (party traveling con undead = problematic towns), balance concerns (undead traits strong), 
+                goal può be unclear (Master design important)</p>
+            </section>
+
+            <section id="difficulty-scaling">
+                <h3>14.7 Scaling Difficoltà Campagna</h3>
+                
+                <h4>Modalità Facile (Casual Play)</h4>
+                <p><strong>Per Chi:</strong> Nuovi giocatori, focus story over challenge, family-friendly, beer-and-pretzels.</p>
+                <p><strong>Adjustments:</strong></p>
+                <ul>
+                    <li>Enemy HP ridotto 25%</li>
+                    <li>Stress guadagnato ridotto metà (round down)</li>
+                    <li>Death saves: successo su 9+, failure su 1-8 (invece 10+/1-9)</li>
+                    <li>Resurrezione always succeed (no challenge)</li>
+                    <li>Lingering Injuries disabilitato</li>
+                    <li>Treasure aumentato 50% (più ricchi, più gear)</li>
+                </ul>
+
+                <h4>Modalità Standard (Balanced - Default)</h4>
+                <p><strong>Per Chi:</strong> Majority tavoli. Challenge presente ma fair.</p>
+                <p><strong>Settings:</strong> Come scritto manuale Cap 1-13. No modifiche.</p>
+
+                <h4>Modalità Difficile (Gritty Realism)</h4>
+                <p><strong>Per Chi:</strong> Experienced players, want challenge, tactical depth, survival horror.</p>
+                <p><strong>Adjustments:</strong></p>
+                <ul>
+                    <li>Enemy HP aumentato 25%, danno +10%</li>
+                    <li>Stress guadagnato doppio</li>
+                    <li>Lingering Injuries attivo (see 14.1B)</li>
+                    <li>Rest Variant: Short rest = 8 ore, Long rest = 7 giorni (see below)</li>
+                    <li>Treasure ridotto 25% (scarcity)</li>
+                    <li>Firearms Misfire attivo (see 14.1D)</li>
+                    <li>Resource tracking strict (ammo, water, rations, ogni unità)</li>
+                </ul>
+
+                <h4>Modalità Nightmare (Permadeath Hardcore)</h4>
+                <p><strong>Per Chi:</strong> Masochists, Dark Souls fans, ultimate challenge.</p>
+                <p><strong>Adjustments:</strong></p>
+                <ul>
+                    <li>Tutto Difficult Mode +</li>
+                    <li>Morte Permanente (see 14.6A)</li>
+                    <li>Resurrection impossibile (no spells)</li>
+                    <li>Encounters +1 CR (harder enemies)</li>
+                    <li>Random Encounters frequency tripled (danger constant)</li>
+                    <li>Corruption system attivo (see 14.5B) PER TUTTI caster, non solo occult</li>
+                    <li>Afflizioni mentali non curabili via magic (only therapy/time)</li>
+                </ul>
+
+                <p><strong>Master Tips Scaling:</strong></p>
+                <ul>
+                    <li>Discuss difficoltà Session Zero. Consensus gruppo.</li>
+                    <li>Può adjust mid-campaign se troppo easy/hard. "Folks, troviamo combattimenti troppo facili. Ok bump difficoltà?"</li>
+                    <li>Difficulty per giocatore: se 1 player veteran, altri new → scale enemies individual (veteran fight harder version, new 
+                    fight easier). More prep MA more fair.</li>
+                </ul>
+            </section>
+
+            <section id="houserules">
+                <h3>14.8 Houserules Popolari Comunità</h3>
+                
+                <p>Queste sono houserules comuni comunità D&D/West. Master può implement liberamente.</p>
+
+                <h4>1. Bonus Action Potion Drinking</h4>
+                <p><strong>Regola:</strong> Drinking pozione = azione bonus (instead azione completa). Administering a altri = still azione.</p>
+                <p><strong>Rationale:</strong> Azione completa drink potion = troppo cost action economy. Incentiva uso healing items.</p>
+
+                <h4>2. Flanking Advantage</h4>
+                <p><strong>Regola:</strong> Se 2 alleati opposite sides nemico (180° apart), entrambe hanno vantaggio attack roll vs quel nemico.</p>
+                <p><strong>Rationale:</strong> Tactical positioning reward. Però, trivializza vantaggio (molto easy obtain). Use caution.</p>
+
+                <h4>3. Critical Success/Failure Skill Checks</h4>
+                <p><strong>Regola:</strong> Natural 20 skill check = auto-success + extra benefit. Natural 1 = auto-failure + complication.</p>
+                <p><strong>Rationale:</strong> Drama, luck, narrative moments. PERÒ, caution: impossibile task non diventa possibile 
+                (cannot nat 20 fly without magic). Master final say.</p>
+
+                <h4>4. Inispirazione Pooled (Party Pool)</h4>
+                <p><strong>Regola:</strong> Invece inspirazione individual, party ha pool condiviso (start sessione con 1d4 inspiration points). 
+                Chiunque può use, depletes pool. Gain via RP, heroic azioni, criticals (Master awards).</p>
+                <p><strong>Rationale:</strong> Condivisione resource, teamwork, non waste (spesso player forget use individual inspiration).</p>
+
+                <h4>5. Diagonal Movement Cost</h4>
+                <p><strong>Regola:</strong> Movimento diagonale grid costs normal (5 ft = 5 ft), NO alternating 5/10. Simplification.</p>
+                <p><strong>Rationale:</strong> Ease play, meno math, flow better. Trade accuracy per speed.</p>
+
+                <h4>6. Max HP on Level Up</h4>
+                <p><strong>Regola:</strong> Quando level up, gain max HP Hit Die (invece roll). Es: Fighter → +10 HP ogni livello, non roll d10.</p>
+                <p><strong>Rationale:</strong> Consistency, avoid feels bad roll (roll 1 su d10 = terrible). PG più durable.</p>
+
+                <h4>7. Bonus Action Dash/Disengage</h4>
+                <p><strong>Regola:</strong> Dash e Disengage può be azione bonus (not just Rogue).</p>
+                <p><strong>Rationale:</strong> Mobilità, dynamic combat, less gridlock. Caution: può trivialize Rogue feature.</p>
+
+                <h4>8. Short Rest = 10 Minuti (Instead 1 Ora)</h4>
+                <p><strong>Regola:</strong> Short rest only requires 10 min instead full hour.</p>
+                <p><strong>Rationale:</strong> Faster pacing, dungeons less slow, encourage rest usage. Caution: può trivialize resource management.</p>
+
+                <h4>9. Spell Points Variant (Invece Spell Slots)</h4>
+                <p><strong>Regola:</strong> Caster usa "Spell Points" instead slot levels. Flexibility cast any level spell finché have points.</p>
+                <p><strong>Rationale:</strong> Flexibility, less bookkeeping, "mana pool" feel. See DMG pg 288 details.</p>
+
+                <h4>10. Bloodied Condition (Video Game Style)</h4>
+                <p><strong>Regola:</strong> Creature a 50% O meno HP = "Bloodied" (visible wounds, breathing heavy). Mechanical effect: Player sa quando 
+                enemy ~half dead. Può trigger abilities (some class features activate when bloodied).</p>
+                <p><strong>Rationale:</strong> Information, tactics, cinematic (describe wounds accumulate).</p>
+
+                <div class="warning-box">
+                    <p><strong>Implementing Houserules:</strong></p>
+                    <ul>
+                        <li>Discuss tavolo Session Zero OR before implement mid-campaign</li>
+                        <li>Write down clearly (physical sheet OR digital doc everyone access)</li>
+                        <li>Trial period (test 3-5 sessioni, evaluate, keep OR discard)</li>
+                        <li>Consistency: Once houserule adopted, stick con it. Changing constantly = confusing.</li>
+                        <li>Balance: Monitor impact game balance. Se 1 houserule break game (troppo strong), adjust OR remove.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="final-advice">
+                <h3>14.9 Consigli Finali su Varianti</h3>
+                
+                <div class="tip-box">
+                    <p><strong>Meno è Più:</strong></p>
+                    <p>Non implement TUTTE varianti questo capitolo. Overwhelm garantito. Sceglie 2-3 rilevanti tavolo tuo, 
+                    test quelle. Dopo stabile, considera add più.</p>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>Listen Players:</strong></p>
+                    <p>Best houserules emergono da problems tavolo specifico. Giocatori complaint "resurrezione troppo facile"? 
+                    Allora implement Resurrection Challenge. Non forced varianti non-richieste.</p>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>Document Everything:</strong></p>
+                    <p>Write houserules/variants used. Share con giocatori. Everyone same page = no disputes mid-session.</p>
+                </div>
+
+                <div class="tip-box">
+                    <p><strong>Playtest & Iterate:</strong></p>
+                    <p>Houserule not working? OK change. "Folks, flanking advantage trivializing combat. Removing rule next session, ok?" 
+                    Adaptation OK. Not failure.</p>
+                </div>
+
+                <div class="horror-box" style="margin-top: 30px;">
+                    <p style="font-size: 1.2em; font-weight: bold;">Il Miglior Regolamento è Quello Che Funziona al TUO Tavolo.</p>
+                    <p>Nessun ruleset perfetto universalmente. D&D 5e è framework, non legge immutabile. <strong>Adatta, modifica, personalizza.</strong></p>
+                    <p>Se regola migliora divertimento tavolo → keep. Se complica senza benefit → discard.</p>
+                    <p style="margin-top: 15px;">
+                        <strong>TU sei Master. TU conosci tuo gruppo. TU decidi regole.</strong><br>
+                        Questo manuale fornisce tools. Come usi tools = arte tua.
+                    </p>
+                </div>
+            </section>
+        </article>
+
+        <div class="pagination">
+            <a href="capitolo_13.html" class="prev">← Capitolo 13</a>
+            <span>Capitolo 14 di 15</span>
+            <a href="appendice_a.html" class="next">Appendici →</a>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p><strong>COLT & CTHULHU</strong> - Capitolo 14: Regole Avanzate e Varianti</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">© 2025 - Guida Completa del Giocatore</p>
+    </footer>
+
+    <a href="#top" class="back-to-top">↑</a>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
