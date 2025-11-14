@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schede Personaggio - Quickstart</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media print {
+            .character-quicksheet {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        .character-quicksheet {
+            background: #FFF8DC;
+            border: 6px solid #8B4513;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .char-header-quick {
+            text-align: center;
+            background: linear-gradient(135deg, #8B4513, #D4AF37);
+            color: white;
+            padding: 20px;
+            margin: -30px -30px 20px -30px;
+            border-radius: 6px 6px 0 0;
+        }
+        
+        .char-name-quick {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .char-class-quick {
+            font-size: 1.2rem;
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+        }
+        
+        .stats-quick {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .stat-quick {
+            background: white;
+            border: 3px solid #8B4513;
+            padding: 15px 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .stat-label {
+            font-weight: bold;
+            font-size: 0.8rem;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        .stat-score {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2C1810;
+        }
+        
+        .stat-mod {
+            font-size: 1.2rem;
+            color: #5D4E37;
+            margin-top: 3px;
+        }
+        
+        .combat-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .combat-stat {
+            background: white;
+            border: 3px solid #8B4513;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .combat-stat-label {
+            font-size: 0.9rem;
+            color: #8B4513;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .combat-stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2C1810;
+        }
+        
+        .weapons-quick {
+            background: white;
+            border: 3px solid #8B4513;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .weapon-entry {
+            padding: 10px;
+            margin: 8px 0;
+            background: #FFF8DC;
+            border-left: 4px solid #D4AF37;
+            border-radius: 4px;
+        }
+        
+        .weapon-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #8B4513;
+        }
+        
+        .weapon-stats {
+            font-size: 0.95rem;
+            color: #2C1810;
+            margin-top: 5px;
+        }
+        
+        .abilities-quick {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.2), transparent);
+            border: 3px solid #D4AF37;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .ability-entry {
+            margin: 12px 0;
+            padding: 12px;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .ability-name {
+            font-weight: bold;
+            color: #8B4513;
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+        }
+        
+        .hp-stress-track {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .track-section {
+            flex: 1;
+            background: white;
+            border: 3px solid #8B4513;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .track-label {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .box {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #8B4513;
+            background: white;
+        }
+        
+        .personality-quick {
+            background: rgba(139, 69, 19, 0.1);
+            border: 2px solid #8B4513;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="tip-box no-print">
+            <h3>📄 Schede Personaggio - Quickstart</h3>
+            <p>Queste sono versioni semplificate delle schede, ottimizzate per giocatori nuovi. 
+            Contengono solo le informazioni essenziali per giocare subito.</p>
+            <p><strong>Stampa:</strong> Usa Ctrl+P per stampare. Ogni scheda occupa 1 pagina fronte.</p>
+        </div>
+
+        <!-- ========================================
+             SCHEDA 1: SARAH McCARTHY - PISTOLERO
+             ======================================== -->
+        <div class="character-quicksheet">
+            <div class="char-header-quick">
+                <div style="font-size: 3rem; margin-bottom: 10px;">🤠</div>
+                <h2 class="char-name-quick">SARAH McCARTHY</h2>
+                <p class="char-class-quick">Pistolero | Livello 1 | Ex Fuorilegge</p>
+            </div>
+
+            <!-- Caratteristiche -->
+            <div class="stats-quick">
+                <div class="stat-quick">
+                    <div class="stat-label">FOR</div>
+                    <div class="stat-score">12</div>
+                    <div class="stat-mod">+1</div>
+                </div>
+                <div class="stat-quick" style="background: #E8F4E8; border-color: #3d5a3d;">
+                    <div class="stat-label">DES</div>
+                    <div class="stat-score">16</div>
+                    <div class="stat-mod">+3</div>
+                </div>
+                <div class="stat-quick">
+                    <div class="stat-label">COS</div>
+                    <div class="stat-score">14</div>
+                    <div class="stat-mod">+2</div>
+                </div>
+                <div class="stat-quick">
+                    <div class="stat-label">INT</div>
+                    <div class="stat-score">10</div>
+                    <div class="stat-mod">+0</div>
+                </div>
+                <div class="stat-quick">
+                    <div class="stat-label">SAG</div>
+                    <div class="stat-score">13</div>
+                    <div class="stat-mod">+1</div>
+                </div>
+                <div class="stat-quick">
+                    <div class="stat-label">CAR</div>
+                    <div class="stat-score">11</div>
+                    <div class="stat-mod">+0</div>
+                </div>
+            </div>
+
+            <!-- Stats Combattimento -->
+            <div class="combat-stats">
+                <div class="combat-stat">
+                    <div class="combat-stat-label">PUNTI FERITA</div>
+                    <div class="combat-stat-value">12</div>
+                </div>
+                <div class="combat-stat">
+                    <div class="combat-stat-label">CLASSE ARMATURA</div>
+                    <div class="combat-stat-value">14</div>
+                </div>
+                <div class="combat-stat">
+                    <div class="combat-stat-label">STRESS MAX</div>
+                    <div class="combat-stat-value">22</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 15px 0;">
+                <strong>Bonus Competenza:</strong> +2 | <strong>Velocità:</strong> 9m | <strong>Iniziativa:</strong> +3
+            </div>
+
+            <!-- Tracker HP e Stress -->
+            <div class="hp-stress-track">
+                <div class="track-section">
+                    <div class="track-label">❤️ PUNTI FERITA</div>
+                    <div class="boxes">
+                        <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+                        <div class="box">4</div><div class="box">5</div><div class="box">6</div>
+                        <div class="box">7</div><div class="box">8</div><div class="box">9</div>
+                        <div class="box">10</div><div class="box">11</div><div class="box">12</div>
+                    </div>
+                </div>
+                
+                <div class="track-section">
+                    <div class="track-label">🧠 STRESS</div>
+                    <div class="boxes">
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">1</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">2</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">3</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">4</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">5</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">6</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">7</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">8</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">9</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">10</div>
+                    </div>
+                    <div class="boxes" style="margin-top: 5px;">
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">11</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">12</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">13</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">14</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">15</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">16</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">17</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">18</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">19</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">20</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Armi -->
+            <div class="weapons-quick">
+                <h4 style="margin-top: 0; color: #8B4513;">⚔️ ATTACCHI</h4>
+                <div class="weapon-entry">
+                    <div class="weapon-name">🔫 Revolver Colt .45 (x2)</div>
+                    <div class="weapon-stats">
+                        <strong>Bonus Colpire:</strong> +5 (d20+3 DES+2 competenza)<br>
+                        <strong>Danni:</strong> 2d6+3 perforante<br>
+                        <strong>Gittata:</strong> 12m/36m | <strong>Munizioni:</strong> 6 colpi ciascuno<br>
+                        <strong>Ricarica:</strong> 1 colpo = azione bonus
+                    </div>
+                </div>
+                <div class="weapon-entry">
+                    <div class="weapon-name">🗡️ Coltello da Caccia</div>
+                    <div class="weapon-stats">
+                        <strong>Bonus Colpire:</strong> +3 (d20+1 FOR+2 competenza)<br>
+                        <strong>Danni:</strong> 1d4+1 perforante<br>
+                        <strong>Portata:</strong> 1.5m (mischia)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abilità Speciali -->
+            <div class="abilities-quick">
+                <h4 style="margin-top: 0; color: #8B4513;">✨ ABILITÀ SPECIALI</h4>
+                
+                <div class="ability-entry">
+                    <div class="ability-name">🎯 Occhio del Tiratore</div>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
+                        <strong>Tipo:</strong> Azione Bonus (recupero: riposo breve/lungo)<br>
+                        <strong>Effetto:</strong> Fino all'inizio del tuo prossimo turno, i tuoi attacchi 
+                        a distanza ignorano copertura 1/2 e 3/4. Niente ti ferma quando prendi la mira.
+                    </p>
+                    <div style="margin-top: 8px;">
+                        <strong>Usi rimanenti:</strong> ⬜ (segna quando usi)
+                    </div>
+                </div>
+                
+                <div class="ability-entry">
+                    <div class="ability-name">⚡ Quick Draw (Estrazione Rapida)</div>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
+                        <strong>Tipo:</strong> Passiva (sempre attiva)<br>
+                        <strong>Effetto:</strong> Non hai bisogno di usare azione per estrarre/riporre armi. 
+                        Puoi estrarre e sparare come parte dello stesso attacco.
+                    </p>
+                </div>
+                
+                <div class="ability-entry">
+                    <div class="ability-name">🎲 Colpo di Fortuna</div>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
+                        <strong>Tipo:</strong> Reazione (1/riposo breve)<br>
+                        <strong>Effetto:</strong> Quando fai un tiro per colpire con arma da fuoco, 
+                        puoi rilanciare il dado e usare il risultato migliore. "Feeling lucky, punk?"
+                    </p>
+                    <div style="margin-top: 8px;">
+                        <strong>Usi rimanenti:</strong> ⬜ (recupero: riposo breve)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abilità Competenti -->
+            <div style="background: white; border: 2px solid #8B4513; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0; color: #8B4513;">🎯 ABILITÀ (d20 + mod + 2 se competente)</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.95rem;">
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Acrobazia</strong> +5 (DES)
+                    </div>
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Atletica</strong> +3 (FOR)
+                    </div>
+                    <div style="padding: 8px;">Furtività +3 (DES)</div>
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Intimidire</strong> +2 (CAR)
+                    </div>
+                    <div style="padding: 8px;">Intuizione +1 (SAG)</div>
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Percezione</strong> +3 (SAG)
+                    </div>
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Rapidità Mano</strong> +5 (DES)
+                    </div>
+                    <div style="padding: 8px;">Sopravvivenza +1 (SAG)</div>
+                </div>
+                <p style="font-size: 0.85rem; margin: 10px 0 0 0;">
+                    ✓ = Competente (+2 bonus). Altre abilità: usa solo modificatore caratteristica.
+                </p>
+            </div>
+
+            <!-- Tiri Salvezza -->
+            <div style="background: white; border: 2px solid #8B4513; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0; color: #8B4513;">🛡️ TIRI SALVEZZA</h4>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                    <div style="padding: 8px; text-align: center;">FOR +1</div>
+                    <div style="background: #E8F4E8; padding: 8px; text-align: center; border-radius: 4px;">
+                        <strong>DES +5 ✓</strong>
+                    </div>
+                    <div style="background: #E8F4E8; padding: 8px; text-align: center; border-radius: 4px;">
+                        <strong>COS +4 ✓</strong>
+                    </div>
+                    <div style="padding: 8px; text-align: center;">INT +0</div>
+                    <div style="padding: 8px; text-align: center;">SAG +1</div>
+                    <div style="padding: 8px; text-align: center;">CAR +0</div>
+                </div>
+            </div>
+
+            <!-- Personalità -->
+            <div class="personality-quick">
+                <h4 style="margin-top: 0; color: #8B4513;">💭 COME GIOCARLA</h4>
+                <p><strong>Personalità:</strong> Sarcastica, coraggiosa fino alla follia. Usa umorismo nero 
+                per nascondere traumi. Veloce a sparare, lenta a fidarsi.</p>
+                <p><strong>Background:</strong> Ex fuorilegge della banda di Black Jack Morrison. Salvò un bambino 
+                durante rapina a Tombstone, prendendo proiettile destinato a lui. 3 anni in prigione. 
+                Ora cerca redenzione.</p>
+                <p><strong>Quirk:</strong> Mano sempre vicina al revolver. Beve whisky quando stressata. 
+                Ha incubi sulla sparatoria di Tombstone.</p>
+                <p style="margin-bottom: 0;"><strong>Motto:</strong> <em>"Tutti meritano una seconda possibilità. 
+                Anche io."</em></p>
+            </div>
+
+            <!-- Equipaggiamento -->
+            <div style="background: white; border: 2px solid #8B4513; padding: 15px; border-radius: 8px;">
+                <h4 style="margin-top: 0; color: #8B4513;">🎒 EQUIPAGGIAMENTO</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.9rem;">
+                    <div>✓ 2x Revolver Colt .45</div>
+                    <div>✓ 100 munizioni .45</div>
+                    <div>✓ Coltello da caccia</div>
+                    <div>✓ Armatura cuoio (CA 14)</div>
+                    <div>✓ Kit pulizia armi</div>
+                    <div>✓ Corda (15m)</div>
+                    <div>✓ 2 Lanterne + olio</div>
+                    <div>✓ Bisacce</div>
+                    <div>✓ Coperta</div>
+                    <div>✓ Razioni (7 giorni)</div>
+                    <div><strong>✓ $12 in contanti</strong></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ========================================
+             SCHEDA 2: REVERENDO STONE
+             ======================================== -->
+        <div class="character-quicksheet">
+            <div class="char-header-quick">
+                <div style="font-size: 3rem; margin-bottom: 10px;">✝️</div>
+                <h2 class="char-name-quick">REV. JOSIAH STONE</h2>
+                <p class="char-class-quick">Reverendo | Livello 1 | Predicatore-Guerriero</p>
+            </div>
+
+            <!-- Caratteristiche -->
+            <div class="stats-quick">
+                <div class="stat-quick">
+                    <div class="stat-label">FOR</div>
+                    <div class="stat-score">10</div>
+                    <div class="stat-mod">+0</div>
+                </div>
+                <div class="stat-quick">
+                    <div class="stat-label">DES</div>
+                    <div class="stat-score">12</div>
+                    <div class="stat-mod">+1</div>
+                </div>
+                <div class="stat-quick">
+                    <div class="stat-label">COS</div>
+                    <div class="stat-score">13</div>
+                    <div class="stat-mod">+1</div>
+                </div>
+                <div class="stat-quick">
+                    <div class="stat-label">INT</div>
+                    <div class="stat-score">14</div>
+                    <div class="stat-mod">+2</div>
+                </div>
+                <div class="stat-quick" style="background: #E8F4E8; border-color: #3d5a3d;">
+                    <div class="stat-label">SAG</div>
+                    <div class="stat-score">16</div>
+                    <div class="stat-mod">+3</div>
+                </div>
+                <div class="stat-quick">
+                    <div class="stat-label">CAR</div>
+                    <div class="stat-score">14</div>
+                    <div class="stat-mod">+2</div>
+                </div>
+            </div>
+
+            <!-- Stats Combattimento -->
+            <div class="combat-stats">
+                <div class="combat-stat">
+                    <div class="combat-stat-label">PUNTI FERITA</div>
+                    <div class="combat-stat-value">9</div>
+                </div>
+                <div class="combat-stat">
+                    <div class="combat-stat-label">CLASSE ARMATURA</div>
+                    <div class="combat-stat-value">13</div>
+                </div>
+                <div class="combat-stat">
+                    <div class="combat-stat-label">STRESS MAX</div>
+                    <div class="combat-stat-value">24</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 15px 0;">
+                <strong>Bonus Competenza:</strong> +2 | <strong>Velocità:</strong> 9m | <strong>Iniziativa:</strong> +1
+            </div>
+
+            <!-- Tracker HP e Stress -->
+            <div class="hp-stress-track">
+                <div class="track-section">
+                    <div class="track-label">❤️ PUNTI FERITA</div>
+                    <div class="boxes">
+                        <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+                        <div class="box">4</div><div class="box">5</div><div class="box">6</div>
+                        <div class="box">7</div><div class="box">8</div><div class="box">9</div>
+                    </div>
+                </div>
+                
+                <div class="track-section">
+                    <div class="track-label">🧠 STRESS</div>
+                    <div class="boxes">
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">1</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">2</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">3</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">4</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">5</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">6</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">7</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">8</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">9</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">10</div>
+                    </div>
+                    <div class="boxes" style="margin-top: 5px;">
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">11</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">12</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">13</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">14</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">15</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">16</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">17</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">18</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">19</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">20</div>
+                    </div>
+                    <div class="boxes" style="margin-top: 5px;">
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">21</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">22</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">23</div>
+                        <div class="box" style="font-size: 0.6rem; border-color: #8B0000;">24</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Armi -->
+            <div class="weapons-quick">
+                <h4 style="margin-top: 0; color: #8B4513;">⚔️ ATTACCHI</h4>
+                <div class="weapon-entry">
+                    <div class="weapon-name">🔫 Fucile Winchester</div>
+                    <div class="weapon-stats">
+                        <strong>Bonus Colpire:</strong> +3 (d20+1 DES+2 competenza)<br>
+                        <strong>Danni:</strong> 2d8 perforante<br>
+                        <strong>Gittata:</strong> 24m/72m | <strong>Munizioni:</strong> 60 colpi<br>
+                        <strong>Ricarica:</strong> 1 colpo = azione
+                    </div>
+                </div>
+                <div class="weapon-entry">
+                    <div class="weapon-name">🪄 Sacred Flame (cantrip)</div>
+                    <div class="weapon-stats">
+                        <strong>Tipo:</strong> Azione, a volontà (nessuno slot)<br>
+                        <strong>Effetto:</strong> Bersaglio fa TS DES CD 13. Fallimento: 1d8 danni radianti. 
+                        Ignora copertura!<br>
+                        <strong>Gittata:</strong> 18m
+                    </div>
+                </div>
+            </div>
+
+            <!-- Magia -->
+            <div style="background: linear-gradient(to right, rgba(212, 175, 55, 0.2), white); 
+                        border: 3px solid #D4AF37; padding: 20px; margin: 15px 0; border-radius: 8px;">
+                <h4 style="margin-top: 0; color: #8B4513;">✨ MAGIA DIVINA</h4>
+                <p><strong>Incantatore Saggezza:</strong> CD Tiro Salvezza 13 | Bonus Colpire Spell +5</p>
+                
+                <div style="margin: 15px 0;">
+                    <strong style="font-size: 1.1rem;">Spell Slots 1° Livello:</strong> 
+                    <span style="font-size: 1.5rem;">⬜ ⬜</span>
+                    <span style="font-size: 0.9rem;">(segna quando usi, recupero riposo lungo)</span>
+                </div>
+
+                <div style="background: white; padding: 12px; border-radius: 6px; margin: 10px 0;">
+                    <strong style="color: #8B4513;">Cure Wounds (1 slot, tocco, 1 azione)</strong><br>
+                    <span style="font-size: 0.95rem;">Tocchi creatura e guarisci <strong>1d8+3 Punti Ferita</strong>. 
+                    "Che la luce ti protegga."</span>
+                </div>
+
+                <div style="background: white; padding: 12px; border-radius: 6px; margin: 10px 0;">
+                    <strong style="color: #8B4513;">Bless (1 slot, 9m, 1 azione, concentrazione 1 min)</strong><br>
+                    <span style="font-size: 0.95rem;">Fino a 3 creature alleate ottengono <strong>+1d4</strong> 
+                    a tutti tiri per colpire e Tiri Salvezza. Ottimo pre-combattimento!</span>
+                </div>
+
+                <div style="background: white; padding: 12px; border-radius: 6px; margin: 10px 0;">
+                    <strong style="color: #8B4513;">Shield of Faith (1 slot, 18m, azione bonus, conc. 10 min)</strong><br>
+                    <span style="font-size: 0.95rem;">Una creatura ottiene <strong>+2 CA</strong>. 
+                    Protezione divina.</span>
+                </div>
+
+                <div style="background: white; padding: 12px; border-radius: 6px; margin: 10px 0;">
+                    <strong style="color: #8B4513;">Guidance (cantrip, tocco, concentrazione 1 min)</strong><br>
+                    <span style="font-size: 0.95rem;">Tocchi alleato. Una volta prima che finisca, può tirare 
+                    <strong>+1d4</strong> a una prova abilità. Usa prima prove difficili!</span>
+                </div>
+            </div>
+
+            <!-- Abilità Speciali -->
+            <div class="abilities-quick">
+                <h4 style="margin-top: 0; color: #8B4513;">✨ ABILITÀ SPECIALI</h4>
+                
+                <div class="ability-entry">
+                    <div class="ability-name">🙏 Tocco Guaritore (3/giorno)</div>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
+                        <strong>Tipo:</strong> Azione Bonus, tocco<br>
+                        <strong>Effetto:</strong> Guarisci 1d4 PF toccando una creatura. Le tue mani brillano 
+                        di luce dorata.
+                    </p>
+                    <div style="margin-top: 8px;">
+                        <strong>Usi rimanenti:</strong> ⬜ ⬜ ⬜ (recupero: riposo lungo)
+                    </div>
+                </div>
+                
+                <div class="ability-entry">
+                    <div class="ability-name">✝️ Turn Undead (1/riposo lungo)</div>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
+                        <strong>Tipo:</strong> Azione, 9m raggio<br>
+                        <strong>Effetto:</strong> Mostri simbolo sacro. Tutti non-morti entro 9m fanno 
+                        TS SAG CD 13 o fuggono terrorizzati per 1 minuto. "Nel nome del Signore, INDIETRO!"
+                    </p>
+                    <div style="margin-top: 8px;">
+                        <strong>Uso rimanente:</strong> ⬜ (recupero: riposo lungo)
+                    </div>
+                </div>
+                
+                <div class="ability-entry">
+                    <div class="ability-name">📿 Servo della Fede</div>
+                    <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
+                        <strong>Tipo:</strong> Passiva (sempre attiva)<br>
+                        <strong>Effetto:</strong> Hai <strong>vantaggio</strong> ai Tiri Salvezza contro 
+                        essere spaventato o affascinato. La tua fede è scudo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Abilità Competenti -->
+            <div style="background: white; border: 2px solid #8B4513; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0; color: #8B4513;">🎯 ABILITÀ (d20 + mod + 2 se competente)</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.95rem;">
+                    <div style="padding: 8px;">Indagare +2 (INT)</div>
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Intuizione</strong> +5 (SAG)
+                    </div>
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Medicina</strong> +5 (SAG)
+                    </div>
+                    <div style="padding: 8px;">Percezione +3 (SAG)</div>
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Persuasione</strong> +4 (CAR)
+                    </div>
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Religione</strong> +4 (INT)
+                    </div>
+                    <div style="background: #E8F4E8; padding: 8px; border-radius: 4px;">
+                        <strong>✓ Storia</strong> +4 (INT)
+                    </div>
+                    <div style="padding: 8px;">Sopravvivenza +3 (SAG)</div>
+                </div>
+            </div>
+
+            <!-- Tiri Salvezza -->
+            <div style="background: white; border: 2px solid #8B4513; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <h4 style="margin-top: 0; color: #8B4513;">🛡️ TIRI SALVEZZA</h4>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                    <div style="padding: 8px; text-align: center;">FOR +0</div>
+                    <div style="padding: 8px; text-align: center;">DES +1</div>
+                    <div style="padding: 8px; text-align: center;">COS +1</div>
+                    <div style="padding: 8px; text-align: center;">INT +2</div>
+                    <div style="background: #E8F4E8; padding: 8px; text-align: center; border-radius: 4px;">
+                        <strong>SAG +5 ✓</strong>
+                    </div>
+                    <div style="background: #E8F4E8; padding: 8px; text-align: center; border-radius: 4px;">
+                        <strong>CAR +4 ✓</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personalità -->
+            <div class="personality-quick">
+                <h4 style="margin-top: 0; color: #8B4513;">💭 COME GIOCARLO</h4>
+                <p><strong>Personalità:</strong> Compassionevole, pragmatico. Voce sempre calma anche in crisi. 
+                Cita Bibbia e filosofi. "Fede senza opere è morta."</p>
+                <p><strong>Background:</strong> Predicatore metodista del Massachusetts. Prima parrocchia in 
+                New Mexico - vide minatore posseduto massacrare famiglia. Studiò occultismo. Ora combatte 
+                orrori cosmici con fede E fucile.</p>
+                <p><strong>Quirk:</strong> Medita ogni alba. Ha incubi ricorrenti. Si prende responsabilità 
+                per morti che non poteva prevenire.</p>
+                <p style="margin-bottom: 0;"><strong>Motto:</strong> <em>"Dio aiuta chi si aiuta. 
+                E io ho un fucile."</em></p>
+            </div>
+
+            <!-- Equipaggiamento -->
+            <div style="background: white; border: 2px solid #8B4513; padding: 15px; border-radius: 8px;">
+                <h4 style="margin-top: 0; color: #8B4513;">🎒 EQUIPAGGIAMENTO</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.9rem;">
+                    <div>✓ Fucile Winchester</div>
+                    <div>✓ 60 munizioni</div>
+                    <div>✓ Bibbia (King James)</div>
+                    <div>✓ Crocifisso argento</div>
+                    <div>✓ Armatura cuoio (CA 13)</div>
+                    <div>✓ Kit medicina</div>
+                    <div>✓ Acqua santa (2 fiale)</div>
+                    <div>✓ Lanterna</div>
+                    <div>✓ Candele (10)</div>
+                    <div>✓ Rosario</div>
+                    <div>✓ Razioni (5 giorni)</div>
+                    <div><strong>✓ $8 in contanti</strong></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="main-footer no-print">
+        <p>Colt & Cthulhu - Quickstart Character Sheets</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quickstart Rules - Colt & Cthulhu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .quickstart-banner {
+            background: linear-gradient(135deg, #8B4513 0%, #2C1810 50%, #8B4513 100%);
+            color: #D4AF37;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 4px solid #D4AF37;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+        
+        .quickstart-banner h1 {
+            font-size: 3rem;
+            margin: 0 0 15px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            color: #D4AF37;
+            border: none;
+        }
+        
+        .quickstart-subtitle {
+            font-size: 1.5rem;
+            color: white;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        
+        .free-badge {
+            display: inline-block;
+            background: #8B0000;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            border: 2px solid #D4AF37;
+        }
+        
+        .quick-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.15), transparent);
+            border-left: 5px solid #D4AF37;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .quick-box h4 {
+            margin-top: 0;
+            color: #8B4513;
+        }
+        
+        .rule-summary {
+            background: white;
+            border: 3px solid #8B4513;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        
+        .dice-example {
+            background: #2C1810;
+            color: #D4AF37;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            border: 2px solid #D4AF37;
+        }
+        
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .action-card {
+            background: white;
+            border: 2px solid #8B4513;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .action-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .download-cta {
+            background: #3d5a3d;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 3px solid #D4AF37;
+        }
+        
+        .download-cta h3 {
+            color: #D4AF37;
+            margin-top: 0;
+        }
+        
+        .download-button {
+            display: inline-block;
+            background: #D4AF37;
+            color: #2C1810;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin: 15px 10px;
+            transition: all 0.3s ease;
+            border: 2px solid #8B4513;
+        }
+        
+        .download-button:hover {
+            background: #8B4513;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .mini-character {
+            background: #FFF8DC;
+            border: 2px solid #8B4513;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .mini-character h5 {
+            margin-top: 0;
+            color: #8B4513;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="quickstart-banner">
+        <h1>🤠 COLT & CTHULHU 🐙</h1>
+        <p class="quickstart-subtitle">Quickstart Rules</p>
+        <p style="color: white; font-size: 1.1rem; margin: 15px auto; max-width: 700px;">
+            Tutto ciò che serve per iniziare a giocare in 30 minuti!
+        </p>
+        <div class="free-badge">✨ 100% GRATUITO ✨</div>
+    </div>
+
+    <div class="container">
+        <article class="chapter">
+            
+            <div class="tip-box">
+                <h3 style="margin-top: 0;">👋 Benvenuto nel Weird West!</h3>
+                <p style="font-size: 1.1rem;">
+                    Questo <strong>Quickstart</strong> contiene tutto il necessario per giocare la tua prima 
+                    partita di Colt & Cthulhu in 2-3 ore:
+                </p>
+                <ul style="font-size: 1.05rem;">
+                    <li>✅ <strong>Regole essenziali</strong> (solo quello che serve, niente fluff)</li>
+                    <li>✅ <strong>2 personaggi pre-generati</strong> pronti all'uso</li>
+                    <li>✅ <strong>Scenario introduttivo</strong> "Sangue sulla Ferrovia"</li>
+                    <li>✅ <strong>Cheat sheet</strong> per Master e giocatori</li>
+                </ul>
+                <p style="font-size: 1.05rem; margin-bottom: 0;">
+                    <strong>Sei pronto?</strong> Prepara alcuni dadi a 20 facce (d20) e iniziamo!
+                </p>
+            </div>
+
+            <!-- SEZIONE 1: CHE COS'È -->
+            <section id="intro">
+                <h2>1. Che cos'è Colt & Cthulhu?</h2>
+                
+                <p style="font-size: 1.1rem;">
+                    <strong>Colt & Cthulhu</strong> è un gioco di ruolo da tavolo ambientato in un <strong>West 
+                    alternativo del 1885</strong>, dove pistoleros affrontano orrori cosmici lovecraftiani. 
+                    Immagina "The Good, The Bad and The Ugly" incontra "L'Ombra venuta dallo Spazio".
+                </p>
+
+                <div class="quick-box">
+                    <h4>🎲 Cosa Serve per Giocare?</h4>
+                    <ul>
+                        <li><strong>3-5 giocatori:</strong> Uno sarà il Master (narratore), gli altri interpretano personaggi</li>
+                        <li><strong>2-3 ore di tempo</strong></li>
+                        <li><strong>Dadi:</strong> Almeno 2-3 dadi a 20 facce (d20), più d6, d8, d10 se possibili</li>
+                        <li><strong>Schede personaggio</strong> (incluse in questo PDF)</li>
+                        <li><strong>Carta e matita</strong> per note</li>
+                    </ul>
+                </div>
+
+                <h3>Come Funziona?</h3>
+                <p>
+                    Il <strong>Master</strong> descrive la situazione. I <strong>giocatori</strong> dicono cosa fanno 
+                    i loro personaggi. Quando l'esito è incerto, si tirano i dadi. È narrativa collaborativa 
+                    con regole per risolvere conflitti.
+                </p>
+
+                <div class="example-box">
+                    <h5>📖 Esempio di Gioco</h5>
+                    <p><strong>Master:</strong> "Attraverso le porte del saloon, vedete tre fuorilegge armati. 
+                    Il capo, una cicatrice sulla guancia, sta minacciando il barman. Cosa fate?"</p>
+                    <p><strong>Sarah (Giocatrice):</strong> "Entro lentamente, mano sul revolver. 'Ragazzi, 
+                    non vogliamo problemi. Perché non andate a bere altrove?'"</p>
+                    <p><strong>Master:</strong> "Il capo ti fissa. 'Chi diavolo sei tu per dirmi cosa fare?' 
+                    Fa Intimidazione contro di te. Tira Tiro Salvezza Saggezza."</p>
+                    <p><strong>Sarah:</strong> [tira d20] "15 più il mio modificatore... 16 totale!"</p>
+                    <p><strong>Master:</strong> "Superi. Non sei intimidita. Cosa fai?"</p>
+                </div>
+            </section>
+
+            <!-- SEZIONE 2: REGOLE BASE -->
+            <section id="regole-base">
+                <h2>2. Regole Essenziali</h2>
+
+                <h3>Il Dado a 20 Facce (d20)</h3>
+                <p>
+                    Quasi tutto nel gioco si risolve tirando un <strong>d20</strong> e aggiungendo modificatori. 
+                    Se il totale eguaglia o supera un numero obiettivo (la <strong>Classe Difficoltà</strong> o CD), 
+                    hai successo!
+                </p>
+
+                <div class="dice-example">
+                    <strong>FORMULA BASE:</strong><br>
+                    d20 + Modificatore ≥ Classe Difficoltà = SUCCESSO<br>
+                    <br>
+                    <strong>Esempio:</strong><br>
+                    Tiri 14 sul d20<br>
+                    + Modificatore Destrezza +3<br>
+                    = 17 totale<br>
+                    <br>
+                    CD era 15 → <span style="color: #3d5a3d;">✅ SUCCESSO!</span>
+                </div>
+
+                <h3>Caratteristiche</h3>
+                <p>Ogni personaggio ha 6 caratteristiche che misurano capacità naturali:</p>
+                
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-name">FORZA (FOR)</div>
+                        <p style="font-size: 0.9rem; margin: 5px 0 0 0;">Potenza fisica, muscoli</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">DESTREZZA (DES)</div>
+                        <p style="font-size: 0.9rem; margin: 5px 0 0 0;">Agilità, riflessi, mira</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">COSTITUZIONE (COS)</div>
+                        <p style="font-size: 0.9rem; margin: 5px 0 0 0;">Resistenza, salute</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">INTELLIGENZA (INT)</div>
+                        <p style="font-size: 0.9rem; margin: 5px 0 0 0;">Logica, memoria, ragionamento</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">SAGGEZZA (SAG)</div>
+                        <p style="font-size: 0.9rem; margin: 5px 0 0 0;">Intuito, percezione, volontà</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">CARISMA (CAR)</div>
+                        <p style="font-size: 0.9rem; margin: 5px 0 0 0;">Personalità, persuasione</p>
+                    </div>
+                </div>
+
+                <p>
+                    Le caratteristiche vanno da 8 (debole) a 18 (eccezionale). Da ogni caratteristica deriva 
+                    un <strong>modificatore</strong>:
+                </p>
+
+                <table style="width: auto; margin: 20px auto;">
+                    <thead>
+                        <tr style="background: #8B4513; color: white;">
+                            <th style="padding: 10px;">Punteggio</th>
+                            <th style="padding: 10px;">Modificatore</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 8px; text-align: center;">8-9</td><td style="padding: 8px; text-align: center;">-1</td></tr>
+                        <tr><td style="padding: 8px; text-align: center;">10-11</td><td style="padding: 8px; text-align: center;">+0</td></tr>
+                        <tr><td style="padding: 8px; text-align: center;">12-13</td><td style="padding: 8px; text-align: center;">+1</td></tr>
+                        <tr><td style="padding: 8px; text-align: center;">14-15</td><td style="padding: 8px; text-align: center;">+2</td></tr>
+                        <tr><td style="padding: 8px; text-align: center;">16-17</td><td style="padding: 8px; text-align: center;">+3</td></tr>
+                        <tr><td style="padding: 8px; text-align: center;">18</td><td style="padding: 8px; text-align: center;">+4</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Tre Tipi di Tiri</h3>
+
+                <div class="action-grid">
+                    <div class="action-card">
+                        <div class="action-icon">🎯</div>
+                        <h5>PROVE ABILITÀ</h5>
+                        <p style="font-size: 0.9rem;">Tenti azione specifica:<br>
+                        <em>Scassinare serratura, seguire tracce, persuadere qualcuno</em></p>
+                        <p style="margin: 10px 0 0 0;"><strong>d20 + mod + bonus competenza</strong></p>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">⚔️</div>
+                        <h5>TIRI PER COLPIRE</h5>
+                        <p style="font-size: 0.9rem;">Attacchi nemico:<br>
+                        <em>Spari col revolver, colpisci col coltello</em></p>
+                        <p style="margin: 10px 0 0 0;"><strong>d20 + mod + bonus competenza</strong></p>
+                    </div>
+                    
+                    <div class="action-card">
+                        <div class="action-icon">🛡️</div>
+                        <h5>TIRI SALVEZZA</h5>
+                        <p style="font-size: 0.9rem;">Resisti a pericolo:<br>
+                        <em>Schivi esplosione, resisti veleno, mantieni sanità</em></p>
+                        <p style="margin: 10px 0 0 0;"><strong>d20 + modificatore</strong></p>
+                    </div>
+                </div>
+
+                <div class="quick-box">
+                    <h4>🎲 Vantaggio e Svantaggio</h4>
+                    <p>A volte situazioni ti danno <strong>vantaggio</strong> (tiri 2d20, usa il migliore) 
+                    o <strong>svantaggio</strong> (tiri 2d20, usa il peggiore).</p>
+                    <p><strong>Esempio vantaggio:</strong> Attacchi nemico distratto</p>
+                    <p><strong>Esempio svantaggio:</strong> Spari in mezzo a tempesta di sabbia</p>
+                </div>
+
+                <h3>Classe Difficoltà (CD)</h3>
+                <p>Ogni azione ha una CD che devi eguagliare/superare:</p>
+                
+                <table style="width: 100%; max-width: 600px; margin: 20px auto;">
+                    <thead>
+                        <tr style="background: #8B4513; color: white;">
+                            <th style="padding: 10px;">CD</th>
+                            <th style="padding: 10px;">Difficoltà</th>
+                            <th style="padding: 10px;">Esempio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 8px; text-align: center;"><strong>10</strong></td>
+                            <td style="padding: 8px;">Facile</td>
+                            <td style="padding: 8px;">Scalare scala, notare traccia evidente</td></tr>
+                        <tr><td style="padding: 8px; text-align: center;"><strong>15</strong></td>
+                            <td style="padding: 8px;">Media</td>
+                            <td style="padding: 8px;">Scassinare serratura, persuadere persona ostile</td></tr>
+                        <tr><td style="padding: 8px; text-align: center;"><strong>20</strong></td>
+                            <td style="padding: 8px;">Difficile</td>
+                            <td style="padding: 8px;">Scalare parete liscia, inganare esperto</td></tr>
+                        <tr><td style="padding: 8px; text-align: center;"><strong>25</strong></td>
+                            <td style="padding: 8px;">Molto Difficile</td>
+                            <td style="padding: 8px;">Quasi impossibile, serve fortuna</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SEZIONE 3: COMBATTIMENTO -->
+            <section id="combattimento">
+                <h2>3. Combattimento Veloce</h2>
+
+                <h3>Ordine di Turno (Iniziativa)</h3>
+                <p>Quando inizia combattimento:</p>
+                <ol>
+                    <li>Tutti tirano <strong>d20 + modificatore Destrezza</strong></li>
+                    <li>Ordinate dal più alto al più basso</li>
+                    <li>Giocate turni in quest'ordine (round)</li>
+                    <li>Ripetete finché combattimento finisce</li>
+                </ol>
+
+                <h3>Nel Tuo Turno</h3>
+                <p>Puoi fare:</p>
+                
+                <div class="rule-summary">
+                    <p style="margin: 0 0 15px 0;"><strong>🏃 MOVIMENTO:</strong> Ti muovi fino a 9 metri (30 piedi)</p>
+                    <p style="margin: 0 0 15px 0;"><strong>⚔️ AZIONE:</strong> Fai una cosa principale (vedi sotto)</p>
+                    <p style="margin: 0;"><strong>⚡ AZIONE BONUS:</strong> Se hai abilità che la usano (non tutti)</p>
+                </div>
+
+                <h4>Azioni Principali più Comuni:</h4>
+                <ul>
+                    <li><strong>ATTACCO:</strong> Attacchi un nemico (arma o incantesimo)</li>
+                    <li><strong>DASH:</strong> Ti muovi altri 9m (18m totali questo turno)</li>
+                    <li><strong>DODGE:</strong> Nemici hanno svantaggio ad attaccarti fino tuo prossimo turno</li>
+                    <li><strong>HELP:</strong> Aiuti alleato (ha vantaggio al suo prossimo tiro)</li>
+                    <li><strong>HIDE:</strong> Provi a nasconderti (se hai copertura)</li>
+                </ul>
+
+                <h3>Attaccare</h3>
+                <div class="dice-example">
+                    <strong>PASSO 1 - TIRO PER COLPIRE:</strong><br>
+                    d20 + modificatore (FOR per mischia, DES per distanza) + bonus competenza<br>
+                    <br>
+                    <strong>Se totale ≥ Classe Armatura (CA) nemico:</strong> Colpisci!<br>
+                    <br>
+                    <strong>PASSO 2 - TIRA DANNI:</strong><br>
+                    Tira dado dell'arma + modificatore<br>
+                    (Revolver = 2d6 + mod DES)<br>
+                    <br>
+                    <strong>PASSO 3 - NEMICO PERDE PF:</strong><br>
+                    Sottrai danni dai suoi Punti Ferita<br>
+                    <br>
+                    <strong>Se PF ≤ 0:</strong> <span style="color: #8B0000;">Nemico cade incosciente!</span>
+                </div>
+
+                <div class="example-box">
+                    <h5>📖 Esempio Combattimento</h5>
+                    <p><strong>Sarah attacca bandito.</strong></p>
+                    <p><strong>1. Tiro per colpire:</strong> d20(12) + DES(+3) + competenza(+2) = 17</p>
+                    <p><strong>CA bandito:</strong> 13 → <span style="color: #3d5a3d;">✅ COLPITO!</span></p>
+                    <p><strong>2. Danni revolver:</strong> 2d6(3,5) + DES(+3) = 11 danni</p>
+                    <p><strong>3. Bandito aveva 15 PF:</strong> 15-11 = 4 PF rimanenti</p>
+                    <p style="font-style: italic; margin-top: 10px;">"Il tuo proiettile lo colpisce al petto. 
+                    Barcolla ma resta in piedi, sanguinante."</p>
+                </div>
+
+                <h3>20 Naturale e 1 Naturale</h3>
+                <ul>
+                    <li><strong>20 sul dado (prima modificatori):</strong> CRITICO! Danni doppi</li>
+                    <li><strong>1 sul dado:</strong> Fallimento automatico</li>
+                </ul>
+
+                <h3>Punti Ferita (PF)</h3>
+                <p>
+                    Misurano quanto danno puoi sopportare prima di cadere. Se arrivi a <strong>0 PF</strong>, 
+                    cadi incosciente. Alleati possono stabilizzarti (azione, prova Medicina CD 10) o curarti.
+                </p>
+
+                <div class="warning-box">
+                    <h4>⚠️ Morte</h4>
+                    <p>A 0 PF, ogni turno tiri <strong>Death Save</strong> (d20 nudo, no modificatori):</p>
+                    <ul>
+                        <li><strong>10+:</strong> Successo (conta 1)</li>
+                        <li><strong>9 o meno:</strong> Fallimento (conta 1)</li>
+                        <li><strong>3 successi:</strong> Ti stabilizzi (vivo ma incosciente)</li>
+                        <li><strong>3 fallimenti:</strong> Muori</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SEZIONE 4: STRESS -->
+            <section id="stress">
+                <h2>4. Sistema Stress (Horror)</h2>
+
+                <p style="font-size: 1.1rem;">
+                    Nel Weird West, la tua <strong>mente</strong> è fragile quanto il tuo corpo. 
+                    Quando vedi orrori cosmici, accumuli <strong>Stress</strong>.
+                </p>
+
+                <div class="horror-box">
+                    <h4>🐙 Come Funziona lo Stress</h4>
+                    <p><strong>Stress Massimo:</strong> 20 + modificatore Saggezza + livello</p>
+                    <p><strong>Guadagni Stress quando:</strong></p>
+                    <ul>
+                        <li>Vedi orrore cosmico (creatura aliena, geometria impossibile)</li>
+                        <li>Assisti a violenza traumatica</li>
+                        <li>Leggi tomo proibito</li>
+                        <li>Vedi compagno morire</li>
+                    </ul>
+                    <p><strong>Il Master ti chiede:</strong> "Fai Tiro Salvezza Saggezza CD [10-15]"</p>
+                    <ul>
+                        <li><strong>Fallisci:</strong> Guadagni 2-4 stress (dipende da orrore)</li>
+                        <li><strong>Superi:</strong> Guadagni 1-2 stress (sempre qualcosa!)</li>
+                    </ul>
+                </div>
+
+                <h3>Effetti dello Stress</h3>
+                <table style="width: 100%; margin: 20px 0;">
+                    <thead>
+                        <tr style="background: #8B4513; color: white;">
+                            <th style="padding: 10px;">Stress Corrente</th>
+                            <th style="padding: 10px;">Stato</th>
+                            <th style="padding: 10px;">Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 8px;">0-5</td><td style="padding: 8px;"><strong>Calmo</strong></td>
+                            <td style="padding: 8px;">Nessun effetto</td></tr>
+                        <tr><td style="padding: 8px;">6-10</td><td style="padding: 8px;"><strong>Nervoso</strong></td>
+                            <td style="padding: 8px;">Roleplay agitazione</td></tr>
+                        <tr><td style="padding: 8px;">11-15</td><td style="padding: 8px;"><strong>Stressato</strong></td>
+                            <td style="padding: 8px;">Svantaggio su SAG e CAR</td></tr>
+                        <tr><td style="padding: 8px;">16-20</td><td style="padding: 8px;"><strong>Ansioso</strong></td>
+                            <td style="padding: 8px;">Svantaggio TUTTE prove abilità</td></tr>
+                        <tr style="background: #FFF0F0;"><td style="padding: 8px;"><strong>21+</strong></td>
+                            <td style="padding: 8px;"><strong>Traumatizzato</strong></td>
+                            <td style="padding: 8px;"><strong>Guadagni afflizione!</strong></td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Recuperare Stress</h3>
+                <ul>
+                    <li><strong>Riposo breve (1 ora):</strong> Recuperi 1d4 stress</li>
+                    <li><strong>Riposo lungo (8 ore):</strong> Recuperi 1d6 stress</li>
+                    <li><strong>In città sicura:</strong> +2 stress recovery</li>
+                    <li><strong>Conforto alleato (10 min):</strong> 1d4 stress (1/giorno)</li>
+                </ul>
+
+                <div class="tip-box">
+                    <h4>💡 Per il Master: Quando Dare Stress</h4>
+                    <p>Non ogni cosa spaventosa = stress. Usa per:</p>
+                    <ul>
+                        <li>✅ Orrori genuinamente ALIENI (creature lovecraftiane, geometria non-euclidea)</li>
+                        <li>✅ Violenza particolarmente traumatica (tortura, tradimento alleato)</li>
+                        <li>✅ Conoscenza proibita (scopri verità che spezza realtà)</li>
+                        <li>❌ NON per: banditi normali, sparatorie standard, pericoli mundani</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SEZIONE 5: PERSONAGGI -->
+            <section id="personaggi">
+                <h2>5. Personaggi Pre-Generati</h2>
+
+                <p>
+                    Scegli uno dei due personaggi sotto. Schede complete stampabili sono disponibili 
+                    alla fine del documento.
+                </p>
+
+                <!-- SARAH -->
+                <div class="mini-character">
+                    <h5>🤠 SARAH McCARTHY - Pistolero</h5>
+                    <p><strong>Concept:</strong> Ex fuorilegge cerca redenzione. Veloce col revolver, lenta a fidarsi.</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0;">
+                        <div><strong>PF:</strong> 12</div>
+                        <div><strong>CA:</strong> 14</div>
+                        <div><strong>Stress Max:</strong> 22</div>
+                    </div>
+                    
+                    <p><strong>Attacco principale:</strong> Revolver +5 colpire, 2d6+3 danni, gittata 12/36m</p>
+                    
+                    <p><strong>Abilità speciale - Occhio del Tiratore:</strong> Bonus action, ignora copertura fino tuo prossimo turno</p>
+                    
+                    <p><strong>Come giocarla:</strong> Sarcastica, coraggiosa. Mano sempre sul revolver. 
+                    Protegge innocenti ferocemente.</p>
+                </div>
+
+                <!-- REVERENDO -->
+                <div class="mini-character">
+                    <h5>✝️ REVERENDO JOSIAH STONE - Reverendo</h5>
+                    <p><strong>Concept:</strong> Predicatore metodista che ha visto orrori. Combatte oscurità con fede E fucile.</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 10px 0;">
+                        <div><strong>PF:</strong> 9</div>
+                        <div><strong>CA:</strong> 13</div>
+                        <div><strong>Stress Max:</strong> 24</div>
+                    </div>
+                    
+                    <p><strong>Attacco principale:</strong> Fucile +3 colpire, 2d8 danni, gittata 24/72m</p>
+                    <p><strong>Magia:</strong> Cure Wounds (guarisci 1d8+3 PF), Sacred Flame (1d8 danni radianti)</p>
+                    
+                    <p><strong>Abilità speciale - Tocco Guaritore:</strong> 3/giorno, bonus action, guarisci alleato 1d4 PF</p>
+                    
+                    <p><strong>Come giocarlo:</strong> Voce calma, compassionevole. Cita Bibbia. Pragmatico - usa fucile quando serve.</p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Ruoli dei Personaggi</h4>
+                    <p><strong>Sarah:</strong> DPS (danno), tira fuori nei combattimenti, elimina nemici velocemente</p>
+                    <p><strong>Reverendo:</strong> Healer + Support, cura alleati, buffa gruppo, resiliente vs stress</p>
+                    <p>Lavorano bene insieme! Sarah gestisce minacce fisiche, Reverendo mantiene gruppo vivo e sano di mente.</p>
+                </div>
+            </section>
+
+            <!-- SEZIONE 6: SCENARIO -->
+            <section id="scenario">
+                <h2>6. Scenario: "Sangue sulla Ferrovia"</h2>
+
+                <div class="warning-box">
+                    <h4>📌 Solo per il Master</h4>
+                    <p>Giocatori, <strong>NON leggete questa sezione!</strong> Contiene spoiler dello scenario.</p>
+                </div>
+
+                <h3>Setup (5 minuti)</h3>
+                <p><strong>Location:</strong> Junction City, Arizona - Piccola cittadina ferroviaria, 1885</p>
+                <p><strong>Hook:</strong> Lo sceriffo locale offre $50 ai PG per investigare sparizioni 
+                vicino al binario ferroviario. 3 operai scomparsi in 2 settimane.</p>
+
+                <h3>Atto I: L'Investigazione (30 min)</h3>
+                <p>PG parlano con:</p>
+                <ul>
+                    <li><strong>Sceriffo Wade:</strong> "Trovati solo cappelli e attrezzi abbandonati. 
+                    Nessun corpo. Come se fossero... evaporati."</li>
+                    <li><strong>Caposquadra Murphy:</strong> (Persuasione CD 12) "Gli uomini parlavano 
+                    di strani rumori sotto i binari di notte. Come... canti."</li>
+                    <li><strong>Barman Pete:</strong> (Se offrono whisky) "Mio nonno nativo diceva 
+                    che questa terra era 'dove le stelle toccano la terra'. Mai capito cosa significasse."</li>
+                </ul>
+
+                <p><strong>Indizio chiave:</strong> Seguendo binari (Sopravvivenza CD 13), trovano 
+                tunnel manutenzione che scende sotto la ferrovia. Entrata nascosta da travi crollate.</p>
+
+                <h3>Atto II: Il Tunnel (45 min)</h3>
+                <p><strong>Descrizione:</strong> Tunnel scende 15m. Pareti hanno strani graffiti - 
+                forme geometriche che fanno male agli occhi guardarle.</p>
+
+                <p><strong>STRESS CHECK 1:</strong> TS SAG CD 11. Fallimento +2 stress, successo +1 stress.</p>
+
+                <p><strong>In fondo al tunnel:</strong> Camera naturale con 3 <strong>Cultisti</strong> 
+                che stanno eseguendo rituale. Al centro: portale dimensionale pulsante.</p>
+
+                <h4>🗡️ COMBATTIMENTO: Cultisti (3)</h4>
+                <div class="stat-block">
+                    <p><strong>CA:</strong> 12 | <strong>PF:</strong> 11 ciascuno</p>
+                    <p><strong>Attacco:</strong> Pugnale +3 colpire, 1d4+1 danno</p>
+                    <p><strong>Tattica:</strong> 2 attaccano in mischia, 1 lancia Eldritch Blast (+3, 1d10 danno)</p>
+                </div>
+
+                <p>Se PG vincono in 3 round, portale è ancora piccolo. Se impiegano 4+ round, 
+                qualcosa inizia ad emergere...</p>
+
+                <h3>Atto III: L'Orrore (30 min)</h3>
+                <p>Dal portale emerge <strong>Tentacolo Dimensionale</strong> (o solo tentacolo se PG veloci).</p>
+
+                <h4>🐙 BOSS: Tentacolo Dimensionale</h4>
+                <div class="stat-block">
+                    <p><strong>CA:</strong> 14 | <strong>PF:</strong> 30</p>
+                    <p><strong>Attacco:</strong> Frusta +5 colpire, 2d6+2 danno, portata 4.5m</p>
+                    <p><strong>Speciale - Presenza Aliena:</strong> Inizio turno, tutti TS SAG CD 12 
+                    o Spaventato per 1 round</p>
+                </div>
+
+                <p><strong>STRESS CHECK 2:</strong> TS SAG CD 13. Fallimento +3 stress, successo +2 stress.</p>
+
+                <p><strong>Come chiudere portale:</strong></p>
+                <ul>
+                    <li>Distruggere i 4 cristalli rituali attorno (10 PF ciascuno, CA 12)</li>
+                    <li>O: Spell caster può tentare Counterspell/Dispel Magic</li>
+                    <li>Quando portale chiude, tentacolo svanisce</li>
+                </ul>
+
+                <h3>Epilogo (10 min)</h3>
+                <p><strong>Ricompensa:</strong> $50 ciascuno + reputazione locale</p>
+                <p><strong>XP:</strong> 300 XP ciascuno (sufficiente per livello 2!)</p>
+                <p><strong>Stress recovery:</strong> Riposo lungo in città = 1d6+2 stress recupero</p>
+
+                <div class="tip-box">
+                    <h4>💡 Consigli Master</h4>
+                    <ul>
+                        <li>Se PG soffrono troppo in combat, riduci PF nemici del 30%</li>
+                        <li>Se troppo facile, aggiungi +1 cultista o più PF al tentacolo</li>
+                        <li>Descrivi l'orrore suggestivamente - "La sua forma sfida geometria" 
+                        vs dettagli grafici</li>
+                        <li>Stress è serio ma recuperabile - non aver paura di darne</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CHEAT SHEET -->
+            <section id="cheatsheet">
+                <h2>7. Cheat Sheet</h2>
+
+                <div class="rule-summary">
+                    <h4 style="margin-top: 0;">🎲 Risoluzione Azioni</h4>
+                    <p><strong>Prova Abilità:</strong> d20 + modificatore caratteristica + bonus competenza ≥ CD</p>
+                    <p><strong>Attacco:</strong> d20 + modificatore + bonus competenza ≥ CA nemico</p>
+                    <p><strong>Danno:</strong> Dado arma + modificatore</p>
+                    <p><strong>Tiro Salvezza:</strong> d20 + modificatore ≥ CD</p>
+                </div>
+
+                <div class="rule-summary">
+                    <h4 style="margin-top: 0;">⚔️ Turno Combattimento</h4>
+                    <p><strong>Movimento:</strong> 9 metri</p>
+                    <p><strong>Azione:</strong> Attacco, Dash, Dodge, Help, Hide, altro</p>
+                    <p><strong>Azione Bonus:</strong> Se hai abilità che la usano</p>
+                    <p><strong>Reazione:</strong> Attacco opportunità (quando nemico esce da portata)</p>
+                </div>
+
+                <div class="rule-summary">
+                    <h4 style="margin-top: 0;">🧠 Stress</h4>
+                    <p><strong>Guadagni quando:</strong> Vedi orrore cosmico (TS SAG)</p>
+                    <p><strong>Effetti:</strong> 11+ = svantaggio SAG/CAR, 16+ = svantaggio tutte abilità</p>
+                    <p><strong>Recovery:</strong> Riposo breve 1d4, lungo 1d6</p>
+                </div>
+
+                <div class="rule-summary">
+                    <h4 style="margin-top: 0;">❤️ Punti Ferita</h4>
+                    <p><strong>0 PF:</strong> Incosciente, fai Death Saves</p>
+                    <p><strong>Death Save:</strong> d20. 10+ successo, 9- fallimento. 3 di uno = vivi o muori</p>
+                    <p><strong>Stabilizzare:</strong> Azione, Medicina CD 10</p>
+                </div>
+            </section>
+
+            <!-- CTA FINALE -->
+            <div class="download-cta">
+                <h3>🎉 Ti è Piaciuto?</h3>
+                <p style="font-size: 1.1rem; margin: 15px 0;">
+                    Questo Quickstart è solo un assaggio! Il <strong>manuale completo</strong> include:
+                </p>
+                <ul style="text-align: left; max-width: 600px; margin: 20px auto; font-size: 1.05rem;">
+                    <li>✅ 6 archetipi giocabili (Pistolero, Reverendo, Dottore, Sciamano, Giocatore, Cacciatore)</li>
+                    <li>✅ Sistema completo creazione personaggio</li>
+                    <li>✅ 20+ creature del Weird West (bandit + orrori lovecraftiani)</li>
+                    <li>✅ Equipaggiamento completo 1885 (revolver, fucili, dynamite, oggetti sacri)</li>
+                    <li>✅ Regole avanzate (duelli western, combattimento a cavallo, magia oscura)</li>
+                    <li>✅ Ambientazione dettagliata del West 1885</li>
+                    <li>✅ Campagna completa livelli 1-5</li>
+                </ul>
+                
+                <a href="#" class="download-button">📖 Acquista Manuale Completo</a>
+                <a href="#" class="download-button">📧 Newsletter Aggiornamenti</a>
+                
+                <p style="margin-top: 20px; font-size: 0.95rem;">
+                    Supporta lo sviluppo indie e ottieni 250+ pagine di contenuto premium!
+                </p>
+            </div>
+
+            <!-- CREDITS -->
+            <div style="background: rgba(139, 69, 19, 0.1); padding: 30px; border-radius: 12px; margin-top: 40px;">
+                <h3 style="text-align: center; margin-top: 0;">Credits & Ringraziamenti</h3>
+                
+                <p style="text-align: center;"><strong>Design & Writing:</strong> Riccardo Franci</p>
+                
+                <p style="text-align: center; margin-top: 20px;">
+                    <strong>Basato su:</strong><br>
+                    D&D 5e SRD (Wizards of the Coast, OGL)<br>
+                    Lovecraftian Horror (H.P. Lovecraft, Public Domain)<br>
+                    Western Genre (Tropi classici del western)
+                </p>
+                
+                <p style="text-align: center; margin-top: 20px; font-size: 0.9rem;">
+                    <strong>Safety Tools:</strong><br>
+                    X-Card (John Stavropoulos)<br>
+                    Lines & Veils (Ron Edwards)
+                </p>
+                
+                <p style="text-align: center; margin-top: 30px; font-size: 0.95rem;">
+                    <strong>© 2025 Riccardo Franci - Tutti i diritti riservati</strong><br>
+                    Questo Quickstart può essere distribuito gratuitamente ma non modificato.<br>
+                    Per info: [tua email]
+                </p>
+            </div>
+
+        </article>
+    </div>
+
+    <footer class="main-footer">
+        <p class="quote">"Il Weird West ti aspetta, cowboy."</p>
+        <p>Colt & Cthulhu Quickstart Rules - Versione 1.0 (2025)</p>
+    </footer>
+
+</body>
+</html>

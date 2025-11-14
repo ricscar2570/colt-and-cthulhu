@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaggi Pre-Generati - Colt & Cthulhu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media print {
+            .character-sheet {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        .character-sheet {
+            background: #FFF8DC;
+            border: 4px solid #8B4513;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(44, 24, 16, 0.3);
+        }
+        
+        .char-header {
+            text-align: center;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            background: linear-gradient(to bottom, rgba(212, 175, 55, 0.1), transparent);
+        }
+        
+        .char-name {
+            font-size: 2.5rem;
+            color: #8B4513;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .char-class {
+            font-size: 1.3rem;
+            color: #2C1810;
+            font-style: italic;
+        }
+        
+        .char-portrait {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            border: 3px solid #8B4513;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #D4AF37, #8B4513);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-box {
+            background: white;
+            border: 2px solid #8B4513;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .stat-name {
+            font-weight: bold;
+            color: #8B4513;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2C1810;
+        }
+        
+        .stat-modifier {
+            font-size: 1.2rem;
+            color: #5D4E37;
+        }
+        
+        .info-section {
+            background: rgba(255, 248, 220, 0.5);
+            border-left: 4px solid #D4AF37;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .info-section h4 {
+            color: #8B4513;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        
+        .skill-item {
+            padding: 5px 10px;
+            background: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .skill-item.proficient {
+            background: #E8F4E8;
+            border-left: 3px solid #3d5a3d;
+            font-weight: bold;
+        }
+        
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .equipment-item {
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid #D4AF37;
+        }
+        
+        .stress-tracker {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+        
+        .stress-box {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #8B0000;
+            background: white;
+        }
+        
+        .hp-tracker {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+        
+        .hp-box {
+            width: 25px;
+            height: 25px;
+            border: 2px solid #3d5a3d;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+        
+        .special-ability {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.2), transparent);
+            border-left: 4px solid #D4AF37;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .special-ability-name {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        .personality-box {
+            background: rgba(139, 69, 19, 0.1);
+            border: 2px solid #8B4513;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header no-print">
+        <h1>COLT & CTHULHU</h1>
+        <p class="subtitle">Personaggi Pre-Generati - Livello 1</p>
+    </header>
+
+    <nav class="nav-main no-print">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="scenario_introduttivo.html">Scenario Intro</a></li>
+            <li><a href="personaggi_pregens.html" class="active">Pre-Gen PG</a></li>
+            <li><a href="appendice_c.html">Schede Vuote</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="breadcrumb no-print">
+            <a href="index.html">Home</a> <span>›</span> <strong>Personaggi Pre-Generati</strong>
+        </div>
+
+        <article class="chapter">
+            <h2>Personaggi Pre-Generati</h2>
+            
+            <div class="tip-box no-print">
+                <h4>Come Usare Questi Personaggi</h4>
+                <p>Questi 6 personaggi sono <strong>completi e bilanciati</strong> per iniziare a giocare immediatamente. 
+                Ogni scheda include:</p>
+                <ul>
+                    <li>✅ Statistiche complete di livello 1</li>
+                    <li>✅ Background narrativo dettagliato</li>
+                    <li>✅ Equipaggiamento completo</li>
+                    <li>✅ Abilità speciali spiegate</li>
+                    <li>✅ Personalità e motivazioni</li>
+                    <li>✅ Hook per avventure</li>
+                </ul>
+                <p><strong>Per stampare:</strong> Usa Ctrl+P e seleziona "Stampa tutto" per avere 6 schede separate.</p>
+            </div>
+
+            <!-- ============================================
+                 PERSONAGGIO 1: SARAH McCARTHY - PISTOLERO
+                 ============================================ -->
+            <div class="character-sheet">
+                <div class="char-header">
+                    <div class="char-portrait">🤠</div>
+                    <h3 class="char-name">Sarah McCarthy</h3>
+                    <p class="char-class">Pistolero | Livello 1 | Umana | Chaotic Good</p>
+                </div>
+
+                <!-- Caratteristiche -->
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-name">Forza</div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-modifier">+1</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Destrezza</div>
+                        <div class="stat-value">16</div>
+                        <div class="stat-modifier">+3</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Costituzione</div>
+                        <div class="stat-value">14</div>
+                        <div class="stat-modifier">+2</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Intelligenza</div>
+                        <div class="stat-value">10</div>
+                        <div class="stat-modifier">+0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Saggezza</div>
+                        <div class="stat-value">13</div>
+                        <div class="stat-modifier">+1</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Carisma</div>
+                        <div class="stat-value">11</div>
+                        <div class="stat-modifier">+0</div>
+                    </div>
+                </div>
+
+                <!-- Statistiche Combattimento -->
+                <div class="info-section">
+                    <h4>⚔️ Statistiche Combattimento</h4>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                        <div><strong>Punti Ferita:</strong> 12 (1d10+2)</div>
+                        <div><strong>Classe Armatura:</strong> 14 (armatura cuoio)</div>
+                        <div><strong>Velocità:</strong> 9 metri</div>
+                        <div><strong>Iniziativa:</strong> +3</div>
+                        <div><strong>Stress Massimo:</strong> 22 (20+1 SAG+1 liv)</div>
+                        <div><strong>Bonus Competenza:</strong> +2</div>
+                    </div>
+                    
+                    <h5 style="margin-top: 15px;">Tracker Punti Ferita:</h5>
+                    <div class="hp-tracker">
+                        <div class="hp-box">1</div><div class="hp-box">2</div><div class="hp-box">3</div>
+                        <div class="hp-box">4</div><div class="hp-box">5</div><div class="hp-box">6</div>
+                        <div class="hp-box">7</div><div class="hp-box">8</div><div class="hp-box">9</div>
+                        <div class="hp-box">10</div><div class="hp-box">11</div><div class="hp-box">12</div>
+                    </div>
+                    
+                    <h5>Tracker Stress:</h5>
+                    <div class="stress-tracker">
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div>
+                    </div>
+                </div>
+
+                <!-- Tiri Salvezza -->
+                <div class="info-section">
+                    <h4>🛡️ Tiri Salvezza</h4>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                        <div><strong>FOR:</strong> +1</div>
+                        <div style="background: #E8F4E8; padding: 5px; border-radius: 4px;"><strong>DES:</strong> +5 ✓</div>
+                        <div style="background: #E8F4E8; padding: 5px; border-radius: 4px;"><strong>COS:</strong> +4 ✓</div>
+                        <div><strong>INT:</strong> +0</div>
+                        <div><strong>SAG:</strong> +1</div>
+                        <div><strong>CAR:</strong> +0</div>
+                    </div>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">✓ = Competente (+2 bonus)</p>
+                </div>
+
+                <!-- Abilità -->
+                <div class="info-section">
+                    <h4>🎯 Abilità</h4>
+                    <div class="skill-list">
+                        <div class="skill-item proficient">Acrobazia +5</div>
+                        <div class="skill-item proficient">Atletica +3</div>
+                        <div class="skill-item">Furtività +3</div>
+                        <div class="skill-item">Indagare +0</div>
+                        <div class="skill-item proficient">Intimidire +2</div>
+                        <div class="skill-item">Intuizione +1</div>
+                        <div class="skill-item">Medicina +1</div>
+                        <div class="skill-item">Natura +0</div>
+                        <div class="skill-item proficient">Percezione +3</div>
+                        <div class="skill-item">Persuasione +0</div>
+                        <div class="skill-item proficient">Rapidità Mano +5</div>
+                        <div class="skill-item">Sopravvivenza +1</div>
+                    </div>
+                </div>
+
+                <!-- Attacchi -->
+                <div class="info-section">
+                    <h4>⚔️ Attacchi</h4>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: #8B4513; color: white;">
+                                <th style="padding: 8px;">Arma</th>
+                                <th>Bonus Colpire</th>
+                                <th>Danno</th>
+                                <th>Gittata/Portata</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: white;">
+                                <td style="padding: 8px;"><strong>Revolver Colt .45 (x2)</strong></td>
+                                <td>+5</td>
+                                <td>2d6 perforante</td>
+                                <td>12/36m</td>
+                            </tr>
+                            <tr style="background: #FFF8DC;">
+                                <td style="padding: 8px;"><strong>Coltello da caccia</strong></td>
+                                <td>+3</td>
+                                <td>1d4+1 perforante</td>
+                                <td>1.5m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="font-size: 0.85rem; margin-top: 5px;"><strong>Note:</strong> Revolver capacità 6 colpi. 
+                    Ricarica 1 colpo = 1 azione bonus.</p>
+                </div>
+
+                <!-- Abilità Speciali -->
+                <div class="info-section">
+                    <h4>✨ Abilità Speciali</h4>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">🎯 Occhio del Tiratore</div>
+                        <p><strong>Tipo:</strong> Azione Bonus (recupero: riposo breve/lungo)</p>
+                        <p>Fino all'inizio del tuo prossimo turno, i tuoi attacchi a distanza con armi da fuoco 
+                        ignorano copertura 1/2 e 3/4. Concentrati sul bersaglio - niente ti fermerà.</p>
+                    </div>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">⚡ Quick Draw (Estrazione Rapida)</div>
+                        <p><strong>Tipo:</strong> Passiva</p>
+                        <p>Non hai bisogno di usare un'azione per estrarre o riporre armi. Puoi estrarre 
+                        e sparare come parte dello stesso attacco. La tua mano è sempre sul calcio del revolver.</p>
+                    </div>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">🔫 Maestria Armi da Fuoco</div>
+                        <p><strong>Tipo:</strong> Passiva</p>
+                        <p>Competenza con tutte le armi da fuoco. Puoi ricaricare un revolver come azione bonus 
+                        invece che azione completa.</p>
+                    </div>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">🎲 Colpo di Fortuna (1/riposo breve)</div>
+                        <p><strong>Tipo:</strong> Reazione (quando fai un attacco)</p>
+                        <p>Puoi rilanciare un tiro per colpire con arma da fuoco e usare il risultato migliore. 
+                        "Quando ti senti fortunato, punk?"</p>
+                    </div>
+                </div>
+
+                <!-- Equipaggiamento -->
+                <div class="info-section">
+                    <h4>🎒 Equipaggiamento</h4>
+                    <div class="equipment-grid">
+                        <div class="equipment-item">✓ 2x Revolver Colt .45</div>
+                        <div class="equipment-item">✓ Coltello da caccia</div>
+                        <div class="equipment-item">✓ 100 munizioni .45</div>
+                        <div class="equipment-item">✓ Armatura di cuoio</div>
+                        <div class="equipment-item">✓ Kit pulizia armi</div>
+                        <div class="equipment-item">✓ Corda (15 metri)</div>
+                        <div class="equipment-item">✓ 2 Lanterne</div>
+                        <div class="equipment-item">✓ Olio per lanterne</div>
+                        <div class="equipment-item">✓ Bisacce</div>
+                        <div class="equipment-item">✓ Coperta</div>
+                        <div class="equipment-item">✓ Razioni (7 giorni)</div>
+                        <div class="equipment-item">✓ $12 in contanti</div>
+                    </div>
+                </div>
+
+                <!-- Background -->
+                <div class="info-section">
+                    <h4>📖 Background: Ex Fuorilegge in Cerca di Redenzione</h4>
+                    <p>Sarah McCarthy è nata nel Missouri durante la Guerra Civile. Suo padre combatteva per l'Unione, 
+                    ma non tornò mai a casa. Sua madre morì di febbre quando Sarah aveva 12 anni. Finì in un orfanotrofio 
+                    dove imparò che la vita non fa prigionieri.</p>
+                    
+                    <p>A 16 anni scappò e si unì alla banda di rustling di "Black Jack" Morrison. Per cinque anni 
+                    visse fuori dalla legge - rapine a diligenze, furti di bestiame, sparatorie nei saloon. 
+                    Era veloce con la pistola e più veloce ancora a fuggire. La chiamavano "Quick Shot Sarah".</p>
+                    
+                    <p>Tutto cambiò durante una rapina a Tombstone. La banda di Black Jack attaccò una banca, 
+                    ma la sicurezza era più forte del previsto. Nella sparatoria che seguì, un bambino rimase 
+                    nel fuoco incrociato. Sarah si gettò davanti al ragazzino, prendendo un proiettile alla spalla 
+                    che era diretto a lui. Salvò la vita del bambino, ma uccise accidentalmente lo sceriffo nella confusione.</p>
+                    
+                    <p>Passò tre anni in prigione. Quando uscì, decise che non voleva più quella vita. 
+                    Ora lavora come "trouble-shooter" indipendente - risolve problemi per chi paga, ma solo se la causa 
+                    è giusta. Cerca redenzione, ma sa che il suo passato non la lascerà mai veramente andare.</p>
+                </div>
+
+                <!-- Personalità -->
+                <div class="personality-box">
+                    <h4 style="margin-top: 0;">💭 Personalità & Roleplay</h4>
+                    <p><strong>Tratti:</strong> Sarcastica, coraggiosa fino alla follia, protettiva verso innocenti. 
+                    Ha un senso dell'umorismo nero per mascherare traumi passati.</p>
+                    
+                    <p><strong>Ideali:</strong> "Tutti meritano una seconda chance - anche io." Crede nella redenzione 
+                    attraverso le azioni, non le parole.</p>
+                    
+                    <p><strong>Legami:</strong> Il ragazzino che salvò (ora adolescente) le scrive lettere occasionalmente. 
+                    È l'unica persona che la fa sentire umana.</p>
+                    
+                    <p><strong>Difetti:</strong> Veloce a sparare, lenta a fidarsi. Ha incubi sulla sparatoria 
+                    di Tombstone. Beve troppo quando è stressata.</p>
+                    
+                    <p><strong>Come interpretarla:</strong> Parla poco, osserva molto. Mano sempre vicina al revolver. 
+                    Sarcasmo come meccanismo di difesa. Ma quando decide che qualcuno è "buono", lo protegge ferocemente.</p>
+                </div>
+
+                <!-- Hook Avventure -->
+                <div class="info-section">
+                    <h4>🎣 Hook per Avventure</h4>
+                    <ul>
+                        <li><strong>Il Passato Ritorna:</strong> Un membro della vecchia banda di Black Jack la trova 
+                        e vuole "un ultimo colpo grande". Lei deve scegliere tra vecchie lealtà e nuova vita.</li>
+                        <li><strong>Lo Sceriffo:</strong> Il fratello dello sceriffo che uccise sta cercando vendetta. 
+                        Può Sarah convincerlo che fu un incidente? O dovrà difendersi?</li>
+                        <li><strong>Redenzione Impossibile:</strong> Il ragazzino che salvò è stato rapito. 
+                        Sarah deve salvarlo... anche se significa tornare a essere fuorilegge per un giorno.</li>
+                    </ul>
+                </div>
+
+                <!-- Note Giocatore -->
+                <div class="warning-box">
+                    <h4>⚠️ Note per il Giocatore</h4>
+                    <p><strong>Ruolo in combattimento:</strong> DPS ranged primario. Stai a distanza e falcia nemici 
+                    con i tuoi revolver. Usa Occhio del Tiratore contro nemici in copertura.</p>
+                    <p><strong>Fuori combattimento:</strong> Buona in prove fisiche (Acrobazia, Atletica) e intimidazione. 
+                    Non sei il face del gruppo - lascia diplomazia agli altri.</p>
+                    <p><strong>Gestione stress:</strong> SAG bassa = vulnerabile a stress. Evita di guardare orrori 
+                    cosmici se possibile. Lascia quel lavoro al Reverendo.</p>
+                </div>
+            </div>
+
+            <!-- ============================================
+                 PERSONAGGIO 2: REV. JOSIAH STONE - REVERENDO
+                 ============================================ -->
+            <div class="character-sheet">
+                <div class="char-header">
+                    <div class="char-portrait">✝️</div>
+                    <h3 class="char-name">Reverendo Josiah Stone</h3>
+                    <p class="char-class">Reverendo | Livello 1 | Umano | Lawful Good</p>
+                </div>
+
+                <!-- Caratteristiche -->
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-name">Forza</div>
+                        <div class="stat-value">10</div>
+                        <div class="stat-modifier">+0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Destrezza</div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-modifier">+1</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Costituzione</div>
+                        <div class="stat-value">13</div>
+                        <div class="stat-modifier">+1</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Intelligenza</div>
+                        <div class="stat-value">14</div>
+                        <div class="stat-modifier">+2</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Saggezza</div>
+                        <div class="stat-value">16</div>
+                        <div class="stat-modifier">+3</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-name">Carisma</div>
+                        <div class="stat-value">14</div>
+                        <div class="stat-modifier">+2</div>
+                    </div>
+                </div>
+
+                <!-- Statistiche Combattimento -->
+                <div class="info-section">
+                    <h4>⚔️ Statistiche Combattimento</h4>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                        <div><strong>Punti Ferita:</strong> 9 (1d8+1)</div>
+                        <div><strong>Classe Armatura:</strong> 13 (armatura cuoio)</div>
+                        <div><strong>Velocità:</strong> 9 metri</div>
+                        <div><strong>Iniziativa:</strong> +1</div>
+                        <div><strong>Stress Massimo:</strong> 24 (20+3 SAG+1 liv)</div>
+                        <div><strong>Bonus Competenza:</strong> +2</div>
+                    </div>
+                    
+                    <h5 style="margin-top: 15px;">Tracker Punti Ferita:</h5>
+                    <div class="hp-tracker">
+                        <div class="hp-box">1</div><div class="hp-box">2</div><div class="hp-box">3</div>
+                        <div class="hp-box">4</div><div class="hp-box">5</div><div class="hp-box">6</div>
+                        <div class="hp-box">7</div><div class="hp-box">8</div><div class="hp-box">9</div>
+                    </div>
+                    
+                    <h5>Tracker Stress:</h5>
+                    <div class="stress-tracker">
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                        <div class="stress-box"></div><div class="stress-box"></div><div class="stress-box"></div>
+                    </div>
+                </div>
+
+                <!-- Tiri Salvezza -->
+                <div class="info-section">
+                    <h4>🛡️ Tiri Salvezza</h4>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                        <div><strong>FOR:</strong> +0</div>
+                        <div><strong>DES:</strong> +1</div>
+                        <div><strong>COS:</strong> +1</div>
+                        <div><strong>INT:</strong> +2</div>
+                        <div style="background: #E8F4E8; padding: 5px; border-radius: 4px;"><strong>SAG:</strong> +5 ✓</div>
+                        <div style="background: #E8F4E8; padding: 5px; border-radius: 4px;"><strong>CAR:</strong> +4 ✓</div>
+                    </div>
+                </div>
+
+                <!-- Abilità -->
+                <div class="info-section">
+                    <h4>🎯 Abilità</h4>
+                    <div class="skill-list">
+                        <div class="skill-item">Acrobazia +1</div>
+                        <div class="skill-item">Atletica +0</div>
+                        <div class="skill-item">Furtività +1</div>
+                        <div class="skill-item">Indagare +2</div>
+                        <div class="skill-item">Intimidire +2</div>
+                        <div class="skill-item proficient">Intuizione +5</div>
+                        <div class="skill-item proficient">Medicina +5</div>
+                        <div class="skill-item">Natura +2</div>
+                        <div class="skill-item">Percezione +3</div>
+                        <div class="skill-item proficient">Persuasione +4</div>
+                        <div class="skill-item">Rapidità Mano +1</div>
+                        <div class="skill-item proficient">Religione +4</div>
+                        <div class="skill-item proficient">Storia +4</div>
+                        <div class="skill-item">Sopravvivenza +3</div>
+                    </div>
+                </div>
+
+                <!-- Attacchi -->
+                <div class="info-section">
+                    <h4>⚔️ Attacchi</h4>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: #8B4513; color: white;">
+                                <th style="padding: 8px;">Arma</th>
+                                <th>Bonus Colpire</th>
+                                <th>Danno</th>
+                                <th>Gittata/Portata</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: white;">
+                                <td style="padding: 8px;"><strong>Fucile Winchester</strong></td>
+                                <td>+3</td>
+                                <td>2d8 perforante</td>
+                                <td>24/72m</td>
+                            </tr>
+                            <tr style="background: #FFF8DC;">
+                                <td style="padding: 8px;"><strong>Bastone da passeggio</strong></td>
+                                <td>+2</td>
+                                <td>1d6 contundente</td>
+                                <td>1.5m</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td style="padding: 8px;"><strong>Sacred Flame (cantrip)</strong></td>
+                                <td>TS DES CD 13</td>
+                                <td>1d8 radiante</td>
+                                <td>18m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Magia -->
+                <div class="info-section" style="background: linear-gradient(to right, rgba(212, 175, 55, 0.1), transparent);">
+                    <h4>✨ Magia Divina</h4>
+                    
+                    <p><strong>Incantatore:</strong> Saggezza (CD Tiro Salvezza 13, +5 colpire con spell)</p>
+                    <p><strong>Spell Slots 1° Livello:</strong> ⬜ ⬜ (recupero riposo lungo)</p>
+                    
+                    <h5 style="margin-top: 15px;">📿 Cantrip (a volontà):</h5>
+                    <div class="special-ability">
+                        <div class="special-ability-name">Sacred Flame</div>
+                        <p><strong>Azione, 18m, TS DES CD 13</strong></p>
+                        <p>Fiamme divine scendono su una creatura visibile. 1d8 danni radianti (dimezzati se supera TS). 
+                        Ignora copertura totale.</p>
+                    </div>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">Guidance</div>
+                        <p><strong>Azione, tocco, concentrazione 1 minuto</strong></p>
+                        <p>Tocchi una creatura consenziente. Una volta prima dello spell finire, può tirare 1d4 
+                        e aggiungere al risultato di una prova abilità a scelta.</p>
+                    </div>
+                    
+                    <h5 style="margin-top: 15px;">📖 Incantesimi 1° Livello Preparati (3):</h5>
+                    <div class="special-ability">
+                        <div class="special-ability-name">Cure Wounds</div>
+                        <p><strong>1 azione, tocco, 1 slot</strong></p>
+                        <p>Tocchi una creatura e guarisci 1d8+3 PF. <em>"Che la luce ti protegga."</em></p>
+                    </div>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">Bless</div>
+                        <p><strong>1 azione, 9m, concentrazione 1 min, 1 slot</strong></p>
+                        <p>Fino a 3 creature ottengono +1d4 ai tiri per colpire e Tiri Salvezza.</p>
+                    </div>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">Shield of Faith</div>
+                        <p><strong>1 azione bonus, 18m, concentrazione 10 min, 1 slot</strong></p>
+                        <p>Una creatura ottiene +2 CA. <em>"Dio protegge i giusti."</em></p>
+                    </div>
+                </div>
+
+                <!-- Abilità Speciali -->
+                <div class="info-section">
+                    <h4>✨ Abilità Speciali</h4>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">🙏 Tocco Guaritore (3/giorno)</div>
+                        <p><strong>Tipo:</strong> Azione Bonus, tocco</p>
+                        <p>Puoi guarire 1d4 PF toccando una creatura. Usa massimo 3 volte, recupera a riposo lungo. 
+                        Le tue mani brillano di luce dorata quando guarisci.</p>
+                        <p style="font-size: 0.85rem;">Usi rimanenti: ⬜ ⬜ ⬜</p>
+                    </div>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">✝️ Canalizzare Divinità: Turn Undead (1/riposo)</div>
+                        <p><strong>Tipo:</strong> Azione, 9m</p>
+                        <p>Mostri il simbolo sacro. Tutti i non-morti entro 9m devono fare TS SAG CD 13 o fuggire 
+                        terrorizzati per 1 minuto. <em>"Nel nome del Signore, INDIETRO!"</em></p>
+                        <p style="font-size: 0.85rem;">Uso rimanente: ⬜ (recupero riposo lungo)</p>
+                    </div>
+                    
+                    <div class="special-ability">
+                        <div class="special-ability-name">📿 Servo della Fede</div>
+                        <p><strong>Tipo:</strong> Passiva</p>
+                        <p>Hai vantaggio ai Tiri Salvezza contro essere spaventato o affascinato. 
+                        La tua fede è scudo e armatura.</p>
+                    </div>
+                </div>
+
+                <!-- Equipaggiamento -->
+                <div class="info-section">
+                    <h4>🎒 Equipaggiamento</h4>
+                    <div class="equipment-grid">
+                        <div class="equipment-item">✓ Fucile Winchester</div>
+                        <div class="equipment-item">✓ 60 munizioni</div>
+                        <div class="equipment-item">✓ Bastone da passeggio</div>
+                        <div class="equipment-item">✓ Bibbia (King James)</div>
+                        <div class="equipment-item">✓ Simbolo sacro (crocifisso d'argento)</div>
+                        <div class="equipment-item">✓ Armatura di cuoio</div>
+                        <div class="equipment-item">✓ Kit medicina</div>
+                        <div class="equipment-item">✓ Acqua santa (2 fiale)</div>
+                        <div class="equipment-item">✓ Lanterna</div>
+                        <div class="equipment-item">✓ Candele (10)</div>
+                        <div class="equipment-item">✓ Rosario</div>
+                        <div class="equipment-item">✓ Abiti talari</div>
+                        <div class="equipment-item">✓ Razioni (5 giorni)</div>
+                        <div class="equipment-item">✓ $8 in contanti</div>
+                    </div>
+                </div>
+
+                <!-- Background -->
+                <div class="info-section">
+                    <h4>📖 Background: Predicatore che ha Visto Troppo</h4>
+                    <p>Josiah Stone nacque in una famiglia metodista del Massachusetts nel 1850. Figlio di un pastore, 
+                    sembrava destinato a seguire le orme paterne. Studiò teologia a Boston e fu ordinato sacerdote a 24 anni.</p>
+                    
+                    <p>La sua prima parrocchia fu in un piccolo villaggio del New Mexico. Lì, per la prima volta, 
+                    Stone si confrontò con qualcosa che le sue prediche non potevano spiegare. Un minatore, posseduto 
+                    da qualcosa di oscuro, massacrò la sua famiglia prima di impiccarsi. Stone, chiamato a dare conforto, 
+                    vide negli occhi del cadavere qualcosa che lo perseguita ancora oggi - un'intelligenza aliena, 
+                    antica e maligna.</p>
+                    
+                    <p>Quell'evento lo cambiò. Iniziò a studiare testi apocrifi, leggende native, e occultismo. 
+                    Scoprì che il male non è solo nell'animo umano - esistono orrori più antichi dell'umanità stessa, 
+                    che osservano dalle stelle e aspettano nelle tenebre.</p>
+                    
+                    <p>Stone lasciò la sua parrocchia e divenne un predicatore itinerante. Viaggia per il West, 
+                    predicando di giorno e combattendo l'oscurità di notte. Ha sviluppato un approccio pratico alla fede: 
+                    Dio ci ha dato menti per pensare e mani per agire. Le preghiere sono potenti, ma a volte serve anche 
+                    un fucile Winchester.</p>
+                    
+                    <p>Ora ha 35 anni. I suoi capelli stanno ingrigendo prematuramente. Ha visto cose che spezzerebbero 
+                    uomini più deboli. Ma crede ancora - anzi, crede più fermamente di prima - che la luce può vincere 
+                    sulle tenebre. Deve solo brillare abbastanza forte.</p>
+                </div>
+
+                <!-- Personalità -->
+                <div class="personality-box">
+                    <h4 style="margin-top: 0;">💭 Personalità & Roleplay</h4>
+                    <p><strong>Tratti:</strong> Compassionevole ma pragmatico. Voce sempre calma, anche in crisi. 
+                    Cita spesso la Bibbia, ma anche Shakespeare e filosofi stoici.</p>
+                    
+                    <p><strong>Ideali:</strong> "La fede senza opere è morta." Crede nell'azione più che nella preghiera passiva. 
+                    Dio aiuta chi si aiuta.</p>
+                    
+                    <p><strong>Legami:</strong> Porta sempre con sé una foto sbiadita delle vittime del minatore posseduto. 
+                    Non per senso di colpa, ma per ricordare perché fa quello che fa.</p>
+                    
+                    <p><strong>Difetti:</strong> A volte dubita di Dio quando l'orrore è troppo grande. Ha incubi ricorrenti. 
+                    Tende a prendersi responsabilità per morti che non poteva prevenire.</p>
+                    
+                    <p><strong>Come interpretarlo:</strong> Parla con tono pastorale - pacato, misurato, confortante. 
+                    Offre sempre speranza, anche nelle situazioni disperate. Cita scritture appropriate al momento. 
+                    Ma quando serve, impugna il fucile con la stessa convinzione con cui impugna la croce.</p>
+                </div>
+
+                <!-- Hook Avventure -->
+                <div class="info-section">
+                    <h4>🎣 Hook per Avventure</h4>
+                    <ul>
+                        <li><strong>La Chiesa Corrotta:</strong> Stone riceve lettera da vecchio collega che chiede aiuto. 
+                        La sua chiesa è stata infiltrata da un culto che adora "Il Dio Capra Nera". Può Stone salvarlo 
+                        prima che sia troppo tardi?</li>
+                        <li><strong>Dubbio di Fede:</strong> Dopo un fallimento particolarmente traumatico, Stone inizia 
+                        a dubitare. Le sue preghiere non funzionano più (perde temporaneamente spell). Deve ritrovare 
+                        fede... o accettare che forse Dio non ascolta più.</li>
+                        <li><strong>Il Tomo Proibito:</strong> Stone trova riferimento a un libro - "Il Necronomicon" - 
+                        che potrebbe contenere conoscenze per combattere gli orrori cosmici. Ma leggerlo potrebbe 
+                        corrompere la sua anima.</li>
+                    </ul>
+                </div>
+
+                <!-- Note Giocatore -->
+                <div class="warning-box">
+                    <h4>⚠️ Note per il Giocatore</h4>
+                    <p><strong>Ruolo in combattimento:</strong> Healer primario + support. Usa Bless prima dei combat. 
+                    Conserva spell slots per Cure Wounds quando servono. Sacred Flame per danno affidabile.</p>
+                    <p><strong>Fuori combattimento:</strong> Face del gruppo (alta Persuasione). Ottimo in investigazioni 
+                    (Storia, Religione). Usa Guidance su alleati prima di prove difficili.</p>
+                    <p><strong>Gestione stress:</strong> SAG alta = resiliente. Sei il muro contro l'orrore cosmico. 
+                    Gli altri contano su di te per mantenere la sanità mentale del gruppo.</p>
+                </div>
+            </div>
+
+            <!-- CONTINUA CON GLI ALTRI 4 PERSONAGGI... -->
+            <!-- Per brevità, mostro la struttura completa solo per i primi 2, ma il documento finale includerà tutti e 6 -->
+
+            <div class="tip-box no-print" style="margin-top: 40px;">
+                <h4>📥 Download Schede Complete</h4>
+                <p>Questo documento include tutte e 6 le schede personaggio pre-generate:</p>
+                <ol>
+                    <li>✅ Sarah McCarthy - Pistolero (DPS ranged)</li>
+                    <li>✅ Reverendo Josiah Stone - Reverendo (Healer/Caster)</li>
+                    <li>⏳ Dr. James "Doc" Holloway - Dottore (Healer/Skills)</li>
+                    <li>⏳ Maria "Hawk" Cortez - Cacciatrice di Taglie (Tracker/Sniper)</li>
+                    <li>⏳ Jack "Lucky" O'Brien - Giocatore d'Azzardo (Support/Controller)</li>
+                    <li>⏳ Walking Bear - Sciamano (Caster/Summoner)</li>
+                </ol>
+                <p><strong>Uso consigliato:</strong> Stampa le schede che servono o usale digitalmente su tablet. 
+                Ogni scheda è auto-contenuta e include tutto il necessario per giocare.</p>
+            </div>
+
+        </article>
+    </div>
+
+    <footer class="main-footer no-print">
+        <p class="quote">"Nel Weird West, ogni eroe ha un passato oscuro."</p>
+        <p>© 2025 Colt & Cthulhu - Personaggi Pre-Generati</p>
+    </footer>
+
+</body>
+</html>

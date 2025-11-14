@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campagna: Il Risveglio del Serpente - Colt & Cthulhu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .campaign-banner {
+            background: linear-gradient(135deg, #2C1810 0%, #8B0000 50%, #2C1810 100%);
+            color: #D4AF37;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 4px solid #D4AF37;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .campaign-banner::before {
+            content: "🐍";
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+        }
+        
+        .campaign-title {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        }
+        
+        .campaign-subtitle {
+            font-size: 1.3rem;
+            color: white;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        .level-badge {
+            display: inline-block;
+            background: #3d5a3d;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 10px 5px;
+            border: 2px solid #D4AF37;
+        }
+        
+        .adventure-card {
+            background: white;
+            border: 4px solid #8B4513;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 6px 12px rgba(44, 24, 16, 0.3);
+            position: relative;
+        }
+        
+        .adventure-header {
+            background: linear-gradient(to right, #8B4513, #D4AF37);
+            color: white;
+            padding: 20px;
+            margin: -25px -25px 20px -25px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .adventure-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            opacity: 0.3;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+        }
+        
+        .adventure-title {
+            font-size: 1.8rem;
+            margin: 0 0 10px 0;
+        }
+        
+        .adventure-meta {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        .story-arc {
+            background: linear-gradient(to right, rgba(139, 0, 0, 0.1), transparent);
+            border-left: 5px solid #8B0000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .npc-card {
+            background: #FFF8DC;
+            border: 2px solid #8B4513;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .npc-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        .location-box {
+            background: rgba(212, 175, 55, 0.15);
+            border: 2px solid #D4AF37;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .rewards-box {
+            background: #E8F4E8;
+            border: 2px solid #3d5a3d;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: #8B4513;
+        }
+        
+        .timeline-item {
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: #D4AF37;
+            border: 4px solid #8B4513;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .connections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .connection-card {
+            background: white;
+            border: 2px solid #8B4513;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>COLT & CTHULHU</h1>
+        <p class="subtitle">Campagna Sample - Il Risveglio del Serpente</p>
+    </header>
+
+    <nav class="nav-main">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="campagna-serpente.html" class="active">Campagna</a></li>
+            <li><a href="scenario_introduttivo.html">Scenari</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <article class="chapter">
+            
+            <div class="campaign-banner">
+                <h1 class="campaign-title">🐍 IL RISVEGLIO DEL SERPENTE</h1>
+                <p class="campaign-subtitle">Campagna Epica per Colt & Cthulhu</p>
+                <div>
+                    <span class="level-badge">Livelli 1-10</span>
+                    <span class="level-badge">7 Avventure</span>
+                    <span class="level-badge">30-40 Sessioni</span>
+                </div>
+            </div>
+
+            <!-- OVERVIEW -->
+            <section id="overview">
+                <h2>📖 Panoramica della Campagna</h2>
+                
+                <div class="story-arc">
+                    <h3 style="margin-top: 0; color: #8B0000;">🎭 La Storia</h3>
+                    <p style="font-size: 1.1rem;">
+                        Nel 1885, i territori occidentali nascondono un segreto più antico dell'umanità stessa. 
+                        Sotto le montagne del New Mexico, dorme <strong>Yig, il Padre dei Serpenti</strong>, 
+                        una divinità aliena che attende il momento del risveglio.
+                    </p>
+                    <p style="font-size: 1.1rem;">
+                        Un culto millenario, <strong>La Confraternita del Serpente Piumato</strong>, ha lavorato 
+                        per secoli per compiere il rituale finale. Ora, con l'arrivo della ferrovia e lo scavo 
+                        di nuove miniere, gli antichi sigilli si stanno indebolendo.
+                    </p>
+                    <p style="font-size: 1.1rem;">
+                        I PG, inizialmente semplici avventurieri del West, scopriranno gradualmente la cospirazione 
+                        e dovranno decidere: <strong>fermare il risveglio</strong> o abbracciare il potere oscuro 
+                        che promette immortalità?
+                    </p>
+                </div>
+
+                <h3>🎯 Temi Centrali</h3>
+                <div class="connections">
+                    <div class="connection-card">
+                        <h4 style="color: #8B4513;">⚖️ Frontiera vs Civiltà</h4>
+                        <p>Libertà del West incontra progresso ferroviario</p>
+                    </div>
+                    <div class="connection-card">
+                        <h4 style="color: #8B4513;">🧠 Sanità Mentale</h4>
+                        <p>Quanto puoi sopportare prima di spezzarti?</p>
+                    </div>
+                    <div class="connection-card">
+                        <h4 style="color: #8B4513;">🐍 Conoscenza Proibita</h4>
+                        <p>Alcuni segreti non dovrebbero essere scoperti</p>
+                    </div>
+                    <div class="connection-card">
+                        <h4 style="color: #8B4513;">🤝 Lealtà</h4>
+                        <p>Chi puoi veramente fidarti quando il mondo impazzisce?</p>
+                    </div>
+                </div>
+
+                <h3>📊 Struttura della Campagna</h3>
+                <table style="width: 100%; margin: 20px 0;">
+                    <thead>
+                        <tr style="background: #8B4513; color: white;">
+                            <th style="padding: 12px;">Avventura</th>
+                            <th>Livelli</th>
+                            <th>Sessioni</th>
+                            <th>Tema</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px;"><strong>1. Sangue sulla Ferrovia</strong></td>
+                            <td>1-2</td>
+                            <td>3-4</td>
+                            <td>Mystery introduttivo</td>
+                        </tr>
+                        <tr style="background: #FFF8DC;">
+                            <td style="padding: 10px;"><strong>2. La Città dei Serpenti</strong></td>
+                            <td>3-4</td>
+                            <td>4-5</td>
+                            <td>Urban investigation</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;"><strong>3. Il Tempio Dimenticato</strong></td>
+                            <td>4-5</td>
+                            <td>4-5</td>
+                            <td>Dungeon crawl</td>
+                        </tr>
+                        <tr style="background: #FFF8DC;">
+                            <td style="padding: 10px;"><strong>4. Guerra Ferroviaria</strong></td>
+                            <td>6-7</td>
+                            <td>5-6</td>
+                            <td>Faction conflict</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;"><strong>5. Il Profeta Folle</strong></td>
+                            <td>7-8</td>
+                            <td>4-5</td>
+                            <td>Horror psicologico</td>
+                        </tr>
+                        <tr style="background: #FFF8DC;">
+                            <td style="padding: 10px;"><strong>6. La Discesa</strong></td>
+                            <td>8-9</td>
+                            <td>5-6</td>
+                            <td>Underworld exploration</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;"><strong>7. Il Risveglio</strong></td>
+                            <td>9-10</td>
+                            <td>5-6</td>
+                            <td>Epic finale</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- NPC RICORRENTI -->
+            <section id="npcs">
+                <h2>👥 PNG Ricorrenti</h2>
+
+                <div class="npc-card">
+                    <div class="npc-name">🎩 CORNELIUS BLACKWOOD</div>
+                    <p><strong>Ruolo:</strong> Antagonista principale, Gran Maestro della Confraternita</p>
+                    <p><strong>Concept:</strong> Magnate ferroviario rispettato pubblicamente, cultista fanatico privatamente. 
+                    Elegante, carismatico, spietato. Crede che il risveglio di Yig porterà "evoluzione" all'umanità.</p>
+                    <p><strong>Arco narrativo:</strong> Appare inizialmente come possibile alleato (Avv. 1-2), 
+                    rivelato come antagonista (Avv. 3), diventa nemico attivo (Avv. 4-5), boss finale (Avv. 7).</p>
+                    <p><strong>Quote:</strong> <em>"Il progresso ha un prezzo, amici miei. E io sono disposto a pagarlo."</em></p>
+                </div>
+
+                <div class="npc-card">
+                    <div class="npc-name">🪶 MARIA LUNA</div>
+                    <p><strong>Ruolo:</strong> Alleata, sciamana Apache</p>
+                    <p><strong>Concept:</strong> Custode di antiche conoscenze native sul Serpente. Diffidente verso bianchi 
+                    ma riconosce necessità di collaborazione. Pragmatica, saggia, traumatizzata dalla perdita della sua tribù.</p>
+                    <p><strong>Arco narrativo:</strong> Mentore riluttante (Avv. 2-3), alleata attiva (Avv. 4-6), 
+                    possibile sacrificio eroico (Avv. 7).</p>
+                    <p><strong>Quote:</strong> <em>"I miei antenati sigillarono questo male. Ora tocca a noi finire il lavoro."</em></p>
+                </div>
+
+                <div class="npc-card">
+                    <div class="npc-name">🔫 MARSHAL WADE COOPER</div>
+                    <p><strong>Ruolo:</strong> Alleato/Antagonista ambiguo</p>
+                    <p><strong>Concept:</strong> Marshal federale ossessionato con "ordine e legge". Inizialmente alleato, 
+                    ma la sua rigidità morale lo porta a opporsi ai PG quando infrangono leggi per fermare culto.</p>
+                    <p><strong>Arco narrativo:</strong> Alleato (Avv. 1-2), tensione crescente (Avv. 3-4), 
+                    opposizione diretta (Avv. 5), redenzione o morte (Avv. 6-7).</p>
+                    <p><strong>Quote:</strong> <em>"La legge è la legge. Non importa cosa stiate combattendo."</em></p>
+                </div>
+
+                <div class="npc-card">
+                    <div class="npc-name">🎓 DR. HEINRICH WAGNER</div>
+                    <p><strong>Ruolo:</strong> Fonte di informazioni, occultista</p>
+                    <p><strong>Concept:</strong> Professore universitario espulso per ricerche "eretiche" su civiltà 
+                    pre-colombiane. Ossessionato con Yig ma non membro del culto. Moralmente ambiguo - condivide 
+                    conoscenze ma a caro prezzo (stress, favori pericolosi).</p>
+                    <p><strong>Arco narrativo:</strong> Informatore (Avv. 2-5), possibile trasformazione in cultista 
+                    se PG non lo controllano (Avv. 6), fonte chiave per rituale finale (Avv. 7).</p>
+                    <p><strong>Quote:</strong> <em>"Conoscenza è potere, amici. E il potere... corrompe deliziosamente."</em></p>
+                </div>
+
+                <div class="npc-card">
+                    <div class="npc-name">🐍 SERPENT HERALD (L'Araldo)</div>
+                    <p><strong>Ruolo:</strong> Luogotenente di Blackwood, mini-boss ricorrente</p>
+                    <p><strong>Concept:</strong> Ex umano trasformato in ibrido serpente-umano tramite rituale. 
+                    Non parla più, comunica con sibili. Estremamente pericoloso in combattimento. I PG lo affrontano 
+                    più volte, "uccidendolo" ma ritorna più forte (shed skin mechanics).</p>
+                    <p><strong>Arco narrativo:</strong> Primo scontro (Avv. 3), ritorna più forte (Avv. 5), 
+                    forma finale (Avv. 7 - sub-boss prima Blackwood).</p>
+                </div>
+            </section>
+
+            <!-- AVVENTURE DETTAGLIATE -->
+            <section id="avventure">
+                <h2>🗺️ Le Sette Avventure</h2>
+
+                <!-- AVVENTURA 1 -->
+                <div class="adventure-card">
+                    <div class="adventure-number">1</div>
+                    <div class="adventure-header">
+                        <h3 class="adventure-title">Sangue sulla Ferrovia</h3>
+                        <p class="adventure-meta">Livelli 1-2 | 3-4 sessioni | Tier: Locale</p>
+                    </div>
+
+                    <h4>📋 Synopsis</h4>
+                    <p>La costruzione della ferrovia transcontinentale si è fermata vicino Junction City. 
+                    Operai spariscono, trovati mutilati con strani morsi. La compagnia ferroviaria (controllata 
+                    segretamente da Blackwood) assume i PG come "consulenti di sicurezza".</p>
+
+                    <h4>🎯 Obiettivi</h4>
+                    <ul>
+                        <li>Investigare sparizioni operai</li>
+                        <li>Scoprire tunnel sotterraneo con simboli serpente</li>
+                        <li>Affrontare primo cultista + creature serpente minori</li>
+                        <li>Trovare frammento di mappa antica (primo indizio)</li>
+                    </ul>
+
+                    <h4>📍 Location Chiave</h4>
+                    <div class="location-box">
+                        <p><strong>Junction City:</strong> Cittadina mineraria, 300 abitanti. Saloon "Lucky Nugget", 
+                        emporio, sceriffo locale (futuro alleato).</p>
+                        <p><strong>Cantiere Ferroviario:</strong> 50 operai, caposquadra Murphy (testimone), 
+                        tende e baracche. Di notte: canti strani, terreno frana.</p>
+                        <p><strong>Tunnel Maledetto:</strong> Scavando, operai hanno rotto antica camera sepolcrale. 
+                        Pareti con geroglifici serpente, altare oscuro, uova di creatura (horror viscerale).</p>
+                    </div>
+
+                    <h4>⚔️ Incontri Principali</h4>
+                    <ul>
+                        <li><strong>Ghoul Minatori (x3):</strong> Ex operai trasformati, CR 1/2 ciascuno</li>
+                        <li><strong>Serpent Spawn (x5):</strong> Serpenti dimensione cane, velenosi, CR 1/4</li>
+                        <li><strong>Cultista Iniziato:</strong> Boss, CR 2, lancia Eldritch Blast, evoca spawns</li>
+                    </ul>
+
+                    <h4>🎁 Ricompense</h4>
+                    <div class="rewards-box">
+                        <p><strong>XP:</strong> 300 XP ciascuno (livello 2)</p>
+                        <p><strong>Denaro:</strong> $100 dalla compagnia ferroviaria</p>
+                        <p><strong>Oggetti:</strong> Frammento Mappa Antica (mostra simbolo serpente + coordinate), 
+                        Diario Cultista (primissimi indizi sul culto)</p>
+                        <p><strong>Alleati:</strong> Sceriffo locale, popolazione Junction City</p>
+                    </div>
+
+                    <h4>🔗 Collegamenti Futuro</h4>
+                    <p>La mappa punta a Santa Fe (Avv. 2). Il diario menziona "Gran Maestro Blackwood" senza 
+                    rivelare chi sia. PG sentono parlare di "strani eventi" anche altrove in New Mexico.</p>
+                </div>
+
+                <!-- AVVENTURA 2 -->
+                <div class="adventure-card">
+                    <div class="adventure-number">2</div>
+                    <div class="adventure-header">
+                        <h3 class="adventure-title">La Città dei Serpenti</h3>
+                        <p class="adventure-meta">Livelli 3-4 | 4-5 sessioni | Tier: Regionale</p>
+                    </div>
+
+                    <h4>📋 Synopsis</h4>
+                    <p>PG arrivano a Santa Fe seguendo indizi. Scoprono che la "rispettabile" alta società 
+                    nasconde membri del culto. Investigazione urbana: infiltrazione feste, corruzione politica, 
+                    assassini in vicoli. Incontrano Maria Luna che rivela profezia Apache: "Quando uomo bianco 
+                    scava troppo in profondità, Serpente si sveglierà."</p>
+
+                    <h4>🎯 Obiettivi</h4>
+                    <ul>
+                        <li>Infiltrare alta società di Santa Fe</li>
+                        <li>Identificare membri del culto (senza far capire che sanno)</li>
+                        <li>Incontrare Maria Luna, guadagnare sua fiducia</li>
+                        <li>Trovare ingresso tempio sotterraneo sotto città</li>
+                        <li>Sfuggire trappola tenduta da cultisti</li>
+                    </ul>
+
+                    <h4>📍 Location Chiave</h4>
+                    <div class="location-box">
+                        <p><strong>Santa Fe:</strong> Capitale territoriale, 5000 abitanti. Centro politico/culturale. 
+                        Palazzo governatore, cathedral, quartiere ricco.</p>
+                        <p><strong>Villa Blackwood:</strong> Maniero di Cornelius. Festa in maschera (PG infiltrano). 
+                        Biblioteca nasconde tomi proibiti. Cantina: ingresso camere rituali.</p>
+                        <p><strong>Riserva Apache:</strong> Dove vive Maria Luna. Tende, poche risorse, atmosfera triste 
+                        (aftermath genocidio). Anziani conoscono storie Serpente.</p>
+                    </div>
+
+                    <h4>⚔️ Incontri Principali</h4>
+                    <ul>
+                        <li><strong>Assassini del Culto (x4):</strong> In vicolo buio, agguato notturno, CR 1 ciascuno</li>
+                        <li><strong>Rituale Interrotto:</strong> PG scoprono sacrificio in corso, devono intervenire 
+                        o osservare (stress pesante se assistono senza agire)</li>
+                        <li><strong>Yuan-Ti Pureblood (x2):</strong> Guardie d'élite di Blackwood, CR 3 ciascuno</li>
+                    </ul>
+
+                    <h4>🎭 Incontri Sociali Chiave</h4>
+                    <ul>
+                        <li><strong>Prima apparizione Cornelius Blackwood:</strong> Sembra alleato! Offre informazioni 
+                        (false), ospitalità, denaro. Carisma +8, Inganno +10. PG devono resistere sua manipolazione.</li>
+                        <li><strong>Governatore Higgins:</strong> Corrotto ma non cultista. Sa cose ma troppo spaventato 
+                        per parlare. Può essere persuaso o intimidito.</li>
+                        <li><strong>Maria Luna:</strong> Inizialmente ostile (giustamente diffidente). Prove difficili 
+                        Persuasione per guadagnare fiducia. Se convincono: diventa mentore, insegna rituali protezione.</li>
+                    </ul>
+
+                    <h4>🎁 Ricompense</h4>
+                    <div class="rewards-box">
+                        <p><strong>XP:</strong> 900 XP totali (livello 4)</p>
+                        <p><strong>Denaro:</strong> $250 + oggetti di valore rubati da villa</p>
+                        <p><strong>Oggetti:</strong> Amuleto Protezione (Maria Luna, +2 TS contro Fear), 
+                        Tomo: "Culti Pre-Colombiani" (+2 Religione check su Yig), Mappa completa templii</p>
+                        <p><strong>Alleati:</strong> Maria Luna (mentore), rete informatori Santa Fe</p>
+                    </div>
+
+                    <h4>🔗 Collegamenti Futuro</h4>
+                    <p>Mappa rivela ubicazione Tempio Dimenticato (Avv. 3). Maria avverte: "Andate là solo se pronti 
+                    a vedere verità che spezzeranno mente." Blackwood sa che PG sono minaccia - inizia piano eliminarli.</p>
+                </div>
+
+                <!-- AVVENTURA 3 -->
+                <div class="adventure-card">
+                    <div class="adventure-number">3</div>
+                    <div class="adventure-header">
+                        <h3 class="adventure-title">Il Tempio Dimenticato</h3>
+                        <p class="adventure-meta">Livelli 4-5 | 4-5 sessioni | Tier: Dungeon Crawl</p>
+                    </div>
+
+                    <h4>📋 Synopsis</h4>
+                    <p>PG viaggiano nelle Montañas Sagradas, trovano rovine pre-colombiane: tempio dedicato a Yig. 
+                    Classic dungeon crawl con trappole, puzzle, mostri. Primo vero sguardo all'orrore cosmico. 
+                    Incontrano Serpent Herald per prima volta. Trovano profezia completa: risveglio richiede 
+                    7 sigilli rotti + rituale specifico.</p>
+
+                    <h4>🎯 Obiettivi</h4>
+                    <ul>
+                        <li>Esplorare tempio (5 livelli + area boss)</li>
+                        <li>Risolvere puzzle antichi (linguistica, logica)</li>
+                        <li>Sopravvivere trappole mortali</li>
+                        <li>Primo combattimento vs Serpent Herald (fugge a 25% HP)</li>
+                        <li>Recuperare Chiave di Ossidiana (previene 1 sigillo rotto)</li>
+                        <li>Leggere profezia completa (stress PESANTE)</li>
+                    </ul>
+
+                    <h4>📍 Struttura Tempio</h4>
+                    <div class="location-box">
+                        <p><strong>Livello 1 - Entrata:</strong> Statue serpente giganti, geroglifici avvertimento, 
+                        trappola dardi avvelenati, guardiani scheletri.</p>
+                        <p><strong>Livello 2 - Sale Rituali:</strong> Altari sacrifici, affreschi osceni (stress check), 
+                        pool acqua sacra (guarisce ma visioni inquietanti).</p>
+                        <p><strong>Livello 3 - Biblioteca Perduta:</strong> Rotoli antichi (conoscenza proibita), 
+                        mimic books, spectral guardians.</p>
+                        <p><strong>Livello 4 - Camere Torture:</strong> Horror corporeo, zombie esperimenti falliti, 
+                        note folli di antico sacerdote.</p>
+                        <p><strong>Livello 5 - Sanctum:</strong> Camera Serpent Herald, profezia scolpita su muro, 
+                        Chiave di Ossidiana su altare (intrappolata).</p>
+                    </div>
+
+                    <h4>⚔️ Boss: Serpent Herald (Forma I)</h4>
+                    <ul>
+                        <li><strong>CR:</strong> 5 | <strong>HP:</strong> 75 | <strong>CA:</strong> 16</li>
+                        <li><strong>Attacchi:</strong> Morso velenoso (2d8+4 + poison), Constrict (grapple + crush)</li>
+                        <li><strong>Speciale:</strong> Shed Skin (1/combattimento, guarisce 20 HP), Fear Aura (TS SAG 14)</li>
+                        <li><strong>Tattica:</strong> Fugge a 25% HP lasciando pelle. "Questo corpo è temporaneo..."</li>
+                    </ul>
+
+                    <h4>🧠 Stress Checks</h4>
+                    <ul>
+                        <li><strong>Affreschi osceni:</strong> TS SAG 13, fallimento +3 stress</li>
+                        <li><strong>Camere torture:</strong> TS SAG 14, fallimento +4 stress</li>
+                        <li><strong>Leggere profezia:</strong> TS SAG 15, fallimento +5 stress (inevitabile, tutti leggono)</li>
+                    </ul>
+
+                    <h4>🎁 Ricompense</h4>
+                    <div class="rewards-box">
+                        <p><strong>XP:</strong> 1200 XP (livello 5)</p>
+                        <p><strong>Tesori:</strong> Oro antico ($500), gemme ($300), armi rituali (+1 weapons)</p>
+                        <p><strong>Oggetti Magici:</strong> Chiave di Ossidiana (quest item), Mantello Serpente 
+                        (+1 CA, resistenza veleno), Tomo Profezia (critical lore)</p>
+                        <p><strong>Conoscenza:</strong> Profezia completa, 7 sigilli, rituale finale, debolezze Yig</p>
+                    </div>
+
+                    <h4>🔗 Collegamenti Futuro</h4>
+                    <p>Profezia rivela: Blackwood sta cercando di rompere sigilli. 3 già rotti (ferrovia, miniere, 
+                    altro). Rimangono 4. PG devono correre per proteggere sigilli rimanenti. Ma dove sono?</p>
+                </div>
+
+                <!-- PLACEHOLDER AVVENTURE 4-7 (OUTLINE COMPATTO) -->
+                <div class="tip-box" style="margin: 40px 0;">
+                    <h3 style="margin-top: 0;">📝 Note: Outline Compatto</h3>
+                    <p>Le avventure 4-7 sono presentate in formato outline compatto. Questo è intenzionale - 
+                    la campagna completa richiederebbe 200+ pagine. Questo documento serve come:</p>
+                    <ul>
+                        <li>✅ <strong>Proof of concept</strong> - dimostra la campagna è strutturata e giocabile</li>
+                        <li>✅ <strong>Roadmap per Master</strong> - abbastanza dettaglio per improvvisare/espandere</li>
+                        <li>✅ <strong>Foundation per supplemento futuro</strong> - può essere espanso in prodotto separato</li>
+                    </ul>
+                    <p>Se vuoi versione completa di Avv. 4-7, posso espanderle singolarmente.</p>
+                </div>
+
+                <!-- AVV 4 - COMPATTO -->
+                <div class="adventure-card" style="border-color: #D4AF37;">
+                    <div class="adventure-number" style="opacity: 0.2;">4</div>
+                    <div class="adventure-header" style="background: linear-gradient(to right, #D4AF37, #8B4513);">
+                        <h3 class="adventure-title">Guerra Ferroviaria</h3>
+                        <p class="adventure-meta">Livelli 6-7 | 5-6 sessioni | Tier: Faction Warfare</p>
+                    </div>
+
+                    <p><strong>Concept:</strong> Due compagnie ferroviarie (Blackwood's Union Pacific vs rivale Southern Pacific) 
+                    in guerra aperta. Blackwood usa guerra come copertura per rompere 4° sigillo sotto canyon dove 
+                    passerà ferrovia. PG devono navigare politica aziendale, sabotaggio, combattimento su treni in movimento.</p>
+
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>Train heist - PG devono fermare treno con dynamite cultista</li>
+                        <li>Duello western classico (Blackwood manda gunslinger d'élite)</li>
+                        <li>Infiltrazione quartier generale aziendale</li>
+                        <li>Boss: Yuan-Ti Abomination (CR 7) travestito da executive</li>
+                        <li>Twist: Marshal Cooper si oppone ai PG (infrangono troppe leggi)</li>
+                    </ul>
+
+                    <p><strong>Outcome:</strong> PG salvano 4° sigillo MA Blackwood rompe 5° in segreto. 
+                    Ora 5/7 sigilli rotti. Tempo sta scadendo.</p>
+                </div>
+
+                <!-- AVV 5 - COMPATTO -->
+                <div class="adventure-card" style="border-color: #D4AF37;">
+                    <div class="adventure-number" style="opacity: 0.2;">5</div>
+                    <div class="adventure-header" style="background: linear-gradient(to right, #D4AF37, #8B4513);">
+                        <h3 class="adventure-title">Il Profeta Folle</h3>
+                        <p class="adventure-meta">Livelli 7-8 | 4-5 sessioni | Tier: Psychological Horror</p>
+                    </div>
+
+                    <p><strong>Concept:</strong> Villaggio remoto (Serpent's Hollow) completamente sotto controllo 
+                    culto. Tutti abitanti o cultisti o vittime. "Profeta" (ex-prete trasformato) guida con visioni. 
+                    PG devono liberare villaggio o distruggerlo. Scelte morali difficili - alcuni abitanti troppo 
+                    corrotti per salvare.</p>
+
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>Atmosfera "The Wicker Man" - superficie normale, horror sotto</li>
+                        <li>Bambini corrotti (moral dilemma - uccidere o cercare cura?)</li>
+                        <li>Profeta ha potere mentale (dominate, suggestion)</li>
+                        <li>Serpent Herald ritorna (Forma II, più forte)</li>
+                        <li>Dr. Wagner appare - offre "soluzione" (rituale oscuro che curerebbe ma corromperebbe PG)</li>
+                    </ul>
+
+                    <p><strong>Outcome:</strong> Villaggio distrutto/purificato. PG guadagnano stress PESANTE 
+                    (inevitabile, scelte impossibili). Scoprono 6° sigillo sotto chiesa - devono proteggerlo.</p>
+                </div>
+
+                <!-- AVV 6 - COMPATTO -->
+                <div class="adventure-card" style="border-color: #D4AF37;">
+                    <div class="adventure-number" style="opacity: 0.2;">6</div>
+                    <div class="adventure-header" style="background: linear-gradient(to right, #D4AF37, #8B4513);">
+                        <h3 class="adventure-title">La Discesa</h3>
+                        <p class="adventure-meta">Livelli 8-9 | 5-6 sessioni | Tier: Underworld</p>
+                    </div>
+
+                    <p><strong>Concept:</strong> Mega-dungeon. PG devono discendere sotto New Mexico seguendo 
+                    Blackwood che è andato avanti per rompere 6° e 7° sigillo. Caverne naturali → rovine antiche → 
+                    città aliena sotterranea → camera Yig.</p>
+
+                    <p><strong>Highlights:</strong></p>
+                    <ul>
+                        <li>Hexcrawl sotterraneo - esplorazione, resource management</li>
+                        <li>Incontri bizzarri: funghi senzienti, cristalli viventi, echi temporali</li>
+                        <li>Yuan-Ti empire sotterraneo (alleanza temporanea? Tradimento inevitabile)</li>
+                        <li>Marshal Cooper riappare - redenzione o morte tragica</li>
+                        <li>Boss finale livello: Serpent Herald Forma III (CR 9)</li>
+                    </ul>
+
+                    <p><strong>Outcome:</strong> PG arrivano tardi - Blackwood ha rotto 6° sigillo. 
+                    Rimane solo 7° sigillo: sulla porta camera Yig. Rituale finale sta per iniziare.</p>
+                </div>
+
+                <!-- AVV 7 - COMPATTO -->
+                <div class="adventure-card" style="border-color: #8B0000;">
+                    <div class="adventure-number" style="opacity: 0.2;">7</div>
+                    <div class="adventure-header" style="background: linear-gradient(to right, #8B0000, #2C1810);">
+                        <h3 class="adventure-title">Il Risveglio</h3>
+                        <p class="adventure-meta">Livelli 9-10 | 5-6 sessioni | Tier: EPIC FINALE</p>
+                    </div>
+
+                    <p><strong>Concept:</strong> Tutto culmina nella camera di Yig. Blackwood sta completando 
+                    rituale. PG devono scegliere: interrompere (combattimento finale) o... unirsi? 
+                    (twist opzionale per gruppi moralmente ambigui).</p>
+
+                    <p><strong>Fasi Finale:</strong></p>
+                    <ol>
+                        <li><strong>Assalto Tempio:</strong> Cultisti élite, trappole, orda Yuan-Ti (mass combat)</li>
+                        <li><strong>Confronto Blackwood:</strong> Offre potere ("Unitevi a me! Diverrete immortali!"). 
+                        Social encounter - può essere persuaso a fermarsi? (CD 25, quasi impossibile)</li>
+                        <li><strong>Boss Rush:</strong> Serpent Herald Forma Finale → Blackwood Trasformato → 
+                        Yig (parzialmente sveglio)</li>
+                        <li><strong>Scelta Finale:</strong> Distruggere Yig (impossibile, è dio) O ri-sigillarlo 
+                        (richiede sacrificio - chi? Maria Luna? Un PG?)</li>
+                    </ol>
+
+                    <h4>⚔️ Boss Finale: YIG, PADRE DEI SERPENTI</h4>
+                    <ul>
+                        <li><strong>CR:</strong> 12 (parzialmente sveglio, forma ridotta)</li>
+                        <li><strong>HP:</strong> 200 | <strong>CA:</strong> 18</li>
+                        <li><strong>Leggendario:</strong> 3 azioni leggendarie, regeneration 10/turno</li>
+                        <li><strong>Attacchi:</strong> Coil Crush (4d10), Poison Breath (cone 60ft, 8d6), 
+                        Gaze of Madness (TS SAG 18 o Confusion)</li>
+                        <li><strong>Lair Actions:</strong> Evoca serpenti, terreno trema, muri si chiudono</li>
+                    </ul>
+
+                    <p><strong>Possibili Ending:</strong></p>
+                    <ul>
+                        <li><strong>Vittoria Totale:</strong> Yig ri-sigillato, sacrificio eroico, pace restaurata. 
+                        PG eroi ma traumatizzati (stress alto permanente).</li>
+                        <li><strong>Vittoria Parziale:</strong> Yig fermato ma non sigillato. Dorme altri 100 anni. 
+                        Problema rimandato a future generazioni.</li>
+                        <li><strong>Vittoria Amara:</strong> Yig fermato ma costo troppo alto (metà gruppo morto, 
+                        Maria sacrificata, New Mexico devastato).</li>
+                        <li><strong>Dark Ending:</strong> PG si uniscono a Blackwood, diventano immortali cultisti. 
+                        Campagna finisce, ma può continuare come "evil campaign".</li>
+                    </ul>
+
+                    <h4>🎁 Ricompense Finali</h4>
+                    <div class="rewards-box">
+                        <p><strong>XP:</strong> 3000 XP (livello 10 completo)</p>
+                        <p><strong>Fama:</strong> Leggendari nel West (se vittoria pubblica) O ricercati (se troppa distruzione)</p>
+                        <p><strong>Artefatti:</strong> Armi legendary (+2/+3), armature potenti, oggetti unici</p>
+                        <p><strong>Legacy:</strong> Mondo cambiato permanentemente dalle loro azioni</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- TIMELINE VISUALE -->
+            <section id="timeline">
+                <h2>📅 Timeline della Campagna</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div style="text-align: center;">
+                            <strong>Gennaio 1885</strong><br>
+                            Ferrovia inizia scavi → Primo sigillo rotto inconsapevolmente
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div style="text-align: center;">
+                            <strong>Marzo 1885 (Avv. 1)</strong><br>
+                            PG assumiti, scoprono tunnel. Secondo sigillo quasi rotto.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div style="text-align: center;">
+                            <strong>Aprile 1885 (Avv. 2)</strong><br>
+                            Santa Fe, infiltrazione, primo incontro Blackwood/Maria
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div style="text-align: center;">
+                            <strong>Maggio 1885 (Avv. 3)</strong><br>
+                            Tempio Dimenticato, profezia rivelata, 3 sigilli già rotti
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div style="text-align: center;">
+                            <strong>Giugno-Luglio 1885 (Avv. 4)</strong><br>
+                            Guerra Ferroviaria, 4° sigillo salvato, 5° rotto in segreto
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div style="text-align: center;">
+                            <strong>Agosto 1885 (Avv. 5)</strong><br>
+                            Serpent's Hollow, scelte morali impossibili
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div style="text-align: center;">
+                            <strong>Settembre 1885 (Avv. 6)</strong><br>
+                            Discesa sotterranea, 6° sigillo rotto
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div style="text-align: center;">
+                            <strong>Ottobre 1885 (Avv. 7)</strong><br>
+                            Confronto finale, risveglio interrotto/completato
+                        </div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; font-style: italic; margin-top: 30px;">
+                    <strong>Nota:</strong> Timeline è flessibile. Master può accelerare/rallentare basandosi 
+                    su frequenza sessioni gruppo.
+                </p>
+            </section>
+
+            <!-- MATERIALE SUPPLEMENTARE -->
+            <section id="supplementare">
+                <h2>📚 Materiale Supplementare</h2>
+
+                <h3>🎲 Tabelle Random</h3>
+                <div class="tip-box">
+                    <h4>Eventi Casuali tra Avventure (d6)</h4>
+                    <ol>
+                        <li><strong>Cultisti Osservano:</strong> PG notano essere seguiti. Opportunità catturaone interrogare spia.</li>
+                        <li><strong>Visione Inquietante:</strong> Un PG ha incubo profetico. Stress +2 ma guadagna indizio utile.</li>
+                        <li><strong>Alleato in Pericolo:</strong> PNG amico è in guai (rapito, accusato crimine, posseduto).</li>
+                        <li><strong>Artefatto Trovato:</strong> PG trova oggetto magico minore in città/mercato.</li>
+                        <li><strong>Notizie Oscure:</strong> Sentono di altro sigillo rotto altrove. Stanno perdendo corsa?</li>
+                        <li><strong>Momento Pace:</strong> Festa locale, romance subplot, bonding moment. Stress recovery bonus.</li>
+                    </ol>
+                </div>
+
+                <h3>🎭 Subplot Opzionali</h3>
+                <ul>
+                    <li><strong>Romance:</strong> PG e Maria Luna? Sarah e Marshal Cooper? (conflitto interessante!)</li>
+                    <li><strong>Vendetta Personale:</strong> Un PG scopre Blackwood responsabile morte famiglia/mentore</li>
+                    <li><strong>Corruzione:</strong> Un PG è tentato dal potere Yig, deve resistere (serie TS SAG)</li>
+                    <li><strong>Redenzione:</strong> Ex-cultista pentito offre aiuto ma può ancora tradire?</li>
+                </ul>
+
+                <h3>📖 Fonti Ispirazione</h3>
+                <ul>
+                    <li><strong>Letteratura:</strong> H.P. Lovecraft ("The Dunwich Horror"), Cormac McCarthy (Blood Meridian)</li>
+                    <li><strong>Film:</strong> The Proposition, Bone Tomahawk, True Grit, The Thing (atmosfera paranoia)</li>
+                    <li><strong>Giochi:</strong> Red Dead Redemption 2 (West autentico), Bloodborne (cosmic horror)</li>
+                    <li><strong>Musica:</strong> Ennio Morricone (western score), Dark Country music per atmosfera</li>
+                </ul>
+            </section>
+
+            <!-- CONCLUSIONE -->
+            <div class="download-cta" style="margin-top: 50px;">
+                <h3 style="color: #D4AF37;">🐍 Pronto a Svegliare il Serpente?</h3>
+                <p style="color: white; font-size: 1.1rem;">
+                    Questo outline ti dà tutto il necessario per guidare una campagna epica 1-10. 
+                    Espandi dove serve, improvvisa quando ispira, e soprattutto... <strong>divertiti!</strong>
+                </p>
+                <p style="color: #D4AF37; margin-top: 20px;">
+                    <strong>Nota:</strong> Questa campagna può essere espansa in supplemento dedicato (100-150 pagine) 
+                    con mappe, stat blocks completi, handouts giocatori, e molto altro. Interessato? Contattami!
+                </p>
+            </div>
+
+        </article>
+    </div>
+
+    <footer class="main-footer">
+        <p class="quote">"Alcuni segreti dovrebbero restare sepolti. Ma voi... voi scaverete comunque."</p>
+        <p>© 2025 Colt & Cthulhu - Il Risveglio del Serpente</p>
+    </footer>
+
+</body>
+</html>
