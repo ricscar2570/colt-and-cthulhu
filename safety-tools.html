@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strumenti di Sicurezza Emotiva - Colt & Cthulhu</title>
+    <title>Gli strumenti di sicurezza emotiva - Colt & Cthulhu</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .safety-banner {
@@ -14,12 +14,14 @@
             border-radius: 12px;
             margin: 30px 0;
             border: 3px solid #D4AF37;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
         }
         
-        .safety-banner h3 {
+        .safety-banner h1 {
             color: #D4AF37;
-            margin-top: 0;
-            font-size: 2rem;
+            margin: 0 0 15px 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
         
         .tool-card {
@@ -98,713 +100,516 @@
         
         .checklist {
             background: white;
-            border: 2px solid #8B4513;
+            border: 2px solid #3d5a3d;
             padding: 20px;
-            border-radius: 8px;
             margin: 20px 0;
+            border-radius: 8px;
         }
         
         .checklist-item {
             padding: 10px;
-            margin: 5px 0;
+            margin: 8px 0;
+            background: #F5F5F5;
+            border-left: 3px solid #3d5a3d;
             border-radius: 4px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .checklist-item input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-        }
-        
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .resource-card {
-            background: white;
-            border: 2px solid #D4AF37;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        
-        .consent-form {
-            background: #FFF8DC;
-            border: 3px solid #8B4513;
-            padding: 25px;
-            border-radius: 12px;
-            margin: 30px 0;
         }
     </style>
 </head>
 <body>
     <header class="main-header">
         <h1>COLT & CTHULHU</h1>
-        <p class="subtitle">Strumenti di Sicurezza Emotiva e Inclusività</p>
+        <p class="subtitle">Gli strumenti di sicurezza emotiva</p>
     </header>
 
     <nav class="nav-main">
         <ul>
             <li><a href="index.html">🏠 Home</a></li>
-            <li><a href="capitolo_01.html">Cap 1</a></li>
-            <li><a href="safety-tools.html" class="active">Safety Tools</a></li>
-            <li><a href="scenario_introduttivo.html">Scenario Intro</a></li>
+            <li><a href="safety-tools.html" class="active">La sicurezza</a></li>
+            <li><a href="scenario_introduttivo.html">Lo scenario</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> <span>›</span> <strong>Strumenti di Sicurezza</strong>
-        </div>
-
         <article class="chapter">
             
             <div class="safety-banner">
-                <h3>🛡️ La Sicurezza Prima di Tutto</h3>
-                <p style="font-size: 1.2rem; margin: 15px 0;">
-                    I giochi di ruolo sono esperienze collaborative che dovrebbero essere divertenti e sicure per tutti. 
-                    Questa pagina fornisce strumenti per assicurare che ogni giocatore si senta rispettato, 
-                    ascoltato e a proprio agio al tavolo.
-                </p>
-                <p style="font-size: 1rem; opacity: 0.9;">
-                    <strong>Nota importante:</strong> Usare questi strumenti non è un segno di debolezza. 
-                    È un segno di maturità, rispetto e intelligenza emotiva.
+                <h1>🛡️ GLI STRUMENTI DI SICUREZZA EMOTIVA</h1>
+                <p style="font-size: 1.2rem; margin: 15px auto; max-width: 800px;">
+                    Colt & Cthulhu può affrontare temi difficili e intensi. Questi strumenti ti 
+                    aiuteranno a creare un ambiente di gioco sicuro, rispettoso e divertente per 
+                    tutti i partecipanti al tavolo.
                 </p>
             </div>
 
             <section id="introduzione">
-                <h2>Perché Servono Strumenti di Sicurezza?</h2>
+                <h2>Perché gli strumenti di sicurezza sono importanti</h2>
                 
                 <p>
-                    <strong>Colt & Cthulhu</strong> combina il genere western con l'horror cosmico lovecraftiano. 
-                    Per sua natura, il gioco può toccare temi sensibili come:
+                    Colt & Cthulhu è un gioco che mescola l'azione western con l'orrore cosmico. 
+                    Per sua natura, il gioco può toccare temi che includono la violenza, la follia, 
+                    la morte e l'orrore corporeo. Mentre questi elementi sono parte integrante 
+                    dell'esperienza di gioco, è fondamentale che tutti i partecipanti al tavolo si 
+                    sentano sicuri e a proprio agio durante il gioco.
                 </p>
-                
-                <ul>
-                    <li>Violenza (sparatorie, morti, torture)</li>
-                    <li>Horror corporeo e psicologico</li>
-                    <li>Follia e deterioramento mentale</li>
-                    <li>Discriminazione razziale (periodo storico 1885)</li>
-                    <li>Colonialismo e oppressione dei nativi americani</li>
-                    <li>Morte, lutto, perdita</li>
-                    <li>Abuso di sostanze (alcol, laudano)</li>
-                    <li>Tematiche religiose e blasfemia</li>
-                </ul>
 
                 <p>
-                    Ogni persona ha esperienze di vita diverse, traumi personali, e sensibilità uniche. 
-                    Quello che è "solo fiction" per qualcuno può essere un trigger doloroso per qualcun altro. 
-                    Gli strumenti di sicurezza permettono a tutti di esprimere i propri limiti <strong>senza 
-                    giudizio</strong> e senza dover spiegare il perché.
+                    Gli strumenti di sicurezza emotiva non sono segni di debolezza - sono segni di 
+                    rispetto reciproco e di maturità. Usarli dimostra che ti importa del benessere 
+                    delle persone con cui giochi, e che vuoi creare un'esperienza divertente per 
+                    tutti, non solo per alcuni.
                 </p>
 
-                <div class="warning-box">
-                    <h4>⚠️ Responsabilità del Master</h4>
-                    <p>
-                        Come Master, sei il custode dello spazio di gioco. È <strong>tua responsabilità</strong>:
+                <div class="tip-box">
+                    <h4>💡 Il principio fondamentale</h4>
+                    <p style="font-size: 1.1rem;">
+                        <strong>Il gioco di ruolo deve essere divertente per tutti i partecipanti.</strong> 
+                        Se qualcosa sta rendendo l'esperienza sgradevole o traumatizzante per anche 
+                        solo una persona al tavolo, allora è qualcosa che va modificato o rimosso. 
+                        Nessun dettaglio narrativo, nessuna scena "epica", nessun momento "memorabile" 
+                        vale il disagio reale di una persona vera.
                     </p>
+                </div>
+
+                <div class="content-warning">
+                    <h4>⚠️ I contenuti potenzialmente sensibili in Colt & Cthulhu</h4>
+                    <p>Questo gioco può includere:</p>
                     <ul>
-                        <li>Introdurre questi strumenti all'inizio della campagna (sessione zero)</li>
-                        <li>Ricordare periodicamente che sono disponibili</li>
-                        <li>Rispettare immediatamente quando vengono usati</li>
-                        <li>Non chiedere mai "perché" qualcuno usa uno strumento di sicurezza</li>
-                        <li>Creare una cultura di gruppo dove usare questi strumenti è normalizzato</li>
+                        <li><strong>La violenza western:</strong> sparatorie, duelli, morti violente 
+                        tipiche del genere western</li>
+                        <li><strong>L'orrore cosmico:</strong> follia, perdita di controllo mentale, 
+                        orrore esistenziale</li>
+                        <li><strong>L'orrore corporeo:</strong> mutazioni, trasformazioni, creature 
+                        mostruose</li>
+                        <li><strong>I temi storici sensibili:</strong> razzismo, colonialismo, 
+                        violenza contro i popoli nativi (il gioco è ambientato nel 1885)</li>
+                        <li><strong>La morte e il lutto:</strong> i personaggi possono morire o 
+                        perdere persone care</li>
+                        <li><strong>L'uso di sostanze:</strong> alcol, laudano e altre sostanze 
+                        dell'epoca</li>
                     </ul>
+                    <p>
+                        <strong>È responsabilità del narratore e di tutti i giocatori discutere 
+                        questi temi PRIMA di iniziare a giocare</strong> e decidere insieme quali 
+                        elementi includere, quali modificare e quali evitare completamente.
+                    </p>
                 </div>
             </section>
 
-            <!-- X-CARD -->
+            <section id="sessione-zero">
+                <h2>La sessione zero: il fondamento della sicurezza</h2>
+
+                <p>
+                    Prima di iniziare qualsiasi campagna o anche un'avventura singola, dedica almeno 
+                    una sessione (o parte di una sessione) a discutere le aspettative, i limiti e 
+                    le preferenze di tutti i partecipanti. Questa è chiamata "sessione zero" e non 
+                    è tempo perso - è un investimento che renderà tutte le sessioni successive 
+                    migliori e più piacevoli.
+                </p>
+
+                <div class="checklist">
+                    <h4>✅ La checklist per la sessione zero</h4>
+                    
+                    <div class="checklist-item">
+                        <strong>1. Le presentazioni e le aspettative</strong>
+                        <p>Ogni persona presenta se stessa e spiega cosa si aspetta dal gioco. 
+                        Alcuni vogliono azione e combattimento, altri preferiscono il gioco di 
+                        ruolo e la narrazione, altri ancora amano risolvere misteri. Va tutto bene, 
+                        basta che tutti sappiano cosa aspettarsi.</p>
+                    </div>
+
+                    <div class="checklist-item">
+                        <strong>2. I temi e i contenuti da evitare</strong>
+                        <p>Chiedi esplicitamente: "Ci sono temi o contenuti che preferite evitare 
+                        completamente?" Assicurati che le persone si sentano libere di rispondere 
+                        onestamente. Puoi anche usare un modulo anonimo se qualcuno preferisce non 
+                        condividere pubblicamente.</p>
+                    </div>
+
+                    <div class="checklist-item">
+                        <strong>3. L'introduzione agli strumenti di sicurezza</strong>
+                        <p>Spiega quali strumenti di sicurezza userete (X-Card, Lines & Veils, 
+                        ecc.) e come funzionano. Fai esempi concreti. Assicurati che tutti capiscano 
+                        che usare questi strumenti è normale e incoraggiato.</p>
+                    </div>
+
+                    <div class="checklist-item">
+                        <strong>4. Il tono del gioco</strong>
+                        <p>Colt & Cthulhu può essere giocato con toni diversi - da "avventura 
+                        pulp leggera" a "orrore psicologico intenso". Decidete insieme dove volete 
+                        posizionarvi su questo spettro.</p>
+                    </div>
+
+                    <div class="checklist-item">
+                        <strong>5. La gestione dei conflitti</strong>
+                        <p>Stabilite come gestirete eventuali disaccordi o conflitti che potrebbero 
+                        emergere durante il gioco. Chi ha l'ultima parola sulle decisioni? Come 
+                        vengono gestite le situazioni in cui le regole non sono chiare?</p>
+                    </div>
+
+                    <div class="checklist-item">
+                        <strong>6. La logistica pratica</strong>
+                        <p>Quando e dove giocherete? Quanto durano le sessioni? Con quale frequenza? 
+                        Cosa succede se qualcuno non può venire? Questi dettagli pratici sono 
+                        importanti quanto quelli emotivi.</p>
+                    </div>
+                </div>
+            </section>
+
             <section id="x-card">
                 <div class="tool-card">
                     <div class="tool-header">
                         <div class="tool-icon">❌</div>
                         <div>
-                            <h3 class="tool-title">X-Card</h3>
-                            <div class="tool-credit">Creato da John Stavropoulos</div>
+                            <h3 class="tool-title">La X-Card</h3>
+                            <p class="tool-credit">Creata da John Stavropoulos</p>
                         </div>
                     </div>
 
-                    <h4>Cos'è l'X-Card?</h4>
+                    <h4>Cos'è la X-Card</h4>
                     <p>
-                        L'X-Card è uno strumento semplice ma potente per interrompere immediatamente contenuti 
-                        che causano disagio. Può essere una carta fisica con una "X" disegnata, o semplicemente 
-                        il gesto di incrociare le braccia formando una X.
+                        La X-Card è un semplice strumento che permette a chiunque al tavolo di 
+                        fermare immediatamente qualsiasi contenuto che lo mette a disagio, senza 
+                        dover spiegare il perché. È letteralmente una carta con una grande X disegnata 
+                        sopra, messa al centro del tavolo e visibile a tutti.
                     </p>
 
-                    <h4>Come Funziona</h4>
                     <div class="how-to-use">
-                        <p><strong>Setup (Sessione Zero):</strong></p>
+                        <h4>Come si usa la X-Card</h4>
                         <ol>
-                            <li>Il Master mette una carta con una X al centro del tavolo (o spiega il gesto)</li>
-                            <li>Spiega: "Se qualcuno tocca questa carta (o fa il gesto X), fermiamo immediatamente 
-                            quello che sta succedendo e passiamo oltre. Nessuna domanda, nessuna spiegazione richiesta."</li>
-                            <li>Pratica insieme: fai toccare la carta a tutti per familiarizzare</li>
-                        </ol>
-                        
-                        <p style="margin-top: 15px;"><strong>Durante il Gioco:</strong></p>
-                        <ol>
-                            <li>Qualsiasi partecipante (Master incluso!) può toccare la X-Card in qualsiasi momento</li>
-                            <li>Il gioco si ferma immediatamente</li>
-                            <li>Il Master dice semplicemente: "OK, tagliamo questa scena" e passa ad altro</li>
-                            <li>Non si chiede "perché" - si rispetta e si continua</li>
+                            <li><strong>Posizionamento:</strong> Metti una carta con una grande X 
+                            al centro del tavolo, facilmente raggiungibile da tutti</li>
+                            <li><strong>Spiegazione:</strong> All'inizio della sessione, spiega: 
+                            "Se in qualsiasi momento qualcosa nel gioco ti mette a disagio, puoi 
+                            toccare o sollevare questa carta. Non devi spiegare perché. Modificheremo 
+                            o salteremo semplicemente quella scena."</li>
+                            <li><strong>Rispetto:</strong> Quando qualcuno usa la X-Card, tutti 
+                            devono rispettare immediatamente la richiesta senza fare domande, 
+                            commenti o espressioni di disappunto</li>
+                            <li><strong>Continuazione:</strong> Il gioco continua semplicemente, 
+                            evitando o modificando l'elemento problematico</li>
                         </ol>
                     </div>
 
-                    <h4>Quando Usarla</h4>
-                    <ul>
-                        <li>Quando una descrizione diventa troppo grafica o disturbante</li>
-                        <li>Quando un tema toccato è più vicino a casa di quanto pensassi</li>
-                        <li>Quando senti disagio crescente e vuoi fermare prima che peggiori</li>
-                        <li>Quando la direzione della storia ti mette a disagio</li>
-                    </ul>
-
                     <div class="example-scenario">
-                        <h5>📖 Esempio d'Uso</h5>
-                        <p><strong>Master:</strong> "Il cultista inizia a torturare il prigioniero. Prende un coltello e—"</p>
-                        <p><strong>Giocatore:</strong> [tocca X-Card]</p>
-                        <p><strong>Master:</strong> "OK, tagliamo. La tortura avviene off-screen. Quando tornate, 
-                        trovate che il prigioniero ha parlato e vi dà informazioni sul culto. Cosa fate?"</p>
-                        <p style="margin-top: 10px; font-style: normal;">
-                            ✅ Nessuna domanda. Nessun giudizio. Il gioco continua in modo sicuro.
-                        </p>
+                        <h5>📖 Un esempio di utilizzo della X-Card</h5>
+                        <p><strong>Narratore:</strong> "Mentre esplori la miniera buia, trovi il 
+                        corpo di uno dei minatori scomparsi. È stato..."</p>
+                        <p><strong>Giocatrice:</strong> [tocca la X-Card]</p>
+                        <p><strong>Narratore:</strong> "Ok, capito. Trovate il corpo e capite che 
+                        è morto, ma non entro nei dettagli. Cosa fate?"</p>
+                        <p><em>[Il gioco continua normalmente, nessuno fa domande sul perché sia 
+                        stata usata la X-Card]</em></p>
                     </div>
 
                     <div class="tip-box">
-                        <h5>💡 Consigli per il Master</h5>
+                        <h4>💡 I consigli per usare bene la X-Card</h4>
                         <ul>
-                            <li><strong>Normalizza l'uso:</strong> Usa tu stesso la X-Card occasionalmente per mostrare 
-                            che è OK usarla</li>
-                            <li><strong>Non drammatizzare:</strong> Quando qualcuno la usa, continua fluidamente senza 
-                            fare "grande scena"</li>
-                            <li><strong>Edit, non cancella:</strong> La X-Card non rimuove eventi dalla fiction - 
-                            li rende off-screen o li riassume brevemente</li>
-                            <li><strong>Disponibile sempre:</strong> Ricorda all'inizio di ogni sessione che la carta è lì</li>
+                            <li><strong>Normalizza il suo uso:</strong> Come narratore, puoi usare 
+                            la X-Card tu stesso durante le prime sessioni per dimostrare che è 
+                            normale e sicuro farlo</li>
+                            <li><strong>Non chiedere spiegazioni:</strong> Mai. Se qualcuno usa 
+                            la X-Card e poi vuole spiegare, va bene, ma non deve sentirsi 
+                            obbligato</li>
+                            <li><strong>Nessun dramma:</strong> Tratta l'uso della X-Card come 
+                            qualcosa di completamente normale, come chiedere una pausa per andare 
+                            in bagno</li>
+                            <li><strong>Sii creativo:</strong> Se qualcosa viene bloccato dalla 
+                            X-Card, trova un modo alternativo per far progredire la storia senza 
+                            quell'elemento</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- LINES & VEILS -->
             <section id="lines-veils">
                 <div class="tool-card">
                     <div class="tool-header">
-                        <div class="tool-icon">🎭</div>
+                        <div class="tool-icon">🚦</div>
                         <div>
-                            <h3 class="tool-title">Lines & Veils (Linee e Veli)</h3>
-                            <div class="tool-credit">Concetto di Ron Edwards</div>
+                            <h3 class="tool-title">Lines & Veils (le linee e i veli)</h3>
+                            <p class="tool-credit">Creato da Ron Edwards, sviluppato da Emily Care Boss</p>
                         </div>
                     </div>
 
-                    <h4>Cosa Sono Lines & Veils?</h4>
+                    <h4>Cosa sono Lines & Veils</h4>
                     <p>
-                        Lines e Veils sono limiti preventivi che il gruppo stabilisce <strong>prima</strong> di iniziare a giocare, 
-                        tipicamente durante la sessione zero. Invece di interrompere durante il gioco (come con X-Card), 
-                        definisci in anticipo cosa è off-limits.
+                        Lines & Veils è un sistema che permette ai giocatori di specificare in 
+                        anticipo quali contenuti vogliono evitare completamente (Lines/Linee) e 
+                        quali contenuti vanno bene se succedono "fuori scena" ma non vogliono 
+                        essere descritti in dettaglio (Veils/Veli).
                     </p>
 
-                    <h4>Due Tipi di Limiti</h4>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
-                        <div style="background: #FFF0F0; padding: 20px; border-radius: 8px; border: 2px solid #8B0000;">
-                            <h5 style="color: #8B0000; margin-top: 0;">🚫 LINES (Linee Dure)</h5>
-                            <p><strong>Definizione:</strong> Contenuti che NON devono apparire nel gioco. Mai. Neanche off-screen.</p>
-                            <p><strong>Esempi:</strong></p>
-                            <ul style="font-size: 0.95rem;">
-                                <li>Violenza sessuale</li>
-                                <li>Abuso su minori</li>
-                                <li>Autolesionismo esplicito</li>
-                                <li>Specifiche fobie (ragni, annegamento, ecc.)</li>
-                            </ul>
-                            <p style="margin-bottom: 0;"><strong>Come gestirle:</strong> Non includere questi temi nella storia. Punto.</p>
-                        </div>
-                        
-                        <div style="background: #E8F4E8; padding: 20px; border-radius: 8px; border: 2px solid #3d5a3d;">
-                            <h5 style="color: #3d5a3d; margin-top: 0;">🎭 VEILS (Veli)</h5>
-                            <p><strong>Definizione:</strong> Contenuti che possono esistere nel mondo di gioco, 
-                            ma devono succedere "dietro le quinte" senza dettagli grafici.</p>
-                            <p><strong>Esempi:</strong></p>
-                            <ul style="font-size: 0.95rem;">
-                                <li>Torture (avvengono off-screen)</li>
-                                <li>Morte di bambini (menzionata ma non mostrata)</li>
-                                <li>Dettagli orrore corporeo (riassunti brevemente)</li>
-                                <li>Escrementi, corpi decomposizione avanzata</li>
-                            </ul>
-                            <p style="margin-bottom: 0;"><strong>Come gestirle:</strong> "Fade to black" o riassumi in una frase.</p>
-                        </div>
-                    </div>
-
-                    <h4>Come Usare Lines & Veils</h4>
                     <div class="how-to-use">
-                        <p><strong>Durante la Sessione Zero:</strong></p>
-                        <ol>
-                            <li><strong>Introduci il concetto:</strong> Spiega la differenza tra Lines e Veils</li>
-                            <li><strong>Condividi un modulo:</strong> Usa il modulo sottostante (o simile) e fai compilare a tutti</li>
-                            <li><strong>Raccogli in privato (opzionale):</strong> Alcuni giocatori preferiscono comunicare 
-                            Lines personali in privato al Master</li>
-                            <li><strong>Compila lista gruppo:</strong> Il Master crea una lista unica che include tutte le Lines/Veils</li>
-                            <li><strong>Condividi con tutti:</strong> Tutti devono conoscere i limiti del gruppo 
-                            (senza necessariamente sapere chi ha richiesto cosa)</li>
-                            <li><strong>Rivedi periodicamente:</strong> Le Lines/Veils possono cambiare. Controlla ogni 4-6 sessioni</li>
-                        </ol>
-                    </div>
+                        <h4>Come funzionano Lines & Veils</h4>
+                        
+                        <p><strong>Le Lines (linee dure):</strong> Sono contenuti che NON devono 
+                        apparire nel gioco in nessuna forma. Se qualcuno stabilisce una Line su 
+                        "torture grafiche", allora le torture semplicemente non esistono nel mondo 
+                        di gioco.</p>
 
-                    <div class="consent-form">
-                        <h4 style="margin-top: 0;">📋 Modulo Lines & Veils - Colt & Cthulhu</h4>
-                        <p style="font-size: 0.95rem; margin-bottom: 20px;">
-                            Compila questo modulo onestamente. Puoi consegnarlo al Master in privato se preferisci. 
-                            Non devi spiegare il perché di una Line o Veil.
-                        </p>
-                        
-                        <div class="checklist">
-                            <h5>🚫 Le Mie LINES (Contenuti da evitare completamente):</h5>
-                            <p style="font-size: 0.9rem; margin-bottom: 10px;">Segna o scrivi contenuti che NON vuoi nel gioco:</p>
-                            
-                            <div class="checklist-item">
-                                <input type="checkbox" id="line1">
-                                <label for="line1">Violenza sessuale o coercizione sessuale</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="line2">
-                                <label for="line2">Abuso/violenza su minori</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="line3">
-                                <label for="line3">Autolesionismo esplicito o suicidio dettagliato</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="line4">
-                                <label for="line4">Violenza su animali (dettagliata)</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="line5">
-                                <label for="line5">Specifiche fobie: ragni, serpenti, altezze, spazi chiusi, annegamento</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="line6">
-                                <label for="line6">Temi di aborto o aborto spontaneo</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="line7">
-                                <label for="line7">Malattie terminali o morte lenta per malattia</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="line8">
-                                <label for="line8">Cannibalismo</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="line9">
-                                <label for="line9">Linguaggio razzista storico (anche se "accurato al periodo")</label>
-                            </div>
-                            
-                            <div style="margin-top: 15px;">
-                                <label><strong>Altre Lines (scrivi sotto):</strong></label>
-                                <textarea style="width: 100%; min-height: 80px; padding: 10px; border: 2px solid #8B4513; border-radius: 4px; font-family: inherit;"></textarea>
-                            </div>
-                        </div>
-                        
-                        <div class="checklist" style="margin-top: 20px;">
-                            <h5>🎭 I Miei VEILS (OK se off-screen o accennati):</h5>
-                            <p style="font-size: 0.9rem; margin-bottom: 10px;">Segna contenuti che possono esistere ma non vuoi descritti in dettaglio:</p>
-                            
-                            <div class="checklist-item">
-                                <input type="checkbox" id="veil1">
-                                <label for="veil1">Tortura (avviene ma non descritta)</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="veil2">
-                                <label for="veil2">Horror corporeo grafico (mutilazioni, corpi deformi)</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="veil3">
-                                <label for="veil3">Morte di personaggi non giocanti cari</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="veil4">
-                                <label for="veil4">Abuso di sostanze (alcol, laudano, oppio)</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="veil5">
-                                <label for="veil5">Escrementi, vomito, fluidi corporei</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="veil6">
-                                <label for="veil6">Corpi in decomposizione avanzata</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="veil7">
-                                <label for="veil7">Scene romantiche/sessuali tra PG (fade to black)</label>
-                            </div>
-                            <div class="checklist-item">
-                                <input type="checkbox" id="veil8">
-                                <label for="veil8">Bestemmie o blasfemia religiosa</label>
-                            </div>
-                            
-                            <div style="margin-top: 15px;">
-                                <label><strong>Altri Veils (scrivi sotto):</strong></label>
-                                <textarea style="width: 100%; min-height: 80px; padding: 10px; border: 2px solid #8B4513; border-radius: 4px; font-family: inherit;"></textarea>
-                            </div>
-                        </div>
+                        <p><strong>I Veils (veli):</strong> Sono contenuti che possono succedere 
+                        nel mondo di gioco, ma "dietro le quinte" senza descrizioni dettagliate. 
+                        Se qualcuno stabilisce un Veil su "violenza contro gli animali", la violenza 
+                        può essere accaduta (per esempio, i personaggi possono trovare un animale 
+                        morto) ma non viene descritta graficamente.</p>
                     </div>
 
                     <div class="example-scenario">
-                        <h5>📖 Esempio - Veils in Azione</h5>
-                        <p><strong>Situazione:</strong> Il gruppo ha Veil su "torture dettagliate".</p>
-                        <p><strong>Master:</strong> "Il cultista prende il prigioniero nella stanza sul retro. 
-                        Per i prossimi venti minuti, sentite urla terribili. Quando finalmente aprite la porta, 
-                        trovate il prigioniero esausto e traumatizzato ma vivo. Ha parlato - vi dice che il culto 
-                        si riunisce nel vecchio fienile ogni luna nuova."</p>
-                        <p style="margin-top: 10px; font-style: normal;">
-                            ✅ La tortura è successa nella fiction (ha senso nella storia) ma non è stata descritta graficamente.
-                        </p>
+                        <h5>📖 Un esempio di Lines & Veils</h5>
+                        <p><strong>Durante la sessione zero:</strong></p>
+                        <p><strong>Giocatore A:</strong> "Per me è una Line la violenza contro i 
+                        bambini. Non voglio che succeda nel gioco, punto."</p>
+                        <p><strong>Giocatrice B:</strong> "Io metto un Veil sull'autolesionismo. 
+                        Va bene se un PNG soffre di problemi mentali, ma non voglio scene dettagliate 
+                        di autolesionismo."</p>
+                        <p><strong>Narratore:</strong> "Perfetto, annotato. La violenza contro i 
+                        bambini semplicemente non esiste nel nostro gioco. E per quanto riguarda 
+                        l'autolesionismo, se dovesse emergere narrativamente, lo gestirò 'fuori 
+                        scena'. Qualcun altro ha Lines o Veils da aggiungere?"</p>
                     </div>
-                </div>
-            </section>
 
-            <!-- CONTENUTI SENSIBILI SPECIFICI -->
-            <section id="contenuti-specifici">
-                <h2>Contenuti Sensibili Specifici di Colt & Cthulhu</h2>
-                
-                <p>
-                    Questo gioco, per sua natura, può toccare temi storici e culturali sensibili. 
-                    Ecco come approcciare responsabilmente alcuni contenuti specifici:
-                </p>
-
-                <!-- Rappresentazione Nativi Americani -->
-                <div class="cultural-note">
-                    <h4>🪶 Rappresentazione dei Nativi Americani</h4>
-                    
-                    <p><strong>Contesto Storico:</strong></p>
-                    <p>
-                        Il 1885 è un periodo buio per i nativi americani: genocidio attivo, Wounded Knee è vicino (1890), 
-                        culture distrutte, bambini strappati alle famiglie per "scuole di assimilazione". 
-                        È impossibile ambientare un gioco nel West senza affrontare questa realtà.
-                    </p>
-                    
-                    <p><strong>Come Approcciarla Responsabilmente:</strong></p>
-                    <ul>
-                        <li><strong>Evita stereotipi:</strong> I nativi non sono tutti "nobili selvaggi" o "guerrieri stoici". 
-                        Sono persone complete con personalità individuali, umorismo, difetti, sogni</li>
-                        <li><strong>Rispetta le culture:</strong> Apache, Navajo, Sioux, Comanche sono culture DIVERSE. 
-                        Non trattarle come monolitiche</li>
-                        <li><strong>Non appropriarti di pratiche sacre:</strong> Evita di usare cerimonie specifiche 
-                        (Sun Dance, Vision Quest) come "meccaniche di gioco" superficiali</li>
-                        <li><strong>Dai agency:</strong> I PNG nativi non sono "vittime passive" - hanno obiettivi propri, 
-                        fanno scelte, resistono attivamente</li>
-                        <li><strong>Ammetti complessità:</strong> Puoi avere nativi come alleati, nemici, o neutrali. 
-                        Non tutti devono essere "buoni" - sono persone</li>
-                        <li><strong>Consulta fonti:</strong> Se usi elementi culturali specifici, fai ricerca seria 
-                        (non film western!)</li>
-                    </ul>
-                    
-                    <div class="warning-box" style="margin-top: 15px;">
-                        <h5>❌ DA EVITARE:</h5>
+                    <div class="tip-box">
+                        <h4>💡 I consigli per Lines & Veils</h4>
                         <ul>
-                            <li>"Discorsi indiani" stereotipati ("Uomo bianco parlare con lingua biforcuta")</li>
-                            <li>Usare termini dispregiativi storici anche se "accurati al periodo"</li>
-                            <li>Ritrarre nativi come "magicamente connessi alla natura" in modo essenzialista</li>
-                            <li>Fare dei nativi solo "quest giver" esotici per PG bianchi</li>
-                            <li>Romanticizzare o banalizzare il genocidio</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tip-box" style="margin-top: 15px;">
-                        <h5>✅ APPROCCIO MIGLIORE:</h5>
-                        <p>Se hai giocatori nativi americani al tavolo, chiedi se vogliono essere coinvolti 
-                        in come vengono rappresentate le loro culture. Se non hai giocatori nativi, considera 
-                        attentamente se hai le conoscenze per rappresentare queste culture rispettosamente - 
-                        potrebbe essere meglio tenere PNG nativi come comprimari o usare personaggi nativi 
-                        pre-scritti con consulenza appropriata.</p>
-                    </div>
-                </div>
-
-                <!-- Razzismo Storico -->
-                <div class="cultural-note">
-                    <h4>⚖️ Razzismo e Discriminazione Storica</h4>
-                    
-                    <p><strong>La Realtà del 1885:</strong></p>
-                    <p>
-                        Il West era violentemente razzista. Segregazione, linciaggi, "Chinese Exclusion Act" (1882), 
-                        discriminazione sistematica contro neri, cinesi, messicani, nativi. Ignorare questo sarebbe 
-                        disonesto storicamente.
-                    </p>
-                    
-                    <p><strong>Ma:</strong> C'è differenza tra riconoscere che il razzismo esisteva e farne 
-                    <em>entertainment</em> o simularlo graficamente al tavolo.</p>
-                    
-                    <p><strong>Linee Guida:</strong></p>
-                    <ul>
-                        <li><strong>Riconosci l'esistenza:</strong> OK dire "In questa città, i nativi non sono benvenuti" 
-                        o "Lo sceriffo è noto per essere violentemente razzista"</li>
-                        <li><strong>Non roleplayare linguaggio d'odio:</strong> NON devi urlare slur razziste al tavolo 
-                        per "realismo". Dì "Il PNG usa linguaggio offensivo" senza ripeterlo</li>
-                        <li><strong>I PG non sono obbligati ad essere razzisti:</strong> Anche se "storicamente improbabile", 
-                        va bene che i PG siano progressisti per gli standard dell'epoca. È fiction!</li>
-                        <li><strong>Dai opzioni di resistere:</strong> Se un PG subisce discriminazione, permettigli 
-                        di reagire con agency (rispondere, combattere, organizzare resistenza)</li>
-                        <li><strong>Non premiare il razzismo:</strong> PNG razzisti non dovrebbero essere "cool" o 
-                        moralmente ambigui in modo attraente</li>
-                    </ul>
-                    
-                    <div class="tip-box" style="margin-top: 15px;">
-                        <h5>💡 Regola Pratica:</h5>
-                        <p><strong>"Show, don't revel"</strong> - Mostra che il razzismo esiste nel mondo, 
-                        ma non compiacertene o usarlo come intrattenimento. Il focus del gioco è combattere orrori cosmici, 
-                        non simulare oppressione storica in dettaglio.</p>
-                    </div>
-                </div>
-
-                <!-- Horror e Salute Mentale -->
-                <div class="cultural-note">
-                    <h4>🧠 Rappresentazione di Salute Mentale e Follia</h4>
-                    
-                    <p><strong>Il Problema:</strong></p>
-                    <p>
-                        Giochi horror lovecraftiani tradizionalmente usano "follia" come meccanica, spesso in modi 
-                        che stigmatizzano malattie mentali reali. "Diventi pazzo" non è divertente per chi vive 
-                        con disturbi mentali.
-                    </p>
-                    
-                    <p><strong>Come Colt & Cthulhu Gestisce Questo:</strong></p>
-                    <ul>
-                        <li><strong>Sistema Stress ≠ Malattia Mentale:</strong> Il sistema stress rappresenta 
-                        trauma acuto da esposizione soprannaturale, non schizofrenia o depressione clinica</li>
-                        <li><strong>Afflizioni temporanee:</strong> Gli effetti dello stress sono reversibili 
-                        con riposo e cura - non sono condizioni permanenti</li>
-                        <li><strong>Nessun "manicomio" come punishment:</strong> Non usiamo istituzioni psichiatriche 
-                        del 1885 (che erano camere di tortura) come meccanica di gioco</li>
-                        <li><strong>Separazione fiction/realtà:</strong> Chiarisci che vedere orrori cosmici causare 
-                        stress non è commento su persone reali con condizioni mentali</li>
-                    </ul>
-                    
-                    <div class="warning-box" style="margin-top: 15px;">
-                        <h5>⚠️ Se Giocatori Hanno Esperienza con Malattia Mentale:</h5>
-                        <p>Alcuni giocatori possono trovare il sistema stress triggering se hanno vissuto 
-                        crisi di salute mentale. Discutete in sessione zero se vogliono:</p>
-                        <ul>
-                            <li>Usare il sistema normalmente (è finzione, capiscono separazione)</li>
-                            <li>Rinominare "stress" in "esposizione cosmica" o "corruzione"</li>
-                            <li>Rimuovere afflizioni che ricordano troppo sintomi reali</li>
-                            <li>Usare sistema alternativo dove lo stress causa solo malus meccanici senza descrizioni narrative</li>
+                            <li><strong>Scrivi una lista:</strong> Durante la sessione zero, crea 
+                            una lista scritta delle Lines e dei Veils. Tienila visibile durante 
+                            il gioco</li>
+                            <li><strong>Aggiorna quando necessario:</strong> Le Lines e i Veils 
+                            possono essere aggiunti in qualsiasi momento. Se emerge qualcosa di 
+                            nuovo durante il gioco, si può aggiungere alla lista</li>
+                            <li><strong>Sii specifico ma flessibile:</strong> "Violenza grafica" 
+                            è vago. "Descrizioni dettagliate di ferite aperte" è più chiaro</li>
+                            <li><strong>Non c'è giudizio:</strong> Le Lines e i Veils di qualcuno 
+                            possono sembrare "esagerate" ad altri, ma vanno rispettate comunque</li>
                         </ul>
                     </div>
                 </div>
+            </section>
 
-                <!-- Violenza e Gore -->
-                <div class="cultural-note">
-                    <h4>🩸 Violenza, Gore e Horror Corporeo</h4>
-                    
-                    <p><strong>Livello di Dettaglio:</strong></p>
+            <section id="stars-wishes">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">⭐</div>
+                        <div>
+                            <h3 class="tool-title">Stars & Wishes (le stelle e i desideri)</h3>
+                            <p class="tool-credit">Creato da Lu Quade</p>
+                        </div>
+                    </div>
+
+                    <h4>Cosa sono Stars & Wishes</h4>
                     <p>
-                        Colt & Cthulhu include violenza (è un gioco di sparatorie western) e horror corporeo 
-                        (è lovecraftiano). MA c'è un range di quanto graficamente descrivere:
+                        Stars & Wishes è uno strumento di feedback positivo che si usa alla fine 
+                        delle sessioni. Ogni partecipante condivide una "stella" (qualcosa che gli 
+                        è piaciuto nella sessione) e un "desiderio" (qualcosa che vorrebbe vedere 
+                        nelle sessioni future).
                     </p>
-                    
-                    <p><strong>Scala di Intensità (scegli livello del gruppo):</strong></p>
-                    <ul>
-                        <li><strong>Livello 1 - PG-13:</strong> Violenza presente ma non grafica. "Il proiettile 
-                        lo colpisce e cade." Orrori descritti suggestivamente.</li>
-                        <li><strong>Livello 2 - R-rated:</strong> Violenza realistica. Sangue, ossa rotte, ferite. 
-                        Orrori descritti ma non eccessivamente.</li>
-                        <li><strong>Livello 3 - Hard-R:</strong> Violenza grafica dettagliata. Horror corporeo esplicito. 
-                        Smembramenti, organi interni, decomposizione.</li>
-                        <li><strong>Livello 4 - Extreme:</strong> Nessun limite. Torture dettagliate, violenza sessuale, 
-                        tutto sul tavolo. <em>(Sconsigliato - controlla Lines/Veils prima!)</em></li>
-                    </ul>
-                    
-                    <div class="tip-box" style="margin-top: 15px;">
-                        <h5>💡 Raccomandazione:</h5>
-                        <p>Per la maggior parte dei gruppi, <strong>Livello 2 (R-rated)</strong> è il sweet spot. 
-                        Abbastanza violento da sentire l'impatto senza essere gratuitamente grafico. 
-                        Puoi sempre scalare su/giù basandoti su comfort del gruppo.</p>
+
+                    <div class="how-to-use">
+                        <h4>Come si usa Stars & Wishes</h4>
+                        <ol>
+                            <li><strong>Il momento:</strong> Dedica 10-15 minuti alla fine di ogni 
+                            sessione per questo esercizio</li>
+                            <li><strong>Le stelle:</strong> Ogni persona condivide qualcosa che gli 
+                            è piaciuto: un momento divertente, una scena ben narrata, un'azione cool 
+                            di un altro personaggio, ecc.</li>
+                            <li><strong>I desideri:</strong> Ogni persona condivide qualcosa che 
+                            vorrebbe vedere: più combattimento, più gioco di ruolo, più focus sul 
+                            suo personaggio, meno scene horror intense, ecc.</li>
+                            <li><strong>L'ascolto:</strong> Il narratore prende nota di stelle e 
+                            desideri e cerca di incorporare i feedback nelle sessioni future</li>
+                        </ol>
+                    </div>
+
+                    <div class="example-scenario">
+                        <h5>📖 Un esempio di Stars & Wishes</h5>
+                        <p><strong>Giocatrice A:</strong> "La mia stella è la scena nel saloon 
+                        quando abbiamo interrogato il barman. Mi è piaciuto molto come hai 
+                        interpretato quel PNG! Il mio desiderio è avere più scene di esplorazione 
+                        all'aperto, perché mi piace quando descrivi i paesaggi del deserto."</p>
+                        <p><strong>Giocatore B:</strong> "Stella: il combattimento contro i ghoul 
+                        è stato intenso e divertente! Desiderio: vorrei più opportunità di usare 
+                        le mie abilità di investigazione."</p>
+                        <p><strong>Narratore:</strong> "Ottimo feedback! Nella prossima sessione 
+                        ci sarà sicuramente più esplorazione del deserto, e sto già pensando a 
+                        un mistero che richiederà parecchia investigazione."</p>
                     </div>
                 </div>
             </section>
 
-            <!-- ALTRI STRUMENTI -->
-            <section id="altri-strumenti">
-                <h2>Altri Strumenti di Sicurezza</h2>
-                
-                <div class="resources-grid">
-                    <div class="resource-card">
-                        <h4>🛑 "Pause" Button</h4>
-                        <p>Simile a X-Card ma meno definitivo. Qualcuno dice "Pausa" e il gruppo si ferma 
-                        per check-in: "Siamo tutti OK? Qualcuno ha bisogno di pausa vera o di aggiustare qualcosa?"</p>
-                        <p><strong>Quando usarlo:</strong> Per rallentare se l'intensità sta crescendo troppo in fretta.</p>
+            <section id="pause-rewind">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">⏸️</div>
+                        <div>
+                            <h3 class="tool-title">Pause & Rewind (pausa e riavvolgi)</h3>
+                        </div>
                     </div>
-                    
-                    <div class="resource-card">
-                        <h4>⏪ "Rewind" / "Redo"</h4>
-                        <p>Se qualcosa è andato in direzione inaspettatamente disturbante, qualcuno può chiedere 
-                        "rewind" e il gruppo torna indietro di 2-3 minuti e riprende diversamente.</p>
-                        <p><strong>Quando usarlo:</strong> Quando ti rendi conto *dopo* che qualcosa era troppo.</p>
+
+                    <h4>Cosa sono Pause & Rewind</h4>
+                    <p>
+                        Questi sono strumenti semplici ma potenti che permettono a chiunque al 
+                        tavolo di fermare momentaneamente il gioco (Pause) o di "tornare indietro" 
+                        e rifare una scena che è andata in una direzione problematica (Rewind).
+                    </p>
+
+                    <div class="how-to-use">
+                        <h4>Come si usano</h4>
+                        <p><strong>Pause:</strong> Chiunque può dire "Pausa" o fare un gesto 
+                        convenuto (come un timeout sportivo) per fermare il gioco. Questo dà a 
+                        tutti un momento per respirare, discutere se qualcosa non va, o semplicemente 
+                        fare una pausa fisica.</p>
+                        
+                        <p><strong>Rewind:</strong> Se una scena va in una direzione che non piace 
+                        a qualcuno, quella persona può chiedere un "Rewind". Il tavolo torna 
+                        indietro di qualche minuto e la scena viene rigiocata in modo diverso.</p>
                     </div>
-                    
-                    <div class="resource-card">
-                        <h4>👍 "Thumbs Up/Down" Check-In</h4>
-                        <p>Periodicamente (ogni ora? A metà sessione?) il Master chiede "Tutti OK?" 
-                        e i giocatori rispondono con pollice su/giù discretamente.</p>
-                        <p><strong>Quando usarlo:</strong> Check-in regolari senza interrompere il flusso.</p>
-                    </div>
-                    
-                    <div class="resource-card">
-                        <h4>📱 "Text to Master" (gioco online)</h4>
-                        <p>In giochi online (Discord, Roll20), i giocatori possono messaggiare privatamente 
-                        il Master se qualcosa li disturba senza interrompere pubblicamente.</p>
-                        <p><strong>Quando usarlo:</strong> Per comunicazioni private durante il gioco.</p>
-                    </div>
-                    
-                    <div class="resource-card">
-                        <h4>⏰ Breaks Programmati</h4>
-                        <p>Fai una pausa di 10-15 minuti ogni 90-120 minuti di gioco. Permette a tutti 
-                        di decomprimere, specialmente dopo scene intense.</p>
-                        <p><strong>Quando usarlo:</strong> Sempre! Le pause migliorano qualità e sicurezza.</p>
-                    </div>
-                    
-                    <div class="resource-card">
-                        <h4>💬 Debrief Post-Sessione</h4>
-                        <p>Ultimi 10 minuti: parlate di cosa è andato bene, cosa è stato intenso, 
-                        cosa aggiustare per la prossima volta. Separa personaggi da giocatori.</p>
-                        <p><strong>Quando usarlo:</strong> Ogni sessione, specialmente quelle pesanti.</p>
+
+                    <div class="example-scenario">
+                        <h5>📖 Un esempio di Rewind</h5>
+                        <p><strong>Durante il gioco:</strong></p>
+                        <p><strong>Narratore:</strong> "Il cultista ghermisce il tuo personaggio 
+                        e inizia a..."</p>
+                        <p><strong>Giocatore:</strong> "Aspetta, chiedo un Rewind. Questa scena 
+                        sta andando in una direzione che non mi piace."</p>
+                        <p><strong>Narratore:</strong> "Nessun problema. Torniamo indietro. Il 
+                        cultista cerca di ghermire il tuo personaggio. Cosa fai?"</p>
+                        <p><strong>Giocatore:</strong> "Schivo e sparo."</p>
+                        <p><strong>Narratore:</strong> "Perfetto, tira per l'attacco!"</p>
                     </div>
                 </div>
             </section>
 
-            <!-- SESSIONE ZERO -->
-            <section id="sessione-zero">
-                <h2>La Sessione Zero: Fondamentale</h2>
-                
+            <section id="rappresentazione-culturale">
+                <h2>La rappresentazione culturale rispettosa</h2>
+
+                <div class="cultural-note">
+                    <h4>🏜️ Un tema importante in Colt & Cthulhu</h4>
+                    <p>
+                        Colt & Cthulhu è ambientato nel West americano del 1885, un periodo storico 
+                        caratterizzato da violenza coloniale contro i popoli nativi americani. Come 
+                        designer del gioco, riconosco che questa è una parte dolorosa e tragica 
+                        della storia che ha conseguenze che perdurano ancora oggi.
+                    </p>
+                </div>
+
+                <h3>Le linee guida per una rappresentazione rispettosa</h3>
+
                 <div class="tip-box">
-                    <p style="font-size: 1.1rem; margin-bottom: 15px;">
-                        <strong>La Sessione Zero non è opzionale.</strong> È dove stabilisci contratto sociale 
-                        del gruppo, aspettative, e limiti prima di investire emotivamente nei personaggi.
+                    <h4>1. Evita gli stereotipi dannosi</h4>
+                    <p>
+                        I nativi americani nel tuo gioco dovrebbero essere personaggi complessi e 
+                        tridimensionali, non stereotipi del "nobile selvaggio" o del "guerriero 
+                        brutale". Hanno le loro motivazioni, paure, speranze e personalità uniche.
                     </p>
                 </div>
 
-                <h3>Agenda Sessione Zero (2-3 ore)</h3>
-                
-                <div class="checklist">
-                    <h4 style="margin-top: 0;">✅ Checklist Master per Sessione Zero</h4>
-                    
-                    <div class="checklist-item" style="background: #E8F4E8;">
-                        <input type="checkbox" id="sz1">
-                        <label for="sz1"><strong>1. Introduci il gioco e ambientazione (15 min)</strong><br>
-                        Spiega tono, temi, tipo di storia. Mostra contenuti tipici.</label>
-                    </div>
-                    
-                    <div class="checklist-item" style="background: #E8F4E8;">
-                        <input type="checkbox" id="sz2">
-                        <label for="sz2"><strong>2. Presenta strumenti di sicurezza (20 min)</strong><br>
-                        Spiega X-Card, Lines & Veils. Fai compilare moduli. Normalizza il loro uso.</label>
-                    </div>
-                    
-                    <div class="checklist-item" style="background: #E8F4E8;">
-                        <input type="checkbox" id="sz3">
-                        <label for="sz3"><strong>3. Raccogli Lines & Veils del gruppo (15 min)</strong><br>
-                        Compila lista condivisa. Assicurati che tutti siano d'accordo.</label>
-                    </div>
-                    
-                    <div class="checklist-item" style="background: #E8F4E8;">
-                        <input type="checkbox" id="sz4">
-                        <label for="sz4"><strong>4. Discuti aspettative sul gioco (20 min)</strong><br>
-                        Frequenza sessioni? Lunghezza campagna? Tono (serio vs silly)? Spotlight equo?</label>
-                    </div>
-                    
-                    <div class="checklist-item" style="background: #E8F4E8;">
-                        <input type="checkbox" id="sz5">
-                        <label for="sz5"><strong>5. Crea personaggi insieme (60-90 min)</strong><br>
-                        Assicurati che PG siano connessi, il gruppo sia bilanciato, backstory compatibili.</label>
-                    </div>
-                    
-                    <div class="checklist-item" style="background: #E8F4E8;">
-                        <input type="checkbox" id="sz6">
-                        <label for="sz6"><strong>6. Stabilisci regole casa e logistics (15 min)</strong><br>
-                        Orari, cibo, alcol al tavolo?, telefoni?, assenze?, regole particolari?</label>
-                    </div>
-                    
-                    <div class="checklist-item" style="background: #E8F4E8;">
-                        <input type="checkbox" id="sz7">
-                        <label for="sz7"><strong>7. Domande e preoccupazioni finali (10 min)</strong><br>
-                        Spazio aperto per dubbi. Conferma che tutti si sentono ascoltati e sicuri.</label>
-                    </div>
+                <div class="tip-box">
+                    <h4>2. Riconosci la complessità storica</h4>
+                    <p>
+                        Il periodo storico include violenze terribili. Non è necessario ignorare 
+                        completamente questo aspetto, ma non deve essere glorificato. Se includiinsegni
+
+ conflitti tra coloni e nativi, mostra la complessità morale e le 
+                        conseguenze umane su entrambi i lati.
+                    </p>
                 </div>
 
-                <div class="warning-box" style="margin-top: 20px;">
-                    <h4>⚠️ Se Salti la Sessione Zero:</h4>
-                    <p>Rischi di:</p>
+                <div class="tip-box">
+                    <h4>3. Consulta fonti autentiche</h4>
+                    <p>
+                        Se vuoi includere elementi della cultura nativa americana nel tuo gioco, 
+                        fai ricerche usando fonti scritte o approvate da membri delle nazioni native. 
+                        Evita di inventare tradizioni "genericamente native" che non corrispondono 
+                        a nessuna cultura reale.
+                    </p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>4. Considera le alternative</h4>
+                    <p>
+                        Non è necessario che ogni campagna di Colt & Cthulhu includa pesantemente 
+                        temi legati ai nativi americani. Puoi creare storie avvincenti che si 
+                        concentrano su altri aspetti del West: la costruzione della ferrovia, i 
+                        conflitti tra città minerarie, i misteri lovecraftiani in contesti urbani, 
+                        ecc.
+                    </p>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Elementi da evitare assolutamente</h4>
                     <ul>
-                        <li>Triggerare giocatori accidentalmente senza sapere i loro limiti</li>
-                        <li>Creare PG che non funzionano insieme</li>
-                        <li>Avere aspettative disallineate (Master vuole campagna seria, giocatori vogliono silly)</li>
-                        <li>Problemi di comportamento perché "regole" non erano chiare</li>
-                        <li>Campagna che collassa dopo 3-4 sessioni per incompatibilità che potevano essere risolte</li>
+                        <li>Appropriazione culturale: Non usare elementi sacri o spirituali di 
+                        culture native come "scenografia" o "estetica cool"</li>
+                        <li>Il "salvatore bianco": Evita narrazioni in cui i personaggi bianchi 
+                        "salvano" i nativi</li>
+                        <li>Linguaggio offensivo: Non usare mai termini storicamente usati in modo 
+                        dispregiativo</li>
+                        <li>Magia "generica indiana": Le tradizioni spirituali native sono diverse 
+                        e complesse, non un sistema magico generico</li>
                     </ul>
-                    <p><strong>Non saltare la Sessione Zero. Mai.</strong></p>
                 </div>
             </section>
 
-            <!-- RISORSE ESTERNE -->
-            <section id="risorse">
-                <h2>Risorse e Link Esterni</h2>
-                
-                <h3>Approfondimenti su Safety Tools:</h3>
-                <ul>
-                    <li><strong>X-Card (originale):</strong> <a href="http://tinyurl.com/x-card-rpg" target="_blank">tinyurl.com/x-card-rpg</a> - John Stavropoulos</li>
-                    <li><strong>TTRPG Safety Toolkit:</strong> Raccolta completa di safety tools della community</li>
-                    <li><strong>Monte Cook Games: Consent in Gaming:</strong> PDF gratuito su consenso al tavolo RPG</li>
-                    <li><strong>The Door Is Always Open:</strong> Articolo su quando/come lasciare gruppo non sicuro</li>
-                </ul>
+            <section id="conclusioni">
+                <h2>Le conclusioni: il rispetto è alla base del divertimento</h2>
 
-                <h3>Rappresentazione Culturale Responsabile:</h3>
-                <ul>
-                    <li><strong>Writing the Other:</strong> Nisi Shawl & Cynthia Ward - guida su scrivere personaggi di culture diverse</li>
-                    <li><strong>Native Representation in RPGs:</strong> Articoli e risorse da designer nativi</li>
-                    <li><strong>"Decolonizing D&D":</strong> Saggi su come evitare tropi colonialisti nei GDR</li>
-                </ul>
-
-                <h3>Salute Mentale e Gaming:</h3>
-                <ul>
-                    <li><strong>Take This (Mental Health Charity):</strong> Risorse su salute mentale nel gaming</li>
-                    <li><strong>AFK (Anxiety, Fear, Kindness):</strong> Podcast su salute mentale e RPG</li>
-                </ul>
-            </section>
-
-            <!-- SOMMARIO FINALE -->
-            <div class="safety-banner" style="margin-top: 40px;">
-                <h3>🛡️ Riepilogo: I Pilastri di un Tavolo Sicuro</h3>
-                <div style="text-align: left; max-width: 800px; margin: 20px auto;">
-                    <ol style="font-size: 1.1rem; line-height: 1.8;">
-                        <li><strong>Comunicazione:</strong> Parla apertamente di limiti e aspettative</li>
-                        <li><strong>Consenso:</strong> Tutti devono essere d'accordo su contenuti del gioco</li>
-                        <li><strong>Strumenti:</strong> Usa X-Card, Lines & Veils, e altri strumenti attivamente</li>
-                        <li><strong>Rispetto:</strong> Quando qualcuno usa uno strumento, rispetta immediatamente senza giudizio</li>
-                        <li><strong>Check-in:</strong> Verifica regolarmente che tutti stiano bene</li>
-                        <li><strong>Flessibilità:</strong> Limiti possono cambiare - rivedi periodicamente</li>
-                        <li><strong>Responsabilità:</strong> Come Master, sei garante dello spazio sicuro</li>
-                    </ol>
-                </div>
-                <p style="font-size: 1.1rem; margin-top: 20px;">
-                    <strong>Ricorda:</strong> Un tavolo sicuro non è un tavolo "soft" o "censurato". 
-                    È un tavolo dove tutti possono immergersi completamente nella storia 
-                    sapendo che saranno rispettati. Il miglior horror viene dalla fiducia.
+                <p>
+                    Gli strumenti di sicurezza non limitano la creatività - la liberano. Quando 
+                    tutti al tavolo si sentono sicuri e rispettati, sono più disposti a immergersi 
+                    completamente nel gioco, a correre rischi narrativi, e a creare storie davvero 
+                    memorabili insieme.
                 </p>
-            </div>
 
-            <div class="pagination">
-                <a href="index.html">← Torna al Manuale</a>
-                <a href="capitolo_01.html">Inizia a Leggere →</a>
+                <p>
+                    Come narratore, hai una responsabilità particolare nel creare e mantenere un 
+                    ambiente sicuro. Ma ricorda: la sicurezza del tavolo è responsabilità di tutti, 
+                    non solo tua. Incoraggia tutti a usare questi strumenti e a parlare se qualcosa 
+                    non va.
+                </p>
+
+                <div class="tip-box">
+                    <h4>💡 Il promemoria finale</h4>
+                    <p style="font-size: 1.1rem;">
+                        <strong>È solo un gioco.</strong> Per quanto possiamo essere investiti nelle 
+                        nostre storie e nei nostri personaggi, alla fine della giornata è un hobby 
+                        che dovrebbe portare gioia, non disagio o trauma. Se qualcosa nel gioco sta 
+                        causando problemi reali alle persone reali, quella cosa va cambiata o 
+                        eliminata. Sempre. Senza eccezioni.
+                    </p>
+                    <p style="font-size: 1.1rem;">
+                        Buon gioco, e che le vostre sessioni siano piene di avventure memorabili 
+                        e momenti condivisi in un ambiente sicuro e rispettoso per tutti!
+                    </p>
+                </div>
+            </section>
+
+            <div class="download-cta" style="background: #3d5a3d; color: white; padding: 30px; 
+                border-radius: 12px; margin: 40px 0; text-align: center; border: 3px solid #D4AF37;">
+                <h3 style="color: #D4AF37; margin-top: 0;">🛡️ La sicurezza prima di tutto</h3>
+                <p style="font-size: 1.2rem;">
+                    Ricorda: usare questi strumenti non è opzionale, è essenziale. Un tavolo sicuro 
+                    è un tavolo dove tutti possono divertirsi davvero.
+                </p>
+                
+                <div style="margin-top: 30px;">
+                    <a href="index.html" class="download-button" style="display: inline-block; 
+                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
+                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
+                        border: 2px solid #8B4513;">📖 Torna alla home</a>
+                    <a href="scenario_introduttivo.html" class="download-button" style="display: inline-block; 
+                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
+                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
+                        border: 2px solid #8B4513;">🌵 Inizia a giocare</a>
+                </div>
             </div>
 
         </article>
     </div>
 
     <footer class="main-footer">
-        <p class="quote">"Il vero orrore non è quello che vedi, ma sapere che puoi fermarlo quando serve."</p>
-        <p>© 2025 Colt & Cthulhu - Strumenti di Sicurezza Emotiva</p>
-        <p style="font-size: 0.9rem;">Questo gioco supporta una cultura di rispetto, inclusività e sicurezza emotiva al tavolo.</p>
+        <p class="quote">"Il vero orrore non è quello che vedi nel gioco, ma quello che qualcuno 
+        potrebbe sentire al tavolo se non ci prendiamo cura l'uno dell'altro."</p>
+        <p>© 2025 Colt & Cthulhu - Gli strumenti di sicurezza emotiva</p>
     </footer>
 
 </body>
