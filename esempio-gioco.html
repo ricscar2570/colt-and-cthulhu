@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esempio di Gioco - Colt & Cthulhu</title>
+    <title>Un esempio di gioco - Colt & Cthulhu</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         .transcript-box {
@@ -22,7 +22,7 @@
             color: #8B4513;
         }
         
-        .speaker.master {
+        .speaker.narratore {
             color: #8B0000;
         }
         
@@ -30,7 +30,7 @@
             color: #2C5F2D;
         }
         
-        .speaker.reverend {
+        .speaker.reverendo {
             color: #4A5D8B;
         }
         
@@ -98,564 +98,459 @@
         .example-banner {
             background: linear-gradient(135deg, #2C1810 0%, #8B4513 50%, #2C1810 100%);
             color: #D4AF37;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             border-radius: 12px;
             margin: 30px 0;
             border: 4px solid #D4AF37;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
         }
         
-        .action-sequence {
-            background: white;
-            border-left: 5px solid #8B4513;
-            padding: 15px;
-            margin: 15px 0;
-            font-family: Arial, sans-serif;
+        .example-banner h1 {
+            font-size: 3rem;
+            margin: 0 0 15px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            color: #D4AF37;
+            border: none;
         }
     </style>
 </head>
 <body>
     <header class="main-header">
         <h1>COLT & CTHULHU</h1>
-        <p class="subtitle">Esempio di Gioco - Il Sistema in Azione</p>
+        <p class="subtitle">Un esempio di gioco</p>
     </header>
 
     <nav class="nav-main">
         <ul>
             <li><a href="index.html">🏠 Home</a></li>
-            <li><a href="capitolo_01.html">Regole</a></li>
-            <li><a href="esempio-gioco.html" class="active">Esempio Gioco</a></li>
-            <li><a href="quickstart-rules.html">Quickstart</a></li>
+            <li><a href="esempio-gioco.html" class="active">L'esempio</a></li>
+            <li><a href="scenario_introduttivo.html">Lo scenario</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> <span>›</span> <strong>Esempio di Gioco</strong>
-        </div>
-
         <article class="chapter">
             
             <div class="example-banner">
-                <h2 style="margin: 0; font-size: 2.5rem;">🎭 VEDILO IN AZIONE</h2>
-                <p style="font-size: 1.2rem; margin: 15px 0; color: white;">
-                    Niente spiega un gioco di ruolo meglio di vedere una sessione reale. 
-                    Ecco un transcript completo di 30 minuti di gioco.
+                <h1>🎬 UN ESEMPIO DI GIOCO</h1>
+                <p style="font-size: 1.3rem; color: white; margin: 15px 0; font-style: italic;">
+                    Il transcript completo di una sessione reale
+                </p>
+                <p style="color: white; font-size: 1.1rem; margin: 15px auto; max-width: 700px;">
+                    Questo esempio mostra come si svolge realmente una sessione di Colt & Cthulhu 
+                    al tavolo, con i dialoghi tra i giocatori e il narratore, i tiri di dado e le 
+                    meccaniche in azione.
                 </p>
             </div>
 
             <section id="introduzione">
-                <h2>Come Leggere Questo Esempio</h2>
+                <h2>Come leggere questo esempio</h2>
                 
-                <p style="font-size: 1.1rem;">
-                    Questo è un <strong>transcript autentico</strong> (leggermente editato per chiarezza) 
-                    di una sessione di Colt & Cthulhu. Mostra:
+                <p>
+                    Questo transcript mostra circa trenta minuti di gioco reale da una sessione di 
+                    Colt & Cthulhu. I giocatori stanno usando i personaggi pre-generati Sarah McCarthy 
+                    (il pistolero) e Reverendo Josiah Stone (il reverendo) per giocare l'inizio dello 
+                    scenario "Il pozzo maledetto".
                 </p>
-                
-                <ul style="font-size: 1.05rem;">
-                    <li>✅ Come funzionano prove abilità e combattimento</li>
-                    <li>✅ Come il Master descrive scene e gestisce regole</li>
-                    <li>✅ Come i giocatori interagiscono e prendono decisioni</li>
-                    <li>✅ Come funziona il sistema stress</li>
-                    <li>✅ Ritmo naturale di gioco</li>
-                </ul>
 
-                <div class="tip-callout">
-                    <h4 style="margin-top: 0;">💡 Legenda Colori</h4>
-                    <p><span class="speaker master">Master</span> - Il narratore e arbitro delle regole</p>
-                    <p><span class="speaker sarah">Sarah (Anna)</span> - Giocatrice che interpreta Sarah McCarthy, Pistolero</p>
-                    <p><span class="speaker reverend">Reverendo (Marco)</span> - Giocatore che interpreta Rev. Josiah Stone</p>
-                    <p style="margin-bottom: 0;"><strong>Note meccaniche</strong> - Spiegano cosa succede "dietro le quinte"</p>
+                <div class="tip-box">
+                    <h4>📖 La legenda dei colori</h4>
+                    <ul>
+                        <li><span style="color: #8B0000; font-weight: bold;">Il narratore</span> - 
+                        in rosso scuro</li>
+                        <li><span style="color: #2C5F2D; font-weight: bold;">Sarah (la pistolera)</span> - 
+                        in verde</li>
+                        <li><span style="color: #4A5D8B; font-weight: bold;">Il reverendo</span> - 
+                        in blu</li>
+                        <li><span style="background: #2C1810; color: #D4AF37; padding: 2px 6px; 
+                        border-radius: 3px;">I tiri di dado</span> - in box dorati</li>
+                        <li><em style="color: #8B4513;">Le note sulle meccaniche</em> - in corsivo marrone</li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- SCENA 1: INVESTIGAZIONE -->
             <div class="scene-header">
-                🔍 SCENA 1: INVESTIGAZIONE AL SALOON (12 minuti)
+                🌅 SCENA 1: L'ARRIVO A DUSTY CREEK
             </div>
 
             <div class="transcript-box">
-<span class="speaker master">Master:</span> Ok, siete entrati a Dusty Creek due ore fa. È una cittadina mineraria piccola - una strada principale, saloon, emporio, sceriffo. Lo sceriffo locale vi ha assunto per 50 dollari per investigare sparizioni misteriose. Tre minatori sono scomparsi nell'ultima settimana. Siete al saloon "The Lucky Nugget" per fare domande. Cosa fate?
+                <p><span class="speaker narratore">Narratore:</span> "Il sole sta tramontando 
+                lentamente sul deserto dell'Arizona mentre la diligenza sobbalza lungo la strada 
+                polverosa. Attraverso il finestrino potete vedere Dusty Creek che appare all'orizzonte - 
+                un piccolo villaggio minerario con pochi edifici sparsi e una strada principale che 
+                sembra essere fatta più di polvere che di terra. Sarah, tu sei seduta di fronte al 
+                reverendo. Cosa sta facendo il tuo personaggio durante il viaggio?"</p>
 
-<span class="speaker sarah">Anna (Sarah):</span> Entro nel saloon, occhi che scansionano la stanza. Mano vicina al revolver. "Quanti avventori ci sono?"
+                <p><span class="speaker sarah">Sarah:</span> "Sto pulendo il mio revolver con un 
+                panno, controllando che ogni parte funzioni perfettamente. Lo faccio in modo quasi 
+                meccanico, come un rituale. Ogni tanto guardo fuori dal finestrino con espressione 
+                sospettosa."</p>
 
-<span class="speaker master">Master:</span> Una dozzina di uomini sparsi ai tavoli. Alcuni giocano a poker, altri bevono in silenzio. Il barman pulisce bicchieri. Noti un vecchio minatore, solo in un angolo, che sembra nervoso.
+                <p><span class="speaker narratore">Narratore:</span> "Perfetto. Reverendo, tu vedi 
+                Sarah che pulisce metodicamente la sua arma. Cosa fa il tuo personaggio?"</p>
 
-<span class="speaker reverend">Marco (Reverendo):</span> "Mi avvicino al bar. Ordino un whisky per me e chiedo al barman se conosce i minatori scomparsi."
+                <p><span class="speaker reverendo">Reverendo:</span> "Sto leggendo la mia Bibbia, 
+                ma ogni tanto sollevo lo sguardo verso Sarah. Dopo un po', chiudo il libro e dico: 
+                'Quella è una bella arma. La usi spesso?'"</p>
 
-<span class="speaker master">Master:</span> Il barman ti guarda sospettoso. "Dipende chi chiede, reverendo." Vuoi provare a persuaderlo o intimidirlo?
+                <p><span class="speaker sarah">Sarah:</span> "La guardo per un momento in silenzio, 
+                poi rispondo in tono neutro: 'Abbastanza spesso da non sbagliare mai un colpo.' 
+                Continuo a pulire il revolver senza guardarlo negli occhi."</p>
 
-<span class="speaker reverend">Marco:</span> Persuasione. Il mio reverendo è tipo gentile ma determinato. "Figliolo, sono qui per aiutare. Tre anime sono scomparse. Se sai qualcosa, è tuo dovere cristiano parlare."
-
-<span class="speaker master">Master:</span> Ok, tira Persuasione. CD è 13 - il barman è diffidente verso stranieri.
-            </div>
-
-            <div class="mechanics-note">
-                <strong>📊 MECCANICA - PROVA ABILITÀ:</strong><br>
-                Marco tira <strong>d20 + modificatore Carisma + bonus competenza</strong>.<br>
-                Il Reverendo ha CAR 14 (+2) e competenza Persuasione (+2) = <strong>+4 totale</strong>.<br>
-                Deve ottenere 13+ per successo.
-            </div>
-
-            <div class="transcript-box">
-<span class="speaker reverend">Marco:</span> *tira dado* <span class="dice-roll">🎲 d20: 11 + 4 = 15</span> Quindici! Ce la faccio?
-
-<span class="speaker master">Master:</span> Sì! Il barman sospira. "Va bene, reverendo. I tre erano tutti dello stesso turno - lavoravano nella miniera nordest, quella vecchia. Dicevano di sentire... rumori strani. Canti, dicevano. Ma non c'era nessuno là sotto."
-
-<span class="speaker sarah">Anna:</span> "Canti?" Sarah si volta. "Che tipo di canti?"
-
-<span class="speaker master">Master:</span> Il barman scrolla spalle. "Non lo so. Non ci sono mai stato. Ma Pete—" indica il vecchio minatore "—lui era nel loro turno. È l'unico sopravvissuto."
-
-<span class="speaker sarah">Anna:</span> Perfetto. Mi avvicino a Pete. Sarah è diretta. "Ehi, vecchio. Dobbiamo parlare." Posso tentare Intimidire per farlo parlare velocemente?
-
-<span class="speaker master">Master:</span> Puoi, ma è già spaventato - Persuasione potrebbe funzionare meglio. Se lo intimidisci potrebbe chiudersi.
-
-<span class="speaker sarah">Anna:</span> Giusto. Ok, cambio approccio. Sarah si siede accanto a lui, tono più morbido. "Ascolta, non so cosa hai visto, ma tre uomini sono spariti. Posso aiutare, ma devi dirmi la verità."
-
-<span class="speaker master">Master:</span> Tira Persuasione, CD 12 - è spaventato ma vuole aiuto.
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 d20: 8 + 0 (CAR) + 0 (non competente) = 8</span> Merda. Otto.
-
-<span class="speaker master">Master:</span> Fallimento. Pete ti guarda con occhi vitrei. "Non... non posso. Tu non capisci. C'è qualcosa là sotto. Qualcosa di sbagliato." Si alza e esce barcollando dal saloon.
-
-<span class="speaker reverend">Marco:</span> "Lo seguo fuori?"
-
-<span class="speaker master">Master:</span> Puoi, ma è già lontano nella notte. Sentite un urlo in lontananza - direzione miniera.
-
-<span class="speaker sarah">Anna:</span> "Merda. Andiamo. ADESSO."
+                <p><span class="speaker reverendo">Reverendo:</span> "Annuisco lentamente e dico: 
+                'Capisco. Nel mio lavoro, invece, cerco di non dover usare MAI il fucile. Ma lo 
+                porto sempre con me, per le occasioni in cui la preghiera non basta.'"</p>
             </div>
 
             <div class="tip-callout">
-                <h4 style="margin-top: 0;">💭 NOTA DEL MASTER</h4>
-                <p>Notate come il Master ha offerto scelta tra Intimidire/Persuadere? Questo dà agency ai giocatori. 
-                Il fallimento di Anna non ha bloccato la storia - ha creato urgenza (urlo) che spinge l'azione avanti.</p>
-            </div>
-
-            <!-- SCENA 2: COMBATTIMENTO -->
-            <div class="scene-header">
-                ⚔️ SCENA 2: COMBATTIMENTO - ENTRATA MINIERA (15 minuti)
+                <h4>💡 La nota del narratore sull'introduzione</h4>
+                <p>
+                    Questa breve scena di apertura serve a stabilire le personalità dei personaggi 
+                    e a creare una prima dinamica tra i giocatori. Sarah è solitaria e pragmatica, 
+                    mentre il reverendo cerca di stabilire un collegamento. Come narratore, ho dato 
+                    spazio ai giocatori di presentare i loro personaggi attraverso le azioni e i 
+                    dialoghi prima di arrivare all'azione vera e propria.
+                </p>
             </div>
 
             <div class="transcript-box">
-<span class="speaker master">Master:</span> Correte verso la miniera. È notte fonda, solo luna crescente. All'entrata vedete Pete che sta lottando contro... qualcosa. Figura umanoide ma la pelle è grigia, occhi vitrei. Sta mordendo Pete. Roll for initiative!
+                <p><span class="speaker narratore">Narratore:</span> "Ottimo gioco di ruolo, ragazzi! 
+                La diligenza si ferma con un cigolio delle ruote e il conducente grida: 'Dusty Creek! 
+                Tutti giù!' Quando scendete, la prima cosa che notate è il silenzio innaturale. Per 
+                essere sera in un villaggio minerario, ci sono pochissime persone per strada. Le 
+                finestre di molti edifici sono sbarrate. Datemi entrambi una prova di percezione."</p>
 
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Iniziativa Sarah: d20 (14) + 3 DES = 17</span>
+                <div class="dice-roll">
+                    🎲 Sarah tira: 12 + 3 (mod. SAG) = 15
+                </div>
 
-<span class="speaker reverend">Marco:</span> *tira* <span class="dice-roll">🎲 Iniziativa Reverendo: d20 (9) + 1 DES = 10</span>
+                <div class="dice-roll">
+                    🎲 Reverendo tira: 18 + 0 (mod. SAG) = 18
+                </div>
 
-<span class="speaker master">Master:</span> *tira per il mostro* <span class="dice-roll">🎲 Iniziativa Ghoul: 12</span>
+                <p><span class="speaker narratore">Narratore:</span> "Bene! Sarah, con 15 noti che 
+                alcune delle persone che vedete per strada vi guardano con espressioni sospettose 
+                prima di affrettarsi a entrare negli edifici. Reverendo, con 18 noti qualcosa di 
+                più inquietante: sopra la porta del saloon c'è un simbolo dipinto - sembra un occhio 
+                stilizzato con delle linee che si irradiano da esso. Non riconosci il simbolo 
+                specifico, ma come uomo di fede senti istintivamente che c'è qualcosa di... sbagliato 
+                in quel simbolo."</p>
+            </div>
+
+            <div class="mechanics-note">
+                📋 <strong>La meccanica in azione:</strong> Le prove di percezione permettono ai 
+                giocatori di notare dettagli importanti nell'ambiente. La difficoltà base era CD 12, 
+                quindi entrambi hanno avuto successo. Chi ottiene un risultato più alto (in questo 
+                caso il reverendo con 18) riceve informazioni aggiuntive e più dettagliate.
+            </div>
+
+            <div class="transcript-box">
+                <p><span class="speaker reverendo">Reverendo:</span> "Mi fermo e fisso il simbolo 
+                per un momento. Poi mi rivolgo a Sarah e dico sottovoce: 'Vedi quel segno sopra la 
+                porta? Non mi piace per niente. C'è qualcosa di profano in esso.'"</p>
+
+                <p><span class="speaker sarah">Sarah:</span> "Seguo il suo sguardo e osservo il 
+                simbolo. 'Profano o no, quel saloon probabilmente ha le risposte che cerchiamo. E 
+                magari anche del whisky decente.' Inizio a camminare verso il saloon."</p>
+
+                <p><span class="speaker narratore">Narratore:</span> "Mentre vi avvicinate al saloon, 
+                la porta si apre e ne esce un uomo anziano con un grembiule - probabilmente il 
+                proprietario o il barman. Vi guarda per un momento, poi dice con voce stanca: 'Voi 
+                siete quelli che ha mandato il signor Thornton, vero? Quelli che dovrebbero occuparsi 
+                della... situazione alla miniera.' Non sembra particolarmente speranzoso."</p>
+
+                <p><span class="speaker sarah">Sarah:</span> "Ci fermiamo davanti a lui. 'Dipende 
+                da cosa intende per situazione. Siamo stati pagati per investigare. Cos'è che sta 
+                succedendo qui?'"</p>
+
+                <p><span class="speaker narratore">Narratore:</span> "L'uomo si guarda intorno 
+                nervosamente prima di rispondere: 'Sparizioni. Cinque uomini in tre settimane. Tutti 
+                minatori. L'ultimo, Red Sullivan, è tornato vivo ma... non è più lo stesso. Parla 
+                di cose... cose che non dovrebbero esistere.' Fa una pausa. 'Volete entrare e bere 
+                qualcosa mentre parliamo? O preferite andare subito da Thornton?'"</p>
+            </div>
+
+            <div class="scene-header">
+                🍺 SCENA 2: IL SALOON E LE INFORMAZIONI
+            </div>
+
+            <div class="transcript-box">
+                <p><span class="speaker reverendo">Reverendo:</span> "Dico: 'Penso che dovremmo 
+                sentire cosa hai da dirci. Ci offri da bere?'"</p>
+
+                <p><span class="speaker narratore">Narratore:</span> "Il barman annuisce e vi fa 
+                entrare. L'interno del saloon è quasi deserto - solo due avventori seduti in un 
+                angolo che vi guardano entrare prima di tornare rapidamente ai loro drink. Il barman 
+                vi porta due bicchieri di whisky e si siede al vostro tavolo. 'Mi chiamo Pete Collins. 
+                Gestisco questo posto da vent'anni. Non ho mai visto il villaggio così... morto.' 
+                Se volete fargli delle domande, questo è il momento."</p>
+
+                <p><span class="speaker sarah">Sarah:</span> "Voglio chiedergli di Red Sullivan, 
+                l'uomo che è tornato. 'Dove possiamo trovare questo Red? E cosa intendi quando dici 
+                che non è più lo stesso?'"</p>
+
+                <p><span class="speaker narratore">Narratore:</span> "Pete beve un sorso del suo 
+                whisky prima di rispondere. 'Red è nella sua baracca, alla fine della strada. Sua 
+                moglie Martha lo sta sorvegliando. Per quanto riguarda cosa intendo...' Si interrompe, 
+                scegliendo le parole con cura. 'Red era un tipo duro. Ha lavorato nelle miniere per 
+                quindici anni. Ha visto incidenti, morti, crolli. Ma quando è tornato due giorni fa, 
+                era... spezzato. Continuava a urlare di stelle sotto la terra e occhi nel buio. E le 
+                sue mani...' Pete esita. 'Le sue mani non smettono di tremare, nemmeno quando dorme.'"</p>
+            </div>
+
+            <div class="stress-indicator">
+                ⚠️ <strong>Il primo trigger dello stress:</strong> Ascoltare questa descrizione 
+                inquietante è il primo momento in cui i personaggi potrebbero guadagnare stress. 
+                Tuttavia, poiché stanno solo ascoltando un racconto e non hanno ancora visto nulla 
+                di soprannaturale direttamente, il narratore decide di non richiedere ancora un 
+                controllo dello stress. Ma l'atmosfera di disagio è stata stabilita.
+            </div>
+
+            <div class="transcript-box">
+                <p><span class="speaker reverendo">Reverendo:</span> "Il mio personaggio si fa serio. 
+                'Pensi che dovremmo parlare con Red?' chiedo a Sarah."</p>
+
+                <p><span class="speaker sarah">Sarah:</span> "'Probabilmente sì, ma prima voglio 
+                sapere di più sulla miniera stessa.' Mi rivolgo a Pete: 'Cos'è che hanno trovato là 
+                sotto? Thornton ci ha detto che cercano argento, ma c'è qualcos'altro?'"</p>
+
+                <p><span class="speaker narratore">Narratore:</span> "Pete vi guarda entrambi per 
+                un lungo momento, come se stesse decidendo quanto dirvi. Poi sospira. 'Circa un mese 
+                fa, hanno sfondato in una nuova caverna. Naturale, non scavata da mani umane. Bella 
+                grande. Thornton era tutto eccitato perché pensava che avrebbero trovato una nuova 
+                vena di argento.' Si ferma. 'Invece hanno trovato un pozzo. Un pozzo profondo che 
+                scende chissà dove. E da allora, gli uomini hanno iniziato a scomparire.' Sarah, 
+                fammi una prova di intuizione."</p>
+
+                <div class="dice-roll">
+                    🎲 Sarah tira: 8 + 1 (mod. SAG) = 9
+                </div>
+
+                <p><span class="speaker narratore">Narratore:</span> "Con un 9, non riesci a capire 
+                se Pete sta dicendo tutta la verità o se sta trattenendo qualcosa. Ma il suo disagio 
+                è genuino - questo è chiaro."</p>
+            </div>
+
+            <div class="mechanics-note">
+                📋 <strong>La meccanica in azione:</strong> La prova di intuizione viene usata per 
+                determinare se un PNG sta mentendo o nascondendo qualcosa. In questo caso, Sarah ha 
+                fallito la prova (CD era 12), quindi non ottiene informazioni aggiuntive sulle 
+                intenzioni di Pete. Il narratore fornisce comunque una piccola informazione ("il suo 
+                disagio è genuino") per non far sentire il fallimento troppo punitivo.
+            </div>
+
+            <div class="scene-header">
+                💀 SCENA 3: L'INCONTRO CON RED SULLIVAN
+            </div>
+
+            <div class="transcript-box">
+                <p><span class="speaker narratore">Narratore:</span> "Dopo aver finito i vostri drink 
+                e ringraziato Pete per le informazioni, uscite dal saloon. Il sole è ormai tramontato 
+                completamente e Dusty Creek è illuminata solo da poche lanterne. La baracca di Red 
+                Sullivan è esattamente dove Pete ha detto - una piccola struttura di legno alla fine 
+                della strada principale. C'è luce alle finestre. Cosa fate?"</p>
+
+                <p><span class="speaker sarah">Sarah:</span> "Mi avvicino alla porta e busso con 
+                decisione."</p>
+
+                <p><span class="speaker narratore">Narratore:</span> "Dopo un momento, la porta si 
+                apre leggermente e vedete una donna sulla trentina con occhiaie profonde e capelli 
+                disordinati. Vi guarda con sospetto. 'Chi siete?' chiede in tono stanco."</p>
+
+                <p><span class="speaker reverendo">Reverendo:</span> "Mi faccio avanti e dico in 
+                tono gentile: 'Buonasera, signora. Siamo stati mandati dal signor Thornton per 
+                investigare su cosa sta accadendo alla miniera. Pete Collins ci ha detto che vostro 
+                marito Red potrebbe avere informazioni che ci potrebbero aiutare. Possiamo parlargli?'"</p>
+
+                <p><span class="speaker narratore">Narratore:</span> "La donna - che presumete sia 
+                Martha Sullivan - esita. Reverendo, fammi una prova di persuasione per convincerla 
+                a farvi entrare."</p>
+
+                <div class="dice-roll">
+                    🎲 Reverendo tira: 11 + 2 (mod. CAR) = 13
+                </div>
+
+                <p><span class="speaker narratore">Narratore:</span> "Con un 13, Martha vi studia 
+                entrambi per un lungo momento, poi sospira e apre la porta completamente. 'Cinque 
+                minuti. Non di più. E se inizia a urlare, ve ne dovete andare immediatamente.' Vi fa 
+                entrare nella baracca che consiste di una singola stanza. Nell'angolo più lontano, 
+                legato a una sedia, c'è un uomo emaciato con gli occhi spalancati che fissano il vuoto. 
+                Questo è Red Sullivan. E ragazzi... adesso tutti e due dovete effettuare un controllo 
+                dello stress."</p>
+            </div>
+
+            <div class="stress-indicator">
+                🧠 <strong>IL PRIMO CONTROLLO DELLO STRESS</strong><br>
+                <strong>Il trigger:</strong> Vedere Red Sullivan nel suo stato di completa follia<br>
+                <strong>La difficoltà:</strong> CD 10<br>
+                <strong>Gli effetti:</strong>
+                <ul style="margin: 10px 0 0 20px;">
+                    <li>Fallimento = 2 punti stress</li>
+                    <li>Successo = 1 punto stress</li>
+                </ul>
+                <p style="margin-top: 10px;"><em>Questo è il primo vero confronto dei personaggi con 
+                l'orrore cosmico. Anche se Red è solo un uomo, il suo stato mentale devastato è una 
+                testimonianza di qualcosa di terribile che ha visto.</em></p>
+            </div>
+
+            <div class="transcript-box">
+                <div class="dice-roll">
+                    🎲 Sarah tira salvezza su SAG: 7 + 1 = 8 (FALLIMENTO - 2 stress)
+                </div>
+
+                <div class="dice-roll">
+                    🎲 Reverendo tira salvezza su SAG: 14 + 0 = 14 (SUCCESSO - 1 stress)
+                </div>
+
+                <p><span class="speaker narratore">Narratore:</span> "Sarah, il tuo personaggio fa 
+                un passo indietro involontario quando vede Red. C'è qualcosa nei suoi occhi - o forse 
+                nella totale assenza di qualsiasi cosa umana in quegli occhi - che ti gela il sangue. 
+                Guadagni 2 punti stress. Sei ancora nella fascia 'calmo' (0-5 punti stress), ma senti 
+                un'inquietudine crescente. Come reagisce Sarah?"</p>
+
+                <p><span class="speaker sarah">Sarah:</span> "La mia mano va istintivamente al calcio 
+                del mio revolver, anche se non lo estraggo. Dico sottovoce: 'Cristo santo... cos'è 
+                che gli hanno fatto?'"</p>
+
+                <p><span class="speaker narratore">Narratore:</span> "Reverendo, anche tu sei scosso 
+                da ciò che vedi, ma la tua fede ti dà forza. Guadagni 1 punto stress. Red inizia a 
+                ridere - un suono orribile, quasi meccanico. Poi inizia a parlare, fissando il vuoto: 
+                'Le stelle... le stelle cantano sotto la terra... ci sono occhi... così tanti occhi 
+                nel fondo del pozzo...'"</p>
             </div>
 
             <div class="combat-tracker">
-                <h4 style="margin-top: 0;">📊 ORDINE INIZIATIVA</h4>
-                <ol style="font-size: 1.05rem; margin: 10px 0;">
-                    <li><strong>Sarah (17)</strong> - Pistolero</li>
-                    <li><strong>Ghoul (12)</strong> - Creatura non-morta</li>
-                    <li><strong>Reverendo (10)</strong> - Healer/Caster</li>
-                </ol>
+                <h4>📊 Il tracker dello stress attuale</h4>
+                <p><strong>Sarah:</strong> 2/20 punti stress (Calmo)</p>
+                <p><strong>Reverendo:</strong> 1/20 punti stress (Calmo)</p>
             </div>
 
             <div class="transcript-box">
-<span class="speaker master">Master:</span> Sarah, sei prima. Il ghoul è a 12 metri, sta per mordere di nuovo Pete che urla.
+                <p><span class="speaker reverendo">Reverendo:</span> "Mi avvicino lentamente a Red, 
+                tenendo la mia Bibbia davanti a me come uno scudo. 'Figliolo,' dico con voce ferma, 
+                'cosa hai visto nel pozzo? Cosa c'è là sotto?'"</p>
 
-<span class="speaker sarah">Anna:</span> Estraggo revolver e sparo. Due colpi rapidi. "Lascialo andare, bastardo!"
+                <p><span class="speaker narratore">Narratore:</span> "Red si gira improvvisamente 
+                verso di te, e per un momento i suoi occhi sembrano focalizzarsi. 'Non dovete guardare 
+                giù,' sussurra con voce rauca. 'Non dovete MAI guardare giù. Loro stanno arrivando... 
+                vengono dalle stelle che sono cadute... il pozzo è la loro porta... IL POZZO È LA 
+                LORO PORTA!' Inizia a urlare e dibattersi contro le corde che lo tengono legato."</p>
 
-<span class="speaker master">Master:</span> Quick Draw ti permette di estrarre e sparare nello stesso turno. Fai il primo attacco.
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Attacco 1: d20 (16) + 5 = 21</span> Ventuno per colpire!
-
-<span class="speaker master">Master:</span> Colpito! Il ghoul ha CA 12. Tira danni.
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Danni: 2d6 (4,3) + 3 DES = 10 danni</span> Dieci danni!
-
-<span class="speaker master">Master:</span> Il proiettile colpisce il ghoul in pieno petto. Si volta verso di te, ringhiando. Fai secondo attacco.
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Attacco 2: d20 (7) + 5 = 12</span> Dodici.
-
-<span class="speaker master">Master:</span> Colpito di striscio! Tira danni.
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Danni: 2d6 (2,1) + 3 = 6 danni</span> Sei danni. Fanno male anche quelli, spero.
-
-<span class="speaker master">Master:</span> Il ghoul aveva 22 PF. Ora ne ha 6. È gravemente ferito ma ancora in piedi. Molla Pete e carica verso di te, artigli tesi. Attacco con artiglio...
-
-<span class="speaker master">Master:</span> *tira* <span class="dice-roll">🎲 Attacco Ghoul: d20 (15) + 3 = 18</span> Diciotto per colpirti. La tua CA?
-
-<span class="speaker sarah">Anna:</span> Quattordici. Sono colpita.
-
-<span class="speaker master">Master:</span> *tira* <span class="dice-roll">🎲 Danni: 2d4 (3,2) + 2 = 7 danni</span> Sette danni. I suoi artigli ti graffiano il braccio. Sangue.
-
-<span class="speaker sarah">Anna:</span> Ahi! Avevo 12 PF, ora ho 5. Ancora ok ma fa male.
-
-<span class="speaker master">Master:</span> Reverendo, il tuo turno. Il ghoul è a 1 metro da Sarah, ferito gravemente.
-
-<span class="speaker reverend">Marco:</span> "Uso Sacred Flame. Alzo il crocifisso. 'Nel nome del Signore, BRUCIA!' Luce divina scende."
-
-<span class="speaker master">Master:</span> Ok, il ghoul fa Tiro Salvezza Destrezza contro tua CD 13.
-
-<span class="speaker master">Master:</span> *tira* <span class="dice-roll">🎲 TS DES Ghoul: d20 (4) + 0 = 4</span> Fallisce miseramente. Tira danni.
-
-<span class="speaker reverend">Marco:</span> *tira* <span class="dice-roll">🎲 Danni Sacred Flame: 1d8 = 7</span> Sette danni radianti!
-
-<span class="speaker master">Master:</span> Il ghoul aveva 6 PF. Con 7 danni, crolla a zero. La luce divina lo avvolge e la creatura urla, pelle che si annerisce. Crolla in cenere. Pete è a terra, sanguinante ma vivo.
+                <p><span class="speaker sarah">Sarah:</span> "Martha corre da Red e gli mette una 
+                mano sulla fronte, cercando di calmarlo. Guardo il reverendo e dico: 'Ne abbiamo 
+                sentito abbastanza. Usciamo.'"</p>
             </div>
 
             <div class="tip-callout">
-                <h4 style="margin-top: 0;">⚔️ NOTA SUL COMBATTIMENTO</h4>
-                <p>Combattimento è durato 3 turni (1 round completo). Sarah ha fatto la maggior parte del danno (16 totali), 
-                Reverendo ha finito il nemico. Cooperazione tattica! Notate come il Master descrive risultati narrativamente 
-                ("pelle si annerisce") non solo meccanicamente.</p>
-            </div>
-
-            <!-- SCENA 3: STRESS CHECK -->
-            <div class="scene-header">
-                🧠 SCENA 3: LA DISCESA - STRESS CHECK (8 minuti)
-            </div>
-
-            <div class="transcript-box">
-<span class="speaker master">Master:</span> Stabilizzate Pete con Medicina - è in shock ma vivrà. Guardate l'entrata della miniera. Buio totale. Sentite... un canto. Non umano. Come voci che armonizzano in modi che non dovrebbero essere possibili.
-
-<span class="speaker reverend">Marco:</span> "Nope. Assolutamente nope." *ride* "Ma il reverendo dice 'Andiamo. Abbiamo un dovere.'"
-
-<span class="speaker master">Master:</span> Entrate. L'ingresso scende ripido. Dopo 30 metri, vedete luce verde fosforescente sulle pareti. Non è lanterna - sono... funghi? No. Più strani. Geometrie incise nella roccia che brillano. Fanno male agli occhi guardarle. <strong>Stress check.</strong> Tirate Tiro Salvezza Saggezza, CD 12.
-
-<span class="speaker sarah">Anna:</span> Oh no. La mia SAG è bassa. *tira* <span class="dice-roll">🎲 TS SAG Sarah: d20 (6) + 1 = 7</span> Sette. Fallito.
-
-<span class="speaker reverend">Marco:</span> *tira* <span class="dice-roll">🎲 TS SAG Reverendo: d20 (13) + 3 = 16</span> Sedici! Superato.
-
-<span class="speaker master">Master:</span> Sarah, fallendo, guadagni 3 stress. Reverendo, superando, guadagni solo 1 stress.
-            </div>
-
-            <div class="stress-indicator">
-                <h4 style="margin-top: 0;">🧠 STRESS CORRENTE</h4>
-                <p><strong>Sarah:</strong> 3/22 stress (Calma - nessun effetto)</p>
-                <p><strong>Reverendo:</strong> 1/24 stress (Calmo - nessun effetto)</p>
-            </div>
-
-            <div class="transcript-box">
-<span class="speaker sarah">Anna:</span> "Sarah barcolla. 'Che diavolo... la mia testa...' Stringe la tempia."
-
-<span class="speaker reverend">Marco:</span> "Il reverendo posa mano sulla sua spalla. 'Abbi fede, figlia. Non guardare direttamente le incisioni. Fissa il sentiero.' Uso Guidance su di lei per il prossimo check."
-
-<span class="speaker master">Master:</span> Ottimo roleplay. Continuate a scendere. Il tunnel si allarga in una caverna naturale. Al centro... un altare. Roccia nera, non locale. Su di esso, simboli ancora più disturbanti. E intorno all'altare... corpi. I tre minatori. Morti da giorni. Qualcosa li ha... svuotati. Pelle grigia come il ghoul.
-
-<span class="speaker sarah">Anna:</span> "Sarah impreca. 'Troppo tardi per loro.'"
-
-<span class="speaker master">Master:</span> Altro <strong>stress check</strong>. Questa volta CD 13 - è più intenso. L'altare pulsa con energia wrongness.
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 TS SAG Sarah: d20 (10) + 1 + 1d4 (3 da Guidance) = 14</span> Quattordici con Guidance! Supero!
-
-<span class="speaker reverend">Marco:</span> "Yes, il mio Guidance ha aiutato!"
-
-<span class="speaker master">Master:</span> Sarah, superando, guadagni solo 2 stress. Marco, tira anche tu.
-
-<span class="speaker reverend">Marco:</span> *tira* <span class="dice-roll">🎲 TS SAG Reverendo: d20 (8) + 3 = 11</span> Undici. Fallito.
-
-<span class="speaker master">Master:</span> Reverendo guadagna 4 stress. Anche la tua fede vacilla di fronte a questa abominazione.
-
-<span class="speaker reverend">Marco:</span> "Il reverendo chiude gli occhi, recita preghiera. 'Liberaci dal male...'"
-            </div>
-
-            <div class="stress-indicator">
-                <h4 style="margin-top: 0;">🧠 STRESS AGGIORNATO</h4>
-                <p><strong>Sarah:</strong> 5/22 stress (Calma - nessun effetto meccanico, ma roleplay inquietudine)</p>
-                <p><strong>Reverendo:</strong> 5/24 stress (Calmo - nessun effetto meccanico)</p>
-            </div>
-
-            <div class="transcript-box">
-<span class="speaker master">Master:</span> Mentre investigate, sentite movimento. Dal tunnel opposto emerge un <strong>Cultista</strong> - veste nera, cappuccio, simboli simili all'altare. "Non dovreste essere qui!" inizia a lanciare incantesimo.
-
-<span class="speaker sarah">Anna:</span> "Roll for initiative! Sarah non aspetta - spara."
-
-<span class="speaker master">Master:</span> Tecnicamente initiative prima, MA—" *pausa* "—Sarah ha alta iniziativa e sta già impugnando revolver. Hai <em>sorpresa</em>. Fai un attacco prima dell'initiative.
-
-<span class="speaker sarah">Anna:</span> Awesome! *tira* <span class="dice-roll">🎲 Attacco sorpresa: d20 (18) + 5 = 23</span> Ventitré!
-
-<span class="speaker master">Master:</span> Colpito automaticamente. Danni?
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Danni: 2d6 (5,6) + 3 = 14 danni!</span> Quattordici!
-
-<span class="speaker master">Master:</span> Il cultista ha 16 PF. Sta ancora in piedi ma gravemente ferito, barcolla. "Voi... non fermerete il risveglio!" Inizia a lanciare di nuovo.
-            </div>
-
-            <div class="mechanics-note">
-                <strong>📊 MECCANICA - SORPRESA:</strong><br>
-                Il Master ha riconosciuto che Sarah era pronta e il cultista non si aspettava attacco. 
-                Questo è <strong>buon arbitraggio</strong> - le regole servono la narrativa, non viceversa. 
-                Sarah ottiene 1 attacco gratuito pre-initiative per ricompensare preparazione tattica.
-            </div>
-
-            <div class="transcript-box">
-<span class="speaker reverend">Marco:</span> "Il reverendo estrae simbolo sacro. 'DEMONE! Nel nome di Dio, fermati!' Uso Turn Undead? Funziona su cultisti?"
-
-<span class="speaker master">Master:</span> Turn Undead funziona solo su non-morti. Il cultista è umano (corrotto, ma umano). Puoi usare Sacred Flame o attacco fisico.
-
-<span class="speaker reverend">Marco:</span> "Sacred Flame allora. Concentrato, lo benedico con fuoco divino."
-
-<span class="speaker master">Master:</span> Cultista fa TS DES CD 13... *tira* <span class="dice-roll">🎲 TS DES: d20 (11) + 1 = 12</span> Fallisce per uno! Tira danni.
-
-<span class="speaker reverend">Marco:</span> *tira* <span class="dice-roll">🎲 Danni: 1d8 = 3</span> Solo tre danni.
-
-<span class="speaker master">Master:</span> Aveva 2 PF rimasti. Crolla, pelle bruciata. L'altare però continua a pulsare. Dovete distruggerlo.
-
-<span class="speaker sarah">Anna:</span> "Sarah svuota il revolver nell'altare. 'Muori, cosa demoniaca!'"
-
-<span class="speaker master">Master:</span> Fai tiro per colpire contro CA 15 (è pietra dura).
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Attacco: d20 (19) + 5 = 24</span> Ventiquattro!
-
-<span class="speaker master">Master:</span> Colpito! Tira danni. L'altare ha 25 PF.
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Danni: 2d6 (3,4) + 3 = 10</span> Dieci danni. L'altare si incrina.
-
-<span class="speaker reverend">Marco:</span> "Uso la mia azione per pregare e lanciare Sacred Flame sull'altare!"
-
-<span class="speaker master">Master:</span> L'altare è oggetto inanimato, quindi non fa TS - colpisci automaticamente. Tira danni.
-
-<span class="speaker reverend">Marco:</span> *tira* <span class="dice-roll">🎲 Danni: 1d8 = 6</span> Sei danni. 'Che la luce purifichi questo sacrilegio!'
-
-<span class="speaker master">Master:</span> Sarah ha fatto 10, tu 6 = 16 totali. L'altare ha 9 PF rimasti. Ancora intero ma crepato profondamente. La luce verde vacilla.
-
-<span class="speaker sarah">Anna:</span> "Sarah ricarica mentre il reverendo prega. 'Ancora un giro!'"
-
-<span class="speaker master">Master:</span> Round 2. Sarah, tiri di nuovo?
-
-<span class="speaker sarah">Anna:</span> "Sì! Uso Occhio del Tiratore per assicurarmi di colpire." *tira* <span class="dice-roll">🎲 Attacco: d20 (12) + 5 = 17</span>
-
-<span class="speaker master">Master:</span> Colpito! Danni?
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Danni: 2d6 (6,5) + 3 = 14!</span> Quattordici!
-
-<span class="speaker master">Master:</span> Bastano! L'altare <strong>ESPLODE</strong> in schegge di roccia nera. La luce verde si estingue. Il canto si ferma di colpo. Silenzio totale. È finita.
-
-<span class="speaker reverend">Marco:</span> "Il reverendo crolla in ginocchio, esausto. 'Grazie, Signore.'"
-
-<span class="speaker sarah">Anna:</span> "Sarah ricarica comunque, occhi sulla caverna. 'Usciamo da qui. Ora.'"
-            </div>
-
-            <!-- EPILOGO -->
-            <div class="scene-header">
-                ✨ EPILOGO - DOPO LA MISSIONE (5 minuti)
-            </div>
-
-            <div class="transcript-box">
-<span class="speaker master">Master:</span> Uscite dalla miniera. Alba sta sorgendo. Pete è stabile - lo portate dallo sceriffo. Lo sceriffo è shockato ma vi paga i 50 dollari. "Non so cosa avete fatto là sotto, ma i rumori sono cessati." Vi offre anche un <strong>riposo lungo</strong> gratuito alla locanda.
-
-<span class="speaker sarah">Anna:</span> "Accettiamo. Sarah ha bisogno di bere e dormire."
-
-<span class="speaker reverend">Marco:</span> "Il reverendo usa Cure Wounds su Sarah prima di dormire. 'Non possiamo permetterci che tu sia ferita.'"
-
-<span class="speaker master">Master:</span> Ok, tira cura.
-
-<span class="speaker reverend">Marco:</span> *tira* <span class="dice-roll">🎲 Cure Wounds: 1d8 + 3 = 9 PF guariti</span> Nove PF!
-
-<span class="speaker sarah">Anna:</span> "Perfetto! Torno a 12 PF, piena salute. Grazie padre."
-
-<span class="speaker master">Master:</span> Durante il riposo lungo, recuperate anche stress. Tirate 1d6 ciascuno.
-
-<span class="speaker sarah">Anna:</span> *tira* <span class="dice-roll">🎲 Stress recovery: 1d6 = 4</span> Recupero 4 stress.
-
-<span class="speaker reverend">Marco:</span> *tira* <span class="dice-roll">🎲 Stress recovery: 1d6 = 5</span> Recupero 5 stress.
-
-<span class="speaker master">Master:</span> Sarah passa da 5 a 1 stress. Reverendo da 5 a 0. Siete entrambi tornati Calmi. La mattina dopo vi svegliate riposati. Lo sceriffo dice che la miniera è stata sigillata. "Non so cosa c'era là sotto, e non voglio saperlo. Ma grazie."
-
-<span class="speaker sarah">Anna:</span> "Sarah annuisce. 'Solo un altro giorno nel West, sceriffo.' Cavalchiamo verso il tramonto?"
-
-<span class="speaker reverend">Marco:</span> "Il reverendo sorride. 'Verso il prossimo villaggio che ha bisogno di aiuto.'"
-
-<span class="speaker master">Master:</span> E su questo... <strong>fine sessione!</strong> Avete guadagnato 300 XP ciascuno. Sufficiente per salire a livello 2! La prossima volta...
-            </div>
-
-            <div class="tip-callout">
-                <h4 style="margin-top: 0;">🎯 NOTA SULL'XP</h4>
-                <p>Il Master assegna XP in base a: combattimenti vinti (100 XP per ghoul, 50 per cultista), 
-                obiettivo completato (distruggere altare = 100 XP), bonus roleplay (50 XP). Totale 300 XP = livello 2!</p>
-            </div>
-
-            <!-- ANALISI DELLA SESSIONE -->
-            <section id="analisi">
-                <h2>📊 Analisi della Sessione</h2>
-
-                <h3>Cosa Abbiamo Visto</h3>
-
-                <div class="action-sequence">
-                    <h4 style="color: #8B4513;">✅ MECCANICHE USATE</h4>
-                    <ul>
-                        <li><strong>Prove Abilità:</strong> Persuasione (successo/fallimento), Impact su storia</li>
-                        <li><strong>Combattimento:</strong> Initiative, attacchi, danni, PF, CA, morte a 0 PF</li>
-                        <li><strong>Stress System:</strong> 2 check, accumulo stress, recovery durante riposo</li>
-                        <li><strong>Magia:</strong> Sacred Flame (cantrip), Cure Wounds (spell slot), Guidance (buff)</li>
-                        <li><strong>Abilità Speciali:</strong> Quick Draw, Occhio del Tiratore, Tocco Guaritore</li>
-                        <li><strong>Riposi:</strong> Riposo lungo per recuperare PF, stress, spell slots</li>
-                    </ul>
-                </div>
-
-                <div class="action-sequence">
-                    <h4 style="color: #8B4513;">🎭 ELEMENTI NARRATIVI</h4>
-                    <ul>
-                        <li><strong>Investigazione:</strong> Interrogare NPC, seguire indizi, scoprire mistero</li>
-                        <li><strong>Tensione crescente:</strong> Da saloon tranquillo → miniera orrifica</li>
-                        <li><strong>Cooperazione:</strong> Sarah DPS, Reverendo supporto/healing</li>
-                        <li><strong>Conseguenze:</strong> Fallimento social non blocca, crea urgenza</li>
-                        <li><strong>Horror graduale:</strong> Prima ghoul (mostro fisico), poi altare (cosmico)</li>
-                        <li><strong>Risoluzione soddisfacente:</strong> Vittoria meritata, ricompensa appropriata</li>
-                    </ul>
-                </div>
-
-                <div class="action-sequence">
-                    <h4 style="color: #8B4513;">⚖️ BILANCIAMENTO</h4>
-                    <ul>
-                        <li><strong>Difficoltà combattimento:</strong> Appropriata per livello 1 (nessuna morte ma tensione)</li>
-                        <li><strong>Stress gestibile:</strong> Mai oltre 5/22 = Calmi (primi passi nell'orrore)</li>
-                        <li><strong>Risorse spese:</strong> Munizioni, 1 spell slot, 1 abilità speciale</li>
-                        <li><strong>Tempo reale:</strong> 40 minuti per sessione completa = ritmo buono</li>
-                        <li><strong>Progressione:</strong> XP sufficiente per level-up = senso achievement</li>
-                    </ul>
-                </div>
-
-                <h3>Dinamiche di Gruppo</h3>
-
-                <div class="tip-callout">
-                    <h4>👥 RUOLI AL TAVOLO</h4>
-                    <p><strong>Master:</strong> Narratore, arbitro regole, controlla NPC/mostri. 
-                    Descrizioni evocative ("pelle che si annerisce"), flessibile con regole (sorpresa), 
-                    mantiene tensione.</p>
-                    
-                    <p><strong>Anna (Sarah):</strong> Giocatrice esperta, tattica. Pensa in termini meccanici 
-                    ("uso Occhio del Tiratore") ma roleplay vivido ("Sarah impreca"). Gestisce DPS del gruppo.</p>
-                    
-                    <p><strong>Marco (Reverendo):</strong> Giocatore supporto. Usa buff (Guidance, Bless), 
-                    cura alleati, roleplay compassionevole. Pensa alla sopravvivenza gruppo, non solo danno.</p>
-                </div>
-
-                <h3>Errori Comuni Evitati</h3>
-
-                <div class="warning-box">
-                    <h4>❌ COSA IL MASTER NON HA FATTO (e perché è buono):</h4>
-                    <ul>
-                        <li><strong>Non ha bloccato storia per fallimento:</strong> Persuasione fallita → NPC fugge → 
-                        urlo crea urgenza. Fallimento avanza trama!</li>
-                        <li><strong>Non ha "fudge" i dadi:</strong> Cultista è morto in 2 hit - va bene! Vittoria rapida 
-                        gratifica giocatori.</li>
-                        <li><strong>Non ha railroaded:</strong> Giocatori scelgono approcci (intimidire vs persuadere, 
-                        quale attacco usare).</li>
-                        <li><strong>Non ha info-dump:</strong> Mistero rivelato gradualmente attraverso gioco, 
-                        non lecture.</li>
-                        <li><strong>Non ha descritto gore grafico:</strong> "Svuotati" è suggestivo senza essere 
-                        eccessivo.</li>
-                    </ul>
-                </div>
-
-                <h3>Tempistiche Effettive</h3>
-
-                <table style="width: 100%; margin: 20px 0;">
-                    <thead>
-                        <tr style="background: #8B4513; color: white;">
-                            <th style="padding: 10px;">Scena</th>
-                            <th style="padding: 10px;">Tempo Reale</th>
-                            <th style="padding: 10px;">% Sessione</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding: 8px;">Setup & intro</td>
-                            <td style="padding: 8px;">2 min</td>
-                            <td style="padding: 8px;">5%</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px;">Investigazione (saloon)</td>
-                            <td style="padding: 8px;">12 min</td>
-                            <td style="padding: 8px;">30%</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px;">Combattimento 1 (ghoul)</td>
-                            <td style="padding: 8px;">8 min</td>
-                            <td style="padding: 8px;">20%</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px;">Esplorazione + stress checks</td>
-                            <td style="padding: 8px;">8 min</td>
-                            <td style="padding: 8px;">20%</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px;">Combattimento 2 (cultista/altare)</td>
-                            <td style="padding: 8px;">7 min</td>
-                            <td style="padding: 8px;">17.5%</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 8px;">Epilogo & XP</td>
-                            <td style="padding: 8px;">3 min</td>
-                            <td style="padding: 8px;">7.5%</td>
-                        </tr>
-                        <tr style="background: #FFF8DC;">
-                            <td style="padding: 8px;"><strong>TOTALE</strong></td>
-                            <td style="padding: 8px;"><strong>40 min</strong></td>
-                            <td style="padding: 8px;"><strong>100%</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <p><strong>Mix ideale:</strong> 30% social/investigation, 40% combat, 20% exploration/horror, 10% admin. 
-                Questo esempio è leggermente combat-heavy, che va bene per introduzione al sistema.</p>
-            </section>
-
-            <!-- CONSIGLI PER NUOVI GIOCATORI -->
-            <section id="consigli">
-                <h2>💡 Cosa Imparare da Questo Esempio</h2>
-
-                <h3>Per Nuovi Giocatori:</h3>
-                <ul style="font-size: 1.05rem;">
-                    <li>✅ <strong>Descrivete azioni in prima persona:</strong> "Sarah spara" o "Io sparo", 
-                    non "Il mio personaggio spara"</li>
-                    <li>✅ <strong>Chiedete quando incerti:</strong> "Posso tentare Intimidire?" - il Master vi guida</li>
-                    <li>✅ <strong>Fallimenti non sono fine:</strong> Fallire prova ≠ game over, solo complicazioni</li>
-                    <li>✅ <strong>Cooperate:</strong> Marco ha usato Guidance su Anna - giocate come team!</li>
-                    <li>✅ <strong>Roleplay anche meccaniche:</strong> "Estraggo revolver" è più coinvolgente di 
-                    "Attacco con +5"</li>
-                </ul>
-
-                <h3>Per Nuovi Master:</h3>
-                <ul style="font-size: 1.05rem;">
-                    <li>✅ <strong>Descrivi sensorialmente:</strong> Non solo vista - canti strani, puzza di decomposizione</li>
-                    <li>✅ <strong>Offri scelte:</strong> "Intimidire o persuadere?" dà agency ai giocatori</li>
-                    <li>✅ <strong>Fallimenti avanzano trama:</strong> NPC fugge → urlo → urgenza. Non blocco.</li>
-                    <li>✅ <strong>Flessibilità > Rigidità:</strong> Sarah ottiene attacco sorpresa per buon roleplay</li>
-                    <li>✅ <strong>Ritmo variabile:</strong> Alterna scene calme (saloon) con intense (combattimento)</li>
-                    <li>✅ <strong>Ricompensa appropriata:</strong> XP + soldi + senso achievement</li>
-                </ul>
-
-                <h3>Errori da Evitare:</h3>
-                <div class="warning-box">
-                    <ul>
-                        <li>❌ <strong>Non dire "no" senza alternativa:</strong> Invece di "Non puoi intimidire", 
-                        di' "Puoi, ma Persuasione potrebbe funzionare meglio"</li>
-                        <li>❌ <strong>Non nascondere CD/difficoltà:</strong> Trasparenza crea fiducia</li>
-                        <li>❌ <strong>Non railroadare:</strong> Se giocatori vogliono metodo diverso da quello 
-                        previsto, lascia provare</li>
-                        <li>❌ <strong>Non punire creatività:</strong> Se giocatore ha idea intelligente, 
-                        ricompensa con vantaggio o CD ridotta</li>
-                        <li>❌ <strong>Non dimenticare stress recovery:</strong> Senza recovery, sistema stress 
-                        diventa death spiral</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- CTA FINALE -->
-            <div class="download-cta" style="background: linear-gradient(135deg, #3d5a3d, #2C1810); margin-top: 40px;">
-                <h3 style="color: #D4AF37;">🎲 Pronto a Giocare?</h3>
-                <p style="color: white; font-size: 1.1rem; margin: 15px 0;">
-                    Hai visto il sistema in azione. Ora tocca a te! Scarica il Quickstart gratuito 
-                    o il manuale completo e inizia la tua avventura nel Weird West.
+                <h4>💡 La nota del narratore sulla scena</h4>
+                <p>
+                    Questa scena è cruciale perché stabilisce la vera natura della minaccia. Red 
+                    fornisce indizi criptici ("stelle sotto la terra", "il pozzo è la loro porta") 
+                    che i giocatori dovranno interpretare. Ho usato il controllo dello stress per 
+                    rendere meccanicamente rilevante l'impatto emotivo di questa scena. Notate come 
+                    i giocatori hanno reagito in modo diverso - Sarah con paura fisica (mano al 
+                    revolver), il reverendo con determinazione spirituale (avvicinandosi con la Bibbia). 
+                    Questo è ottimo gioco di ruolo che riflette le personalità dei personaggi.
                 </p>
-                <a href="quickstart-rules.html" class="download-button">📖 Quickstart Gratuito</a>
-                <a href="#" class="download-button">💎 Manuale Completo</a>
+            </div>
+
+            <div class="scene-header">
+                🌙 EPILOGO: LA PREPARAZIONE
+            </div>
+
+            <div class="transcript-box">
+                <p><span class="speaker narratore">Narratore:</span> "Uscite dalla baracca nel buio 
+                della notte. Martha vi ringrazia con voce stanca prima di chiudere la porta. Siete 
+                soli nella strada deserta di Dusty Creek, con solo il suono del vento del deserto 
+                che sibila tra gli edifici. Cosa fate ora?"</p>
+
+                <p><span class="speaker sarah">Sarah:</span> "Mi fermo e guardo il reverendo. 'Allora, 
+                uomo di fede. Credi che possiamo davvero fermare qualunque cosa ci sia in quella 
+                miniera?'"</p>
+
+                <p><span class="speaker reverendo">Reverendo:</span> "Sorrido tristemente. 'Non lo so, 
+                Sarah. Ma so che se non ci proviamo noi, nessun altro lo farà. E quella gente...' 
+                Indico le case buie intorno a noi. 'Quella gente ha bisogno di qualcuno che abbia il 
+                coraggio di scendere in quel buco e affrontare qualunque cosa ci sia là sotto.'"</p>
+
+                <p><span class="speaker sarah">Sarah:</span> "Annuisco lentamente. 'Hai ragione. 
+                Domattina andiamo da Thornton per l'equipaggiamento, poi scendiamo in quella maledetta 
+                miniera.' Faccio una pausa. 'E reverendo? Porta quel fucile Winchester. Qualcosa mi 
+                dice che la fede da sola non basterà.'"</p>
+
+                <p><span class="speaker narratore">Narratore:</span> "Perfetto. E con questa 
+                bellissima scena di chiusura, facciamo una pausa qui per questa sera. La prossima 
+                sessione inizierà con voi due che scendete nella miniera. Ottimo gioco di ruolo, 
+                ragazzi!"</p>
+            </div>
+
+            <section id="analisi">
+                <h2>L'analisi della sessione</h2>
+
+                <div class="tip-box">
+                    <h4>Cosa ha funzionato bene in questa sessione</h4>
+                    <ul>
+                        <li><strong>Il pacing:</strong> Il narratore ha bilanciato bene i momenti di 
+                        gioco di ruolo tranquillo (la diligenza, il saloon) con i momenti di tensione 
+                        (l'incontro con Red)</li>
+                        <li><strong>Le prove di abilità:</strong> Il narratore ha chiesto prove quando 
+                        era significativo (percezione per notare dettagli, persuasione per convincere 
+                        Martha) ma non ha interrotto il flusso con troppe richieste di dadi</li>
+                        <li><strong>Lo stress:</strong> Il primo controllo dello stress è arrivato 
+                        al momento giusto - non troppo presto, non troppo tardi. Ha avuto un impatto 
+                        meccanico reale ma non ha penalizzato troppo i personaggi</li>
+                        <li><strong>Il gioco di ruolo:</strong> Entrambi i giocatori hanno interpretato 
+                        i loro personaggi in modo coerente e hanno creato bei momenti di interazione</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>I consigli per i nuovi narratori</h4>
+                    <ul>
+                        <li><strong>Lascia spazio ai giocatori:</strong> Notate come il narratore fa 
+                        domande aperte ("Cosa fa il tuo personaggio?") invece di dire ai giocatori 
+                        cosa stanno facendo</li>
+                        <li><strong>Descrivi con i sensi:</strong> Il narratore usa descrizioni visive 
+                        (gli occhi di Red), uditive (il vento che sibila), e persino tattili (il sangue 
+                        che si gela) per rendere le scene più vivide</li>
+                        <li><strong>Premia il buon gioco di ruolo:</strong> Quando i giocatori fanno 
+                        qualcosa di interessante (come Sarah che porta la mano al revolver), il 
+                        narratore lo riconosce e lo incorpora nella narrazione</li>
+                        <li><strong>Non aver paura del silenzio:</strong> Ci sono momenti in cui il 
+                        narratore fa una pausa e lascia che i giocatori reagiscano. Questo crea tensione 
+                        molto meglio che riempire ogni silenzio con parole</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="download-cta" style="background: #3d5a3d; color: white; padding: 30px; 
+                border-radius: 12px; margin: 40px 0; text-align: center; border: 3px solid #D4AF37;">
+                <h3 style="color: #D4AF37; margin-top: 0;">🎬 Pronto a creare le tue storie?</h3>
+                <p style="font-size: 1.2rem;">
+                    Questo è solo un piccolo assaggio di come si gioca a Colt & Cthulhu. Ora è il 
+                    tuo turno di creare storie memorabili al tavolo!
+                </p>
+                
+                <div style="margin-top: 30px;">
+                    <a href="index.html" class="download-button" style="display: inline-block; 
+                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
+                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
+                        border: 2px solid #8B4513;">📖 Torna alla home</a>
+                    <a href="scenario_introduttivo.html" class="download-button" style="display: inline-block; 
+                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
+                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
+                        border: 2px solid #8B4513;">🌵 Inizia a giocare</a>
+                </div>
             </div>
 
         </article>
     </div>
 
     <footer class="main-footer">
-        <p class="quote">"Il miglior modo per imparare un GDR? Vederlo in azione."</p>
-        <p>© 2025 Colt & Cthulhu - Esempio di Gioco</p>
+        <p class="quote">"Il vero orrore non è quello che si nasconde nelle ombre, ma quello che 
+        vedi riflesso negli occhi di chi è già stato toccato da esso."</p>
+        <p>© 2025 Colt & Cthulhu - Un esempio di gioco</p>
     </footer>
 
 </body>
