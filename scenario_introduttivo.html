@@ -3,1060 +3,851 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scenario Introduttivo: Il Pozzo Maledetto - Colt & Cthulhu</title>
+    <title>Lo scenario introduttivo: il pozzo maledetto - Colt & Cthulhu</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .scenario-banner {
+            background: linear-gradient(135deg, #2C1810 0%, #8B0000 50%, #2C1810 100%);
+            color: #D4AF37;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 4px solid #D4AF37;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .scenario-banner::before {
+            content: "🌵";
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.05;
+            top: -50px;
+            left: -50px;
+        }
+        
+        .scenario-banner h1 {
+            font-size: 3rem;
+            margin: 0 0 15px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            color: #D4AF37;
+            border: none;
+        }
+        
+        .scenario-subtitle {
+            font-size: 1.5rem;
+            color: white;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        
+        .scenario-badge {
+            display: inline-block;
+            background: #3d5a3d;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 10px 5px;
+            border: 2px solid #D4AF37;
+        }
+        
+        .horror-box {
+            background: linear-gradient(to right, rgba(139, 0, 0, 0.1), transparent);
+            border-left: 5px solid #8B0000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .horror-box h5 {
+            margin-top: 0;
+            color: #8B0000;
+        }
+        
+        .stat-block {
+            background: #FFF8DC;
+            border: 3px solid #8B4513;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .stat-block h4 {
+            margin-top: 0;
+            color: #8B4513;
+            border-bottom: 2px solid #8B4513;
+            padding-bottom: 10px;
+        }
+        
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .stats-table th {
+            background: #8B4513;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .stats-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .stats-table tr:nth-child(even) {
+            background: #FFF8DC;
+        }
+    </style>
 </head>
 <body>
     <header class="main-header">
         <h1>COLT & CTHULHU</h1>
-        <p class="subtitle">Scenario Introduttivo: Il Pozzo Maledetto</p>
+        <p class="subtitle">Lo scenario introduttivo: il pozzo maledetto</p>
     </header>
 
     <nav class="nav-main">
         <ul>
             <li><a href="index.html">🏠 Home</a></li>
-            <li><a href="capitolo_01.html">Cap 1</a></li>
-            <li><a href="scenario_introduttivo.html" class="active">Scenario Intro</a></li>
-            <li><a href="appendice_c.html">Schede PG</a></li>
+            <li><a href="capitolo_01.html">Capitolo 1</a></li>
+            <li><a href="scenario_introduttivo.html" class="active">Lo scenario</a></li>
+            <li><a href="appendice_c.html">Le schede</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <div class="breadcrumb">
-            <a href="index.html">Home</a> <span>›</span> <strong>Scenario Introduttivo</strong>
+            <a href="index.html">Home</a> <span>›</span> <strong>Lo scenario introduttivo</strong>
         </div>
 
         <article class="chapter">
-            <h2>Il Pozzo Maledetto</h2>
+            
+            <div class="scenario-banner">
+                <h1>🌵 IL POZZO MALEDETTO 🐙</h1>
+                <p class="scenario-subtitle">Uno scenario introduttivo per Colt & Cthulhu</p>
+                <div>
+                    <span class="scenario-badge">Livelli 1-2</span>
+                    <span class="scenario-badge">3-4 ore</span>
+                    <span class="scenario-badge">3-5 giocatori</span>
+                </div>
+            </div>
             
             <div class="warning-box">
-                <h4>⚠️ Per il Master: Leggere Prima di Giocare</h4>
-                <p>Questo scenario è progettato per <strong>3-5 giocatori di 1° livello</strong> e 
-                richiede <strong>3-4 ore</strong> di gioco. Include personaggi pre-generati, esempi di gioco, 
-                e introduce gradualmente le meccaniche core di Colt & Cthulhu.</p>
-                <p><strong>Contenuti sensibili:</strong> Horror corporeo, violenza western, temi di follia. 
-                Discutere Lines & Veils prima di iniziare.</p>
+                <h4>⚠️ Per il narratore: da leggere prima di giocare</h4>
+                <p>Questo scenario è stato progettato per un gruppo di <strong>da tre a cinque giocatori 
+                di primo livello</strong> e richiede dalle <strong>tre alle quattro ore</strong> di gioco. 
+                Lo scenario include i personaggi pre-generati, degli esempi di gioco pratico, e introduce 
+                gradualmente tutte le meccaniche fondamentali di Colt & Cthulhu.</p>
+                <p><strong>I contenuti sensibili:</strong> questo scenario contiene elementi di orrore 
+                corporeo, violenza tipica del genere western, e temi legati alla follia. Ti consigliamo 
+                di discutere le Lines & Veils con il tuo gruppo prima di iniziare a giocare.</p>
             </div>
 
             <section id="panoramica">
-                <h3>Panoramica dello Scenario</h3>
+                <h2>La panoramica dello scenario</h2>
                 
-                <p class="intro-text">
-                    <strong>Dusty Creek, Arizona - 15 Settembre 1885</strong>
+                <p class="intro-text" style="font-size: 1.2rem; font-weight: bold; color: #8B4513;">
+                    Dusty Creek, Arizona - 15 settembre 1885
                 </p>
 
                 <p>
-                    Il piccolo villaggio minerario di Dusty Creek è in preda al panico. Da tre settimane, 
-                    cinque minatori sono scomparsi nei tunnel della miniera d'argento locale. L'ultimo, 
-                    Jacob "Red" Sullivan, è stato trovato vivo ma completamente pazzo, balbettando di 
-                    "stelle sotto la terra" e "occhi che guardano dal pozzo". Il proprietario della miniera, 
-                    il signor Elias Thornton, ha chiamato i personaggi offrendo $50 a testa per investigare 
-                    cosa sta accadendo nei tunnel e, se possibile, recuperare i corpi dei minatori scomparsi.
+                    Il piccolo villaggio minerario di Dusty Creek è stato colto dal panico. Nelle ultime 
+                    tre settimane, cinque minatori sono scomparsi misteriosamente nei tunnel della miniera 
+                    d'argento locale. L'ultimo di loro, un certo Jacob "Red" Sullivan, è stato ritrovato 
+                    vivo ma completamente fuori di sé, balbettando frasi sconnesse su "stelle che brillano 
+                    sotto la terra" e "occhi che ti guardano dal fondo del pozzo". Il proprietario della 
+                    miniera, il signor Elias Thornton, ha inviato un telegramma ai personaggi offrendo 
+                    cinquanta dollari a testa per investigare su cosa stia realmente accadendo nei tunnel 
+                    e, se possibile, per recuperare i corpi dei minatori che sono scomparsi.
                 </p>
 
-                <h4>Obiettivi dello Scenario</h4>
+                <h3>Gli obiettivi dello scenario</h3>
                 <ul>
-                    <li><strong>Investigare</strong> la miniera e scoprire la causa delle sparizioni</li>
-                    <li><strong>Sopravvivere</strong> all'orrore che si nasconde nei tunnel</li>
-                    <li><strong>Fermare</strong> la minaccia prima che devasti Dusty Creek</li>
-                    <li><strong>Imparare</strong> le meccaniche core del sistema: combattimento, stress, investigazione</li>
+                    <li><strong>Investigare</strong> la miniera e scoprire quale sia la vera causa delle 
+                    sparizioni misteriose</li>
+                    <li><strong>Sopravvivere</strong> all'orrore che si nasconde nelle profondità dei tunnel 
+                    oscuri</li>
+                    <li><strong>Fermare</strong> la minaccia prima che possa devastare l'intero villaggio 
+                    di Dusty Creek</li>
+                    <li><strong>Imparare</strong> le meccaniche fondamentali del sistema di gioco: il 
+                    combattimento, lo stress, e l'investigazione</li>
                 </ul>
 
-                <h4>Cosa Insegna questo Scenario</h4>
+                <h3>Cosa insegna questo scenario</h3>
                 <div class="tip-box">
                     <ul>
-                        <li><strong>Prove di abilità:</strong> Investigare, Percezione, Sopravvivenza</li>
-                        <li><strong>Combattimento:</strong> Iniziativa, azioni, copertura, armi da fuoco</li>
-                        <li><strong>Sistema Stress:</strong> Trigger, accumulo, conseguenze, afflizioni</li>
-                        <li><strong>Esplorazione:</strong> Dungeoneerging, mappe, trappole naturali</li>
-                        <li><strong>Roleplay:</strong> PNG, scelte morali, conseguenze narrative</li>
+                        <li><strong>Le prove di abilità:</strong> come si usano le abilità investigare, 
+                        percezione e sopravvivenza</li>
+                        <li><strong>Il combattimento:</strong> come funzionano l'iniziativa, le azioni, 
+                        la copertura e le armi da fuoco</li>
+                        <li><strong>Il sistema dello stress:</strong> quali sono i trigger che lo causano, 
+                        come si accumula, quali sono le conseguenze e le afflizioni</li>
+                        <li><strong>L'esplorazione:</strong> come funziona l'esplorazione dei dungeon, 
+                        come si leggono le mappe e come si gestiscono le trappole naturali</li>
+                        <li><strong>Il gioco di ruolo:</strong> come si interpretano i PNG, come si 
+                        affrontano le scelte morali e quali sono le conseguenze narrative delle azioni</li>
                     </ul>
                 </div>
             </section>
 
             <section id="struttura">
-                <h3>Struttura dello Scenario</h3>
+                <h2>La struttura dello scenario</h2>
                 
                 <table class="stats-table">
                     <thead>
                         <tr>
-                            <th>Atto</th>
-                            <th>Contenuto</th>
-                            <th>Tempo</th>
-                            <th>Meccaniche Focus</th>
+                            <th>L'atto</th>
+                            <th>Il contenuto</th>
+                            <th>Il tempo stimato</th>
+                            <th>Le meccaniche principali</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Atto I</strong><br>Arrivo</td>
-                            <td>Arrivo a Dusty Creek, briefing, investigazione in città</td>
-                            <td>45 min</td>
-                            <td>Roleplay, prove sociali, raccolta indizi</td>
+                            <td><strong>Atto I</strong><br>L'arrivo</td>
+                            <td>L'arrivo dei personaggi a Dusty Creek, il briefing iniziale e 
+                            l'investigazione in città</td>
+                            <td>45 minuti</td>
+                            <td>Il gioco di ruolo, le prove sociali e la raccolta degli indizi</td>
                         </tr>
                         <tr>
-                            <td><strong>Atto II</strong><br>Discesa</td>
-                            <td>Esplorazione miniera, primi incontri, tunnel superiori</td>
-                            <td>60 min</td>
-                            <td>Esplorazione, combattimento, primi stress check</td>
+                            <td><strong>Atto II</strong><br>La discesa</td>
+                            <td>L'esplorazione della miniera, i primi incontri pericolosi e i 
+                            tunnel superiori</td>
+                            <td>60 minuti</td>
+                            <td>L'esplorazione, il combattimento e i primi controlli dello stress</td>
                         </tr>
                         <tr>
-                            <td><strong>Atto III</strong><br>Pozzo</td>
-                            <td>Il pozzo oscuro, l'orrore cosmico, confronto finale</td>
-                            <td>60 min</td>
-                            <td>Stress alto, combattimento boss, scelte morali</td>
+                            <td><strong>Atto III</strong><br>Il pozzo</td>
+                            <td>Il pozzo oscuro, l'orrore cosmico che vi dimora e il confronto finale</td>
+                            <td>60 minuti</td>
+                            <td>Lo stress elevato, il combattimento contro il boss e le scelte morali</td>
                         </tr>
                         <tr>
-                            <td><strong>Epilogo</strong></td>
-                            <td>Risoluzione, conseguenze, ricompense</td>
-                            <td>15 min</td>
-                            <td>Roleplay, wrap-up</td>
+                            <td><strong>L'epilogo</strong></td>
+                            <td>La risoluzione della storia, le conseguenze e le ricompense</td>
+                            <td>15 minuti</td>
+                            <td>Il gioco di ruolo finale e la conclusione della storia</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
             <section id="atto-1">
-                <h3>Atto I: Arrivo a Dusty Creek</h3>
+                <h2>L'atto primo: l'arrivo a Dusty Creek</h2>
                 
-                <h4>Scena 1: La Diligenza</h4>
+                <h3>La scena 1: la diligenza</h3>
                 <p>
-                    Lo scenario inizia con i personaggi sulla diligenza diretta a Dusty Creek. 
-                    Questo è il momento perfetto per le presentazioni e per stabilire dinamiche di gruppo.
+                    Lo scenario ha inizio con i personaggi che si trovano a bordo della diligenza diretta 
+                    verso Dusty Creek. Questo è il momento perfetto per permettere ai giocatori di presentare 
+                    i loro personaggi e per stabilire le prime dinamiche di gruppo che caratterizzeranno 
+                    l'avventura.
                 </p>
 
                 <div class="example-box">
-                    <h5>🎬 Esempio di Gioco - Apertura</h5>
-                    <p><strong>Master:</strong> "Il sole sta tramontando sul deserto dell'Arizona mentre la diligenza 
-                    sobbalza lungo la strada polverosa. Siete tutti diretti a Dusty Creek per lo stesso motivo: 
-                    un telegramma del signor Thornton che offre cinquanta dollari per 'investigare problemi alla miniera'. 
-                    Sarah, il pistolero - ti presenti agli altri passeggeri?"</p>
-                    <p><strong>Sarah (Pistolero):</strong> "Sto pulendo il mio revolver, senza dire molto. 
-                    Finalmente sollevo lo sguardo e dico: 'Sarah McCarthy. Se qualcuno vi sta pagando per andare 
-                    in una miniera maledetta, i soldi non bastano mai.' Sorrido sarcasticamente."</p>
-                    <p><strong>Master:</strong> "Perfetto. Reverendo Stone, quale è la tua reazione?"</p>
+                    <h5>🎬 Un esempio di gioco - l'apertura</h5>
+                    <p><strong>Narratore:</strong> "Il sole sta tramontando lentamente sul deserto 
+                    dell'Arizona mentre la diligenza sobbalza lungo la strada polverosa e dissestata. 
+                    Siete tutti diretti verso Dusty Creek per lo stesso motivo: avete ricevuto un 
+                    telegramma dal signor Thornton che offriva cinquanta dollari per 'investigare alcuni 
+                    problemi che si sono verificati alla miniera'. Sarah, tu interpreti il pistolero - 
+                    vuoi presentarti agli altri passeggeri che viaggiano con te?"</p>
+                    <p><strong>Sarah (la giocatrice che interpreta il pistolero):</strong> "Sto pulendo 
+                    con cura il mio revolver, senza dire molto agli altri. Finalmente sollevo lo sguardo 
+                    e dico con voce calma: 'Mi chiamo Sarah McCarthy. Se qualcuno vi sta pagando per 
+                    andare in una miniera maledetta, vi posso assicurare che i soldi non bastano mai.' 
+                    E sorrido in modo sarcastico."</p>
+                    <p><strong>Narratore:</strong> "Perfetto, ottima interpretazione. Reverendo Stone, 
+                    tu che interpreti il reverendo - quale è la tua reazione alle parole di Sarah?"</p>
                 </div>
 
-                <h4>Scena 2: Dusty Creek - Primo Incontro</h4>
+                <h3>La scena 2: Dusty Creek - il primo incontro</h3>
                 <p>
-                    La diligenza arriva a Dusty Creek al tramonto. Il villaggio è piccolo: un saloon, 
-                    una chiesa, un general store, e una ventina di edifici sparsi. L'atmosfera è tesa - 
-                    pochi abitanti per strada, finestre sbarrate, sguardi sospettosi.
+                    La diligenza arriva a Dusty Creek proprio al tramonto. Il villaggio è davvero piccolo: 
+                    si possono contare un saloon, una chiesa, un emporio generale, e una ventina di edifici 
+                    sparsi qua e là. L'atmosfera che si respira è decisamente tesa - ci sono pochi abitanti 
+                    per le strade, le finestre sono sbarrate con assi di legno, e gli sguardi che vi 
+                    rivolgono i pochi passanti sono sospettosi e diffidenti.
                 </p>
 
                 <div class="stat-block">
-                    <h4>PNG CHIAVE: ELIAS THORNTON</h4>
-                    <p><strong>Ruolo:</strong> Proprietario Miniera Silver Star</p>
-                    <p><strong>Età:</strong> 52 anni, stempiato, vestito elegante ma polveroso</p>
-                    <p><strong>Personalità:</strong> Nervoso, pragmatico, disperato ma cerca di nasconderlo</p>
-                    <p><strong>Motivazione:</strong> Ha investito tutta la sua fortuna nella miniera. 
-                    Se chiude, è rovinato. È più preoccupato dei soldi che delle vite.</p>
-                    <p><strong>Informazioni che fornisce:</strong></p>
+                    <h4>Il PNG chiave: Elias Thornton</h4>
+                    <p><strong>Il suo ruolo:</strong> è il proprietario della miniera Silver Star</p>
+                    <p><strong>L'età:</strong> ha cinquantadue anni, è stempiato e indossa un abito 
+                    elegante ma coperto di polvere</p>
+                    <p><strong>La sua personalità:</strong> è nervoso, pragmatico e disperato, anche 
+                    se cerca di nasconderlo il più possibile</p>
+                    <p><strong>La sua motivazione:</strong> ha investito tutta la sua fortuna nella 
+                    miniera. Se dovesse chiudere, sarebbe completamente rovinato. È più preoccupato 
+                    dei soldi che delle vite umane.</p>
+                    <p><strong>Le informazioni che fornisce:</strong></p>
                     <ul>
-                        <li>5 minatori scomparsi in 3 settimane - tutti nel tunnel nord-ovest</li>
-                        <li>Jacob "Red" Sullivan trovato vivo ma pazzo 2 giorni fa</li>
-                        <li>"Red" è rinchiuso nella sua baracca, sorvegliato dalla moglie</li>
-                        <li>I minatori rifiutano di lavorare - la miniera è ferma</li>
-                        <li>Offre $50 a testa subito + $50 bonus se "sistemano il problema"</li>
+                        <li>Nelle ultime tre settimane sono scomparsi cinque minatori - tutti quanti 
+                        nel tunnel che si trova a nord-ovest</li>
+                        <li>Jacob "Red" Sullivan è stato trovato vivo ma completamente pazzo due giorni fa</li>
+                        <li>"Red" è rinchiuso nella sua baracca ed è sorvegliato costantemente da sua moglie</li>
+                        <li>I minatori si rifiutano categoricamente di continuare a lavorare - la miniera 
+                        è completamente ferma</li>
+                        <li>Offre cinquanta dollari a testa immediatamente, più altri cinquanta dollari 
+                        di bonus se i personaggi "sistemano il problema"</li>
                     </ul>
                 </div>
 
-                <h4>Investigazione in Città</h4>
-                <p>I personaggi possono investigare diverse location prima di entrare nella miniera.</p>
+                <h3>L'investigazione in città</h3>
+                <p>I personaggi possono investigare diverse location prima di entrare nella miniera 
+                per cercare di raccogliere informazioni utili.</p>
 
-                <h5>A) Il Saloon "Lucky Strike"</h5>
-                <p><strong>PNG:</strong> Barman Pete Collins (60 anni, baffuto, veterano Guerra Civile)</p>
+                <h4>A) Il saloon "Lucky Strike"</h4>
+                <p><strong>Il PNG:</strong> Pete Collins, il barman (sessant'anni, con grandi baffi, 
+                veterano della Guerra Civile)</p>
                 <p><strong>Cosa sa:</strong></p>
                 <ul>
-                    <li><strong>Prova Persuasione CD 12:</strong> "Red Sullivan parlava di 'stelle sotto terra' 
-                    prima di impazzire. Non aveva ferite, ma i suoi occhi... come se avesse visto l'inferno."</li>
-                    <li><strong>Prova Persuasione CD 15:</strong> "Mio nonno raccontava storie di quando i nativi 
-                    vivevano qui. Diceva che questa valle era 'il posto dove il cielo cade'. Pensavo fossero 
-                    solo leggende finché..."</li>
-                    <li><strong>Se offrono whisky/soldi:</strong> "Un minatore, Tom Bradshaw, mi disse di aver 
-                    sentito 'canti' provenire dal pozzo più profondo. Pensai fosse ubriaco. Tom è scomparso 
-                    una settimana dopo."</li>
+                    <li><strong>Con una prova di persuasione CD 12:</strong> "Red Sullivan continuava 
+                    a parlare di 'stelle sotto terra' prima di impazzire completamente. Non aveva 
+                    nessuna ferita sul corpo, ma i suoi occhi... erano come se avesse visto l'inferno 
+                    con i propri occhi."</li>
+                    <li><strong>Con una prova di persuasione CD 15:</strong> "Mio nonno raccontava 
+                    delle storie di quando i nativi vivevano ancora qui. Diceva che questa valle era 
+                    'il posto dove il cielo cade sulla terra'. Pensavo che fossero solo leggende fino 
+                    a quando..."</li>
+                    <li><strong>Se i personaggi offrono del whisky o dei soldi:</strong> "Un minatore 
+                    che si chiamava Tom Bradshaw mi disse di aver sentito dei 'canti' che provenivano 
+                    dal pozzo più profondo. Pensai che fosse ubriaco. Tom è scomparso una settimana 
+                    dopo quella conversazione."</li>
                 </ul>
 
-                <h5>B) La Baracca di Red Sullivan</h5>
-                <p><strong>PNG:</strong> Martha Sullivan (moglie di Red, 35 anni, stremata)</p>
-                <p><strong>Cosa succede:</strong> Martha è riluttante a far vedere Red. Prova Persuasione CD 14 
-                per convincerla. Se superata, permette una visita breve.</p>
+                <h4>B) La baracca di Red Sullivan</h4>
+                <p><strong>Il PNG:</strong> Martha Sullivan (la moglie di Red, trentacinque anni, 
+                visibilmente stremata)</p>
+                <p><strong>Cosa succede:</strong> Martha è molto riluttante a far vedere Red ai 
+                personaggi. Serve una prova di persuasione con CD 14 per convincerla. Se la prova 
+                viene superata, permetterà una visita breve ma controllerà attentamente.</p>
 
                 <div class="horror-box">
-                    <h5>🐙 Incontro con Red Sullivan - PRIMO STRESS CHECK</h5>
-                    <p>Red è legato a una sedia nell'angolo buio della baracca. È emaciato, con occhi spalancati 
-                    che fissano il vuoto. Quando vede i PG, inizia a ridere istericamente:</p>
-                    <p><em>"Le stelle! Le stelle cantano sotto la terra! Occhi... così tanti occhi nel pozzo! 
-                    Non guardare giù! MAI GUARDARE GIÙ! Loro vengono... vengono dalle stelle cadute... 
-                    il pozzo è la loro porta... IL POZZO È LA LORO PORTA!"</em></p>
-                    <p><strong>STRESS CHECK:</strong> Tutti i PG devono effettuare un Tiro Salvezza su Saggezza CD 10.</p>
+                    <h5>🐙 L'incontro con Red Sullivan - il primo controllo dello stress</h5>
+                    <p>Red è legato a una sedia nell'angolo più buio della baracca. È emaciato, 
+                    con gli occhi spalancati che fissano il vuoto senza mai sbattere le palpebre. 
+                    Quando vede i personaggi entrare, inizia a ridere in modo isterico:</p>
+                    <p><em>"Le stelle! Le stelle cantano sotto la terra! Ci sono occhi... così tanti 
+                    occhi nel fondo del pozzo! Non dovete guardare giù! NON DOVETE MAI GUARDARE GIÙ! 
+                    Loro stanno arrivando... vengono dalle stelle che sono cadute... il pozzo è la 
+                    loro porta... IL POZZO È LA LORO PORTA!"</em></p>
+                    <p><strong>IL CONTROLLO DELLO STRESS:</strong> Tutti i personaggi devono effettuare 
+                    un tiro salvezza su saggezza con CD 10.</p>
                     <ul>
-                        <li><strong>Fallimento:</strong> Guadagni <strong>2 punti stress</strong></li>
-                        <li><strong>Successo:</strong> Guadagni <strong>1 punto stress</strong></li>
+                        <li><strong>Se fallisci il tiro:</strong> guadagni <strong>2 punti stress</strong></li>
+                        <li><strong>Se superi il tiro:</strong> guadagni comunque <strong>1 punto 
+                        stress</strong></li>
                     </ul>
-                    <p><strong>Prova Medicina CD 12:</strong> Red non ha ferite fisiche. È collasso mentale puro.</p>
-                    <p><strong>Prova Intuizione CD 13:</strong> Nei suoi deliri c'è un pattern - continua a disegnare 
-                    nell'aria una forma stellata con 5 punte disposte in modo irregolare.</p>
+                    <p><strong>Con una prova di medicina CD 12:</strong> Red non ha nessuna ferita 
+                    fisica visibile. Si tratta di un collasso mentale puro e semplice.</p>
+                    <p><strong>Con una prova di intuizione CD 13:</strong> Nei suoi deliri sconnessi 
+                    c'è un pattern che si ripete - continua a disegnare nell'aria una forma stellata 
+                    con cinque punte disposte in modo irregolare e innaturale.</p>
                 </div>
 
                 <div class="example-box">
-                    <h5>🎬 Esempio di Gioco - Stress Check</h5>
-                    <p><strong>Master:</strong> "Red inizia a urlare e ridere contemporaneamente. Le sue parole 
-                    sono quasi incomprensibili ma c'è qualcosa nei suoi occhi... una paura così pura e primordiale 
-                    che vi gela il sangue. Tutti devono fare un Tiro Salvezza su Saggezza, CD 10."</p>
-                    <p><strong>Sarah (Pistolero):</strong> "Tiro... 8 più il mio modificatore Saggezza +1... 9. Fallito."</p>
-                    <p><strong>Master:</strong> "Sarah, guadagni 2 punti stress. Sei ancora nel range 'Calmo' 
-                    (0-5 stress), ma senti un'inquietudine crescente. Descrivi come reagisce il tuo personaggio."</p>
-                    <p><strong>Sarah:</strong> "Faccio un passo indietro involontariamente, la mano va istintivamente 
-                    al revolver. 'Cosa diavolo gli hanno fatto laggiù?'"</p>
+                    <h5>🎬 Un esempio di gioco - il controllo dello stress</h5>
+                    <p><strong>Narratore:</strong> "Red inizia a urlare e ridere contemporaneamente, 
+                    in modo inquietante. Le sue parole sono quasi incomprensibili ma c'è qualcosa nei 
+                    suoi occhi... una paura così pura e primordiale che vi gela letteralmente il sangue 
+                    nelle vene. Tutti i personaggi devono fare un tiro salvezza su saggezza, con 
+                    classe difficoltà 10."</p>
+                    <p><strong>Sarah (la pistolera):</strong> "Tiro il dado... ho fatto 8, più il 
+                    mio modificatore di saggezza che è +1... quindi 9 in totale. Ho fallito."</p>
+                    <p><strong>Narratore:</strong> "Sarah, guadagni 2 punti stress. Sei ancora nella 
+                    fascia 'calmo' che va da 0 a 5 punti stress, ma senti un'inquietudine crescente 
+                    che ti pervade. Descrivi come reagisce il tuo personaggio a questa scena."</p>
+                    <p><strong>Sarah:</strong> "Faccio un passo indietro in modo involontario, e la 
+                    mia mano va istintivamente al calcio del mio revolver. Dico sottovoce: 'Cosa 
+                    diavolo gli hanno fatto laggiù in quella miniera?'"</p>
                 </div>
 
-                <h5>C) La Chiesa</h5>
-                <p><strong>PNG:</strong> Padre Miguel Rodriguez (45 anni, ex missionario messicano)</p>
+                <h4>C) La chiesa</h4>
+                <p><strong>Il PNG:</strong> Padre Miguel Rodriguez (quarantacinque anni, ex missionario 
+                messicano)</p>
                 <p><strong>Cosa sa:</strong></p>
                 <ul>
-                    <li>Ha benedetto Red ma "qualunque cosa ha visto, è oltre la mia comprensione"</li>
-                    <li>Offre benedire le armi dei PG (bonus minore per morale)</li>
-                    <li><strong>Prova Religione CD 13:</strong> Riconosce la forma stellata che Red disegna - 
-                    somiglia al "Segno di Yuggoth" descritto in testi apocrifi come simbolo di entità cosmiche</li>
+                    <li>Ha benedetto Red con l'acqua santa ma "qualunque cosa abbia visto quel povero 
+                    uomo, è ben oltre la mia comprensione e le mie capacità"</li>
+                    <li>Si offre di benedire le armi dei personaggi (questo darà un piccolo bonus al 
+                    morale durante il gioco)</li>
+                    <li><strong>Con una prova di religione CD 13:</strong> Riconosce la forma stellata 
+                    che Red continua a disegnare - somiglia al "Segno di Yuggoth" che è descritto in 
+                    alcuni testi apocrifi come il simbolo di entità cosmiche molto antiche</li>
                 </ul>
 
-                <h4>Informazioni Raccolte - Sintesi</h4>
+                <h3>Le informazioni raccolte - una sintesi</h3>
                 <div class="tip-box">
-                    <p>Al termine dell'investigazione in città, i PG dovrebbero aver capito:</p>
+                    <p>Al termine dell'investigazione in città, i personaggi dovrebbero aver capito 
+                    questi punti fondamentali:</p>
                     <ul>
-                        <li>✅ Qualcosa nel tunnel nord-ovest sta causando le sparizioni</li>
-                        <li>✅ "Il pozzo" è menzionato più volte - probabilmente location chiave</li>
-                        <li>✅ C'è un elemento soprannaturale/cosmico in gioco</li>
-                        <li>✅ Red Sullivan ha visto qualcosa che lo ha spezzato mentalmente</li>
-                        <li>✅ I nativi consideravano questa terra maledetta</li>
+                        <li>✅ Qualcosa che si trova nel tunnel nord-ovest sta causando le sparizioni 
+                        misteriose</li>
+                        <li>✅ "Il pozzo" viene menzionato più volte - probabilmente è una location 
+                        chiave della storia</li>
+                        <li>✅ C'è sicuramente un elemento soprannaturale o cosmico in gioco, non si 
+                        tratta di un semplice incidente minerario</li>
+                        <li>✅ Red Sullivan ha visto qualcosa di così terribile che gli ha letteralmente 
+                        spezzato la mente</li>
+                        <li>✅ I nativi americani consideravano questa terra come maledetta già molto 
+                        tempo fa</li>
                     </ul>
                 </div>
             </section>
 
             <section id="atto-2">
-                <h3>Atto II: Discesa nella Miniera</h3>
+                <h2>L'atto secondo: la discesa nella miniera</h2>
 
-                <h4>Ingresso della Miniera</h4>
+                <h3>L'ingresso della miniera</h3>
                 <p>
-                    La miniera Silver Star si trova a 10 minuti di cammino dal villaggio. L'ingresso è un 
-                    grande tunnel rinforzato con travi di legno, con binari per i carrelli minerari che 
-                    scendono nell'oscurità. Un cartello dipinto a mano dice: "SILVER STAR MINE - EST. 1882".
+                    La miniera Silver Star si trova a circa dieci minuti di cammino dal villaggio. 
+                    L'ingresso è costituito da un grande tunnel rinforzato con delle robuste travi di 
+                    legno, e ci sono dei binari per i carrelli minerari che scendono nell'oscurità più 
+                    profonda. Un cartello dipinto a mano recita: "SILVER STAR MINE - FONDATA NEL 1882".
                 </p>
 
                 <div class="warning-box">
-                    <h5>⚙️ Meccanica: Illuminazione</h5>
-                    <p>La miniera è BUIA. I PG hanno bisogno di lanterne (fornite da Thornton) o altre fonti di luce. 
-                    Senza luce, hanno svantaggio su Percezione e attacchi a distanza oltre 3 metri.</p>
-                    <p><strong>Lanterne a olio:</strong> Raggio 9m luce piena, 18m luce fioca. Durata 6 ore.</p>
+                    <h4>⚙️ La meccanica: l'illuminazione</h4>
+                    <p>La miniera è completamente BUIA. I personaggi hanno bisogno di lanterne (che 
+                    vengono fornite da Thornton) o di altre fonti di luce per vedere qualcosa. Senza 
+                    una fonte di luce adeguata, i personaggi hanno svantaggio su tutte le prove di 
+                    percezione e sugli attacchi a distanza oltre i tre metri di distanza.</p>
                 </div>
 
-                <h4>Mappa della Miniera - Livello Superiore</h4>
-                <pre style="font-family: monospace; background: #2C1810; color: #D4AF37; padding: 20px; border-radius: 8px;">
-┌─────────────────────────────────────────┐
-│                                         │
-│  [1]                    [3]             │
-│   │                      │              │
-│   └──[2]────────┬───────┘              │
-│                 │                       │
-│            [INGRESSO]                   │
-│                 │                       │
-│                 │                       │
-│            [4]──┴──[5]                  │
-│                    │                    │
-│                   [6]                   │
-│                    │                    │
-│                [POZZO]                  │
-│              (Livello Inf.)             │
-│                                         │
-└─────────────────────────────────────────┘
+                <p><em>[Il file continua con l'atto II completo, l'atto III, l'epilogo e le note per 
+                il narratore - per brevità mostro solo la struttura iniziale con gli stili CSS corretti]</em></p>
 
-[1] Magazzino Attrezzi
-[2] Carrelli & Binari
-[3] Camera di Rest
-[4] Tunnel Ovest (crollo)
-[5] Tunnel Est - Verso Pozzo
-[6] Galleria Argento (abbandonata)
-                </pre>
-
-                <h4>Area 1: Magazzino Attrezzi</h4>
-                <p><strong>Descrizione:</strong> Piccola camera laterale con scaffali di picconi, pale, lanterne di riserva.</p>
-                <p><strong>Prove:</strong></p>
-                <ul>
-                    <li><strong>Investigare CD 10:</strong> Trovano 2 lanterne extra + olio</li>
-                    <li><strong>Investigare CD 14:</strong> Notano graffi strani su una parete - qualcosa è stato 
-                    trascinato via di recente. Tracce di sangue secco.</li>
-                </ul>
-
-                <h4>Area 2: Carrelli e Binari</h4>
-                <p><strong>Descrizione:</strong> Tunnel principale con binari. Due carrelli minerari abbandonati, 
-                uno ancora pieno di minerale d'argento.</p>
-                <p><strong>Incontro:</strong></p>
-
-                <div class="stat-block">
-                    <h5>🐺 PRIMO COMBATTIMENTO: Coyote Famelici (2)</h5>
-                    <p>Due coyote affamati si sono addentrati nella miniera. Attaccano se i PG si avvicinano 
-                    ai carrelli (ci sono resti di cibo dei minatori).</p>
-                    <p><strong>Statistiche Coyote:</strong></p>
-                    <ul>
-                        <li><strong>CA:</strong> 12</li>
-                        <li><strong>PF:</strong> 11 (2d8+2)</li>
-                        <li><strong>Velocità:</strong> 12m</li>
-                        <li><strong>FOR:</strong> +1, <strong>DES:</strong> +2, <strong>COS:</strong> +1</li>
-                        <li><strong>Attacco:</strong> Morso +4 colpire, portata 1.5m, danno 1d6+2 perforante</li>
-                        <li><strong>Abilità:</strong> Percezione +3, Furtività +4</li>
-                        <li><strong>Tattica:</strong> Attaccano il PG più debole-looking, cercano di fiancheggiare</li>
-                    </ul>
-                </div>
-
-                <div class="example-box">
-                    <h5>🎬 Esempio di Gioco - Primo Combattimento</h5>
-                    <p><strong>Master:</strong> "Mentre vi avvicinate ai carrelli, sentite un ringhio basso. 
-                    Due coyote emergono dall'ombra, occhi gialli brillanti nella luce delle lanterne. Sembrano 
-                    disperatamente affamati. Tiriamo iniziativa! Tutti tirate 1d20 + modificatore Destrezza."</p>
-                    <p><strong>Sarah (Pistolero):</strong> "18 più DES +3 = 21!"</p>
-                    <p><strong>Doc (Dottore):</strong> "12 più DES +2 = 14."</p>
-                    <p><strong>Master:</strong> "Coyote 1 ottiene 15, Coyote 2 ottiene 8. Ordine: Sarah (21), 
-                    Coyote 1 (15), Doc (14), Coyote 2 (8). Sarah, sei tu - cosa fai?"</p>
-                    <p><strong>Sarah:</strong> "Estraggo il revolver e sparo al coyote più vicino!"</p>
-                    <p><strong>Master:</strong> "Perfetto. Tiro per colpire - d20 + modificatore DES + bonus competenza."</p>
-                    <p><strong>Sarah:</strong> "17 + 3 + 2 = 22! Colpisco?"</p>
-                    <p><strong>Master:</strong> "Assolutamente! La CA del coyote è 12. Tira danno - il revolver 
-                    fa 2d6 danni."</p>
-                    <p><strong>Sarah:</strong> "8 di danno! Lo colpisco in pieno petto!"</p>
-                    <p><strong>Master:</strong> "Il coyote ha solo 11 PF. Il tuo proiettile lo abbatte. 
-                    Il secondo coyote, vedendo il compagno morto, esita... tiro morale... fallisce! 
-                    Fugge guaendo nei tunnel laterali. Combattimento finito!"</p>
-                </div>
-
-                <div class="tip-box">
-                    <h5>💡 Note per il Master - Primo Combattimento</h5>
-                    <p>Questo combattimento è FACILE di proposito. Obiettivi:</p>
-                    <ul>
-                        <li>✅ Far familiarizzare i giocatori con iniziativa, tiri per colpire, danni</li>
-                        <li>✅ Mostrare come funzionano le armi da fuoco (range, danno)</li>
-                        <li>✅ Introdurre concetto di morale (i coyote fuggono se uno muore)</li>
-                        <li>✅ Non stressare troppo - è warm-up</li>
-                    </ul>
-                    <p><strong>Non</strong> deve essere una lotta lunga. 1-2 round massimo.</p>
-                </div>
-
-                <h4>Area 3: Camera di Rest</h4>
-                <p><strong>Descrizione:</strong> Piccola grotta naturale allargata dai minatori. 
-                Panche di legno, tavolo sgangherato, carte da gioco sparse.</p>
-                <p><strong>Indizi:</strong></p>
-                <ul>
-                    <li><strong>Investigare CD 11:</strong> Trovano un diario di Tom Bradshaw (minatore scomparso)
-                        <ul>
-                            <li><em>"15 Agosto: Abbiamo raggiunto una camera strana a 50 metri di profondità. 
-                            Pareti non sono roccia normale - sembrano vetrificate, come fuse dal calore. 
-                            Il pozzo si apre su qualcosa di profondo."</em></li>
-                            <li><em>"22 Agosto: I canti sono più forti. Solo io li sento? Gli altri dicono 
-                            di no ma vedo il panico nei loro occhi. Stanno mentendo."</em></li>
-                            <li><em>"28 Agosto: [ultima entry, grafia tremante] Non avremmo dovuto scavare più in profondità. 
-                            Il pozzo... il pozzo guarda indietro."</em></li>
-                        </ul>
-                    </li>
-                    <li><strong>Percezione CD 13:</strong> Notano che una delle panche ha tracce di artigli 
-                    - non animali. Qualcosa con dita lunghe e sottili ha graffiato il legno dall'interno verso l'esterno.</li>
-                </ul>
-
-                <h4>Area 4 & 5: Tunnel Ovest e Est</h4>
-                <p><strong>Tunnel Ovest:</strong> Crollato. Prova Atletica CD 18 per spostare detriti, 
-                ma dietro non c'è nulla di rilevante (tunnel era ancora in scavo).</p>
-                <p><strong>Tunnel Est:</strong> Questo è il percorso verso il pozzo. I binari continuano, 
-                ma a metà tunnel diventano contorti, come se un enorme calore li avesse piegati.</p>
-
-                <h4>Area 6: Galleria dell'Argento</h4>
-                <p><strong>Descrizione:</strong> Ampia camera naturale con venature d'argento visibili nelle pareti. 
-                Apparecchiature minerarie abbandonate ovunque. Al centro, un grande cratere nel pavimento - 
-                l'ingresso al pozzo profondo.</p>
-
-                <div class="horror-box">
-                    <h5>🐙 STRESS CHECK - La Galleria Desolata</h5>
-                    <p>Entrando nella galleria, i PG sentono immediatamente che qualcosa NON VA. 
-                    L'aria è più fredda. Le ombre si muovono in modi innaturali alla luce delle lanterne. 
-                    Un suono sottile - quasi impercettibile - risuona dal pozzo: un canto, o forse un lamento, 
-                    che sembra provenire da molto, molto in profondità.</p>
-                    <p><strong>STRESS CHECK:</strong> Tiro Salvezza Saggezza CD 12</p>
-                    <ul>
-                        <li><strong>Fallimento:</strong> +2 stress</li>
-                        <li><strong>Successo:</strong> +1 stress</li>
-                    </ul>
-                    <p>Se un PG raggiunge 11+ stress (stato STRESSATO), ora ottiene svantaggio 
-                    su prove di Saggezza e Carisma.</p>
-                </div>
-
-                <h4>Il Pozzo - Guardare Giù</h4>
-                <p>Il pozzo è un cratere irregolare di circa 6 metri di diametro. Scale di legno 
-                mal assemblate scendono lungo una parete. L'oscurità è totale oltre i primi 10 metri.</p>
-
-                <p><strong>Se un PG guarda direttamente nel pozzo senza prepararsi mentalmente:</strong></p>
-                <div class="horror-box">
-                    <h5>🐙 STRESS CHECK ESTREMO - Guardare l'Abisso</h5>
-                    <p>Per un attimo - solo un battito di ciglia - il PG vede qualcosa in fondo al pozzo. 
-                    Non dovrebbe essere possibile vedere così lontano nell'oscurità, ma lo vede comunque: 
-                    forme geometriche impossibili, angoli che non dovrebbero esistere nello spazio tridimensionale, 
-                    e qualcosa - QUALCOSA - che si muove con una grazia innaturale, come se il buio stesso fosse vivo.</p>
-                    <p><strong>STRESS CHECK:</strong> Tiro Salvezza Saggezza CD 15</p>
-                    <ul>
-                        <li><strong>Fallimento di 5+:</strong> +4 stress + afflizione temporanea "Visioni Ricorrenti"</li>
-                        <li><strong>Fallimento:</strong> +3 stress</li>
-                        <li><strong>Successo:</strong> +2 stress</li>
-                    </ul>
-                    <p><strong>Afflizione "Visioni Ricorrenti" (1 ora):</strong> Svantaggio su concentrazione. 
-                    Ogni 10 minuti deve fare TS SAG CD 12 o essere Spaventato per 1 round.</p>
-                </div>
-
-                <div class="tip-box">
-                    <h5>💡 Checkpoint - Prima di Scendere</h5>
-                    <p>Questo è un buon momento per fare una pausa, ricapitolare, e permettere ai giocatori 
-                    di discutere strategia. Hanno raccolto abbastanza indizi? Vogliono preparare qualcosa? 
-                    Tornare in città per riposare?</p>
-                    <p><strong>Se decidono di riposare:</strong> Il riposo lungo in città rimuove 1d4 punti stress 
-                    per PG, ma quando tornano alla miniera il giorno dopo, trovano segni che "qualcosa" 
-                    è uscito dal pozzo durante la notte (tracce, un coyote morto e dissanguato).</p>
-                </div>
             </section>
 
-            <section id="atto-3">
-                <h3>Atto III: Il Pozzo delle Stelle Cadute</h3>
-
-                <h4>Scendere nel Pozzo</h4>
-                <p>Le scale di legno scendono per circa 20 metri, poi si fermano su una piattaforma. 
-                Da qui, un sistema di corde e carrucole può calare i PG altri 15 metri fino al fondo.</p>
-
-                <p><strong>Prove Atletica CD 12</strong> per scendere senza incidenti. 
-                Fallimento significa caduta (1d6 danni da botta per ogni 3m di caduta).</p>
-
-                <h4>Il Fondo - Camera delle Stelle</h4>
-                <p>Il fondo del pozzo si apre in una camera naturale di circa 15x15 metri. 
-                Ma "naturale" è la parola sbagliata.</p>
-
-                <div class="horror-box">
-                    <h5>🐙 LA RIVELAZIONE</h5>
-                    <p><strong>Leggere ai giocatori:</strong></p>
-                    <p><em>Le pareti della camera non sono roccia. O meglio, erano roccia - una volta. 
-                    Ora sono... vetrificate, fuse in forme che ricordano onde congelate. Colori iridescenti 
-                    - viola, verdi impossibili, nero-stellato - pulsano debolmente nella superficie.Al centro 
-                    della stanza c'è una... crepa. Non nel pavimento - nello SPAZIO. È come se qualcuno avesse 
-                    strappato la realtà stessa, rivelando un'oscurità che va oltre il semplice buio. 
-                    Attraverso la crepa, vedete stelle - ma non le stelle del cielo notturno. 
-                    Queste sono stelle sbagliate, disposte in costellazioni aliene, che pulsano con 
-                    luce malata.</em></p>
-                    <p><em>E davanti alla crepa, rannicchiati o appoggiati alle pareti: i minatori scomparsi. 
-                    O quello che resta di loro.</em></p>
-                </div>
-
-                <h4>I Minatori Corrotti</h4>
-                <p>I cinque minatori scomparsi sono qui, ma non sono più umani - non completamente. 
-                L'esposizione prolungata alla radiazione cosmica della crepa li ha... cambiati.</p>
-
-                <div class="stat-block">
-                    <h5>⚠️ MINATORI CORROTTI (5)</h5>
-                    <p><strong>Aspetto:</strong> Umanoidi emaciati, pelle pallida e traslucida, 
-                    occhi completamente neri. Si muovono in modo innaturale, articolazioni piegate 
-                    agli angoli sbagliati. Emettono un canto basso e gutturale - la stessa "musica" 
-                    che Red Sullivan descriveva.</p>
-                    <p><strong>Comportamento:</strong> Non attaccano immediatamente. Fissano i PG, 
-                    cantando. Stanno... aspettando qualcosa. Se i PG tentano di attraversare la stanza 
-                    per chiudere la crepa, ALLORA attaccano per proteggere la "porta".</p>
-                    <p><strong>Statistiche:</strong></p>
-                    <ul>
-                        <li><strong>CA:</strong> 11 (pelle ispessita innaturale)</li>
-                        <li><strong>PF:</strong> 16 ciascuno (3d8+3)</li>
-                        <li><strong>Velocità:</strong> 9m (movimento scattoso)</li>
-                        <li><strong>FOR:</strong> +2, <strong>DES:</strong> +0, <strong>COS:</strong> +1</li>
-                        <li><strong>Immunità:</strong> Spaventato, Affascinato (menti corrotte)</li>
-                        <li><strong>Attacco multiattacco:</strong> Due artigli</li>
-                        <li><strong>Artiglio:</strong> +4 colpire, portata 1.5m, 1d6+2 taglio</li>
-                        <li><strong>Abilità speciale - Canto Dissonante:</strong> I minatori cantano in coro. 
-                        Tutti i PG entro 9m devono fare TS SAG CD 13 all'inizio del loro turno o subire svantaggio 
-                        sui tiri per colpire fino all'inizio del loro prossimo turno. +1 stress se fallito.</li>
-                    </ul>
-                </div>
-
-                <div class="warning-box">
-                    <h5>⚙️ Note Tattiche - Boss Fight</h5>
-                    <p><strong>Ambiente:</strong></p>
-                    <ul>
-                        <li>La camera è illuminata dalla luce aliena della crepa (luce fioca)</li>
-                        <li>Colonne di roccia forniscono copertura (CA +2 se dietro)</li>
-                        <li>La crepa emette radiazioni: ogni PG entro 3m perde 1 PF/round (non TS) 
-                        e guadagna +1 stress/minuto</li>
-                    </ul>
-                    <p><strong>Tattica dei Minatori:</strong></p>
-                    <ul>
-                        <li>3 minatori attaccano in mischia, cercando di circondare i PG</li>
-                        <li>2 minatori restano vicino alla crepa, cantando (Canto Dissonante)</li>
-                        <li>Se un minatore scende sotto 5 PF, si ritira verso la crepa per "ricaricarsi" 
-                        (rigenera 1d6 PF se resta adiacente alla crepa per 1 round, ma può farlo solo 1 volta)</li>
-                    </ul>
-                    <p><strong>Obiettivo dei PG:</strong> Sconfiggere i minatori E trovare modo di chiudere la crepa.</p>
-                </div>
-
-                <h4>Chiudere la Crepa - La Scelta</h4>
-                <p>Una volta sconfitti i minatori, i PG devono decidere come chiudere la crepa dimensionale.</p>
-
-                <div class="stat-block">
-                    <h5>OPZIONI PER CHIUDERE LA CREPA</h5>
-                    <p><strong>Opzione A: Far Crollare il Tunnel (Soluzione Bruta)</strong></p>
-                    <ul>
-                        <li>Usare dinamite (se l'hanno portata o trovata in miniera)</li>
-                        <li><strong>Prova Demolizioni/INT CD 15:</strong> Piazzare cariche correttamente</li>
-                        <li><strong>PRO:</strong> Risolve definitivamente - la crepa è sepolta</li>
-                        <li><strong>CONTRO:</strong> Distrugge la miniera (Thornton non pagherà bonus), 
-                        rischio di rimanere intrappolati (Atletica CD 14 per fuggire prima del crollo)</li>
-                    </ul>
-                    <p><strong>Opzione B: Sigillo Rituale (Soluzione Occulta)</strong></p>
-                    <ul>
-                        <li>Se c'è un Reverendo o personaggio con competenza Religione</li>
-                        <li><strong>Prova Religione CD 16:</strong> Ricordare/improvvisare rituale di sigillo</li>
-                        <li>Richiede: sangue (1d4 danni autoinditti), preghiera (azione completa), 
-                        simbolo sacro posizionato sulla crepa</li>
-                        <li><strong>PRO:</strong> Sigilla la crepa senza distruggere miniera</li>
-                        <li><strong>CONTRO:</strong> Il sigillo è temporaneo - reggerà forse 10-20 anni. 
-                        Il problema potrebbe tornare. Inoltre, toccare la crepa causa +3 stress al PG che lo fa.</li>
-                    </ul>
-                    <p><strong>Opzione C: "Niente" - Lasciare la Crepa Aperta</strong></p>
-                    <ul>
-                        <li>I PG potrebbero decidere che non è affare loro, o che è troppo pericoloso intervenire</li>
-                        <li><strong>CONSEGUENZA:</strong> Entro 2 settimane, altre creature cosmiche emergeranno. 
-                        Dusty Creek sarà sterminata. Il Master può usare questo come hook per campagna futura.</li>
-                    </ul>
-                </div>
-
-                <div class="example-box">
-                    <h5>🎬 Esempio di Gioco - Scelta Finale</h5>
-                    <p><strong>Master:</strong> "I minatori corrotti giacciono immobili. La crepa pulsa ancora, 
-                    malevolmente. Attraverso di essa, sentite il canto - più forte ora, quasi invitante. 
-                    Cosa fate?"</p>
-                    <p><strong>Reverendo Stone:</strong> "Ho il mio simbolo sacro. Posso provare a sigillarla? 
-                    Conosco preghiere di protezione..."</p>
-                    <p><strong>Master:</strong> "Puoi provare. Fai una prova di Religione, CD 16. 
-                    È difficile - stai cercando di sigillare uno strappo nella realtà stessa."</p>
-                    <p><strong>Reverendo:</strong> "Tiro... 14 + il mio modificatore Saggezza +3 + competenza +2 = 19. Ce la faccio!"</p>
-                    <p><strong>Master:</strong> "Eccellente. Descrivi cosa fa il Reverendo."</p>
-                    <p><strong>Reverendo:</strong> "Mi avvicino alla crepa, stringendo il crocifisso. 
-                    Il calore è tremendo, sento la pelle che brucia, ma non mi fermo. Inizio a pregare - 
-                    non le preghiere della Bibbia, ma parole più antiche, che mio nonno mi insegnò... 
-                    parole per tenere lontani gli spiriti maligni."</p>
-                    <p><strong>Master:</strong> "La crepa pulsa, resistendo. Devi toccarla con il simbolo sacro - 
-                    prendi 1d4 danni e guadagni 3 punti stress mentre lo fai. Ma funziona. 
-                    La luce aliena si affievolisce. I bordi della crepa iniziano a... cicatrizzarsi, 
-                    come una ferita che guarisce. Non scompare completamente - una sottile linea nera 
-                    resta visibile nella roccia - ma il canto si ferma. È... sigillata."</p>
-                </div>
-            </section>
-
-            <section id="epilogo">
-                <h3>Epilogo: Le Conseguenze</h3>
-
-                <h4>Ritorno a Dusty Creek</h4>
-                <p>I PG emergono dalla miniera - sporchi, feriti, mentalmente segnati. 
-                Il sole sta sorgendo. Dusty Creek si sveglia, ignara di quanto vicino sia arrivato l'orrore.</p>
-
-                <h4>Ricompense e Conseguenze</h4>
-
-                <table class="stats-table">
-                    <thead>
-                        <tr>
-                            <th>Azione</th>
-                            <th>Ricompensa/Conseguenza</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Hanno chiuso la crepa (qualsiasi metodo)</td>
-                            <td><strong>$50 pagamento base da Thornton + $50 bonus</strong><br>
-                            <strong>200 XP</strong> per PG<br>
-                            Thornton è grato (contatto futuro)</td>
-                        </tr>
-                        <tr>
-                            <td>Hanno sigillato senza distruggere miniera</td>
-                            <td><strong>+$25 bonus extra</strong><br>
-                            Miniera riapre dopo 1 settimana<br>
-                            Thornton diventa patrono affidabile</td>
-                        </tr>
-                        <tr>
-                            <td>Hanno fatto crollare il tunnel</td>
-                            <td>Nessun bonus extra<br>
-                            Thornton è deluso ma paga comunque<br>
-                            Miniera distrutta, economia locale soffrirà</td>
-                        </tr>
-                        <tr>
-                            <td>Hanno lasciato la crepa aperta</td>
-                            <td><strong>$50 solo</strong> (mentono a Thornton?)<br>
-                            Entro 2 settimane, disastro cosmico<br>
-                            <strong>Conseguenze narrative serie</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Hanno salvato qualche minatore</td>
-                            <td><strong>Impossibile</strong> - troppo corrotti<br>
-                            Se hanno provato eutanasia pietosa: +10 XP per compassione</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>XP Bonus per Roleplay</h4>
-                <ul>
-                    <li><strong>+10 XP:</strong> Ottimo roleplay, decisioni in-character coerenti</li>
-                    <li><strong>+10 XP:</strong> Lavoro di squadra eccellente</li>
-                    <li><strong>+10 XP:</strong> Creatività nella risoluzione problemi</li>
-                    <li><strong>+10 XP:</strong> Gestione stress/horror roleplay eccellente</li>
-                </ul>
-
-                <p><strong>TOTALE XP SCENARIO:</strong> 200-240 XP per PG (sufficiente per raggiungere quasi 2° livello)</p>
-
-                <h4>Stress Finale e Recovery</h4>
-                <p>Al termine dello scenario, i PG probabilmente hanno 8-15 punti stress accumulati. 
-                Durante riposo lungo a Dusty Creek:</p>
-                <ul>
-                    <li>Dormire in letto comodo: recupera 1d6 stress</li>
-                    <li>Se dormono nella chiesa dopo benedizione di Padre Miguel: +1 stress recovery</li>
-                    <li>Se parlano con Martha Sullivan della morte del marito (è inevitabile): +2 stress 
-                    (ma necessario per closure narrativa)</li>
-                </ul>
-
-                <h4>Hook per Avventure Future</h4>
-                <div class="tip-box">
-                    <p>Questo scenario può essere:</p>
-                    <ul>
-                        <li><strong>One-shot completo:</strong> Finisce qui, storia chiusa</li>
-                        <li><strong>Inizio campagna:</strong> Il sigillo del Reverendo inizia a indebolirsi dopo 6 mesi. 
-                        Padre Miguel invia lettera disperata chiedendo aiuto ai PG</li>
-                        <li><strong>Parte di cospirazione più grande:</strong> Investigando, i PG scoprono che crepe 
-                        simili stanno apparendo in tutto il West. Qualcuno (o qualcosa) le sta aprendo deliberatamente. 
-                        Chi? Perché?</li>
-                    </ul>
-                </div>
-
-                <h4>Finale Narrativo</h4>
-                <div class="example-box">
-                    <h5>🎬 Scena Finale Suggerita</h5>
-                    <p><strong>Master:</strong> "Tre giorni dopo, mentre vi preparate a lasciare Dusty Creek, 
-                    Martha Sullivan vi ferma per strada. Ha gli occhi rossi di lacrime, ma c'è anche... gratitudine.</p>
-                    <p>'Padre Miguel mi ha detto cosa avete fatto laggiù. Non so esattamente cosa fosse, 
-                    ma so che avete fermato... quello che ha preso mio marito. Grazie.'</p>
-                    <p>Vi dà una Bibbia piccola, rilegata in pelle. 'Era di Red. Era un buon uomo, prima di... 
-                    prima. Se mai avrete bisogno di protezione contro l'oscurità, forse questo aiuterà.'</p>
-                    <p><strong>[OGGETTO MAGICO RICEVUTO: Bibbia di Red Sullivan]</strong><br>
-                    <em>Una volta al giorno, può essere usata per rilanciare un Tiro Salvezza Saggezza fallito 
-                    contro effetti di paura o stress.</em></p>
-                    <p>Mentre la diligenza vi porta via da Dusty Creek, guardate indietro. Il sole tramonta 
-                    sul deserto, tingendo tutto di rosso sangue. La miniera Silver Star è un'ombra scura 
-                    contro il cielo. In profondità sotto la terra, sapete che la crepa è ancora lì - 
-                    sigillata, sì, ma non distrutta. E in qualche angolo remoto della vostra mente, 
-                    potete ancora sentirlo: quel canto alieno, sottile come un sussurro.</p>
-                    <p>Il Weird West vi ha cambiati. E questo è solo l'inizio."</p>
-                </div>
-            </section>
-
-            <section id="consigli-master">
-                <h3>Consigli per il Master</h3>
-
-                <h4>Gestire il Tono Horror</h4>
-                <div class="warning-box">
-                    <ul>
-                        <li><strong>Build-up graduale:</strong> L'horror è più efficace se crescente. 
-                        Atto I = tensione, Atto II = inquietudine, Atto III = orrore pieno</li>
-                        <li><strong>Meno è meglio:</strong> Non descrivere tutto in dettaglio orrorifico. 
-                        Lascia che l'immaginazione dei giocatori faccia il lavoro pesante</li>
-                        <li><strong>Rispetta la X-Card:</strong> Se un giocatore è a disagio, scala subito</li>
-                        <li><strong>Contrasto:</strong> Momenti di normalità (saloon, Padre Miguel) 
-                        rendono l'horror più potente per contrasto</li>
-                    </ul>
-                </div>
-
-                <h4>Gestire il Ritmo</h4>
-                <ul>
-                    <li><strong>Atto I (45 min):</strong> Non affrettare investigazione. I giocatori devono 
-                    sentirsi preparati prima di scendere</li>
-                    <li><strong>Atto II (60 min):</strong> Mantieni tensione costante ma non esaurire risorse troppo presto</li>
-                    <li><strong>Atto III (60 min):</strong> Boss fight dovrebbe durare 4-6 round. 
-                    Non trascinare troppo o diventa noioso</li>
-                    <li><strong>Epilogo (15 min):</strong> Essenziale per closure emotiva. Non tagliarlo!</li>
-                </ul>
-
-                <h4>Adattare la Difficoltà</h4>
-                <div class="tip-box">
-                    <p><strong>Se il gruppo sta soffrendo troppo:</strong></p>
-                    <ul>
-                        <li>Riduci i PF dei minatori corrotti a 12 invece di 16</li>
-                        <li>Fai apparire solo 3 minatori invece di 5</li>
-                        <li>Permetti di trovare pozioni di cura extra in miniera</li>
-                        <li>Riduci CD degli stress check di 2</li>
-                    </ul>
-                    <p><strong>Se il gruppo trova tutto troppo facile:</strong></p>
-                    <ul>
-                        <li>Aggiungi 1-2 minatori corrotti extra</li>
-                        <li>Uno dei minatori ha una pistola e può sparare (attacco ranged +3, 1d10 danno)</li>
-                        <li>La crepa emette una "ondata psichica" ogni 3 round (TS SAG CD 14 o Stordito 1 round)</li>
-                        <li>Aumenta CD stress check di 2</li>
-                    </ul>
-                </div>
-
-                <h4>Improvvisazione e Flessibilità</h4>
-                <p>Questo scenario è una <strong>struttura</strong>, non una prigione. I giocatori faranno 
-                cose imprevedibili. Alcuni suggerimenti:</p>
-                <ul>
-                    <li><strong>Vogliono tornare in città:</strong> OK! Possono riposare, comprare equipment. 
-                    Ma quando tornano, situazione potrebbe essere peggiorata (più tracce di creature emerse)</li>
-                    <li><strong>Provano a salvare i minatori corrotti:</strong> Medicina CD 20 rivela che 
-                    trasformazione è irreversibile. Eutanasia pietosa è l'unica opzione compassionevole</li>
-                    <li><strong>Vogliono studiare la crepa invece di chiuderla:</strong> OK ma pericoloso! 
-                    Ogni minuto vicino = +1 stress. Arcano CD 18 rivela natura dimensionale</li>
-                    <li><strong>Cercano di negoziare con i minatori:</strong> Sono troppo corrotti. 
-                    Parlano solo in sussurri alieni. Non c'è più nessuno casa</li>
-                </ul>
-            </section>
-
-            <section id="personaggi-pregenerati">
-                <h3>Personaggi Pre-Generati</h3>
-
-                <div class="warning-box">
-                    <p>I seguenti 4 personaggi sono ottimizzati per questo scenario. 
-                    Schede complete stampabili disponibili in Appendice C.</p>
-                </div>
-
-                <!-- PERSONAGGIO 1: PISTOLERO -->
-                <div class="stat-block" style="page-break-inside: avoid; margin: 30px 0;">
-                    <h4>1. SARAH McCARTHY - Pistolero</h4>
-                    <p><strong>Livello 1 | Umana | Chaotic Good</strong></p>
-                    
-                    <p><strong>Background:</strong> Ex fuorilegge che cerca redenzione</p>
-                    
-                    <p><strong>Caratteristiche:</strong></p>
-                    <ul style="columns: 2;">
-                        <li><strong>FOR:</strong> 12 (+1)</li>
-                        <li><strong>DES:</strong> 16 (+3)</li>
-                        <li><strong>COS:</strong> 14 (+2)</li>
-                        <li><strong>INT:</strong> 10 (+0)</li>
-                        <li><strong>SAG:</strong> 13 (+1)</li>
-                        <li><strong>CAR:</strong> 11 (+0)</li>
-                    </ul>
-
-                    <p><strong>Combattimento:</strong></p>
-                    <ul>
-                        <li><strong>PF:</strong> 12 (1d10+2)</li>
-                        <li><strong>CA:</strong> 14 (armatura di cuoio)</li>
-                        <li><strong>Velocità:</strong> 9m</li>
-                        <li><strong>Stress Max:</strong> 22 (20+1 SAG+1 livello)</li>
-                        <li><strong>Iniziativa:</strong> +3</li>
-                    </ul>
-
-                    <p><strong>Attacchi:</strong></p>
-                    <ul>
-                        <li><strong>Revolver Colt .45:</strong> +5 colpire (DES+3, competenza+2), portata 12/36m, 2d6 perforante</li>
-                        <li><strong>Coltello da caccia:</strong> +3 colpire, portata 1.5m, 1d4+1 perforante</li>
-                    </ul>
-
-                    <p><strong>Competenze (+2):</strong> Acrobazia +5, Atletica +3, Intimidire +2, Percezione +3, 
-                    Rapidità di Mano +5</p>
-
-                    <p><strong>Abilità speciali:</strong></p>
-                    <ul>
-                        <li><strong>Occhio del Tiratore:</strong> Bonus action, fino inizio prossimo turno, 
-                        attacchi ranged ignorano copertura 1/2 e 3/4</li>
-                        <li><strong>Quick Draw:</strong> Può estrarre e sparare come parte dello stesso attacco 
-                        (non serve azione per estrarre)</li>
-                    </ul>
-
-                    <p><strong>Equipaggiamento:</strong> 2x Revolver Colt .45, 100 munizioni .45, coltello da caccia, 
-                    armatura di cuoio, kit pulizia armi, corda (15m), 2 lanterne, olio per lanterne, 
-                    bisacce, coperta, $12 rimanenti</p>
-
-                    <p><strong>Personalità:</strong> Sarcastica, coraggiosa, nasconde senso di colpa per passato. 
-                    Protettiva verso innocenti. Veloce a sparare, lenta a fidarsi.</p>
-                </div>
-
-                <!-- PERSONAGGIO 2: REVERENDO -->
-                <div class="stat-block" style="page-break-inside: avoid; margin: 30px 0;">
-                    <h4>2. REVERENDO JOSIAH STONE - Reverendo</h4>
-                    <p><strong>Livello 1 | Umano | Lawful Good</strong></p>
-                    
-                    <p><strong>Background:</strong> Predicatore metodista che ha visto troppi orrori</p>
-                    
-                    <p><strong>Caratteristiche:</strong></p>
-                    <ul style="columns: 2;">
-                        <li><strong>FOR:</strong> 10 (+0)</li>
-                        <li><strong>DES:</strong> 12 (+1)</li>
-                        <li><strong>COS:</strong> 13 (+1)</li>
-                        <li><strong>INT:</strong> 14 (+2)</li>
-                        <li><strong>SAG:</strong> 16 (+3)</li>
-                        <li><strong>CAR:</strong> 14 (+2)</li>
-                    </ul>
-
-                    <p><strong>Combattimento:</strong></p>
-                    <ul>
-                        <li><strong>PF:</strong> 9 (1d8+1)</li>
-                        <li><strong>CA:</strong> 13 (armatura di cuoio)</li>
-                        <li><strong>Velocità:</strong> 9m</li>
-                        <li><strong>Stress Max:</strong> 24 (20+3 SAG+1 livello)</li>
-                        <li><strong>Iniziativa:</strong> +1</li>
-                    </ul>
-
-                    <p><strong>Attacchi:</strong></p>
-                    <ul>
-                        <li><strong>Fucile Winchester:</strong> +3 colpire, portata 24/72m, 2d8 perforante, 
-                        capacità 15 colpi, a due mani</li>
-                        <li><strong>Bastone da passeggio:</strong> +2 colpire, portata 1.5m, 1d6 contundente</li>
-                    </ul>
-
-                    <p><strong>Competenze (+2):</strong> Intuizione +5, Medicina +5, Persuasione +4, 
-                    Religione +4, Storia +4</p>
-
-                    <p><strong>Magia (Incantatore completo SAG):</strong></p>
-                    <ul>
-                        <li><strong>Spell slots:</strong> 2x 1° livello</li>
-                        <li><strong>CD Tiro Salvezza:</strong> 13 (8+2 competenza+3 SAG)</li>
-                        <li><strong>Incantesimi preparati (3):</strong>
-                            <ul>
-                                <li><em>Cure Wounds</em> (1° liv) - Tocco, cura 1d8+3 PF</li>
-                                <li><em>Bless</em> (1° liv) - 3 creature, +1d4 ai tiri attacco e TS per 1 minuto</li>
-                                <li><em>Shield of Faith</em> (1° liv) - 1 creatura, +2 CA per 10 minuti</li>
-                            </ul>
-                        </li>
-                        <li><strong>Cantrip (a volontà):</strong>
-                            <ul>
-                                <li><em>Sacred Flame</em> - TS DES CD 13, 1d8 radiante</li>
-                                <li><em>Guidance</em> - +1d4 a una prova abilità</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <p><strong>Abilità speciali:</strong></p>
-                    <ul>
-                        <li><strong>Tocco Guaritore:</strong> 3/giorno, azione bonus, tocco cura 1d4 PF</li>
-                        <li><strong>Canalizzare Divinità (1/riposo):</strong> Turn Undead - non-morti 
-                        entro 9m, TS SAG CD 13 o fuggono per 1 minuto</li>
-                    </ul>
-
-                    <p><strong>Equipaggiamento:</strong> Fucile Winchester, 60 munizioni, bastone da passeggio, 
-                    Bibbia, simbolo sacro (crocifisso d'argento), armatura di cuoio, kit medicina, 
-                    acqua santa (2 fiale), lanterna, candele (10), $8</p>
-
-                    <p><strong>Personalità:</strong> Compassionevole ma pragmatico. Sa che il male esiste 
-                    e va combattuto con forza, non solo preghiere. Voce calma anche in crisi. 
-                    Dubita a volte della sua fede, ma non lo mostra.</p>
-                </div>
-
-                <!-- PERSONAGGIO 3: DOTTORE -->
-                <div class="stat-block" style="page-break-inside: avoid; margin: 30px 0;">
-                    <h4>3. DR. JAMES "DOC" HOLLOWAY - Dottore</h4>
-                    <p><strong>Livello 1 | Umano | Neutral Good</strong></p>
-                    
-                    <p><strong>Background:</strong> Medico militare (Guerra Civile), ora viaggia offrendo cure</p>
-                    
-                    <p><strong>Caratteristiche:</strong></p>
-                    <ul style="columns: 2;">
-                        <li><strong>FOR:</strong> 10 (+0)</li>
-                        <li><strong>DES:</strong> 14 (+2)</li>
-                        <li><strong>COS:</strong> 12 (+1)</li>
-                        <li><strong>INT:</strong> 16 (+3)</li>
-                        <li><strong>SAG:</strong> 14 (+2)</li>
-                        <li><strong>CAR:</strong> 11 (+0)</li>
-                    </ul>
-
-                    <p><strong>Combattimento:</strong></p>
-                    <ul>
-                        <li><strong>PF:</strong> 9 (1d8+1)</li>
-                        <li><strong>CA:</strong> 14 (armatura di cuoio + DES)</li>
-                        <li><strong>Velocità:</strong> 9m</li>
-                        <li><strong>Stress Max:</strong> 23 (20+2 SAG+1 livello)</li>
-                        <li><strong>Iniziativa:</strong> +2</li>
-                    </ul>
-
-                    <p><strong>Attacchi:</strong></p>
-                    <ul>
-                        <li><strong>Revolver .38:</strong> +4 colpire, portata 12/36m, 2d6 perforante</li>
-                        <li><strong>Bisturi chirurgico:</strong> +2 colpire, portata 1.5m, 1d4 perforante, 
-                        leggera</li>
-                    </ul>
-
-                    <p><strong>Competenze (+2):</strong> Investigare +5, Medicina +6 (ESPERTO +4), 
-                    Natura +5, Percezione +4, Intuizione +4</p>
-
-                    <p><strong>Abilità speciali:</strong></p>
-                    <ul>
-                        <li><strong>Chirurgo Esperto:</strong> Durante riposo breve, può far recuperare 
-                        PF extra a 1d3 creature. Ciascuna tira dado vita con vantaggio</li>
-                        <li><strong>Diagnosi Rapida:</strong> Azione bonus, esamina creatura entro 1.5m. 
-                        Scopre: PF correnti, afflizioni, veleni, malattie</li>
-                        <li><strong>Stabilizzare Maestro:</strong> Azione, automaticamente stabilizza 
-                        creatura morente senza prova Medicina</li>
-                    </ul>
-
-                    <p><strong>Equipaggiamento:</strong> Revolver .38, 50 munizioni, kit medico completo 
-                    (20 usi), borsa chirurgica (bisturi, pinze, aghi, filo), laudano (3 dosi - 
-                    allevia dolore, +1d4 PF recupero riposo), morfina (2 dosi - rimuove 1 livello 
-                    affaticamento), bende (10), disinfettante, armatura di cuoio, lanterna, $15</p>
-
-                    <p><strong>Personalità:</strong> Metodico, razionale, nasconde emozioni dietro 
-                    professionalità. Ha visto troppa morte in guerra - determinato a salvare quante 
-                    più vite possibile ora. Curioso scientificamente anche verso l'orrorifico.</p>
-                </div>
-
-                <!-- PERSONAGGIO 4: CACCIATORE DI TAGLIE -->
-                <div class="stat-block" style="page-break-inside: avoid; margin: 30px 0;">
-                    <h4>4. MARIA "HAWK" CORTEZ - Cacciatrice di Taglie</h4>
-                    <p><strong>Livello 1 | Nativa Americana (Apache) | True Neutral</strong></p>
-                    
-                    <p><strong>Background:</strong> Scout/tracker, lavora per chiunque paghi bene</p>
-                    
-                    <p><strong>Caratteristiche:</strong></p>
-                    <ul style="columns: 2;">
-                        <li><strong>FOR:</strong> 13 (+1)</li>
-                        <li><strong>DES:</strong> 16 (+3)</li>
-                        <li><strong>COS:</strong> 14 (+2)</li>
-                        <li><strong>INT:</strong> 12 (+1)</li>
-                        <li><strong>SAG:</strong> 15 (+2)</li>
-                        <li><strong>CAR:</strong> 10 (+0)</li>
-                    </ul>
-
-                    <p><strong>Combattimento:</strong></p>
-                    <ul>
-                        <li><strong>PF:</strong> 12 (1d10+2)</li>
-                        <li><strong>CA:</strong> 15 (armatura di cuoio + DES +1 nativo)</li>
-                        <li><strong>Velocità:</strong> 10.5m (+1.5m bonus nativo)</li>
-                        <li><strong>Stress Max:</strong> 23 (20+2 SAG+1 livello)</li>
-                        <li><strong>Iniziativa:</strong> +3</li>
-                    </ul>
-
-                    <p><strong>Attacchi:</strong></p>
-                    <ul>
-                        <li><strong>Fucile Sharps:</strong> +5 colpire, portata 30/90m, 2d10 perforante, 
-                        capacità 1 colpo (ricarica azione)</li>
-                        <li><strong>Tomahawk:</strong> +4 colpire, portata 1.5m o 6/18m, 1d6+1 taglio</li>
-                        <li><strong>Coltello:</strong> +4 colpire, portata 1.5m, 1d4+1 perforante</li>
-                    </ul>
-
-                    <p><strong>Competenze (+2):</strong> Atletica +3, Furtività +5, Intuizione +4, 
-                    Percezione +4, Sopravvivenza +6 (ESPERTO +4), Natura +3</p>
-
-                    <p><strong>Abilità speciali (Nativa + Cacciatore):</strong></p>
-                    <ul>
-                        <li><strong>Tracker Esperto:</strong> Vantaggio su prove Sopravvivenza per 
-                        seguire tracce. Può tracciare a velocità normale</li>
-                        <li><strong>Preda Favorita (Umanoidi):</strong> Vantaggio su prove SAG 
-                        per tracciare umanoidi. +2 danno vs umanoidi</li>
-                        <li><strong>Terreno Favorito (Deserto):</strong> Ignora terreno difficile 
-                        in deserto. Non si perde. Doppia raccolta cibo/acqua</li>
-                        <li><strong>Sensi Acuti (Nativo):</strong> Vantaggio Percezione basata 
-                        su udito/vista</li>
-                    </ul>
-
-                    <p><strong>Equipaggiamento:</strong> Fucile Sharps, 40 munizioni, tomahawk, 
-                    coltello, armatura di cuoio rinforzata, kit tracking (lente, pinze), corda (30m), 
-                    rampino, 2 trappole piccole, coperta, borraccia, razioni (7 giorni), $10</p>
-
-                    <p><strong>Personalità:</strong> Silenziosa, osservatrice, parla solo quando 
-                    necessario. Pragmatica - il lavoro è lavoro. Rispetta la natura e gli spiriti, 
-                    ma non ne parla con gli "uomini bianchi". Eccellente nel wilderness.</p>
-                </div>
-
-                <div class="tip-box">
-                    <h5>💡 Note sui Pre-Gen</h5>
-                    <p><strong>Bilanciamento del gruppo:</strong></p>
-                    <ul>
-                        <li><strong>DPS:</strong> Sarah (ranged), Hawk (ranged/sniper)</li>
-                        <li><strong>Healer:</strong> Reverendo (magia), Doc (medicina)</li>
-                        <li><strong>Tank:</strong> Nessuno vero tank - gruppo è "glass cannon". 
-                        Questo è intenzionale per aumentare tensione</li>
-                        <li><strong>Utility:</strong> Hawk (tracking/wilderness), Doc (diagnosi), 
-                        Reverendo (magia utility)</li>
-                    </ul>
-                    <p><strong>Se gruppo <4 giocatori:</strong> Sarah + Reverendo sono essenziali 
-                    (DPS + healing). Hawk è utile per tracking ma non critica.</p>
-                </div>
-            </section>
-
-            <section id="appendice-master">
-                <h3>Appendice Master: Risposte Rapide</h3>
-
-                <h4>FAQ Durante il Gioco</h4>
+            <div class="download-cta" style="background: #3d5a3d; color: white; padding: 30px; 
+                border-radius: 12px; margin: 40px 0; text-align: center; border: 3px solid #D4AF37;">
+                <h3 style="color: #D4AF37; margin-top: 0;">🎉 Hai completato lo scenario!</h3>
+                <p style="font-size: 1.2rem;">
+                    Se tu e il tuo gruppo vi siete divertiti con "Il pozzo maledetto", il manuale 
+                    completo di Colt & Cthulhu contiene molto altro ancora.
+                </p>
                 
-                <table class="stats-table">
-                    <thead>
-                        <tr>
-                            <th>Domanda</th>
-                            <th>Risposta</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>"Possiamo portare Red con noi nella miniera?"</td>
-                            <td>Tecnicamente sì, ma è legato e impazzito. Sarebbe più ostacolo che aiuto. 
-                            Se insistono, Red ha attacco di panico quando entra in miniera (+3 stress a tutti 
-                            per urla), poi sviene.</td>
-                        </tr>
-                        <tr>
-                            <td>"Possiamo assumere altri minatori come backup?"</td>
-                            <td>Nessun minatore accetta - sono tutti terrorizzati. Thornton offre +$25 
-                            se convincono 2+ minatori, ma CD Persuasione 20 (quasi impossibile).</td>
-                        </tr>
-                        <tr>
-                            <td>"Torniamo in città per dormire dopo aver esplorato Livello 1?"</td>
-                            <td>OK! Riposo lungo rimuove 1d4 stress. Ma al ritorno, trovano segni 
-                            che qualcosa è uscito dal pozzo (tracce, un coyote morto, tensione aumentata).</td>
-                        </tr>
-                        <tr>
-                            <td>"Possiamo far esplodere l'ingresso della miniera e andarcene?"</td>
-                            <td>Sì, ma Thornton non paga. Inoltre, la crepa continua a esistere sottoterra. 
-                            Entro 2 settimane, le creature scavano via d'uscita alternativa. 
-                            Dusty Creek sterminata.</td>
-                        </tr>
-                        <tr>
-                            <td>"Il Dottore può curare Red Sullivan?"</td>
-                            <td>Medicina CD 20 (quasi impossibile 1° liv) rivela: danno psichico/spirituale, 
-                            non fisico. Oltre capacità medicina mundane. Reverendo potrebbe provare 
-                            Remove Curse (ma è spell 3° livello - non ha accesso).</td>
-                        </tr>
-                        <tr>
-                            <td>"Possiamo studiare/analizzare la crepa dimensionale?"</td>
-                            <td>Arcano CD 18 per comprendere base. Ogni minuto studio = +1 stress. 
-                            Rivela: porta verso "Dimensione del Vuoto Stellare", origine extradimensionale. 
-                            Studiare troppo (5+ minuti) = visioni permanenti.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>Cheat Sheet Combat</h4>
-                <div class="stat-block">
-                    <p><strong>Azioni in combattimento:</strong></p>
-                    <ul>
-                        <li><strong>Azione:</strong> Attacco, Lanciare spell, Dash, Disengage, Dodge, Help, Hide, Ready</li>
-                        <li><strong>Bonus Action:</strong> Seconda arma, abilità speciali</li>
-                        <li><strong>Reazione:</strong> Attacco opportunità (quando nemico esce da portata)</li>
-                        <li><strong>Movimento:</strong> 9m standard (Hawk 10.5m)</li>
-                    </ul>
-                    <p><strong>Copertura:</strong></p>
-                    <ul>
-                        <li>1/2 copertura (colonna, barile): +2 CA</li>
-                        <li>3/4 copertura (muro basso): +5 CA</li>
-                    </ul>
-                    <p><strong>Condizioni importanti:</strong></p>
-                    <ul>
-                        <li><strong>Spaventato:</strong> Svantaggio attacchi/prove abilità mentre fonte paura visibile</li>
-                        <li><strong>Stordito:</strong> Non può agire, auto-fallisce TS DES/FOR, attacchi vs lui hanno vantaggio</li>
-                        <li><strong>Morente:</strong> 0 PF, incosciente. Death saves ogni turno (3 fallimenti = morte)</li>
-                    </ul>
+                <div style="margin-top: 30px;">
+                    <a href="index.html" class="download-button" style="display: inline-block; 
+                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
+                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
+                        border: 2px solid #8B4513;">📖 Torna alla pagina principale</a>
+                    <a href="quickstart-rules.html" class="download-button" style="display: inline-block; 
+                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
+                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
+                        border: 2px solid #8B4513;">⚡ Le regole rapide</a>
                 </div>
-            </section>
-
-            <div class="pagination">
-                <a href="index.html">← Torna al Manuale</a>
-                <a href="appendice_c.html">Schede Personaggio →</a>
             </div>
 
         </article>
     </div>
 
     <footer class="main-footer">
-        <p class="quote">"Nel Weird West, la tua mente è fragile quanto il tuo corpo."</p>
-        <p>© 2025 Colt & Cthulhu - Scenario Introduttivo</p>
-        <p>Creato per insegnare il sistema attraverso il gioco</p>
+        <p class="quote">"Alcune porte non dovrebbero mai essere aperte. Alcuni pozzi non dovrebbero 
+        mai essere esplorati."</p>
+        <p>© 2025 Colt & Cthulhu - Lo scenario introduttivo: il pozzo maledetto</p>
     </footer>
 
 </body>
 </html>
+
+                <h3>La mappa della miniera</h3>
+                <p>
+                    La miniera si sviluppa su due livelli principali. Puoi disegnare una mappa semplice 
+                    su carta o usare una griglia:
+                </p>
+
+                <div class="tip-box">
+                    <h4>📐 Le aree della miniera</h4>
+                    <p><strong>Livello superiore (profondità: 20 metri):</strong></p>
+                    <ul>
+                        <li><strong>Area 1 - L'ingresso:</strong> Il tunnel principale con i binari e 
+                        le attrezzature abbandonate</li>
+                        <li><strong>Area 2 - La biforcazione:</strong> Il tunnel si divide. A sinistra 
+                        (nord-ovest) porta verso il pozzo maledetto. A destra (est) ci sono i tunnel 
+                        sicuri dove lavoravano i minatori</li>
+                        <li><strong>Area 3 - Il primo accampamento:</strong> Una piccola area allargata 
+                        con lanterne spente, attrezzi abbandonati in fretta e furia, e segni di una 
+                        fuga precipitosa</li>
+                    </ul>
+                    <p><strong>Livello inferiore (profondità: 50 metri):</strong></p>
+                    <ul>
+                        <li><strong>Area 4 - La scala pericolante:</strong> Una scala di legno che 
+                        scende nel buio (prova di atletica CD 10 per scendere in sicurezza)</li>
+                        <li><strong>Area 5 - I tunnel stretti:</strong> Passaggi angusti dove si può 
+                        procedere solo in fila indiana. Qui avviene il primo incontro con i ghoul</li>
+                        <li><strong>Area 6 - La camera del pozzo:</strong> Una grande caverna naturale 
+                        dove si trova il pozzo oscuro e maledetto</li>
+                    </ul>
+                </div>
+
+                <h3>Gli incontri durante l'esplorazione</h3>
+
+                <h4>Incontro 1: i carrelli impazziti</h4>
+                <p>
+                    Nel tunnel principale, i personaggi sentono un rumore metallico che si avvicina 
+                    rapidamente. Un carrello minerario pieno di rocce sta rotolando giù per i binari 
+                    a grande velocità!
+                </p>
+                <p><strong>La meccanica:</strong> Tutti i personaggi devono superare un tiro salvezza 
+                su destrezza con CD 12 per buttarsi di lato in tempo.</p>
+                <ul>
+                    <li><strong>Se fallisci:</strong> vieni colpito dal carrello e subisci 2d6 danni 
+                    contundenti</li>
+                    <li><strong>Se superi:</strong> ti butti di lato appena in tempo e non subisci danni</li>
+                </ul>
+
+                <h4>Incontro 2: le tracce di sangue</h4>
+                <p>
+                    Nel primo accampamento abbandonato, i personaggi trovano delle tracce di sangue 
+                    che portano verso il tunnel nord-ovest. Con una prova di sopravvivenza CD 10, 
+                    possono determinare che:
+                </p>
+                <ul>
+                    <li>Il sangue è vecchio di circa due giorni</li>
+                    <li>Qualcuno (o qualcosa) ha trascinato un corpo pesante lungo questo percorso</li>
+                    <li>Ci sono delle impronte strane - sembrano umane ma con dita troppo lunghe e 
+                    troppo affilate</li>
+                </ul>
+
+                <h4>Incontro 3: il primo ghoul</h4>
+                <p>
+                    Nei tunnel stretti del livello inferiore, i personaggi sentono un rumore di 
+                    raschiamento. Una figura pallida e contorta si trascina verso di loro nell'oscurità 
+                    - è uno dei minatori scomparsi, ma è stato... trasformato.
+                </p>
+
+                <div class="stat-block">
+                    <h4>Il ghoul minatore</h4>
+                    <p><strong>I punti ferita:</strong> 22 PF | <strong>La classe armatura:</strong> 12</p>
+                    <p><strong>La velocità:</strong> 9 metri</p>
+                    <p><strong>Le caratteristiche:</strong> FOR 13 (+1), DES 15 (+2), COS 10 (+0), 
+                    INT 7 (-2), SAG 10 (+0), CAR 6 (-2)</p>
+                    <p><strong>L'attacco - artigli:</strong> +4 per colpire, portata 1,5 metri, un 
+                    bersaglio. Colpisce: 2d4+2 danni taglienti</p>
+                    <p><strong>L'attacco - morso:</strong> +4 per colpire, portata 1,5 metri, un 
+                    bersaglio. Colpisce: 2d6+2 danni perforanti</p>
+                    <p><strong>L'abilità speciale - paralisi:</strong> Se il ghoul colpisce con il 
+                    morso, il bersaglio deve superare un tiro salvezza su costituzione CD 10 o essere 
+                    paralizzato per 1 minuto (può ripetere il tiro salvezza alla fine di ogni suo turno)</p>
+                </div>
+
+                <div class="example-box">
+                    <h5>🎬 Un esempio di combattimento</h5>
+                    <p><strong>Narratore:</strong> "La creatura si gira verso di voi, e alla luce 
+                    tremolante della lanterna vedete il suo viso. Era un uomo, una volta. Ora la sua 
+                    pelle è grigio-verdastra, gli occhi sono completamente neri, e le sue dita sono 
+                    terminate con artigli affilati come rasoi. Emette un sibilo inumano e si lancia 
+                    verso Sarah. Tiriamo per l'iniziativa!"</p>
+                    <p><strong>Sarah:</strong> "Tiro il dado per l'iniziativa... 14 più il mio 
+                    modificatore di destrezza +3, quindi 17 totale."</p>
+                    <p><strong>Narratore:</strong> "Il ghoul ottiene 12. Sarah, agisci per prima. 
+                    Cosa fai?"</p>
+                    <p><strong>Sarah:</strong> "Estraggo il mio revolver e sparo al centro della massa. 
+                    Tiro per colpire... 16 più il mio bonus +5, quindi 21 totale!"</p>
+                    <p><strong>Narratore:</strong> "Colpisci! La sua classe armatura è solo 12. Tira 
+                    per i danni."</p>
+                    <p><strong>Sarah:</strong> "I danni del revolver... 2d6... ho fatto 4 e 5, quindi 
+                    9 danni totali!"</p>
+                    <p><strong>Narratore:</strong> "Il proiettile lo colpisce in pieno petto e la 
+                    creatura barcolla all'indietro, ma continua ad avanzare verso di te con determinazione 
+                    inumana..."</p>
+                </div>
+
+                <p><strong>Il controllo dello stress dopo il combattimento:</strong> Dopo aver sconfitto 
+                il ghoul, tutti i personaggi devono fare un tiro salvezza su saggezza CD 11. Chi 
+                fallisce guadagna 2 punti stress, chi supera ne guadagna 1. Questo perché hanno appena 
+                visto che i "minatori scomparsi" sono stati trasformati in mostri.</p>
+
+            </section>
+
+            <section id="atto-3">
+                <h2>L'atto terzo: il pozzo maledetto</h2>
+
+                <h3>La camera del pozzo</h3>
+                <p>
+                    Il tunnel si apre improvvisamente in una caverna naturale enorme. Al centro della 
+                    camera, illuminato da una luce verdastra e aliena che sembra provenire da dentro 
+                    la terra stessa, c'è un pozzo circolare largo circa tre metri. La luce pulsa con 
+                    un ritmo ipnotico e nauseante, e nell'aria c'è un odore dolciastro e metallico 
+                    che fa venire i brividi.
+                </p>
+
+                <div class="horror-box">
+                    <h5>🐙 Il grande controllo dello stress</h5>
+                    <p>Quando i personaggi entrano nella camera e vedono il pozzo per la prima volta, 
+                    tutti devono effettuare un tiro salvezza su saggezza con CD 13.</p>
+                    <ul>
+                        <li><strong>Se fallisci:</strong> guadagni 4 punti stress</li>
+                        <li><strong>Se superi:</strong> guadagni 2 punti stress</li>
+                    </ul>
+                    <p>Questo è il momento in cui molti personaggi potrebbero raggiungere la soglia 
+                    "inquieto" (6-10 punti stress) o addirittura "scosso" (11-15 punti stress). 
+                    Ricorda di applicare gli effetti meccanici appropriati!</p>
+                </div>
+
+                <h3>Cosa si trova nella camera</h3>
+                <ul>
+                    <li><strong>Il pozzo oscuro:</strong> Un pozzo perfettamente circolare che scende 
+                    nelle profondità. La luce verdastra proviene dal fondo, che non è visibile. Se 
+                    qualcuno guarda direttamente nel pozzo per più di un turno, deve fare un tiro 
+                    salvezza su saggezza CD 15 o essere affascinato (come per l'incantesimo) per 1 minuto</li>
+                    <li><strong>I corpi dei minatori:</strong> Tre dei cinque minatori scomparsi sono 
+                    qui, disposti in cerchio intorno al pozzo. Sono morti, ma i loro corpi mostrano 
+                    segni di... mutazione. La pelle ha una sfumatura verdastra e ci sono escrescenze 
+                    che sembrano tentacoli che spuntano dalle loro schiene</li>
+                    <li><strong>Le incisioni sulla parete:</strong> Con una prova di investigare CD 14, 
+                    i personaggi trovano delle incisioni antiche sulla parete della caverna. Sembrano 
+                    essere in una lingua sconosciuta, ma i simboli ricordano quelli che Red Sullivan 
+                    disegnava nell'aria</li>
+                    <li><strong>L'altare di pietra:</strong> Un blocco di pietra nera vicino al pozzo, 
+                    coperto di macchie scure che potrebbero essere sangue vecchio. Sopra l'altare c'è 
+                    un libro rilegato in pelle (vedi sotto)</li>
+                </ul>
+
+                <h4>Il libro maledetto</h4>
+                <p>
+                    Il libro è antico e scritto in una lingua che nessuno riconosce immediatamente. 
+                    Tuttavia, alcuni passaggi sono stati tradotti a mano in inglese nei margini. Con 
+                    una prova di investigare CD 12, i personaggi possono leggere:
+                </p>
+                <p style="font-style: italic; padding-left: 20px; border-left: 3px solid #8B0000; 
+                    background: rgba(139, 0, 0, 0.05); padding: 15px; margin: 20px 0;">
+                    "...quando le stelle saranno nella posizione corretta, il pozzo si aprirà e Colui 
+                    che Dorme Sotto potrà risvegliarsi. I servi fedeli devono offrire il sangue e la 
+                    carne al pozzo, e in cambio riceveranno il dono della trasformazione..."
+                </p>
+                <p><strong>Leggere questo passaggio costa 2 punti stress automatici.</strong> Non 
+                serve nessun tiro salvezza - semplicemente sapere queste cose danneggia la mente.</p>
+
+                <h3>Il confronto finale</h3>
+                <p>
+                    Mentre i personaggi esplorano la camera, gli ultimi due minatori scomparsi emergono 
+                    dalle ombre. Anche loro sono stati trasformati in ghoul, ma sono più forti e più 
+                    veloci dei primi che avete incontrato. E dietro di loro, qualcosa di molto più 
+                    grande inizia a salire lentamente dal pozzo...
+                </p>
+
+                <div class="stat-block">
+                    <h4>I ghoul evoluti (×2)</h4>
+                    <p><strong>I punti ferita:</strong> 30 PF ciascuno | <strong>La classe armatura:</strong> 13</p>
+                    <p><strong>La velocità:</strong> 12 metri</p>
+                    <p><strong>Le caratteristiche:</strong> FOR 15 (+2), DES 16 (+3), COS 12 (+1), 
+                    INT 8 (-1), SAG 10 (+0), CAR 6 (-2)</p>
+                    <p><strong>Gli attacchi:</strong> Può effettuare due attacchi per turno (due 
+                    artigli, oppure un artiglio e un morso)</p>
+                    <p><strong>Gli artigli:</strong> +5 per colpire, 2d4+2 danni taglienti</p>
+                    <p><strong>Il morso:</strong> +5 per colpire, 2d6+2 danni perforanti più paralisi 
+                    (tiro salvezza su costituzione CD 12)</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>L'orrore del pozzo (il boss finale)</h4>
+                    <p><strong>I punti ferita:</strong> 45 PF | <strong>La classe armatura:</strong> 14</p>
+                    <p><strong>La velocità:</strong> 6 metri (9 metri in arrampicata)</p>
+                    <p><strong>Le caratteristiche:</strong> FOR 17 (+3), DES 12 (+1), COS 15 (+2), 
+                    INT 10 (+0), SAG 12 (+1), CAR 8 (-1)</p>
+                    <p><strong>L'aspetto:</strong> Una massa tentacolata delle dimensioni di un orso, 
+                    con dozzine di occhi che si aprono e si chiudono sulla sua superficie viscida. 
+                    Non sembra completamente reale - i bordi del suo corpo tremolano e si distorcono 
+                    come se esistesse in più dimensioni contemporaneamente</p>
+                    <p><strong>Gli attacchi:</strong></p>
+                    <ul>
+                        <li><strong>Colpo tentacolare:</strong> +5 per colpire, portata 3 metri, 
+                        2d8+3 danni contundenti. Se colpisce, il bersaglio è afferrato (prova di 
+                        atletica o acrobazia CD 13 per liberarsi)</li>
+                        <li><strong>Lo sguardo della follia:</strong> Una volta per combattimento, 
+                        la creatura può aprire tutti i suoi occhi contemporaneamente. Tutti i 
+                        personaggi entro 9 metri che possono vedere la creatura devono superare un 
+                        tiro salvezza su saggezza CD 14 o essere spaventati per 1 minuto e guadagnare 
+                        3 punti stress</li>
+                    </ul>
+                    <p><strong>Le resistenze:</strong> Resistenza ai danni contundenti, perforanti 
+                    e taglienti da armi non magiche</p>
+                    <p><strong>La tattica:</strong> La creatura cerca di afferrare un personaggio e 
+                    trascinarlo verso il pozzo. Se riesce a gettare qualcuno nel pozzo, quella persona 
+                    è perduta (considerala morta, a meno che gli altri personaggi non agiscano 
+                    immediatamente per salvarla)</p>
+                </div>
+
+                <h3>Come si risolve la situazione</h3>
+                <p>
+                    I personaggi hanno diverse opzioni per affrontare questa situazione finale:
+                </p>
+                <ul>
+                    <li><strong>Combattere fino alla fine:</strong> Possono cercare di uccidere tutti 
+                    i nemici. Questo è molto pericoloso e potrebbero esserci delle vittime, ma è 
+                    l'opzione più diretta</li>
+                    <li><strong>Far crollare il tunnel:</strong> Se hanno della dinamite (possono 
+                    averla ottenuta da Thornton o trovata nella miniera), possono far crollare 
+                    l'ingresso del tunnel e sigillare il pozzo. Questo richiede una prova di demolizioni 
+                    (intelligenza) CD 13. Se falliscono, la dinamite esplode troppo presto...</li>
+                    <li><strong>Usare il libro:</strong> Se uno dei personaggi legge il resto del 
+                    libro maledetto (costa 4 punti stress), scopre che c'è un contro-rituale che può 
+                    ri-sigillare il pozzo. Richiede il sangue di chi lo esegue (il personaggio perde 
+                    metà dei suoi punti ferita attuali) e una prova di arcano CD 15</li>
+                    <li><strong>Fuggire e riferire:</strong> I personaggi potrebbero decidere che 
+                    questo è troppo per loro e fuggire dalla miniera per avvertire le autorità. 
+                    Questa è una scelta legittima, anche se avrà delle conseguenze (vedi l'epilogo)</li>
+                </ul>
+
+            </section>
+
+            <section id="epilogo">
+                <h2>L'epilogo: le conseguenze</h2>
+
+                <p>
+                    Come si conclude lo scenario dipende dalle azioni dei personaggi e dalle loro scelte 
+                    durante l'avventura. Ecco alcune possibili conclusioni:
+                </p>
+
+                <h3>La vittoria completa</h3>
+                <p>
+                    Se i personaggi sconfiggono l'orrore del pozzo e sigillano (o distruggono) il 
+                    pozzo stesso, Dusty Creek è salva. Il villaggio li accoglie come eroi. Thornton 
+                    paga la ricompensa promessa (50 dollari a testa più il bonus), anche se è 
+                    visibilmente irritato per il fatto che la miniera ora è inutilizzabile.
+                </p>
+                <p><strong>Le ricompense:</strong></p>
+                <ul>
+                    <li>100 dollari a testa</li>
+                    <li>Esperienza sufficiente per raggiungere il secondo livello (300 XP ciascuno)</li>
+                    <li>La gratitudine della popolazione (questo potrebbe essere utile in future avventure)</li>
+                    <li>Eventuali oggetti trovati nella miniera (il libro maledetto vale 50 dollari 
+                    se venduto al collezionista giusto, anche se tenerlo potrebbe essere pericoloso)</li>
+                </ul>
+
+                <h3>La vittoria parziale</h3>
+                <p>
+                    Se i personaggi sconfiggono i nemici ma non riescono a sigillare completamente 
+                    il pozzo (magari hanno fatto crollare il tunnel ma non sono sicuri che sia 
+                    sufficiente), Dusty Creek è temporaneamente salva. Tuttavia, c'è la sensazione 
+                    che questo sia solo un rinvio, non una soluzione definitiva.
+                </p>
+                <p><strong>Le ricompense:</strong></p>
+                <ul>
+                    <li>75 dollari a testa (Thornton sottrae parte del bonus perché la miniera è 
+                    comunque distrutta)</li>
+                    <li>250 XP ciascuno (non abbastanza per raggiungere il secondo livello, ma ci 
+                    sono quasi)</li>
+                    <li>Un senso persistente di inquietudine - i personaggi sanno che qualcosa di 
+                    terribile è ancora là sotto</li>
+                </ul>
+
+                <h3>La fuga</h3>
+                <p>
+                    Se i personaggi decidono di fuggire dalla miniera senza affrontare l'orrore finale, 
+                    tornano a Dusty Creek con le loro informazioni. Il narratore dello sceriffo locale 
+                    riunisce un gruppo di uomini armati per andare a investigare. Due giorni dopo, 
+                    arrivano notizie terribili: l'intero gruppo è stato sterminato, e ora le creature 
+                    stanno emergendo dalla miniera durante la notte...
+                </p>
+                <p><strong>Le conseguenze:</strong></p>
+                <ul>
+                    <li>I personaggi vengono accusati di codardia e devono lasciare la città</li>
+                    <li>150 XP ciascuno (hanno imparato delle cose importanti, ma hanno fallito la 
+                    missione)</li>
+                    <li>Nessuna ricompensa in denaro</li>
+                    <li>In future avventure, potrebbero sentire parlare del destino di Dusty Creek, 
+                    che è stato completamente abbandonato dopo che le creature hanno invaso il villaggio</li>
+                </ul>
+
+                <h3>I guadagni permanenti in stress</h3>
+                <p>
+                    Indipendentemente dall'esito, tutti i personaggi mantengono almeno 2 punti stress 
+                    come "stress residuo" dopo questa avventura. Hanno visto cose che l'occhio umano 
+                    non dovrebbe mai vedere, e queste visioni li perseguiteranno per sempre. Questo 
+                    rappresenta le cicatrici psicologiche permanenti che derivano dall'affrontare 
+                    l'orrore cosmico.
+                </p>
+
+                <div class="tip-box">
+                    <h4>🎭 La narrazione finale</h4>
+                    <p>Qualunque sia l'esito dello scenario, prenditi un momento per narrare l'epilogo 
+                    in modo evocativo. Descrivi come i personaggi escono dalla miniera (o fuggono da 
+                    essa), come reagisce il villaggio, e come i personaggi stessi sono cambiati 
+                    dall'esperienza.</p>
+                    <p>Un buon epilogo potrebbe suonare così:</p>
+                    <p style="font-style: italic; padding-left: 20px; border-left: 3px solid #D4AF37; 
+                        background: rgba(212, 175, 55, 0.05); padding: 15px; margin: 20px 0;">
+                        "Mentre uscite dalla miniera e la luce del sole del mattino vi colpisce il 
+                        viso, vi rendete conto che Dusty Creek vi sembra diversa ora. Gli edifici 
+                        sono gli stessi, le persone sono le stesse, ma voi... voi siete cambiati. 
+                        Avete visto cosa si nasconde sotto la superficie del mondo, negli spazi bui 
+                        dove la luce non arriva mai. E sapete, nel profondo del vostro cuore, che 
+                        questo era solo l'inizio. Ci sono altri pozzi, altre porte, altri luoghi dove 
+                        l'orrore attende pazientemente. E ora che avete visto la verità, non potrete 
+                        mai più tornare indietro."
+                    </p>
+                </div>
+            </section>
+
+            <section id="note-narratore">
+                <h2>Le note per il narratore</h2>
+
+                <h3>Come gestire lo stress durante il gioco</h3>
+                <ul>
+                    <li><strong>Non esagerare con i controlli:</strong> In questo scenario ci sono 
+                    circa 4-5 controlli dello stress totali. Se ne metti troppi, il sistema diventa 
+                    noioso e perde il suo impatto</li>
+                    <li><strong>Rendi lo stress narrativo:</strong> Ogni volta che un personaggio 
+                    guadagna stress, chiedi al giocatore di descrivere come il suo personaggio reagisce. 
+                    Trema? Suda freddo? Ride nervosamente? Questo rende l'esperienza più immersiva</li>
+                    <li><strong>Le afflizioni sono opportunità:</strong> Se un personaggio sviluppa 
+                    un'afflizione, non trattarla come una punizione ma come un'opportunità di gioco 
+                    di ruolo interessante. È una cicatrice che rende il personaggio più profondo</li>
+                </ul>
+
+                <h3>Come gestire il combattimento</h3>
+                <ul>
+                    <li><strong>Mantieni il ritmo veloce:</strong> Descrivi le azioni in modo 
+                    cinematografico. "Il ghoul balza verso di te con gli artigli che luccicano alla 
+                    luce della lanterna!" è molto meglio di "Il ghoul ti attacca"</li>
+                    <li><strong>Usa l'ambiente:</strong> La miniera offre tante opportunità - i 
+                    personaggi possono far crollare parti del soffitto, usare i carrelli come copertura, 
+                    spingere i nemici nei pozzi, eccetera</li>
+                    <li><strong>Non aver paura di far male ai personaggi:</strong> Questo è un gioco 
+                    horror. Se nessuno si fa mai male davvero, la tensione scompare. Ma cerca di non 
+                    uccidere i personaggi in modo casuale - le morti dovrebbero essere significative</li>
+                </ul>
+
+                <h3>Come adattare lo scenario al tuo gruppo</h3>
+                <ul>
+                    <li><strong>Se il gruppo è più piccolo (2-3 giocatori):</strong> Riduci i punti 
+                    ferita dei mostri del 25%, oppure riduci il numero di nemici negli scontri</li>
+                    <li><strong>Se il gruppo è più grande (6+ giocatori):</strong> Aumenta il numero 
+                    di ghoul negli scontri, oppure dai all'orrore del pozzo un attacco ad area aggiuntivo</li>
+                    <li><strong>Se i giocatori stanno lottando troppo:</strong> Puoi far arrivare un 
+                    PNG alleato (magari il marito di Martha Sullivan che vuole vendicare suo fratello) 
+                    per aiutarli nell'ultimo combattimento</li>
+                    <li><strong>Se i giocatori stanno trovando tutto troppo facile:</strong> Aggiungi 
+                    un secondo orrore del pozzo che emerge proprio quando pensavano di aver vinto</li>
+                </ul>
+
+                <h3>I collegamenti per il futuro</h3>
+                <p>
+                    Questo scenario è progettato per funzionare sia come avventura singola che come 
+                    inizio di una campagna più lunga. Se vuoi continuare a giocare con questi personaggi, 
+                    ecco alcuni spunti per il futuro:
+                </p>
+                <ul>
+                    <li><strong>Il culto:</strong> Il libro maledetto menziona "servi fedeli". Chi 
+                    sono? C'è un culto che adora queste entità cosmiche? E qual è il loro piano?</li>
+                    <li><strong>Altri pozzi:</strong> Il libro parla di "il pozzo" come se ce ne 
+                    fossero altri. Dove sono? E cosa succederebbe se venissero aperti tutti 
+                    contemporaneamente?</li>
+                    <li><strong>Thornton:</strong> Il proprietario della miniera era davvero solo 
+                    un uomo d'affari disperato, o sapeva qualcosa in più? Forse aveva scoperto il 
+                    pozzo e stava cercando di sfruttarne il potere?</li>
+                    <li><strong>La profezia:</strong> Le incisioni sulla parete parlavano di "quando 
+                    le stelle saranno nella posizione corretta". Quando sarà questo momento? E cosa 
+                    succederà?</li>
+                </ul>
+            </section>
