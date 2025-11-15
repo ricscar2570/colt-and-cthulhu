@@ -12,6 +12,18 @@
             margin: 20px 0;
             background: #F5E6D3;
             page-break-inside: avoid;
+            font-size: 12px;
+        }
+        .character-sheet table {
+            font-size: 11px;
+        }
+        .character-sheet table td {
+            padding: 3px 5px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .character-sheet strong {
+            font-size: 10px;
         }
         .sheet-section {
             margin: 15px 0;
@@ -19,28 +31,37 @@
             border: 1px solid #8B4513;
             background: #FFF8DC;
         }
+        .sheet-section h3 {
+            font-size: 14px;
+            margin: 5px 0;
+        }
         .stat-block {
             display: inline-block;
-            width: 80px;
+            width: 70px;
             text-align: center;
-            margin: 5px;
-            padding: 10px;
+            margin: 3px;
+            padding: 8px;
             border: 2px solid #654321;
             background: white;
+            font-size: 9px;
+        }
+        .stat-block strong {
+            font-size: 9px;
         }
         .stat-value {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
             color: #8B0000;
         }
         .stat-modifier {
-            font-size: 18px;
+            font-size: 14px;
             color: #2C1810;
         }
         .checkbox-line {
-            margin: 5px 0;
-            padding: 5px;
+            margin: 3px 0;
+            padding: 3px;
             border-bottom: 1px dotted #999;
+            font-size: 10px;
         }
         .stress-tracker {
             display: flex;
@@ -53,6 +74,11 @@
             height: 15px;
             border: 1px solid #000;
             display: inline-block;
+        }
+        .compact-table td {
+            font-size: 9px !important;
+            padding: 2px 3px !important;
+            line-height: 1.2;
         }
         @media print {
             .no-print { display: none; }
@@ -117,16 +143,16 @@
 
                 <!-- Informazioni Base -->
                 <div class="sheet-section">
-                    <table style="width: 100%; border-collapse: collapse;">
+                    <table class="compact-table" style="width: 100%; border-collapse: collapse;">
                         <tr>
-                            <td style="width: 40%;"><strong>NOME PERSONAGGIO:</strong> _______________________________</td>
-                            <td style="width: 20%;"><strong>LIVELLO:</strong> _______</td>
-                            <td style="width: 40%;"><strong>CLASSE:</strong> _______________________________</td>
+                            <td style="width: 40%;"><strong>NOME:</strong> ____________________</td>
+                            <td style="width: 15%;"><strong>LIV:</strong> ____</td>
+                            <td style="width: 45%;"><strong>CLASSE:</strong> ____________________</td>
                         </tr>
                         <tr>
-                            <td><strong>RAZZA:</strong> _______________________________</td>
-                            <td><strong>ALLINEAMENTO:</strong> _______</td>
-                            <td><strong>BACKGROUND:</strong> _______________________________</td>
+                            <td><strong>RAZZA:</strong> ____________________</td>
+                            <td><strong>ALIGN:</strong> ____</td>
+                            <td><strong>BACKGROUND:</strong> ____________________</td>
                         </tr>
                     </table>
                 </div>
@@ -170,33 +196,33 @@
 
                 <!-- Combat Stats -->
                 <div class="sheet-section">
-                    <table style="width: 100%;">
+                    <table class="compact-table" style="width: 100%;">
                         <tr>
-                            <td style="width: 25%;"><strong>BONUS COMPETENZA:</strong> +___</td>
-                            <td style="width: 25%;"><strong>INIZIATIVA:</strong> +___</td>
-                            <td style="width: 25%;"><strong>VELOCITÀ:</strong> ___ m</td>
-                            <td style="width: 25%;"><strong>PERCEZIONE PASSIVA:</strong> ___</td>
+                            <td style="width: 25%;"><strong>COMP:</strong> +___</td>
+                            <td style="width: 25%;"><strong>INIZ:</strong> +___</td>
+                            <td style="width: 25%;"><strong>VEL:</strong> ___ m</td>
+                            <td style="width: 25%;"><strong>PERC. PASS:</strong> ___</td>
                         </tr>
                     </table>
                 </div>
 
                 <!-- HP & AC -->
                 <div class="sheet-section" style="background: #FFE4B5;">
-                    <table style="width: 100%;">
+                    <table class="compact-table" style="width: 100%;">
                         <tr>
                             <td style="width: 33%; text-align: center;">
-                                <div><strong>CLASSE ARMATURA (CA)</strong></div>
-                                <div style="font-size: 32px; font-weight: bold; color: #8B0000;">___</div>
+                                <div style="font-size: 10px;"><strong>CA</strong></div>
+                                <div style="font-size: 28px; font-weight: bold; color: #8B0000;">___</div>
                             </td>
                             <td style="width: 34%; text-align: center;">
-                                <div><strong>PUNTI FERITA (PF)</strong></div>
-                                <div><strong>ATTUALI:</strong> ___ / <strong>MAX:</strong> ___</div>
-                                <div><strong>TEMPORANEI:</strong> ___</div>
+                                <div style="font-size: 10px;"><strong>PUNTI FERITA</strong></div>
+                                <div style="font-size: 10px;"><strong>ATT:</strong> ___ / <strong>MAX:</strong> ___</div>
+                                <div style="font-size: 9px;"><strong>TEMP:</strong> ___</div>
                             </td>
                             <td style="width: 33%; text-align: center;">
-                                <div><strong>DADI VITA</strong></div>
-                                <div><strong>TOTALE:</strong> ___d___</div>
-                                <div><strong>USATI:</strong> ☐☐☐☐☐☐☐☐☐☐</div>
+                                <div style="font-size: 10px;"><strong>DADI VITA</strong></div>
+                                <div style="font-size: 10px;"><strong>TOT:</strong> ___d___</div>
+                                <div style="font-size: 9px;"><strong>USATI:</strong> ☐☐☐☐☐☐☐☐☐☐</div>
                             </td>
                         </tr>
                     </table>
@@ -224,29 +250,29 @@
                 <!-- Skills -->
                 <div class="sheet-section">
                     <h3 style="margin-top: 0;">ABILITÀ</h3>
-                    <table style="width: 100%;">
+                    <table class="compact-table" style="width: 100%;">
                         <tr>
                             <td style="width: 50%; vertical-align: top;">
-                                <div class="checkbox-line">☐ <strong>Acrobatics</strong> (DES): +___</div>
-                                <div class="checkbox-line">☐ <strong>Animal Handling</strong> (SAG): +___</div>
-                                <div class="checkbox-line">☐ <strong>Arcana</strong> (INT): +___</div>
-                                <div class="checkbox-line">☐ <strong>Athletics</strong> (FOR): +___</div>
-                                <div class="checkbox-line">☐ <strong>Deception</strong> (CAR): +___</div>
-                                <div class="checkbox-line">☐ <strong>History</strong> (INT): +___</div>
-                                <div class="checkbox-line">☐ <strong>Insight</strong> (SAG): +___</div>
-                                <div class="checkbox-line">☐ <strong>Intimidation</strong> (CAR): +___</div>
-                                <div class="checkbox-line">☐ <strong>Investigation</strong> (INT): +___</div>
+                                <div class="checkbox-line">☐ <strong>Acrobazia</strong> (DES): +___</div>
+                                <div class="checkbox-line">☐ <strong>Addestr. Animali</strong> (SAG): +___</div>
+                                <div class="checkbox-line">☐ <strong>Arcano</strong> (INT): +___</div>
+                                <div class="checkbox-line">☐ <strong>Atletica</strong> (FOR): +___</div>
+                                <div class="checkbox-line">☐ <strong>Inganno</strong> (CAR): +___</div>
+                                <div class="checkbox-line">☐ <strong>Storia</strong> (INT): +___</div>
+                                <div class="checkbox-line">☐ <strong>Intuizione</strong> (SAG): +___</div>
+                                <div class="checkbox-line">☐ <strong>Intimidazione</strong> (CAR): +___</div>
+                                <div class="checkbox-line">☐ <strong>Investigazione</strong> (INT): +___</div>
                             </td>
                             <td style="width: 50%; vertical-align: top;">
-                                <div class="checkbox-line">☐ <strong>Medicine</strong> (SAG): +___</div>
-                                <div class="checkbox-line">☐ <strong>Nature</strong> (INT): +___</div>
-                                <div class="checkbox-line">☐ <strong>Perception</strong> (SAG): +___</div>
-                                <div class="checkbox-line">☐ <strong>Performance</strong> (CAR): +___</div>
-                                <div class="checkbox-line">☐ <strong>Persuasion</strong> (CAR): +___</div>
-                                <div class="checkbox-line">☐ <strong>Religion</strong> (INT): +___</div>
-                                <div class="checkbox-line">☐ <strong>Sleight of Hand</strong> (DES): +___</div>
-                                <div class="checkbox-line">☐ <strong>Stealth</strong> (DES): +___</div>
-                                <div class="checkbox-line">☐ <strong>Survival</strong> (SAG): +___</div>
+                                <div class="checkbox-line">☐ <strong>Medicina</strong> (SAG): +___</div>
+                                <div class="checkbox-line">☐ <strong>Natura</strong> (INT): +___</div>
+                                <div class="checkbox-line">☐ <strong>Percezione</strong> (SAG): +___</div>
+                                <div class="checkbox-line">☐ <strong>Spettacolo</strong> (CAR): +___</div>
+                                <div class="checkbox-line">☐ <strong>Persuasione</strong> (CAR): +___</div>
+                                <div class="checkbox-line">☐ <strong>Religione</strong> (INT): +___</div>
+                                <div class="checkbox-line">☐ <strong>Rapidità di Mano</strong> (DES): +___</div>
+                                <div class="checkbox-line">☐ <strong>Furtività</strong> (DES): +___</div>
+                                <div class="checkbox-line">☐ <strong>Sopravvivenza</strong> (SAG): +___</div>
                             </td>
                         </tr>
                     </table>
@@ -255,10 +281,10 @@
                 <!-- Proficiencies -->
                 <div class="sheet-section">
                     <h3 style="margin-top: 0;">COMPETENZE</h3>
-                    <div><strong>ARMATURE:</strong> ________________________________________________________________</div>
-                    <div><strong>ARMI:</strong> ________________________________________________________________</div>
-                    <div><strong>STRUMENTI:</strong> ________________________________________________________________</div>
-                    <div><strong>LINGUAGGI:</strong> ________________________________________________________________</div>
+                    <div style="font-size: 9px;"><strong>ARMATURE:</strong> ____________________________</div>
+                    <div style="font-size: 9px;"><strong>ARMI:</strong> ____________________________</div>
+                    <div style="font-size: 9px;"><strong>STRUMENTI:</strong> ____________________________</div>
+                    <div style="font-size: 9px;"><strong>LINGUAGGI:</strong> ____________________________</div>
                 </div>
             </div>
 
@@ -271,37 +297,53 @@
                 <!-- Attacks -->
                 <div class="sheet-section">
                     <h3 style="margin-top: 0;">ATTACCHI</h3>
-                    <table style="width: 100%; border-collapse: collapse; border: 1px solid #000;">
+                    <table class="compact-table" style="width: 100%; border-collapse: collapse; border: 1px solid #000;">
                         <thead>
                             <tr style="background: #DEB887;">
-                                <th style="border: 1px solid #000; padding: 5px;">ARMA</th>
-                                <th style="border: 1px solid #000; padding: 5px;">BONUS ATTACCO</th>
-                                <th style="border: 1px solid #000; padding: 5px;">DANNO</th>
-                                <th style="border: 1px solid #000; padding: 5px;">TIPO</th>
-                                <th style="border: 1px solid #000; padding: 5px;">GITTATA</th>
-                                <th style="border: 1px solid #000; padding: 5px;">MUNIZIONI</th>
+                                <th style="border: 1px solid #000; padding: 2px; font-size: 8px;">ARMA</th>
+                                <th style="border: 1px solid #000; padding: 2px; font-size: 8px;">BONUS</th>
+                                <th style="border: 1px solid #000; padding: 2px; font-size: 8px;">DANNO</th>
+                                <th style="border: 1px solid #000; padding: 2px; font-size: 8px;">TIPO</th>
+                                <th style="border: 1px solid #000; padding: 2px; font-size: 8px;">GITTATA</th>
+                                <th style="border: 1px solid #000; padding: 2px; font-size: 8px;">MUNIZ.</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="border: 1px solid #000; padding: 5px;">_____________</td>
-                                <td style="border: 1px solid #000; padding: 5px;">+___</td>
-                                <td style="border: 1px solid #000; padding: 5px;">_______</td>
-                                <td style="border: 1px solid #000; padding: 5px;">_______</td>
-                                <td style="border: 1px solid #000; padding: 5px;">___/___ m</td>
-                                <td style="border: 1px solid #000; padding: 5px;">___ / ___</td>
+                                <td style="border: 1px solid #000; padding: 2px;">________</td>
+                                <td style="border: 1px solid #000; padding: 2px;">+__</td>
+                                <td style="border: 1px solid #000; padding: 2px;">____</td>
+                                <td style="border: 1px solid #000; padding: 2px;">____</td>
+                                <td style="border: 1px solid #000; padding: 2px;">__/__</td>
+                                <td style="border: 1px solid #000; padding: 2px;">__/__</td>
                             </tr>
                             <tr>
-                                <td style="border: 1px solid #000; padding: 5px;">_____________</td>
-                                <td style="border: 1px solid #000; padding: 5px;">+___</td>
-                                <td style="border: 1px solid #000; padding: 5px;">_______</td>
-                                <td style="border: 1px solid #000; padding: 5px;">_______</td>
-                                <td style="border: 1px solid #000; padding: 5px;">___/___ m</td>
-                                <td style="border: 1px solid #000; padding: 5px;">___ / ___</td>
+                                <td style="border: 1px solid #000; padding: 2px;">________</td>
+                                <td style="border: 1px solid #000; padding: 2px;">+__</td>
+                                <td style="border: 1px solid #000; padding: 2px;">____</td>
+                                <td style="border: 1px solid #000; padding: 2px;">____</td>
+                                <td style="border: 1px solid #000; padding: 2px;">__/__</td>
+                                <td style="border: 1px solid #000; padding: 2px;">__/__</td>
                             </tr>
                             <tr>
-                                <td style="border: 1px solid #000; padding: 5px;">_____________</td>
-                                <td style="border: 1px solid #000; padding: 5px;">+___</td>
+                                <td style="border: 1px solid #000; padding: 2px;">________</td>
+                                <td style="border: 1px solid #000; padding: 2px;">+__</td>
+                                <td style="border: 1px solid #000; padding: 2px;">____</td>
+                                <td style="border: 1px solid #000; padding: 2px;">____</td>
+                                <td style="border: 1px solid #000; padding: 2px;">__/__</td>
+                                <td style="border: 1px solid #000; padding: 2px;">__/__</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid #000; padding: 2px;">________</td>
+                                <td style="border: 1px solid #000; padding: 2px;">+__</td>
+                                <td style="border: 1px solid #000; padding: 2px;">____</td>
+                                <td style="border: 1px solid #000; padding: 2px;">____</td>
+                                <td style="border: 1px solid #000; padding: 2px;">__/__</td>
+                                <td style="border: 1px solid #000; padding: 2px;">__/__</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                                 <td style="border: 1px solid #000; padding: 5px;">_______</td>
                                 <td style="border: 1px solid #000; padding: 5px;">_______</td>
                                 <td style="border: 1px solid #000; padding: 5px;">___/___ m</td>
