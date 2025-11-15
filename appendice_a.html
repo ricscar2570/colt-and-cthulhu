@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appendice A: Quick Reference - Colt & Cthulhu</title>
+    <title>Appendice A: Riferimento Rapido - Colt & Cthulhu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="main-header">
         <h1>COLT & CTHULHU</h1>
-        <p class="subtitle">Appendice A: Quick Reference - Tabelle Rapide</p>
+        <p class="subtitle">Appendice A: Riferimento Rapido - Le Tabelle di Consultazione Rapida</p>
     </header>
 
     <nav class="nav-main">
         <ul>
             <li><a href="index.html">🏠 Home</a></li>
-            <li><a href="capitolo_01.html" >Cap 1</a></li>
+            <li><a href="capitolo_01.html">Cap 1</a></li>
             <li><a href="capitolo_02.html">Cap 2</a></li>
             <li><a href="capitolo_03.html">Cap 3</a></li>
             <li><a href="capitolo_04.html">Cap 4</a></li>
@@ -29,12 +29,9 @@
             <li><a href="capitolo_12.html">Cap 12</a></li>
             <li><a href="capitolo_13.html">Cap 13</a></li>
             <li><a href="capitolo_14.html">Cap 14</a></li>
-            <li><a href="capitolo_15.html">Cap 15</a></li>
-            <li><a href="capitolo_16.html">Cap 16</a></li>
-            <li><a href="appendice_a.html" class="active" >App. A</a></li>
-			<li><a href="appendice_b.html">App. B</a></li>
-			<li><a href="appendice_c.html">App. C</a></li>
-        
+            <li><a href="appendice_a.html" class="active">App. A</a></li>
+            <li><a href="appendice_b.html">App. B</a></li>
+            <li><a href="appendice_c.html">App. C</a></li>
         </ul>
     </nav>
 
@@ -44,594 +41,809 @@
         </div>
 
         <article class="chapter">
-            <h2>Appendice A: Quick Reference</h2>
+            <h2>Appendice A: Riferimento Rapido</h2>
             
-            <p style="font-size: 1.1em; margin-bottom: 30px;">
-                Questa appendice contiene <strong>tabelle di consultazione rapida</strong> per accelerare il gioco. Master e giocatori 
-                possono stampare queste pagine per reference immediato durante sessione.
+            <p class="intro-text">
+                Questa appendice contiene una raccolta completa di tabelle di consultazione rapida 
+                progettate per accelerare il gioco e ridurre al minimo le interruzioni durante le sessioni. 
+                Il Maestro del Gioco e i giocatori possono stampare queste pagine e tenerle a portata di mano 
+                per un riferimento immediato durante le partite.
             </p>
 
+            <div class="tip-box" style="margin-bottom: 30px;">
+                <p><strong>Come Utilizzare Questa Appendice:</strong></p>
+                <p>
+                    Ogni tabella è stata progettata per essere autosufficiente e facilmente consultabile. 
+                    Puoi stampare l'intera appendice o solo le sezioni che utilizzi più frequentemente. 
+                    Molti Maestri del Gioco trovano utile tenere una copia stampata di queste tabelle dietro 
+                    il loro schermo per riferimenti rapidi durante le sessioni.
+                </p>
+            </div>
+
             <section id="combat-actions">
-                <h3>A.1 Azioni in Combattimento</h3>
+                <h3>A.1 Le Azioni in Combattimento</h3>
+                
+                <p style="margin-bottom: 20px;">
+                    Questa tabella riassume tutte le azioni che i personaggi possono compiere durante 
+                    il proprio turno di combattimento. Ricorda che ogni personaggio ha diritto a un'azione, 
+                    a un movimento e potenzialmente a un'azione bonus (se possiede abilità che lo permettono) 
+                    per ogni turno, oltre a una reazione per round di combattimento.
+                </p>
                 
                 <table class="equipment-table">
                     <thead>
                         <tr>
-                            <th style="width: 20%;">Tipo Azione</th>
-                            <th style="width: 30%;">Azione</th>
-                            <th style="width: 50%;">Descrizione</th>
+                            <th style="width: 20%;">Tipo di Azione</th>
+                            <th style="width: 30%;">Nome dell'Azione</th>
+                            <th style="width: 50%;">Descrizione ed Effetto</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td rowspan="8"><strong>AZIONE</strong><br>(1 per turno)</td>
-                            <td>Attack</td>
-                            <td>1 attacco arma (+ Extra Attack se hai feature). Ranged O melee.</td>
+                            <td rowspan="8"><strong>AZIONE</strong><br><em>(una per turno)</em></td>
+                            <td><strong>Attaccare</strong></td>
+                            <td>Effettui un attacco con l'arma (più attacchi aggiuntivi se possiedi la capacità Attacco Extra). Può essere un attacco a distanza o in mischia.</td>
                         </tr>
                         <tr>
-                            <td>Cast Spell</td>
-                            <td>Lancia spell con casting time 1 azione.</td>
+                            <td><strong>Lanciare Incantesimo</strong></td>
+                            <td>Lanci un incantesimo che richiede un'azione come tempo di lancio.</td>
                         </tr>
                         <tr>
-                            <td>Dash</td>
-                            <td>Movimento extra = tua velocità completa.</td>
+                            <td><strong>Scatto</strong></td>
+                            <td>Ottieni movimento extra pari alla tua velocità completa per questo turno.</td>
                         </tr>
                         <tr>
-                            <td>Disengage</td>
-                            <td>Movimento non provoca opportunity attacks questo turno.</td>
+                            <td><strong>Disimpegno</strong></td>
+                            <td>Il tuo movimento non provoca attacchi di opportunità per il resto di questo turno.</td>
                         </tr>
                         <tr>
-                            <td>Dodge</td>
-                            <td>Attacchi vs te hanno svantaggio. Tu hai vantaggio TS DES. Fino prossimo turno.</td>
+                            <td><strong>Schivata</strong></td>
+                            <td>Gli attacchi contro di te hanno svantaggio fino all'inizio del tuo prossimo turno. Ottieni vantaggio ai tiri salvezza su Destrezza.</td>
                         </tr>
                         <tr>
-                            <td>Help</td>
-                            <td>Assisti alleato: vantaggio prossimo check O attack roll vs target entro 1.5m.</td>
+                            <td><strong>Aiutare</strong></td>
+                            <td>Assisti un alleato, garantendogli vantaggio alla sua prossima prova di abilità o al prossimo tiro per colpire contro un bersaglio entro 1,5 metri da te.</td>
                         </tr>
                         <tr>
-                            <td>Hide</td>
-                            <td>Furtività check tentare nascondersi.</td>
+                            <td><strong>Nascondersi</strong></td>
+                            <td>Effettui una prova di Furtività per tentare di nasconderti.</td>
                         </tr>
                         <tr>
-                            <td>Ready</td>
-                            <td>Prepara azione trigger quando condizione specificata occurs.</td>
+                            <td><strong>Preparare</strong></td>
+                            <td>Prepari un'azione che verrà eseguita automaticamente quando si verifica una condizione da te specificata.</td>
                         </tr>
                         <tr>
-                            <td rowspan="5"><strong>AZIONE BONUS</strong><br>(1 per turno)</td>
-                            <td>Two-Weapon Fighting</td>
-                            <td>Se attaccato con Light weapon mano principale, attack con Light weapon off-hand (no bonus danno).</td>
+                            <td rowspan="5"><strong>AZIONE BONUS</strong><br><em>(una per turno, se disponibile)</em></td>
+                            <td><strong>Combattere con Due Armi</strong></td>
+                            <td>Se hai attaccato con un'arma leggera nella mano principale, puoi effettuare un attacco con un'arma leggera nell'altra mano (senza aggiungere il modificatore di caratteristica al danno).</td>
                         </tr>
                         <tr>
-                            <td>Quick Draw (Pistolero)</td>
-                            <td>Draw + fire pistola stesso turno (liv 2+ Pistolero).</td>
+                            <td><strong>Estrazione Rapida</strong></td>
+                            <td>Estrarre e sparare con una pistola nello stesso turno (capacità del Pistolero di livello 2 o superiore).</td>
                         </tr>
                         <tr>
-                            <td>Reload (Lever-Action)</td>
-                            <td>Reload Winchester/lever-action rifle (standard = azione).</td>
+                            <td><strong>Ricarica Rapida</strong></td>
+                            <td>Ricaricare un fucile a leva (Winchester o simili) come azione bonus invece dell'azione standard.</td>
                         </tr>
                         <tr>
-                            <td>Cunning Action</td>
-                            <td>Rogue: Dash, Disengage, O Hide come azione bonus.</td>
+                            <td><strong>Azione Astuta</strong></td>
+                            <td>Alcune classi possono utilizzare Scatto, Disimpegno o Nascondersi come azione bonus.</td>
                         </tr>
                         <tr>
-                            <td>Class Feature Specific</td>
-                            <td>Varie class features richiedono azione bonus (check class).</td>
+                            <td><strong>Capacità di Classe</strong></td>
+                            <td>Numerose capacità di classe specifiche richiedono un'azione bonus. Consulta la descrizione della tua classe per i dettagli.</td>
                         </tr>
                         <tr>
-                            <td rowspan="4"><strong>REAZIONE</strong><br>(1 per round)</td>
-                            <td>Opportunity Attack</td>
-                            <td>Quando enemy esce reach senza Disengage, 1 melee attack.</td>
+                            <td rowspan="4"><strong>REAZIONE</strong><br><em>(una per round)</em></td>
+                            <td><strong>Attacco di Opportunità</strong></td>
+                            <td>Quando un nemico esce dalla tua portata senza effettuare l'azione Disimpegno, puoi effettuare un attacco in mischia contro di lui.</td>
                         </tr>
                         <tr>
-                            <td>Readied Action</td>
-                            <td>Usa azione preparata quando trigger occurs.</td>
+                            <td><strong>Azione Preparata</strong></td>
+                            <td>Esegui l'azione che avevi preparato quando si verifica la condizione scatenante.</td>
                         </tr>
                         <tr>
-                            <td>Quick Shot (Pistolero liv 6+)</td>
-                            <td>Reaction: interrupt enemy azione con 1 pistol shot (1/short rest).</td>
+                            <td><strong>Colpo Rapido</strong></td>
+                            <td>Il Pistolero di livello 6 o superiore può interrompere l'azione di un nemico con un colpo di pistola come reazione (una volta per riposo breve).</td>
                         </tr>
                         <tr>
-                            <td>Spell (es: Shield, Counterspell)</td>
-                            <td>Alcuni spell casting time = reazione.</td>
+                            <td><strong>Incantesimi Reattivi</strong></td>
+                            <td>Alcuni incantesimi (come Scudo o Controincantesimo) hanno come tempo di lancio una reazione.</td>
                         </tr>
                         <tr>
-                            <td rowspan="3"><strong>MOVIMENTO</strong><br>(velocità totale)</td>
-                            <td>Movimento Standard</td>
-                            <td>Muovi fino velocità (9m umano standard). Può split prima/dopo azione.</td>
+                            <td rowspan="3"><strong>MOVIMENTO</strong><br><em>(fino alla velocità totale)</em></td>
+                            <td><strong>Movimento Standard</strong></td>
+                            <td>Muoviti fino alla tua velocità (9 metri per un umano standard). Puoi dividere il movimento prima e dopo la tua azione.</td>
                         </tr>
                         <tr>
-                            <td>Difficult Terrain</td>
-                            <td>Movimento costa doppio (ogni 1.5m = 3m movimento).</td>
+                            <td><strong>Terreno Difficile</strong></td>
+                            <td>Il movimento in terreno difficile costa il doppio (ogni 1,5 metri di terreno difficile consuma 3 metri di movimento).</td>
                         </tr>
                         <tr>
-                            <td>Stand from Prone</td>
-                            <td>Costa metà velocità movimento alzarsi da prone.</td>
+                            <td><strong>Alzarsi da Terra</strong></td>
+                            <td>Alzarsi dalla condizione Prono costa metà della tua velocità di movimento.</td>
                         </tr>
                         <tr>
-                            <td rowspan="4"><strong>FREE</strong><br>(Illimitato*)</td>
-                            <td>Drop Item</td>
-                            <td>Lascia cadere oggetto held (gratis).</td>
+                            <td rowspan="4"><strong>AZIONI GRATUITE</strong><br><em>(entro limiti ragionevoli)</em></td>
+                            <td><strong>Lasciare Cadere Oggetto</strong></td>
+                            <td>Puoi lasciare cadere un oggetto che stai impugnando senza spendere azioni.</td>
                         </tr>
                         <tr>
-                            <td>Speak/Shout</td>
-                            <td>Parla breve frase (6 secondi worth). No lunghi monologhi!</td>
+                            <td><strong>Comunicare</strong></td>
+                            <td>Puoi comunicare brevemente (poche parole o una frase corta) durante il tuo turno.</td>
                         </tr>
                         <tr>
-                            <td>Environmental Interaction</td>
-                            <td>1 gratis/turno: open door, pick up item, pull lever. Extra = azione.</td>
+                            <td><strong>Interagire con Oggetto</strong></td>
+                            <td>Una semplice interazione con un oggetto (aprire una porta, estrarre un'arma) è gratuita. Interazioni multiple richiedono azioni.</td>
                         </tr>
                         <tr>
-                            <td>Draw/Stow Weapon</td>
-                            <td>1 gratis/turno. Draw + stow same turno = azione. (Salvo Quick Draw feature)</td>
+                            <td><strong>Altre Attività Minori</strong></td>
+                            <td>Il Maestro del Gioco determina se altre attività minori possono essere compiute gratuitamente.</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
-            <section id="conditions">
-                <h3>A.2 Condizioni (Conditions)</h3>
+            <section id="conditions" style="margin-top: 50px;">
+                <h3>A.2 Le Condizioni e gli Stati Alterati</h3>
+                
+                <p style="margin-bottom: 20px;">
+                    Le condizioni sono stati alterati che influenzano le capacità di un personaggio o di una creatura. 
+                    Molti incantesimi, abilità di classe e attacchi speciali possono infliggere condizioni. 
+                    Questa tabella riassume gli effetti di ciascuna condizione.
+                </p>
                 
                 <table class="equipment-table">
                     <thead>
                         <tr>
-                            <th style="width: 20%;">Condizione</th>
-                            <th style="width: 80%;">Effetti</th>
+                            <th style="width: 25%;">Condizione</th>
+                            <th style="width: 75%;">Effetti</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Blinded</strong></td>
-                            <td>• Non può vedere, auto-fail check richiedono vista<br>
-                            • Attacchi vs te: vantaggio<br>
-                            • Tuoi attacchi: svantaggio</td>
+                            <td><strong>Accecato</strong></td>
+                            <td>Non puoi vedere e fallisci automaticamente tutte le prove di abilità che richiedono la vista. I tiri per colpire contro di te hanno vantaggio, e i tuoi tiri per colpire hanno svantaggio.</td>
                         </tr>
                         <tr>
-                            <td><strong>Charmed</strong></td>
-                            <td>• Non può attaccare charmer O target con effetti dannosi<br>
-                            • Charmer ha vantaggio social checks vs te</td>
+                            <td><strong>Affascinato</strong></td>
+                            <td>Non puoi attaccare la creatura che ti ha affascinato o bersagliarla con abilità dannose o effetti magici. La creatura che ti ha affascinato ha vantaggio alle prove di abilità per interagire socialmente con te.</td>
                         </tr>
                         <tr>
-                            <td><strong>Deafened</strong></td>
-                            <td>• Non può sentire, auto-fail check richiedono udito</td>
+                            <td><strong>Assordato</strong></td>
+                            <td>Non puoi sentire e fallisci automaticamente tutte le prove di abilità che richiedono l'udito.</td>
                         </tr>
                         <tr>
-                            <td><strong>Frightened</strong></td>
-                            <td>• Svantaggio ability checks e attack rolls mentre source paura in linea vista<br>
-                            • Non può voluntary move closer source</td>
+                            <td><strong>Afferrato</strong></td>
+                            <td>La tua velocità diventa 0 e non puoi beneficiare di alcun bonus alla velocità. La condizione termina se chi ti afferra è incapacitato o se un effetto ti rimuove dalla presa.</td>
                         </tr>
                         <tr>
-                            <td><strong>Grappled</strong></td>
-                            <td>• Velocità = 0, non può benefit boost velocità<br>
-                            • Ends se grappler incapacitated O forced away</td>
+                            <td><strong>Incapacitato</strong></td>
+                            <td>Non puoi compiere azioni o reazioni.</td>
                         </tr>
                         <tr>
-                            <td><strong>Incapacitated</strong></td>
-                            <td>• Non può take azioni O reazioni</td>
+                            <td><strong>Invisibile</strong></td>
+                            <td>Sei impossibile da vedere senza l'aiuto della magia o di un senso speciale. Per determinare se ti nascondi, vieni considerato pesantemente oscurato. I tiri per colpire contro di te hanno svantaggio, e i tuoi tiri per colpire hanno vantaggio.</td>
                         </tr>
                         <tr>
-                            <td><strong>Invisible</strong></td>
-                            <td>• Cannot be seen, heavily obscured per scopi hiding<br>
-                            • Attacchi vs te: svantaggio<br>
-                            • Tuoi attacchi: vantaggio</td>
+                            <td><strong>Paralizzato</strong></td>
+                            <td>Sei incapacitato e non puoi muoverti o parlare. Fallisci automaticamente i tiri salvezza su Forza e Destrezza. I tiri per colpire contro di te hanno vantaggio. Qualsiasi attacco che ti colpisce da una distanza di 1,5 metri o inferiore è un colpo critico.</td>
                         </tr>
                         <tr>
-                            <td><strong>Paralyzed</strong></td>
-                            <td>• Incapacitated, non può move O speak<br>
-                            • Auto-fail TS FOR e DES<br>
-                            • Attacchi vs te: vantaggio<br>
-                            • Attacchi entro 1.5m = auto-crit se hit</td>
+                            <td><strong>Pietrificato</strong></td>
+                            <td>Sei trasformato in sostanza inanimata solida (solitamente pietra), insieme a tutti gli oggetti che indossi e trasporti. Il tuo peso aumenta di un fattore dieci e smetti di invecchiare. Sei incapacitato, non puoi muoverti o parlare, e non sei consapevole di ciò che ti circonda. Gli attacchi contro di te hanno vantaggio. Fallisci automaticamente i tiri salvezza su Forza e Destrezza. Hai resistenza a tutti i danni e immunità al veleno e alle malattie.</td>
                         </tr>
                         <tr>
-                            <td><strong>Petrified</strong></td>
-                            <td>• Trasformato in stone (include gear)<br>
-                            • Incapacitated, non aware surroundings<br>
-                            • Auto-fail TS FOR e DES<br>
-                            • Attacchi vs te: vantaggio<br>
-                            • Resistenza tutti danni<br>
-                            • Immune veleno/malattia (esistenti suspended)</td>
+                            <td><strong>Avvelenato</strong></td>
+                            <td>Hai svantaggio ai tiri per colpire e alle prove di abilità.</td>
                         </tr>
                         <tr>
-                            <td><strong>Poisoned</strong></td>
-                            <td>• Svantaggio attack rolls e ability checks</td>
+                            <td><strong>Prono</strong></td>
+                            <td>La tua unica opzione di movimento è strisciare, a meno che tu non ti alzi (costando metà del tuo movimento). Hai svantaggio ai tiri per colpire. Un tiro per colpire contro di te ha vantaggio se l'attaccante è entro 1,5 metri da te, altrimenti ha svantaggio.</td>
                         </tr>
                         <tr>
-                            <td><strong>Prone</strong></td>
-                            <td>• Movimento only crawling (ogni 1.5m costa 3m) OR stand (metà velocità)<br>
-                            • Svantaggio attack rolls<br>
-                            • Attacchi vs te: vantaggio se entro 1.5m, svantaggio se oltre</td>
+                            <td><strong>Trattenuto</strong></td>
+                            <td>La tua velocità diventa 0 e non puoi beneficiare di alcun bonus alla velocità. I tiri per colpire contro di te hanno vantaggio, e i tuoi tiri per colpire hanno svantaggio. Hai svantaggio ai tiri salvezza su Destrezza.</td>
                         </tr>
                         <tr>
-                            <td><strong>Restrained</strong></td>
-                            <td>• Velocità = 0<br>
-                            • Attacchi vs te: vantaggio<br>
-                            • Tuoi attacchi: svantaggio<br>
-                            • Svantaggio TS DES</td>
+                            <td><strong>Stordito</strong></td>
+                            <td>Sei incapacitato, non puoi muoverti, e puoi parlare solo in modo balbettante. Fallisci automaticamente i tiri salvezza su Forza e Destrezza. I tiri per colpire contro di te hanno vantaggio.</td>
                         </tr>
                         <tr>
-                            <td><strong>Stunned</strong></td>
-                            <td>• Incapacitated, non può move, parla difficoltà<br>
-                            • Auto-fail TS FOR e DES<br>
-                            • Attacchi vs te: vantaggio</td>
+                            <td><strong>Privo di Sensi</strong></td>
+                            <td>Sei incapacitato, non puoi muoverti o parlare, e non sei consapevole di ciò che ti circonda. Lasci cadere tutto ciò che stai impugnando e cadi a terra prono. Fallisci automaticamente i tiri salvezza su Forza e Destrezza. I tiri per colpire contro di te hanno vantaggio. Qualsiasi attacco che ti colpisce da una distanza di 1,5 metri o inferiore è un colpo critico.</td>
                         </tr>
                         <tr>
-                            <td><strong>Unconscious</strong></td>
-                            <td>• Incapacitated, non può move O speak, unaware<br>
-                            • Drop tutto held, fall prone<br>
-                            • Auto-fail TS FOR e DES<br>
-                            • Attacchi vs te: vantaggio<br>
-                            • Attacchi entro 1.5m = auto-crit se hit</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Exhaustion</strong><br>(Livelli 1-6)</td>
-                            <td><strong>1:</strong> Svantaggio ability checks<br>
-                            <strong>2:</strong> Velocità dimezzata<br>
-                            <strong>3:</strong> Svantaggio attack rolls e TS<br>
-                            <strong>4:</strong> PF max dimezzati<br>
-                            <strong>5:</strong> Velocità ridotta 0<br>
-                            <strong>6:</strong> <span style="color: #8B0000;">Morte</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="stress-reference">
-                <h3>A.3 Sistema Stress - Reference Rapido</h3>
-                
-                <h4>Trigger Stress Comuni</h4>
-                <table class="equipment-table">
-                    <thead>
-                        <tr>
-                            <th>Situazione</th>
-                            <th>CD TS SAG</th>
-                            <th>Stress se Fallito</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Vedere cadavere mutilato</td><td>10</td><td>1d4</td></tr>
-                        <tr><td>Vedere alleato morire</td><td>12</td><td>1d6</td></tr>
-                        <tr><td>Tortura witnessing</td><td>13</td><td>1d6</td></tr>
-                        <tr><td>Zombie/Ghoul primo incontro</td><td>11</td><td>1d4</td></tr>
-                        <tr><td>Vampiro/Werewolf</td><td>13</td><td>1d6</td></tr>
-                        <tr><td>Deep One/Mi-Go</td><td>14</td><td>1d8</td></tr>
-                        <tr><td>Shoggoth/Star Spawn</td><td>16</td><td>2d6</td></tr>
-                        <tr><td>Great Old One (parziale manifestazione)</td><td>18</td><td>3d6</td></tr>
-                        <tr><td>Great Old One (completa)</td><td>20</td><td>4d8</td></tr>
-                        <tr><td>Leggere Necronomicon</td><td>15</td><td>2d6</td></tr>
-                        <tr><td>Cast spell oscuro (liv 5+)</td><td>13</td><td>1d6</td></tr>
-                        <tr><td>Luogo maledetto (cemetery, lair)</td><td>12</td><td>1d4/ora</td></tr>
-                    </tbody>
-                </table>
-
-                <h4>Livelli Stress</h4>
-                <table class="equipment-table">
-                    <thead>
-                        <tr>
-                            <th>Stress</th>
-                            <th>Stato</th>
-                            <th>Effetti</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>0-19</td>
-                            <td><strong>Stabile</strong></td>
-                            <td>Nessun effetto meccanico.</td>
-                        </tr>
-                        <tr>
-                            <td>20-39</td>
-                            <td><strong>Ansioso</strong></td>
-                            <td>-1 attack rolls, ability checks.</td>
-                        </tr>
-                        <tr>
-                            <td>40-59</td>
                             <td><strong>Spaventato</strong></td>
-                            <td>-2 attack rolls, ability checks. Svantaggio Concentrazione.</td>
-                        </tr>
-                        <tr>
-                            <td>60-79</td>
-                            <td><strong>Terrorizzato</strong></td>
-                            <td>-3 attack rolls, checks. Concentrazione auto-fail. Possibile afflizione minore.</td>
-                        </tr>
-                        <tr>
-                            <td>80-99</td>
-                            <td><strong>In Panico</strong></td>
-                            <td>-4 penalty. Risk azioni irrazionali. Afflizione probabile.</td>
-                        </tr>
-                        <tr>
-                            <td>100+</td>
-                            <td><strong style="color: #8B0000;">Broken</strong></td>
-                            <td>Catatonia, fuga incontrollata, O violenza. Personaggio unplayable finché stress ridotto &lt;100.</td>
+                            <td>Hai svantaggio alle prove di abilità e ai tiri per colpire finché la fonte della tua paura è nella tua linea di vista. Non puoi avvicinarti volontariamente alla fonte della tua paura.</td>
                         </tr>
                     </tbody>
                 </table>
-
-                <h4>Recupero Stress</h4>
-                <ul>
-                    <li><strong>Short Rest:</strong> 1d6 stress recuperato</li>
-                    <li><strong>Long Rest:</strong> 2d8 stress recuperato</li>
-                    <li><strong>Conforto Alleato:</strong> Medicina/Persuasione DC 12 → +1d4 bonus recovery</li>
-                    <li><strong>Sicurezza Totale:</strong> 1 settimana città safe → -10 stress extra</li>
-                    <li><strong>Therapy:</strong> 1 mese + $100 → -20 stress (non cumulabile)</li>
-                </ul>
             </section>
 
-            <section id="weapon-properties">
-                <h3>A.4 Proprietà Armi</h3>
+            <section id="stress-levels" style="margin-top: 50px;">
+                <h3>A.3 I Livelli di Stress e i Loro Effetti</h3>
+                
+                <p style="margin-bottom: 20px;">
+                    Il sistema dello stress è una delle meccaniche distintive di Colt & Cthulhu. 
+                    Questa tabella riassume i diversi stati mentali e i loro effetti sulle capacità del personaggio.
+                </p>
                 
                 <table class="equipment-table">
                     <thead>
                         <tr>
-                            <th style="width: 25%;">Proprietà</th>
-                            <th style="width: 75%;">Effetto</th>
+                            <th style="width: 20%;">Stress Corrente</th>
+                            <th style="width: 20%;">Stato Mentale</th>
+                            <th style="width: 60%;">Effetti sul Personaggio</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Ammunition (Munizioni)</strong></td>
-                            <td>Richiede munizioni per attaccare. Range indicato (normale/lungo). Oltre normal = svantaggio. 
-                            Oltre long = impossible.</td>
+                            <td><strong>0-5</strong></td>
+                            <td><strong>Calmo</strong></td>
+                            <td>Nessun effetto negativo. La mente del personaggio è lucida e stabile, e può affrontare le situazioni con la massima capacità mentale.</td>
                         </tr>
                         <tr>
-                            <td><strong>Finesse</strong></td>
-                            <td>Usa DES O FOR per attack/damage roll (scelta tua).</td>
+                            <td><strong>6-10</strong></td>
+                            <td><strong>Nervoso</strong></td>
+                            <td>Tensione mentale leggera. Non ci sono effetti meccanici negativi, ma il personaggio dovrebbe mostrare segni di agitazione nel gioco di ruolo (nervosismo, preoccupazione crescente, gesti nervosi).</td>
                         </tr>
                         <tr>
-                            <td><strong>Heavy</strong></td>
-                            <td>Creature Small hanno svantaggio attack con arma Heavy.</td>
+                            <td><strong>11-15</strong></td>
+                            <td><strong>Stressato</strong></td>
+                            <td>Il personaggio ha svantaggio su tutte le prove di Saggezza e Carisma. Ha difficoltà a concentrarsi mentalmente e a mantenere la calma nelle interazioni sociali.</td>
                         </tr>
                         <tr>
-                            <td><strong>Light</strong></td>
-                            <td>Può usare Two-Weapon Fighting (azione bonus attack se dual wield).</td>
+                            <td><strong>16-20</strong></td>
+                            <td><strong>Ansioso</strong></td>
+                            <td>Il personaggio ha svantaggio su TUTTE le prove di abilità (non solo Saggezza e Carisma). Inizia a sviluppare tic nervosi evidenti, paranoia crescente, e ha grande difficoltà a funzionare normalmente.</td>
                         </tr>
                         <tr>
-                            <td><strong>Loading</strong></td>
-                            <td>Richiede reload dopo 1 attacco (limita Extra Attack a 1 colpo/turno). Crossbow, alcuni rifle.</td>
+                            <td><strong>21-24</strong></td>
+                            <td><strong>Traumatizzato</strong></td>
+                            <td>Il personaggio ha svantaggio su tutte le prove di abilità e sui tiri per colpire. Deve effettuare un tiro salvezza su Saggezza CD 15 alla fine di ogni riposo lungo o acquisire un'afflizione mentale permanente.</td>
                         </tr>
                         <tr>
-                            <td><strong>Range (Gittata)</strong></td>
-                            <td>Due numeri: normale/lungo (es: 12/36m). Entro normal = no penalty. Oltre = svantaggio. Oltre long = impossible.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Reach</strong></td>
-                            <td>Estende reach +1.5m per melee attacks (3m totale invece 1.5m).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Reload</strong></td>
-                            <td>Dopo sparare tutti colpi, richiede azione (O azione bonus se specified) reload.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Thrown (Lancio)</strong></td>
-                            <td>Può lanciare per ranged attack. Range indicato. Usa FOR per attack/damage.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Two-Handed</strong></td>
-                            <td>Richiede 2 mani usare.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Versatile</strong></td>
-                            <td>Può usare 1 O 2 mani. Se 2 mani, danno aumentato (indicato parentesi).</td>
+                            <td><strong>25+</strong></td>
+                            <td><strong>Punto di Rottura</strong></td>
+                            <td>La mente del personaggio si spezza. Il Maestro del Gioco tira sulla tabella del Punto di Rottura per determinare la reazione del personaggio (fuga, catatonia, violenza incontrollata). Il personaggio non è più sotto il controllo del giocatore finché non recupera sotto i 25 punti di stress.</td>
                         </tr>
                     </tbody>
                 </table>
+                
+                <h4 style="margin-top: 30px;">Come Si Recupera lo Stress</h4>
+                <div class="example-box">
+                    <ul>
+                        <li><strong>Riposo Breve (1 ora):</strong> Recuperi 1d6 punti di stress.</li>
+                        <li><strong>Riposo Lungo (8 ore):</strong> Recuperi 2d8 punti di stress.</li>
+                        <li><strong>Terapia Professionale:</strong> Un Dottore o un Reverendo può fornire terapia durante un riposo lungo, aggiungendo 1d6 al recupero dello stress.</li>
+                        <li><strong>Ambiente Sicuro e Confortevole:</strong> Il Maestro del Gioco può concedere 1d4 di recupero stress aggiuntivo se il riposo avviene in un ambiente particolarmente sicuro e rilassante.</li>
+                        <li><strong>Alcol e Sostanze:</strong> Forniscono sollievo temporaneo (-1d4 stress per 1 ora) ma possono portare a dipendenza e problemi a lungo termine.</li>
+                    </ul>
+                </div>
             </section>
 
-            <section id="cover-reference">
-                <h3>A.5 Cover (Copertura)</h3>
+            <section id="cover" style="margin-top: 50px;">
+                <h3>A.4 Le Regole sulla Copertura</h3>
+                
+                <p style="margin-bottom: 20px;">
+                    La copertura è fondamentale nel combattimento del Weird West. Utilizzare efficacemente 
+                    la copertura può fare la differenza tra la vita e la morte in uno scontro a fuoco.
+                </p>
                 
                 <table class="equipment-table">
                     <thead>
                         <tr>
-                            <th>Tipo Cover</th>
-                            <th>Bonus AC</th>
-                            <th>Bonus TS DES</th>
-                            <th>Esempio</th>
+                            <th style="width: 25%;">Tipo di Copertura</th>
+                            <th style="width: 35%;">Condizione</th>
+                            <th style="width: 40%;">Beneficio</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Half Cover</strong></td>
-                            <td>+2</td>
-                            <td>+2</td>
-                            <td>Barrel, albero, wagon</td>
+                            <td><strong>Nessuna Copertura</strong></td>
+                            <td>Il bersaglio è completamente esposto</td>
+                            <td>Nessun bonus alla Classe Armatura o ai tiri salvezza</td>
                         </tr>
                         <tr>
-                            <td><strong>Three-Quarters Cover</strong></td>
-                            <td>+5</td>
-                            <td>+5</td>
-                            <td>Wall con window, portcullis</td>
+                            <td><strong>Metà Copertura</strong></td>
+                            <td>Un ostacolo copre almeno metà del corpo del bersaglio (una botte, un tronco d'albero, una creatura)</td>
+                            <td>+2 alla Classe Armatura e ai tiri salvezza su Destrezza</td>
                         </tr>
                         <tr>
-                            <td><strong>Total Cover</strong></td>
-                            <td>Cannot target</td>
-                            <td>Auto-pass (se not in AOE)</td>
-                            <td>Dietro solid wall, inside building</td>
+                            <td><strong>Tre Quarti di Copertura</strong></td>
+                            <td>Un ostacolo copre almeno tre quarti del corpo del bersaglio (una feritoia, il portello di un carro, un tronco spesso)</td>
+                            <td>+5 alla Classe Armatura e ai tiri salvezza su Destrezza</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Copertura Totale</strong></td>
+                            <td>Un ostacolo copre completamente il bersaglio (dietro un angolo, completamente nascosto dietro un muro)</td>
+                            <td>Non può essere bersagliato direttamente da attacchi o incantesimi</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="tip-box" style="margin-top: 20px;">
+                    <p><strong>Nota per il Maestro del Gioco:</strong></p>
+                    <p>
+                        Incoraggia i giocatori a descrivere come i loro personaggi utilizzano la copertura 
+                        durante il combattimento. Questo non solo rende il gioco più tattico e realistico, 
+                        ma aggiunge anche colore narrativo alle scene di combattimento. In un ambiente western, 
+                        la copertura può includere botti, carri ribaltati, rocce, angoli di edifici e molto altro.
+                    </p>
+                </div>
+            </section>
+
+            <section id="weapon-stats" style="margin-top: 50px;">
+                <h3>A.5 Le Statistiche delle Armi Comuni</h3>
+                
+                <p style="margin-bottom: 20px;">
+                    Questa tabella riassume le armi più comuni utilizzate nel Weird West, 
+                    con tutte le statistiche necessarie per il combattimento.
+                </p>
+                
+                <h4>Le Armi da Fuoco</h4>
+                <table class="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Arma</th>
+                            <th>Costo</th>
+                            <th>Danno</th>
+                            <th>Proprietà</th>
+                            <th>Peso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Revolver Colt .45</strong></td>
+                            <td>15 dollari</td>
+                            <td>2d6 perforante</td>
+                            <td>Munizioni (gittata 12/36 m), ricarica (6 colpi)</td>
+                            <td>1,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Derringer</strong></td>
+                            <td>7 dollari</td>
+                            <td>1d8 perforante</td>
+                            <td>Munizioni (gittata 6/18 m), ricarica (2 colpi), leggera, nascosta</td>
+                            <td>0,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fucile Winchester 1873</strong></td>
+                            <td>25 dollari</td>
+                            <td>2d8 perforante</td>
+                            <td>Munizioni (gittata 24/96 m), ricarica (15 colpi), a due mani</td>
+                            <td>4 kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fucile a Canna Doppia</strong></td>
+                            <td>20 dollari</td>
+                            <td>2d10 perforante</td>
+                            <td>Munizioni (gittata 9/27 m), ricarica (2 colpi), a due mani, dispersione</td>
+                            <td>3,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fucile da Cecchino</strong></td>
+                            <td>40 dollari</td>
+                            <td>2d10 perforante</td>
+                            <td>Munizioni (gittata 48/192 m), ricarica (1 colpo), a due mani, pesante</td>
+                            <td>5 kg</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin-top: 30px;">Le Armi da Mischia</h4>
+                <table class="equipment-table">
+                    <thead>
+                        <tr>
+                            <th>Arma</th>
+                            <th>Costo</th>
+                            <th>Danno</th>
+                            <th>Proprietà</th>
+                            <th>Peso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Coltello Bowie</strong></td>
+                            <td>2 dollari</td>
+                            <td>1d6 perforante</td>
+                            <td>Leggera, da lancio (gittata 6/18 m)</td>
+                            <td>0,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tomahawk</strong></td>
+                            <td>3 dollari</td>
+                            <td>1d8 tagliente</td>
+                            <td>Leggera, da lancio (gittata 6/18 m)</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sciabola della Cavalleria</strong></td>
+                            <td>15 dollari</td>
+                            <td>1d8 tagliente</td>
+                            <td>-</td>
+                            <td>1,5 kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Machete</strong></td>
+                            <td>5 dollari</td>
+                            <td>1d6 tagliente</td>
+                            <td>Leggera</td>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lancia</strong></td>
+                            <td>1 dollaro</td>
+                            <td>1d6 perforante</td>
+                            <td>Da lancio (gittata 6/18 m), versatile (1d8)</td>
+                            <td>1,5 kg</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
-            <section id="travel-reference">
-                <h3>A.6 Viaggio e Movimento</h3>
+            <section id="travel" style="margin-top: 50px;">
+                <h3>A.6 Le Regole di Viaggio ed Esplorazione</h3>
                 
-                <h4>Pace di Viaggio</h4>
+                <p style="margin-bottom: 20px;">
+                    Viaggiare attraverso la frontiera del Weird West è pericoloso e richiede pianificazione. 
+                    Queste regole aiutano a gestire i viaggi a lunga distanza.
+                </p>
+                
+                <h4>La Velocità di Viaggio</h4>
                 <table class="equipment-table">
                     <thead>
                         <tr>
-                            <th>Pace</th>
-                            <th>Distanza/Ora</th>
-                            <th>Distanza/Giorno (8 ore)</th>
-                            <th>Effetto</th>
+                            <th style="width: 25%;">Ritmo</th>
+                            <th style="width: 25%;">Distanza per Ora</th>
+                            <th style="width: 25%;">Distanza per Giorno</th>
+                            <th style="width: 25%;">Effetto</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Veloce</strong></td>
-                            <td>6 km</td>
-                            <td>48 km</td>
-                            <td>-5 Percezione passiva (distracted). Possibile exhaustion forced march oltre 8 ore.</td>
+                            <td>6 chilometri</td>
+                            <td>48 chilometri</td>
+                            <td>Svantaggio alle prove di Percezione passiva</td>
                         </tr>
                         <tr>
                             <td><strong>Normale</strong></td>
-                            <td>5 km</td>
-                            <td>40 km</td>
-                            <td>Standard. No penalty.</td>
+                            <td>4,5 chilometri</td>
+                            <td>36 chilometri</td>
+                            <td>Nessun effetto</td>
                         </tr>
                         <tr>
-                            <td><strong>Lenta</strong></td>
-                            <td>3 km</td>
-                            <td>24 km</td>
-                            <td>Può usare Furtività (party stealthy travel).</td>
+                            <td><strong>Lento</strong></td>
+                            <td>3 chilometri</td>
+                            <td>24 chilometri</td>
+                            <td>Possibilità di usare Furtività durante il viaggio</td>
                         </tr>
                     </tbody>
                 </table>
 
-                <h4>Velocità Montature</h4>
+                <h4 style="margin-top: 30px;">Le Attività Durante il Viaggio</h4>
+                <div class="example-box">
+                    <p>Durante il viaggio, i personaggi possono svolgere le seguenti attività:</p>
+                    <ul>
+                        <li><strong>Navigare:</strong> Il personaggio guida il gruppo utilizzando prove di Sopravvivenza per evitare di perdersi.</li>
+                        <li><strong>Disegnare una Mappa:</strong> Il personaggio crea una mappa della zona per riferimenti futuri.</li>
+                        <li><strong>Tracciare:</strong> Il personaggio cerca tracce di creature o persone con prove di Sopravvivenza.</li>
+                        <li><strong>Foraggiare:</strong> Il personaggio cerca cibo e acqua con prove di Sopravvivenza.</li>
+                        <li><strong>Fare la Guardia:</strong> Il personaggio rimane vigile contro i pericoli, utilizzando la Percezione passiva.</li>
+                    </ul>
+                </div>
+
+                <h4 style="margin-top: 30px;">Il Consumo di Risorse</h4>
                 <table class="equipment-table">
                     <thead>
                         <tr>
-                            <th>Montatura</th>
-                            <th>Velocità Combat</th>
-                            <th>Distanza/Giorno</th>
+                            <th style="width: 40%;">Risorsa</th>
+                            <th style="width: 60%;">Consumo Giornaliero</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Cavallo</td><td>18m</td><td>~60 km (normale pace)</td></tr>
-                        <tr><td>Pony</td><td>12m</td><td>~40 km</td></tr>
-                        <tr><td>Mule/Donkey</td><td>12m</td><td>~35 km</td></tr>
-                        <tr><td>Wagon (2 cavalli)</td><td>6m</td><td>~25 km</td></tr>
-                        <tr><td>A Piedi (Umano)</td><td>9m</td><td>~40 km</td></tr>
+                        <tr>
+                            <td><strong>Cibo (per persona)</strong></td>
+                            <td>0,5 chilogrammi di razioni o equivalente foraggiato</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Acqua (per persona)</strong></td>
+                            <td>4 litri (8 litri in clima caldo o desertico)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Foraggio (per cavallo)</strong></td>
+                            <td>5 chilogrammi di fieno o erba fresca</td>
+                        </tr>
                     </tbody>
                 </table>
-
-                <h4>Terrain Difficile</h4>
-                <p>Movimento costa <strong>doppio</strong>: ogni 1.5m = 3m movimento. Esempio terrain difficile: brush denso, desert sand, 
-                mud, steep hills, rubble.</p>
             </section>
 
-            <section id="prices-quick">
-                <h3>A.7 Prezzi Comuni (Quick Reference)</h3>
+            <section id="prices" style="margin-top: 50px;">
+                <h3>A.7 I Prezzi Comuni nel Weird West</h3>
+                
+                <p style="margin-bottom: 20px;">
+                    Questa tabella fornisce i prezzi tipici per beni e servizi nell'America del 1885. 
+                    I prezzi possono variare significativamente in base alla località e alla disponibilità.
+                </p>
                 
                 <table class="equipment-table">
                     <thead>
                         <tr>
-                            <th>Item/Servizio</th>
-                            <th>Costo</th>
+                            <th style="width: 50%;">Bene o Servizio</th>
+                            <th style="width: 50%;">Prezzo Tipico</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td colspan="2"><strong>ALLOGGIO & CIBO</strong></td></tr>
-                        <tr><td>Inn (notte)</td><td>$1-2</td></tr>
-                        <tr><td>Meal (standard)</td><td>$0.50</td></tr>
-                        <tr><td>Beer (mug)</td><td>$0.05</td></tr>
-                        <tr><td>Whiskey (shot)</td><td>$0.10</td></tr>
-                        <tr><td colspan="2"><strong>ARMI</strong></td></tr>
-                        <tr><td>Colt .45 Revolver</td><td>$15</td></tr>
-                        <tr><td>Winchester 1873 Rifle</td><td>$25</td></tr>
-                        <tr><td>Double-Barrel Shotgun</td><td>$20</td></tr>
-                        <tr><td>Derringer</td><td>$7</td></tr>
-                        <tr><td>Munizioni (20 rounds pistol)</td><td>$2</td></tr>
-                        <tr><td>Silver Bullets (20)</td><td>$20</td></tr>
-                        <tr><td colspan="2"><strong>GEAR</strong></td></tr>
-                        <tr><td>Rope (50 ft)</td><td>$2</td></tr>
-                        <tr><td>Bedroll</td><td>$1</td></tr>
-                        <tr><td>Lantern</td><td>$5</td></tr>
-                        <tr><td>Healer's Kit (10 usi)</td><td>$5</td></tr>
-                        <tr><td>Dynamite (stick)</td><td>$5</td></tr>
-                        <tr><td colspan="2"><strong>TRASPORTI</strong></td></tr>
-                        <tr><td>Cavallo (riding)</td><td>$75-150</td></tr>
-                        <tr><td>Saddle</td><td>$10</td></tr>
-                        <tr><td>Wagon</td><td>$100</td></tr>
-                        <tr><td>Stagecoach ride (100 km)</td><td>$5-10</td></tr>
-                        <tr><td>Cavallo Feed (giorno)</td><td>$0.50</td></tr>
-                        <tr><td colspan="2"><strong>SERVIZI</strong></td></tr>
-                        <tr><td>Doctor Visit</td><td>$2</td></tr>
-                        <tr><td>Surgery (minor)</td><td>$10-20</td></tr>
-                        <tr><td>Haircut + Shave</td><td>$0.25</td></tr>
-                        <tr><td>Bath (public)</td><td>$0.50</td></tr>
-                        <tr><td>Telegram (per parola)</td><td>$0.05</td></tr>
-                        <tr><td>Gunsmith repair</td><td>$2-10</td></tr>
+                        <tr><td colspan="2" style="background-color: #F5E6D3;"><strong>ALLOGGIO E CIBO</strong></td></tr>
+                        <tr><td>Locanda (camera per notte)</td><td>1-2 dollari</td></tr>
+                        <tr><td>Pasto standard (saloon o locanda)</td><td>50 centesimi</td></tr>
+                        <tr><td>Birra (boccale)</td><td>5 centesimi</td></tr>
+                        <tr><td>Whisky (bicchierino)</td><td>10 centesimi</td></tr>
+                        <tr><td>Bottiglia di whisky</td><td>2 dollari</td></tr>
+                        
+                        <tr><td colspan="2" style="background-color: #F5E6D3;"><strong>ARMI E MUNIZIONI</strong></td></tr>
+                        <tr><td>Revolver Colt .45</td><td>15 dollari</td></tr>
+                        <tr><td>Fucile Winchester 1873</td><td>25 dollari</td></tr>
+                        <tr><td>Fucile a canna doppia</td><td>20 dollari</td></tr>
+                        <tr><td>Derringer</td><td>7 dollari</td></tr>
+                        <tr><td>Munizioni (20 colpi per pistola)</td><td>2 dollari</td></tr>
+                        <tr><td>Proiettili d'argento (20 colpi)</td><td>20 dollari</td></tr>
+                        <tr><td>Dinamite (singolo candelotto)</td><td>5 dollari</td></tr>
+                        
+                        <tr><td colspan="2" style="background-color: #F5E6D3;"><strong>EQUIPAGGIAMENTO DA AVVENTURA</strong></td></tr>
+                        <tr><td>Corda (15 metri)</td><td>2 dollari</td></tr>
+                        <tr><td>Sacco a pelo</td><td>1 dollaro</td></tr>
+                        <tr><td>Lanterna</td><td>5 dollari</td></tr>
+                        <tr><td>Olio per lanterna (fiala)</td><td>10 centesimi</td></tr>
+                        <tr><td>Kit del guaritore (10 utilizzi)</td><td>5 dollari</td></tr>
+                        <tr><td>Borraccia</td><td>50 centesimi</td></tr>
+                        <tr><td>Razioni (per giorno)</td><td>50 centesimi</td></tr>
+                        
+                        <tr><td colspan="2" style="background-color: #F5E6D3;"><strong>TRASPORTI E ANIMALI</strong></td></tr>
+                        <tr><td>Cavallo da sella</td><td>75-150 dollari</td></tr>
+                        <tr><td>Cavallo da tiro</td><td>50-100 dollari</td></tr>
+                        <tr><td>Sella</td><td>10 dollari</td></tr>
+                        <tr><td>Carro</td><td>100 dollari</td></tr>
+                        <tr><td>Diligenza (viaggio di 100 chilometri)</td><td>5-10 dollari</td></tr>
+                        <tr><td>Foraggio per cavallo (giorno)</td><td>50 centesimi</td></tr>
+                        <tr><td>Stalla (notte)</td><td>25 centesimi</td></tr>
+                        
+                        <tr><td colspan="2" style="background-color: #F5E6D3;"><strong>SERVIZI</strong></td></tr>
+                        <tr><td>Visita dal dottore</td><td>2 dollari</td></tr>
+                        <tr><td>Chirurgia (intervento minore)</td><td>10-20 dollari</td></tr>
+                        <tr><td>Taglio di capelli e rasatura</td><td>25 centesimi</td></tr>
+                        <tr><td>Bagno pubblico</td><td>50 centesimi</td></tr>
+                        <tr><td>Telegramma (per parola)</td><td>5 centesimi</td></tr>
+                        <tr><td>Riparazione arma (armaiolo)</td><td>2-10 dollari</td></tr>
+                        <tr><td>Avvocato (per ora)</td><td>5-10 dollari</td></tr>
+                        <tr><td>Guida locale (per giorno)</td><td>5 dollari</td></tr>
                     </tbody>
                 </table>
+
+                <div class="tip-box" style="margin-top: 20px;">
+                    <p><strong>Nota sui Prezzi:</strong></p>
+                    <p>
+                        I prezzi elencati rappresentano valori medi nelle città della frontiera. 
+                        In località remote o durante periodi di scarsità, i prezzi possono raddoppiare 
+                        o triplicare. Al contrario, nelle grandi città come San Francisco o Chicago, 
+                        alcuni beni potrebbero costare meno. Il Maestro del Gioco dovrebbe adattare i prezzi 
+                        in base alle circostanze narrative.
+                    </p>
+                </div>
             </section>
 
-            <section id="dcs">
-                <h3>A.8 Difficulty Class (CD) Tipiche</h3>
+            <section id="dcs" style="margin-top: 50px;">
+                <h3>A.8 Le Classi di Difficoltà Tipiche</h3>
+                
+                <p style="margin-bottom: 20px;">
+                    Questa tabella aiuta il Maestro del Gioco a determinare rapidamente la Classe di Difficoltà 
+                    appropriata per le prove di abilità e i tiri salvezza.
+                </p>
                 
                 <table class="equipment-table">
                     <thead>
                         <tr>
-                            <th>CD</th>
-                            <th>Difficoltà</th>
-                            <th>Esempio</th>
+                            <th style="width: 15%;">Classe di Difficoltà</th>
+                            <th style="width: 25%;">Livello di Difficoltà</th>
+                            <th style="width: 60%;">Esempi di Situazioni</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>5</td><td>Molto Facile</td><td>Climb rope con nodi, notice oggetto ovvio</td></tr>
-                        <tr><td>10</td><td>Facile</td><td>Climb rope liscia, persuade friendly NPC</td></tr>
-                        <tr><td>12</td><td>Moderato</td><td>Sopravvivenza track creature, Medicina stabilize</td></tr>
-                        <tr><td>15</td><td>Medio</td><td>Pick lock standard, notice hidden door, persuade neutral NPC</td></tr>
-                        <tr><td>17</td><td>Difficile</td><td>Climb cliff slippery, decipher ancient text, persuade hostile NPC</td></tr>
-                        <tr><td>20</td><td>Molto Difficile</td><td>Climb surface quasi impossibile, recall info extremely oscura</td></tr>
-                        <tr><td>25</td><td>Quasi Impossibile</td><td>Jump gap improbable, convince enemy spare you mid-combat</td></tr>
-                        <tr><td>30</td><td>Mitico</td><td>Task legendary heroes. Rare usare. Master discretion.</td></tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td><strong>Molto Facile</strong></td>
+                            <td>Arrampicarsi su una corda annodata, notare un oggetto in bella vista, riconoscere un fatto di conoscenza comune</td>
+                        </tr>
+                        <tr>
+                            <td><strong>10</strong></td>
+                            <td><strong>Facile</strong></td>
+                            <td>Arrampicarsi su una corda liscia, persuadere un personaggio non giocante amichevole, seguire tracce recenti su terreno morbido</td>
+                        </tr>
+                        <tr>
+                            <td><strong>12</strong></td>
+                            <td><strong>Moderato</strong></td>
+                            <td>Tracciare una creatura su terreno duro, stabilizzare un morente con la medicina, trovare cibo in natura</td>
+                        </tr>
+                        <tr>
+                            <td><strong>15</strong></td>
+                            <td><strong>Medio</strong></td>
+                            <td>Scassinare una serratura standard, notare una porta segreta, persuadere un personaggio non giocante neutrale, decifrare un codice semplice</td>
+                        </tr>
+                        <tr>
+                            <td><strong>17</strong></td>
+                            <td><strong>Difficile</strong></td>
+                            <td>Arrampicarsi su una scogliera scivolosa, decifrare un testo antico, persuadere un personaggio non giocante ostile, trovare una traccia nascosta</td>
+                        </tr>
+                        <tr>
+                            <td><strong>20</strong></td>
+                            <td><strong>Molto Difficile</strong></td>
+                            <td>Arrampicarsi su una superficie quasi impossibile, ricordare informazioni estremamente oscure, scassinare una serratura complessa</td>
+                        </tr>
+                        <tr>
+                            <td><strong>25</strong></td>
+                            <td><strong>Quasi Impossibile</strong></td>
+                            <td>Saltare un divario improbabile, convincere un nemico a risparmiarti durante il combattimento, decifrare un linguaggio perduto</td>
+                        </tr>
+                        <tr>
+                            <td><strong>30</strong></td>
+                            <td><strong>Mitico</strong></td>
+                            <td>Imprese degne di eroi leggendari. Da usare raramente e solo a discrezione del Maestro del Gioco per situazioni davvero eccezionali.</td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
 
-            <section id="random-encounters">
-                <h3>A.9 Tabella Encounter Casuali (Wilderness)</h3>
+            <section id="random-encounters" style="margin-top: 50px;">
+                <h3>A.9 La Tabella degli Incontri Casuali</h3>
                 
-                <p><strong>Roll d20 ogni 4 ore viaggio wilderness:</strong></p>
-                <ul>
-                    <li><strong>1-3:</strong> Encounter (roll sottotabella)</li>
-                    <li><strong>4-18:</strong> Nessun encounter</li>
-                    <li><strong>19-20:</strong> Discovery interessante (location, NPC, treasure)</li>
-                </ul>
+                <p style="margin-bottom: 20px;">
+                    Gli incontri casuali aggiungono imprevedibilità e pericolo ai viaggi attraverso 
+                    la frontiera. Utilizza questa tabella per determinare cosa accade durante 
+                    i viaggi in territorio selvaggio.
+                </p>
 
-                <h4>Encounter Sottotabella (d12)</h4>
+                <div class="example-box">
+                    <p><strong>Quando Effettuare il Tiro:</strong></p>
+                    <p>
+                        Tira un dado da 20 ogni 4 ore di viaggio attraverso territorio selvaggio o non civilizzato:
+                    </p>
+                    <ul>
+                        <li><strong>1-3:</strong> Si verifica un incontro (tira sulla tabella sottostante)</li>
+                        <li><strong>4-18:</strong> Nessun incontro significativo</li>
+                        <li><strong>19-20:</strong> Scoperta interessante (una località nascosta, un personaggio non giocante utile, un tesoro dimenticato)</li>
+                    </ul>
+                </div>
+
+                <h4 style="margin-top: 30px;">La Tabella degli Incontri (tira 1d12)</h4>
                 <table class="equipment-table">
                     <thead>
                         <tr>
-                            <th>Roll</th>
-                            <th>Encounter</th>
-                            <th>Attitudine (d6)</th>
+                            <th style="width: 15%;">Risultato</th>
+                            <th style="width: 40%;">Tipo di Incontro</th>
+                            <th style="width: 45%;">Attitudine Iniziale (tira 1d6)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>1-2</td><td>Banditi (1d4+1)</td><td>1-4 Hostile, 5-6 Demand tribute</td></tr>
-                        <tr><td>3</td><td>Natives (1d6)</td><td>1-2 Hostile, 3-4 Wary, 5-6 Friendly</td></tr>
-                        <tr><td>4</td><td>Wildlife (coyote, rattlesnake, bear)</td><td>1-3 Aggressive, 4-6 Avoids</td></tr>
-                        <tr><td>5</td><td>Travelers (1d4 settlers/merchants)</td><td>1-2 Suspicious, 3-6 Friendly</td></tr>
-                        <tr><td>6</td><td>Cavalry Patrol (1d6 soldiers)</td><td>1 Hostile (deserters), 2-6 Questioning</td></tr>
-                        <tr><td>7</td><td>Zombi (1d4)</td><td>Always hostile</td></tr>
-                        <tr><td>8</td><td>Ghost/Spirit</td><td>1-3 Malevolent, 4-5 Confused, 6 Helpful</td></tr>
-                        <tr><td>9</td><td>Cultisti (1d4+1)</td><td>1-5 Hostile if discovered, 6 Recruiting</td></tr>
-                        <tr><td>10</td><td>Desperado (solo gunfighter)</td><td>1-3 Hostile (robbery), 4-6 Challenge (duel)</td></tr>
-                        <tr><td>11</td><td>Strange Phenomena (lights, sounds)</td><td>Roll Stress check</td></tr>
-                        <tr><td>12</td><td>Master Choice (adapt narrativa)</td><td>-</td></tr>
+                        <tr>
+                            <td><strong>1-2</strong></td>
+                            <td>Banditi (1d4+1 fuorilegge armati)</td>
+                            <td>1-4: Ostili (attaccano), 5-6: Richiedono tributo (minacciano)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>Nativi Americani (1d6 guerrieri)</td>
+                            <td>1-2: Ostili (difendono il territorio), 3-4: Diffidenti, 5-6: Amichevoli (commercio)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>Fauna selvatica (coyote, serpente a sonagli, orso)</td>
+                            <td>1-3: Aggressivi (affamati o minacciati), 4-6: Evitano il contatto</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>Viaggiatori (1d4 coloni o mercanti)</td>
+                            <td>1-2: Sospettosi (temono i banditi), 3-6: Amichevoli (condividono informazioni)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6</strong></td>
+                            <td>Pattuglia di Cavalleria (1d6 soldati)</td>
+                            <td>1: Ostili (disertori o corrotti), 2-6: Interrogativi (cercano fuorilegge)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7</strong></td>
+                            <td>Zombi (1d4 non-morti ambulanti)</td>
+                            <td>Sempre ostili (attaccano a vista)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>8</strong></td>
+                            <td>Fantasma o Spirito (apparizione soprannaturale)</td>
+                            <td>1-3: Malevolo (cerca vendetta), 4-5: Confuso (necessita aiuto), 6: Utile (fornisce informazioni)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>9</strong></td>
+                            <td>Cultisti (1d4+1 adoratori di entità oscure)</td>
+                            <td>1-5: Ostili se scoperti (proteggono i segreti), 6: Reclutano (cercano convertiti)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>10</strong></td>
+                            <td>Pistolero Solitario (pistolero esperto)</td>
+                            <td>1-3: Ostile (rapina), 4-6: Sfida (cerca duello per reputazione)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>11</strong></td>
+                            <td>Fenomeni Strani (luci misteriose, suoni inquietanti)</td>
+                            <td>Richiede un tiro salvezza su Saggezza CD 12 o si guadagna 1d4 punti stress</td>
+                        </tr>
+                        <tr>
+                            <td><strong>12</strong></td>
+                            <td>Scelta del Maestro del Gioco (evento personalizzato)</td>
+                            <td>Il Maestro del Gioco crea un incontro appropriato alla narrativa corrente</td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
 
-            <section id="inspiration">
-                <h3>A.10 Guadagnare Ispirazione</h3>
+            <section id="inspiration" style="margin-top: 50px;">
+                <h3>A.10 Come Guadagnare l'Ispirazione</h3>
                 
-                <p>Master award Ispirazione quando giocatore:</p>
-                <ul>
-                    <li>Roleplay character personality/flaws eccellentemente</li>
-                    <li>Compie azione eroica/self-sacrificing</li>
-                    <li>Idea creativa/brillante solves problem</li>
-                    <li>Fa ridere tavolo con appropriate humor</li>
-                    <li>Contribuisce narrativa significativamente (backstory integration)</li>
-                </ul>
+                <p style="margin-bottom: 20px;">
+                    L'Ispirazione è una ricompensa che il Maestro del Gioco può assegnare ai giocatori 
+                    per premiare il buon gioco di ruolo, la creatività e le azioni eroiche. 
+                    Questa sezione fornisce linee guida su quando assegnare l'Ispirazione.
+                </p>
 
-                <p><strong>Uso Ispirazione:</strong> Spend 1 Ispirazione gain vantaggio 1 roll (attack, check, save). Puoi spend DOPO vedere 
-                result initial roll (before Master dichiara success/failure). Max 1 Ispirazione tenuta per volta.</p>
+                <div class="example-box">
+                    <h4>Quando Assegnare l'Ispirazione</h4>
+                    <p>Il Maestro del Gioco dovrebbe considerare di assegnare l'Ispirazione quando un giocatore:</p>
+                    <ul>
+                        <li><strong>Interpreta Brillantemente il Personaggio:</strong> Il giocatore interpreta in modo eccellente la personalità, i difetti o le motivazioni del proprio personaggio, anche quando questo comporta scelte svantaggiose dal punto di vista meccanico.</li>
+                        <li><strong>Compie un'Azione Eroica o di Auto-Sacrificio:</strong> Il personaggio si mette deliberatamente in pericolo per salvare gli altri o per fare la cosa giusta.</li>
+                        <li><strong>Risolve un Problema in Modo Creativo:</strong> Il giocatore propone una soluzione brillante o inaspettata a un problema che non si basa semplicemente sul combattimento o sui tiri di dado.</li>
+                        <li><strong>Contribuisce all'Atmosfera:</strong> Il giocatore fa ridere il tavolo con una battuta appropriata, crea tensione con una buona interpretazione, o contribuisce significativamente all'atmosfera della sessione.</li>
+                        <li><strong>Integra il Background:</strong> Il giocatore collega abilmente il background del proprio personaggio alla narrativa corrente, arricchendo la storia per tutti al tavolo.</li>
+                        <li><strong>Aiuta gli Altri Giocatori:</strong> Il giocatore facilita il coinvolgimento di altri giocatori più timidi o aiuta a risolvere conflitti al tavolo in modo costruttivo.</li>
+                    </ul>
+                </div>
+
+                <div class="example-box" style="margin-top: 20px;">
+                    <h4>Come Utilizzare l'Ispirazione</h4>
+                    <p>
+                        Un giocatore può spendere la propria Ispirazione per ottenere <strong>vantaggio</strong> 
+                        su un singolo tiro di dado (che sia un tiro per colpire, una prova di abilità o un tiro salvezza).
+                    </p>
+                    <p><strong>Regole Importanti:</strong></p>
+                    <ul>
+                        <li>Puoi dichiarare di utilizzare l'Ispirazione <strong>dopo aver visto il risultato</strong> del tiro iniziale, ma <strong>prima che il Maestro del Gioco dichiari se hai avuto successo o fallito</strong>.</li>
+                        <li>Puoi possedere al massimo <strong>un punto di Ispirazione</strong> alla volta. Se guadagni Ispirazione quando ne hai già una, puoi scegliere di donarla a un altro giocatore che non ne ha.</li>
+                        <li>L'Ispirazione non si accumula tra le sessioni; se non la utilizzi, la perdi alla fine della sessione (a discrezione del Maestro del Gioco).</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box" style="margin-top: 20px;">
+                    <p><strong>Consiglio per i Maestri del Gioco:</strong></p>
+                    <p>
+                        Siate generosi con l'Ispirazione! È uno strumento potente per incoraggiare il tipo 
+                        di gioco che desiderate al vostro tavolo. Se volete più interpretazione, premiate 
+                        l'interpretazione. Se volete soluzioni creative, premiate la creatività. L'Ispirazione 
+                        non rende il gioco troppo facile; rende invece il gioco più divertente e coinvolgente.
+                    </p>
+                </div>
             </section>
 
-            <div class="tip-box" style="margin-top: 40px;">
-                <p><strong>Suggerimento Stampa:</strong></p>
-                <p>Stampa questa appendice e tieni table durante sessioni per reference veloce. Riduce tempo lookup rules, mantiene flow gioco!</p>
+            <div class="tip-box" style="margin-top: 50px;">
+                <h4>Suggerimento per la Stampa</h4>
+                <p>
+                    Questa appendice è stata progettata specificamente per essere stampata e utilizzata come 
+                    riferimento rapido durante le sessioni. Molti Maestri del Gioco trovano utile stampare queste pagine 
+                    e tenerle in una cartellina dietro il proprio schermo, oppure distribuire copie ai giocatori.
+                </p>
+                <p>
+                    La consultazione rapida di queste tabelle riduce significativamente il tempo necessario 
+                    per cercare le regole nei capitoli principali del manuale, mantenendo fluido il ritmo 
+                    del gioco e l'immersione nella storia.
+                </p>
             </div>
         </article>
 
@@ -643,8 +855,8 @@
     </div>
 
     <footer class="main-footer">
-        <p><strong>COLT & CTHULHU</strong> - Appendice A: Quick Reference</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">© 2025 - Guida Completa del Giocatore</p>
+        <p><strong>COLT & CTHULHU</strong> - Appendice A: Riferimento Rapido</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">© 2025 Riccardo Franci - Tutti i diritti riservati</p>
     </footer>
 
     <a href="#top" class="back-to-top">↑</a>
