@@ -1,0 +1,3003 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appendice: Dieci scenari pronti - Colt & Cthulhu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .scenario-banner {
+            background: linear-gradient(135deg, #1a0f00 0%, #8B4513 50%, #1a0f00 100%);
+            color: #D4AF37;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 4px solid #D4AF37;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+        
+        .scenario-banner h1 {
+            font-size: 3rem;
+            margin: 0 0 15px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            color: #D4AF37;
+            border: none;
+        }
+        
+        .scenario-card {
+            background: #FFF8DC;
+            border: 4px solid #8B4513;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 8px rgba(44, 24, 16, 0.3);
+        }
+        
+        .scenario-header {
+            background: linear-gradient(to right, #8B4513, #D4AF37);
+            color: white;
+            padding: 20px;
+            margin: -30px -30px 20px -30px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .scenario-number {
+            font-size: 3rem;
+            opacity: 0.3;
+            float: right;
+            margin: -10px 0 0 0;
+        }
+        
+        .scenario-title {
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+        }
+        
+        .scenario-tagline {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .hook-box {
+            background: #E8F4E8;
+            border-left: 5px solid #3d5a3d;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .truth-box {
+            background: #FFF0F0;
+            border-left: 5px solid #8B0000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .horror-box {
+            background: #2C1810;
+            color: #E8DCC0;
+            border: 3px solid #8B0000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(139, 0, 0, 0.3);
+        }
+        
+        .npc-block {
+            background: white;
+            border: 2px solid #8B4513;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+        
+        .stat-block {
+            background: #FFF8DC;
+            border: 3px solid #8B4513;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .location-box {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.15), transparent);
+            border-left: 4px solid #D4AF37;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .handout {
+            background: #F5F5DC;
+            border: 3px double #8B4513;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-style: italic;
+            box-shadow: inset 0 0 10px rgba(139, 69, 19, 0.1);
+        }
+        
+        .key-question {
+            background: linear-gradient(135deg, #D4AF37 0%, #8B4513 100%);
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th {
+            background: #8B4513;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #D4AF37;
+        }
+        
+        table tr:nth-child(even) {
+            background: #FFF8DC;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>COLT & CTHULHU</h1>
+        <p class="subtitle">Appendice: Dieci scenari pronti per il gioco</p>
+    </header>
+
+    <nav class="nav-main">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="scenario_introduttivo.html">Lo scenario</a></li>
+            <li><a href="appendice-scenari.html" class="active">Gli scenari</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <article class="chapter">
+            
+            <div class="scenario-banner">
+                <h1>🌵 DIECI SCENARI PRONTI 🐙</h1>
+                <p style="font-size: 1.3rem; color: white; margin: 15px 0; font-style: italic;">
+                    Avventure complete per portare l'orrore cosmico nel tuo West
+                </p>
+                <p style="color: white; font-size: 1.1rem; margin: 15px auto; max-width: 700px;">
+                    Questa appendice contiene dieci scenari completi, pronti al gioco, che intrecciano 
+                    l'azione western con l'orrore lovecraftiano. Ogni scenario include agganci, PNG 
+                    dettagliati, statistiche creature, e tutto ciò che serve per una sessione memorabile.
+                </p>
+            </div>
+
+            <section id="come-usare">
+                <h2>Come usare questi scenari</h2>
+                
+                <p>
+                    Ogni scenario è strutturato per offrire al narratore massima flessibilità. Puoi 
+                    utilizzarli come avventure autoconclusiv e da completare in una o due sessioni, oppure 
+                    integrarli in una campagna più ampia. Gli scenari sono pensati per personaggi di 
+                    <strong>livello 1-3</strong>, ma includono suggerimenti per adattarli a gruppi più 
+                    esperti.
+                </p>
+
+                <div class="tip-box">
+                    <h4>💡 La struttura di ogni scenario</h4>
+                    <ul>
+                        <li><strong>L'aggancio:</strong> Come coinvolgere i personaggi nella storia</li>
+                        <li><strong>La verità lovecraftiana:</strong> Cosa sta realmente accadendo (solo per il narratore!)</li>
+                        <li><strong>L'orrore:</strong> Gli elementi che creano tensione e paura</li>
+                        <li><strong>Le location:</strong> I luoghi chiave dell'avventura</li>
+                        <li><strong>I PNG:</strong> Personaggi non giocanti con motivazioni e segreti</li>
+                        <li><strong>Le creature:</strong> Statistiche complete per gli orrori cosmici</li>
+                        <li><strong>La domanda chiave:</strong> Il dilemma morale o tattico dell'avventura</li>
+                        <li><strong>Le conclusioni possibili:</strong> Modi diversi in cui può finire la storia</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Importante per il narratore</h4>
+                    <p>
+                        Questi scenari contengono orrori cosmici potenti. <strong>Non tutti i problemi 
+                        possono essere risolti con la violenza.</strong> Incoraggia i giocatori a 
+                        pensare creativamente: la fuga, il raggiro, la distruzione di artefatti o la 
+                        ricerca di alleati inaspettati possono essere soluzioni migliori di un duello 
+                        con pistole contro entità immortali.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SCENARIO 0 - IL PRINCIPALE -->
+            <div class="scenario-card" id="scenario-0" style="border: 6px solid #8B0000; box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);">
+                <div class="scenario-header" style="background: linear-gradient(to right, #000000, #8B0000, #000000);">
+                    <span class="scenario-number" style="color: #8B0000;">00</span>
+                    <h2 class="scenario-title" style="font-size: 2.5rem;">Dove l'Oceano Incontra la Polvere</h2>
+                    <p class="scenario-tagline" style="font-size: 1.3rem;">Lo scenario definitivo - Il risveglio del Sognatore</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #8B0000 0%, #000000 100%); color: #D4AF37; 
+                    padding: 30px; margin: 20px -30px; text-align: center; border-top: 3px solid #D4AF37; 
+                    border-bottom: 3px solid #D4AF37;">
+                    <h3 style="margin: 0 0 15px 0; font-size: 1.8rem; color: white;">⚠️ ATTENZIONE: SCENARIO EPICO</h3>
+                    <p style="font-size: 1.2rem; margin: 0; line-height: 1.7;">
+                        Questo è <strong>LO</strong> scenario di Colt & Cthulhu. Il momento in cui i personaggi 
+                        vedranno <strong>Cthulhu stesso</strong> e comprenderanno l'insignificanza dell'umanità 
+                        di fronte al cosmo. Preparati per 4-6 ore di gioco intenso che culmineranno in una delle 
+                        scene più terrificanti del GDR horror.
+                    </p>
+                    <p style="font-size: 1.1rem; margin: 20px 0 0 0; font-style: italic;">
+                        Livello consigliato: 3-5 | Durata: 4-6 ore | Tasso mortalità: ALTO | Tasso follia: ESTREMO
+                    </p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio - La preparazione nel West</h4>
+                    <p>
+                        <strong>Salt Lake City, Utah - 1885</strong>
+                    </p>
+                    <p>
+                        <strong>Cornelius Blackwood</strong>, magnate della <em>Utah & Pacific Railroad Company</em>, 
+                        vi convoca nel suo ufficio sontuoso. È un uomo sulla sessantina, vestito impeccabilmente, 
+                        ma i suoi occhi tradiscono preoccupazione profonda.
+                    </p>
+                    <p>
+                        "Signori," inizia versandovi whisky costoso, "ho un problema. La mia squadra di geometri - 
+                        dodici uomini, i migliori che il denaro possa comprare - è scomparsa tre settimane fa mentre 
+                        tracciava la rotta per la nuova linea ferroviaria attraverso lo Utah meridionale."
+                    </p>
+                    <p>
+                        Spinge una mappa attraverso il tavolo di mogano. Il dito indica una vasta depressione salina 
+                        a 200 miglia a sud.
+                    </p>
+                    <p>
+                        "Sono scomparsi qui. Un luogo che le tribù <strong>Ute</strong> chiamano 
+                        <strong>'L'Occhio Asciutto'</strong>. Gli anziani mi hanno implorato di non mandare uomini 
+                        là. Dicono che è un luogo dove 'il mare morto sogna'."
+                    </p>
+                    <p>
+                        Blackwood si sporge in avanti, voce bassa: "Normalmente ignorerei le superstizioni native. Ma 
+                        l'ultimo telegramma che ho ricevuto dal capo geometra, il Dr. Edmund Pierce..." tira fuori un 
+                        foglio sgualcito, "...era questo."
+                    </p>
+                </div>
+
+                <div class="handout" style="background: #F0E68C; border: 4px double #8B4513; font-size: 0.95rem;">
+                    <p style="text-align: center; font-weight: bold; font-style: normal; border-bottom: 2px solid #8B4513; 
+                        padding-bottom: 10px; margin-bottom: 15px;">
+                        TELEGRAMMA - DR. EDMUND PIERCE
+                    </p>
+                    <p style="font-family: 'Courier New', monospace;">
+                        DA: CAMPO BASE OCCHIO ASCIUTTO<br>
+                        A: BLACKWOOD, SALT LAKE CITY<br>
+                        DATA: 3 SETTEMBRE 1885<br><br>
+                        
+                        STOP L'ARIA È SBAGLIATA STOP PUZZA DI SALE E ALGHE STOP SIAMO A 200 MIGLIA DALL'OCEANO 
+                        STOP<br><br>
+                        
+                        LE STELLE NON SONO QUELLE GIUSTE STOP GLI STRUMENTI IMPAZZISCONO STOP PUNTANO TUTTI 
+                        SOTTOTERRA STOP<br><br>
+                        
+                        L'ECO NEL CANYON CANTA STOP NON È INGLESE STOP NON È UMANO STOP<br><br>
+                        
+                        JENKINS SI È SCAVATO GLI OCCHI STANOTTE STOP DICE CHE "VEDEVA TROPPO" STOP<br><br>
+                        
+                        MANDATECI VIA STOP O MANDATE ALTRI STOP DOBBIAMO FINIRE IL LAVORO STOP<br><br>
+                        
+                        L'OCEANO CI CHIAMA STOP<br><br>
+                        
+                        - PIERCE
+                    </p>
+                </div>
+
+                <div class="hook-box">
+                    <p>
+                        Blackwood vi guarda intensamente. "Ho bisogno che li troviate. Vivi o morti. E che 
+                        recuperiate le loro mappe e strumenti - ho investito 50.000 dollari in quell'equipaggiamento. 
+                        Vi pago <strong>200 dollari a testa</strong> ora, più <strong>altri 300 al completamento</strong>."
+                    </p>
+                    <p>
+                        Fa una pausa. "E se scoprite cosa sta succedendo davvero là fuori... forse c'è un bonus extra."
+                    </p>
+                    <p style="margin-top: 20px; padding: 15px; background: rgba(139, 0, 0, 0.1); border-left: 4px solid #8B0000;">
+                        <strong>Nota per il narratore:</strong> Blackwood è sincero. Non sa nulla del Mito. Vuole 
+                        semplicemente i suoi uomini e le sue mappe. Se i PG rifiutano, può aumentare la paga fino 
+                        a 1000 dollari totali - è disperato.
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità lovecraftiana - Il cuore dello scenario</h4>
+                    <p>
+                        Lo Utah meridionale è un antico fondale marino. <strong>Eoni fa</strong>, quando la Grande 
+                        Città Cadavere di <strong>R'lyeh</strong> precipitò dallo spazio sulla Terra, l'impatto fu 
+                        così catacl ismico da scagliare "frammenti" della sua geometria impossibile per migliaia di 
+                        chilometri.
+                    </p>
+                    <p>
+                        Uno di questi "frammenti" giace sepolto sotto la depressione salina dell'Occhio Asciutto. 
+                        Non è un frammento fisico di pietra o metallo - è un <strong>Fossile Psichico</strong>, 
+                        un'antenna cosmica cristallizzata che trasmette passivamente l'incubo del suo padrone 
+                        addormentato.
+                    </p>
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #8B0000; margin: 20px 0; padding: 20px; 
+                        background: white; border: 3px solid #8B0000; text-align: center;">
+                        CTHULHU STA SOGNANDO. IL FOSSILE TRASMETTE QUEL SOGNO.
+                    </p>
+                    <p>
+                        I geometri, con i loro strumenti scientifici di precisione (teodoliti, bussole magnetiche, 
+                        livelle a bolla), hanno involontariamente <strong>amplificato il segnale</strong>. Cercando 
+                        di mappare anomalie magnetiche, hanno invece creato un'antenna ancora più potente.
+                    </p>
+                    <p>
+                        Ora il sogno di Cthulhu non sta solo sussurrando nelle loro menti. Sta <strong>squarciando 
+                        la realtà</strong>.
+                    </p>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2rem; margin: 40px 0 20px 0; text-align: center; 
+                    border-top: 3px solid #8B0000; border-bottom: 3px solid #8B0000; padding: 15px 0;">
+                    ATTO I - Il Viaggio verso l'Occhio Asciutto
+                </h3>
+
+                <div class="location-box">
+                    <h4>📍 La strada verso sud (3 giorni di viaggio)</h4>
+                    <p>
+                        Il viaggio da Salt Lake City all'Occhio Asciutto richiede tre giorni a cavallo attraverso 
+                        terreno progressivamente più desolato. Usa questo tempo per:
+                    </p>
+                    <ul>
+                        <li><strong>Sviluppo carattere:</strong> I PG parlano, fanno piani, si preparano mentalmente</li>
+                        <li><strong>Incontri minori:</strong> Mercanti che scappano dalla zona, animali che si 
+                        comportano stranamente</li>
+                        <li><strong>Foreshadowing:</strong> Segni inquietanti - uccelli morti, vegetazione 
+                        annerita, cristalli di sale dove non dovrebbero esserci</li>
+                    </ul>
+                </div>
+
+                <div class="npc-block">
+                    <h4>👤 Aquila che Vede Lontano (Sciamano Ute)</h4>
+                    <p><strong>Ruolo:</strong> Guida spirituale, oracolo, possibile alleato</p>
+                    <p><strong>Aspetto:</strong> Anziano sui 70 anni, corpo magro e coriaceo plasmato dal deserto. 
+                    Occhi profondi color ambra che sembrano vedere attraverso le cose. Veste con pelli di cervo 
+                    decorate con perline e piume di corvo.</p>
+                    <p><strong>Incontro:</strong> Il secondo giorno, lo trovate seduto su una roccia direttamente 
+                    sul vostro percorso. "Vi stavo aspettando," dice senza preamboli.</p>
+                    <p><strong>Conoscenze:</strong> Conosce le leggende dell'Occhio Asciutto da generazioni. Sa 
+                    che è un luogo dove "il Grande Sognatore Sotto il Mare può guardare attraverso la terra." 
+                    Può insegnare ai PG il canto di protezione (vedi sotto).</p>
+                    <p><strong>Avvertimento:</strong> "Gli uomini bianchi hanno aperto l'Occhio. Ora il Sognatore 
+                    ci guarda. Voi dovete chiuderlo... o unirvi ai folli che danzano nell'acqua fantasma."</p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>🎵 Il Canto di Protezione Ute</h4>
+                    <p>
+                        Aquila che Vede Lontano può insegnare ai PG un antico canto di protezione. Cantarlo 
+                        richiede un'azione e concede <strong>vantaggio sui tiri salvezza su Saggezza contro 
+                        effetti psichici</strong> per 1 minuto.
+                    </p>
+                    <p>
+                        Il canto suona così (traduzione): <em>"Chiudi i tuoi occhi, oh Mare Morto / La terra 
+                        ti ha dimenticato / Dormi nel fango nero / Non guardare i figli della polvere"</em>
+                    </p>
+                    <p>
+                        Cantarlo durante la visione di Cthulhu può salvare vite e menti.
+                    </p>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2rem; margin: 40px 0 20px 0; text-align: center; 
+                    border-top: 3px solid #8B0000; border-bottom: 3px solid #8B0000; padding: 15px 0;">
+                    ATTO II - L'Accampamento Abbandonato
+                </h3>
+
+                <div class="location-box">
+                    <h4>📍 Il Campo Base dei Geometri</h4>
+                    <p>
+                        Trovate l'accampamento all'alba del quarto giorno. È un caos controllato - come se gli 
+                        occupanti avessero semplicemente smesso di preoccuparsi delle convenzioni umane.
+                    </p>
+                    <p><strong>Descrizione visiva:</strong></p>
+                    <ul>
+                        <li>Tutto - tende, attrezzature, terreno - è coperto da uno strato di <strong>sale marino 
+                        umido e alghe secche</strong>. Siete a 200 miglia dall'oceano più vicino.</li>
+                        <li>Le bussole girano all'impazzata, i cavalli si rifiutano di avvicinarsi</li>
+                        <li>L'aria ha un odore di <strong>salsedine e decomposizione</strong></li>
+                        <li>La temperatura è sbagliata - 10 gradi più fredda di quanto dovrebbe essere</li>
+                    </ul>
+                </div>
+
+                <div class="location-box">
+                    <h4>🔬 Gli strumenti disposti in cerchio</h4>
+                    <p>
+                        Al centro del campo, qualcuno ha disposto con cura tutti gli strumenti scientifici - 
+                        teodoliti, bussole, livelle, sestanti - in un cerchio perfetto di 6 metri di diametro.
+                    </p>
+                    <p>
+                        <strong>Cosa notano i PG (Percezione CD 12):</strong>
+                    </p>
+                    <ul>
+                        <li>Tutti gli strumenti puntano <strong>verso il basso</strong>, verso il centro del cerchio</li>
+                        <li>Le bussole non indicano il nord - indicano un punto sottoterra</li>
+                        <li>I teodoliti sono tutti angolati precisamente a 47° verso il sottosuolo</li>
+                        <li>Nel centro del cerchio, qualcuno ha scavato un buco profondo 2 metri. Sul fondo, 
+                        una roccia verdestra pulsa debolmente</li>
+                    </ul>
+                    <p>
+                        <strong>Cosa significa (Arcano/Scienza CD 15):</strong> Hanno creato un <strong>triangolatore 
+                        multivettoriale</strong>. Stanno mappando qualcosa sottoterra con precisione millimetrica. 
+                        Ma non è geologia - è geometria impossibile.
+                    </p>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Indizio</th>
+                        <th>Dove trovarlo</th>
+                        <th>CD Prova</th>
+                        <th>Cosa rivela</th>
+                    </tr>
+                    <tr>
+                        <td>Diario Dr. Pierce</td>
+                        <td>Tenda principale</td>
+                        <td>Investigare CD 10</td>
+                        <td>Progressione della follia, menzioni di "l'eco che canta"</td>
+                    </tr>
+                    <tr>
+                        <td>Mappe geologiche</td>
+                        <td>Tavolo da lavoro</td>
+                        <td>Automatico</td>
+                        <td>Mostrano che quest'area era fondale oceanico milioni di anni fa</td>
+                    </tr>
+                    <tr>
+                        <td>Registrazioni fonografiche</td>
+                        <td>Cassa di legno</td>
+                        <td>Percezione CD 13</td>
+                        <td>Registrazione dell'eco: canto alieno "Ph'nglui mglw'nafh..."</td>
+                    </tr>
+                    <tr>
+                        <td>Lettera personale (Jenkins)</td>
+                        <td>Sotto una branda</td>
+                        <td>Investigare CD 14</td>
+                        <td>"Vedo troppo. L'oceano mostra cose. Devo fermare gli occhi."</td>
+                    </tr>
+                    <tr>
+                        <td>Campioni geologici</td>
+                        <td>Laboratorio improvvisato</td>
+                        <td>Natura CD 15</td>
+                        <td>Rocce con geometria non-euclidea, cristalli "viventi"</td>
+                    </tr>
+                </table>
+
+                <div class="handout">
+                    <h4>📜 Diario del Dr. Edmund Pierce (Estratti)</h4>
+                    <p style="text-align: center; font-weight: bold; font-style: normal;">
+                        ESTRATTI SELEZIONATI
+                    </p>
+                    <p>
+                        <strong>20 Agosto:</strong> Arrivati all'Occhio Asciutto. Formazione geologica 
+                        affascinante. Le tribù locali ci evitano. Superstizione primitiva, presumo.<br><br>
+                        
+                        <strong>23 Agosto:</strong> Anomalia magnetica significativa. Tutti gli strumenti 
+                        indicano una massa densa sottoterra. Possibile deposito minerale massiccio?<br><br>
+                        
+                        <strong>26 Agosto:</strong> L'eco nel canyon è... strana. Ritorna come se ci fosse 
+                        qualcun altro a cantare. Jenkins giura di sentire parole. <del>Impossibile</del>.<br><br>
+                        
+                        <strong>29 Agosto:</strong> Ho sentito l'eco stanotte. Dio mi perdoni, Jenkins ha 
+                        ragione. Sono PAROLE. Ma in che lingua? Suona come... sale? Acqua? Sogno?<br><br>
+                        
+                        <strong>1° Settembre:</strong> Abbiamo triangolato la fonte dell'anomalia. È a 2 
+                        chilometri sottoterra. La geometria non ha senso. I nostri strumenti mostrano angoli 
+                        che non dovrebbero esistere in uno spazio tridimensionale.<br><br>
+                        
+                        <strong>2 Settembre:</strong> JENKINS SI È CAVATO GLI OCCHI. Urlava che "vedeva 
+                        l'oceano sottoterra" e che "il Sognatore lo guardava". L'abbiamo legato. I suoi 
+                        singhiozzi notturni ci tengono svegli.<br><br>
+                        
+                        <strong>3 Settembre:</strong> Stanotte ho sognato. Un oceano nero. Torri verdi che 
+                        salgono da fango preistorico. E qualcosa di ENORME che dorme su un trono. Mi ha 
+                        guardato. MI HA VISTO.<br><br>
+                        
+                        L'eco dice il suo nome: <span style="color: #8B0000; font-size: 1.2rem;">
+                        CTHULHU</span><br><br>
+                        
+                        Dobbiamo completare l'antenna. Forse se lo vediamo chiaramente, capiremo. Forse 
+                        possiamo servirlo. Forse...
+                    </p>
+                    <p style="text-align: right; font-style: normal; margin-top: 20px;">
+                        [Il diario finisce qui. Le pagine successive sono coperte di diagrammi ossessivi e 
+                        la frase "IL SOGNATORE SI SVEGLIA" ripetuta migliaia di volte in scrittura sempre 
+                        più frenetica]
+                    </p>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2rem; margin: 40px 0 20px 0; text-align: center; 
+                    border-top: 3px solid #8B0000; border-bottom: 3px solid #8B0000; padding: 15px 0;">
+                    ATTO III - L'Eco nel Canyon
+                </h3>
+
+                <div class="location-box">
+                    <h4>📍 Il Canyon dell'Eco</h4>
+                    <p>
+                        Le tracce (impronte, segni di trascinamento) conducono verso un canyon stretto che 
+                        si addentra nella depressione salina. Le pareti di roccia rossa sono alte 30 metri.
+                    </p>
+                    <p><strong>L'anomalia acustica:</strong></p>
+                    <p>
+                        Quando parlate, l'eco ritorna... <strong>sbagliata</strong>. Non è il semplice rimbalzo 
+                        del suono. È come se qualcun altro stesse ripetendo le vostre parole, ma con una voce 
+                        gutturale, aliena, antica.
+                    </p>
+                    <p>
+                        Se ascoltate attentamente (Percezione CD 13), l'eco sta effettivamente <em>rispondendo</em>:
+                    </p>
+                    <p style="padding: 15px; background: rgba(0,0,0,0.1); font-family: 'Georgia', serif; 
+                        font-style: italic;">
+                        <strong>PG:</strong> "Ciao?"<br>
+                        <strong>Eco:</strong> "...Ph'nglui..."<br><br>
+                        
+                        <strong>PG:</strong> "C'è qualcuno?"<br>
+                        <strong>Eco:</strong> "...mglw'nafh..."<br><br>
+                        
+                        <strong>PG:</strong> "Dove sono i geometri?"<br>
+                        <strong>Eco:</strong> "...Cthulhu R'lyeh..."<br><br>
+                        
+                        <strong>PG:</strong> [qualunque cosa]<br>
+                        <strong>Eco:</strong> "...wgah'nagl fhtagn..."
+                    </p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 Effetti psicologici del canyon</h4>
+                    <p>
+                        Ogni 10 minuti passati nel canyon, i PG devono effettuare <strong>tiro salvezza su 
+                        Saggezza CD 12</strong>:
+                    </p>
+                    <ul>
+                        <li><strong>Successo:</strong> Resistono</li>
+                        <li><strong>Fallimento:</strong> Guadagnano 1 punto stress + iniziano a sentire 
+                        l'oceano. Odore di sale. Suono di onde. Sensazione di acqua alle caviglie (non reale)</li>
+                        <li><strong>Fallimento critico:</strong> Come sopra + hanno una visione flash di 
+                        R'lyeh (guadagnano 2 stress aggiuntivi)</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-weight: bold; color: #8B0000;">
+                        I cavalli si rifiutano categoricamente di entrare nel canyon. Dovete proseguire a piedi.
+                    </p>
+                </div>
+
+                <div class="location-box">
+                    <h4>📍 Le pareti "bagnate"</h4>
+                    <p>
+                        Più procedete nel canyon, più le pareti di roccia sembrano... umide. Gocciolano acqua 
+                        salata che <strong>non dovrebbe esserci</strong>.
+                    </p>
+                    <p>
+                        <strong>Natura CD 14:</strong> Quest'acqua è impossibile. La composizione chimica 
+                        corrisponde all'acqua di mare del Cretaceo - 70 milioni di anni fa. Come può esistere?
+                    </p>
+                    <p>
+                        <strong>Arcano CD 16:</strong> Non è acqua "normale". È un'impronta psichica. Il Fossile 
+                        sta proiettando memorie dell'antico oceano nella realtà presente.
+                    </p>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2rem; margin: 40px 0 20px 0; text-align: center; 
+                    border-top: 3px solid #8B0000; border-bottom: 3px solid #8B0000; padding: 15px 0;">
+                    ATTO IV - La Tribù Maledetta
+                </h3>
+
+                <div class="npc-block">
+                    <h4>👤 I Sopravvissuti Ute</h4>
+                    <p><strong>Numero:</strong> 8 nativi terrorizzati - 3 guerrieri, 2 donne, 3 bambini</p>
+                    <p><strong>Condizione:</strong> In fuga disperata, affamati, alcuni feriti</p>
+                    <p><strong>Incontro:</strong> Li trovate nascosti in una grotta laterale del canyon, 
+                    barricati con rocce e pelli. Quando vi vedono, puntano archi e lance tremanti.</p>
+                </div>
+
+                <div class="npc-block">
+                    <h4>👤 Nuvola Rossa (Guerriero Ute)</h4>
+                    <p><strong>Ruolo:</strong> Portavoce del gruppo, guerriero sopravvissuto</p>
+                    <p><strong>Aspetto:</strong> Uomo sui 30 anni, cicatrice recente sul petto (artiglio?), 
+                    occhi che hanno visto troppo</p>
+                    <p><strong>Stato mentale:</strong> 4 punti stress, afflizione "Incubi Ricorrenti"</p>
+                    <p><strong>Ciò che sa:</strong></p>
+                    <ul>
+                        <li>Gli uomini bianchi hanno "aperto l'Occhio Asciutto" due giorni fa</li>
+                        <li>L'"acqua fantasma" è emersa - non vera acqua ma qualcosa di peggio</li>
+                        <li>Creature dell'antico mare camminano ora nel deserto</li>
+                        <li>I geometri sono al centro della depressione, adorando "il dio che sogna"</li>
+                    </ul>
+                    <p><strong>Ciò che vuole:</strong> Che i PG chiudano l'Occhio prima che sia troppo tardi. 
+                    "Quando il Sognatore si sveglia completamente, l'oceano morto ricoprirà di nuovo la terra."</p>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ La scelta morale</h4>
+                    <p>
+                        Nuvola Rossa chiede ai PG di scortare le donne e i bambini in salvo prima di affrontare 
+                        i geometri. Ma questo significa perdere tempo prezioso - e il rituale si sta avvicinando 
+                        al completamento.
+                    </p>
+                    <p><strong>Opzione A:</strong> Scortare i nativi (4 ore perse, ma vite salvate)</p>
+                    <p><strong>Opzione B:</strong> Andare subito al centro (i nativi potrebbero morire)</p>
+                    <p><strong>Opzione C:</strong> Dividere il gruppo (rischiosa ma equilibrata)</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ INCONTRO OPZIONALE: PREDATORE DELL'ANTICO MARE</h4>
+                    <p>
+                        Se i PG tardano troppo o fanno troppo rumore, una "eco" dell'antico oceano si 
+                        materializza per cacciarli.
+                    </p>
+                    <p><strong>PLESIOSAURO SPETTRALE</strong></p>
+                    <p><strong>CA:</strong> 15 (forma semi-corporea) | <strong>PF:</strong> 68 (8d12+16)</p>
+                    <p><strong>Velocità:</strong> 6 metri, nuoto 12 metri (può "nuotare" nell'aria)</p>
+                    <p><strong>Resistenze:</strong> Fisici (da armi non magiche)</p>
+                    <p><strong>Vulnerabilità:</strong> Fuoco, radiante</p>
+                    <p><strong>Morso:</strong> +7 al tiro, 3d8+4 perforanti + afferrare</p>
+                    <p><strong>Stretta acquatica:</strong> Creatura afferrata subisce 2d6 danni da freddo/turno</p>
+                    <p><strong>Stress:</strong> Vedere la creatura = SAG CD 13 o 2 stress</p>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2rem; margin: 40px 0 20px 0; text-align: center; 
+                    border-top: 3px solid #8B0000; border-bottom: 3px solid #8B0000; padding: 15px 0;">
+                    ATTO V - Il Profeta del Sale
+                </h3>
+
+                <div class="location-box">
+                    <h4>📍 Il Centro della Depressione Salina - L'Occhio Asciutto</h4>
+                    <p>
+                        Emergete dal canyon e vedete... l'impossibile.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; padding: 20px; background: rgba(139,0,0,0.1);">
+                        La depressione salina si estende per 2 chilometri in ogni direzione - una cicatrice 
+                        bianca nella terra rossa. Ma al centro, qualcosa brilla con luce verdastra malata.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; padding: 20px; background: rgba(139,0,0,0.1);">
+                        I geometri hanno costruito un'<strong>effigie mostruosa</strong> alta 10 metri. È 
+                        fatta di sale cristallizzato, treppiedi di metallo, rocce, e... parti di corpi. Non 
+                        sembrano morti per violenza - si sono semplicemente <em>aggiunti</em> alla struttura.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; padding: 20px; background: rgba(139,0,0,0.1);">
+                        La forma è vagamente umanoide ma <strong>sbagliata</strong> in modi che fanno male 
+                        agli occhi. Testa calamaro. Ali membranose. Tentacoli. È una rappresentazione grezza 
+                        ma riconoscibile di <span style="color: #8B0000; font-weight: bold; font-size: 1.2rem;">
+                        CTHULHU</span>.
+                    </p>
+                </div>
+
+                <div class="npc-block">
+                    <h4>👤 Il Profeta del Sale (Dr. Edmund Pierce - Trasformato)</h4>
+                    <p><strong>Aspetto:</strong> Un tempo era un uomo distinto sulla cinquantina. Ora è 
+                    qualcosa d'altro. La pelle è ricoperta di cristalli di sale che crescono attraverso la 
+                    carne. Gli occhi sono vuoti - letteralmente vuoti, sostituti da conchiglie lucenti. 
+                    Cammina scalzo sulla crosta salina lasciando impronte che sanguinano acqua marina.</p>
+                    <p><strong>Stato mentale:</strong> Oltre la follia. Non è più Pierce. È un <em>araldo</em>.</p>
+                    <p><strong>I suoi "fedeli":</strong> Gli altri 11 geometri sono con lui, tutti ciechi, 
+                    tutti cristallizzati. Si muovono all'unisono come un unico organismo.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ IL PROFETA DEL SALE (Dr. Edmund Pierce Corrotto)</h4>
+                    <p><strong>CA:</strong> 16 (armatura di sale cristallizzato)</p>
+                    <p><strong>PF:</strong> 82 (11d8+33)</p>
+                    <p><strong>Velocità:</strong> 9 metri, nuoto 12 metri</p>
+                    <p><strong>FOR:</strong> 16 (+3) | <strong>DES:</strong> 12 (+1) | <strong>COS:</strong> 
+                    16 (+3) | <strong>INT:</strong> 18 (+4) | <strong>SAG:</strong> 6 (-2) | 
+                    <strong>CAR:</strong> 14 (+2)</p>
+                    
+                    <p><strong>Immunità:</strong> Psichico, veleno</p>
+                    <p><strong>Resistenze:</strong> Freddo, necrotico</p>
+                    <p><strong>Vulnerabilità:</strong> Fuoco (sale si scioglie)</p>
+                    
+                    <p><strong>AZIONI:</strong></p>
+                    <p><strong>Tocco del Sognatore:</strong> +6 al tiro, portata 1,5 m. Colpito: 2d8+3 
+                    necrotici + SAG CD 15 o paralizzato 1 round (visione di R'lyeh)</p>
+                    <p><strong>Parola di potere aliena (Ricarica 5-6):</strong> Grida "Ph'nglui mglw'nafh 
+                    Cthulhu R'lyeh wgah'nagl fhtagn!" Tutte le creature entro 9 metri: SAG CD 16 o 3d10 
+                    psichici + stordito 1 round</p>
+                    <p><strong>Evocare acqua fantasma (1/giorno):</strong> Riempie area di 6m di raggio con 
+                    acqua spettrale. Terreno difficile, SAG CD 14 ogni turno o 2d6 psichici</p>
+                    
+                    <p><strong>REAZIONI:</strong></p>
+                    <p><strong>Scudo di sale:</strong> Quando colpito, crea scudo cristallino (riduce danno 
+                    di 2d10)</p>
+                    
+                    <p><strong>Stress:</strong> Vedere il Profeta = SAG CD 14 o 3 stress</p>
+                    <p><strong>IMPORTANTE:</strong> Il Profeta NON vuole combattere. Vuole che assistiate.</p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 L'incontro con il Profeta</h4>
+                    <p style="font-size: 1.15rem; line-height: 1.8;">
+                        Quando vi avvicinate, tutti e dodici i geometri si voltano verso di voi 
+                        simultaneamente. Il Profeta alza le braccia in gesto di benvenuto.
+                    </p>
+                    <p style="font-size: 1.2rem; font-style: italic; padding: 20px; background: black; 
+                        color: #D4AF37; border: 3px solid #8B0000;">
+                        <strong>"Stolti! Siete venuti ad assistere alla Nascita!"</strong>
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 1.8;">
+                        La sua voce è come rocce che grattano sott'acqua.
+                    </p>
+                    <p style="font-size: 1.2rem; font-style: italic; padding: 20px; background: black; 
+                        color: #D4AF37; border: 3px solid #8B0000;">
+                        "Avete sentito il Suo canto nelle vostre menti primitive. Lo avete chiamato 'eco'. 
+                        Ma noi... NOI ora vedremo il Sognatore! L'antenna è completa. Manca solo... 
+                        l'ultimo collegamento."
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 1.8;">
+                        Estrae dal mantello un piccone di ferro lungo 1 metro, con la punta coperta di simboli 
+                        incisi che fanno male agli occhi.
+                    </p>
+                    <p style="font-size: 1.2rem; font-style: italic; padding: 20px; background: black; 
+                        color: #D4AF37; border: 3px solid #8B0000;">
+                        "Quando conficco questo nel cuore del Fossile Psichico, l'antenna si attiverà 
+                        completamente. Per un momento benedetto, il sogno diventerà visione. E vedremo... 
+                        VEDREMO IL GRANDE CTHULHU!"
+                    </p>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ LA SCELTA FINALE - 3 OPZIONI</h4>
+                    
+                    <p><strong>OPZIONE 1: Fermare il rituale CON LA FORZA</strong></p>
+                    <ul>
+                        <li>Combattere il Profeta e i 11 geometri (vedi stat-block sotto)</li>
+                        <li>Difficoltà: ALTA - 12 vs 4-5 PG</li>
+                        <li>Se vincono velocemente: Fermano il rituale PRIMA della visione</li>
+                        <li>Se tardano: Il Profeta completa il rituale durante il combattimento</li>
+                    </ul>
+                    
+                    <p><strong>OPZIONE 2: Lasciarlo completare e sopravvivere</strong></p>
+                    <ul>
+                        <li>Non interferire. Assistere alla visione.</li>
+                        <li>VEDRANNO Cthulhu (vedi Atto VI)</li>
+                        <li>Poi devono distruggere il Fossile durante il chaos</li>
+                        <li>Più pericoloso ma garantisce di vedere "il momento iconico"</li>
+                    </ul>
+                    
+                    <p><strong>OPZIONE 3: Negoziare/Ingannare</strong></p>
+                    <ul>
+                        <li>Persuasione/Inganno CD 18 - fingere di voler unirsi</li>
+                        <li>Avvicinarsi al Fossile con la scusa di "aiutare"</li>
+                        <li>Sabotare l'antenna o rubare il piccone</li>
+                        <li>Rischiosa - se falliscono, il Profeta attiva comunque</li>
+                    </ul>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ GEOMETRI CORROTTI (x11)</h4>
+                    <p><strong>CA:</strong> 13 | <strong>PF:</strong> 22 ciascuno</p>
+                    <p><strong>Velocità:</strong> 9 metri</p>
+                    <p>Combattono come uno sciame, non individui. Usano picconi, catene, rocce affilate.</p>
+                    <p><strong>Attacco in branco:</strong> +4 al tiro, 1d8+2 danni</p>
+                    <p><strong>Frenesia del culto:</strong> Non sentono dolore. A 0 PF continuano a muoversi 
+                    per 1 round prima di crollare</p>
+                    <p><strong>TATTICA:</strong> Circondano i PG, provano ad afferrarli e trascinarli verso 
+                    l'effigie</p>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2.5rem; margin: 60px 0 30px 0; text-align: center; 
+                    border: 5px solid #8B0000; padding: 20px; background: black; color: #D4AF37;">
+                    ATTO VI - LA VISIONE E LA MAREA<br>
+                    <span style="font-size: 1.2rem; font-style: italic;">(Il momento definitivo)</span>
+                </h3>
+
+                <div style="background: linear-gradient(180deg, #000000 0%, #8B0000 50%, #000000 100%); 
+                    color: white; padding: 40px; margin: 30px -30px; border: 6px solid #8B0000;">
+                    <h4 style="text-align: center; font-size: 2rem; color: #D4AF37; margin: 0 0 20px 0;">
+                        💀 MOMENTO ICONICO: L'OCCHIO SI APRE 💀
+                    </h4>
+                    <p style="font-size: 1.2rem; text-align: center; margin: 20px 0;">
+                        Che i PG abbiano fermato il Profeta o meno, se il piccone tocca il Fossile, 
+                        <strong>questo accade</strong>.
+                    </p>
+                </div>
+
+                <div class="horror-box" style="border: 5px solid #8B0000; background: #000000; color: #D4AF37;">
+                    <h4 style="color: white; font-size: 1.8rem; text-align: center; margin-top: 0;">
+                        LA VISIONE DI CTHULHU
+                    </h4>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        Il Profeta conficca il piccone nel terreno salino, completando il cerchio di ferro 
+                        attorno al Fossile Psichico.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        Non è un rituale. È un <strong>cortocircuito cosmico</strong>.
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 2; font-weight: bold; color: white;">
+                        Per un istante eterno, il mondo cessa di esistere.
+                    </p>
+                    
+                    <hr style="border-color: #8B0000; margin: 30px 0;">
+                    
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        <strong>FASE 1 - LO SQUARCIO (Round 1)</strong>
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9;">
+                        Il cielo del deserto si <em>squarcia</em>. Non vedete stelle. Non vedete blu. 
+                        Vedete un <strong>abisso nero e vorticoso</strong>, come se qualcuno avesse strappato 
+                        via il tessuto della realtà.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9;">
+                        Sentite vertigine. Nausea. <strong>State cadendo</strong>... no, la vostra 
+                        <em>prospettiva</em> sta cadendo. Siete costretti a guardare giù... o attraverso... 
+                        il pianeta stesso.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; font-weight: bold; color: white;">
+                        La vostra vista precipita per migliaia di chilometri, attraverso roccia, magma, 
+                        mantello, fino all'<span style="color: #00CED1;">Oceano Pacifico</span>.
+                    </p>
+                    <p style="font-style: italic; text-align: center; margin: 20px 0; font-size: 1.2rem;">
+                        [Tutti i PG: Tiro salvezza Costituzione CD 13 o proni per nausea]
+                    </p>
+                    
+                    <hr style="border-color: #8B0000; margin: 30px 0;">
+                    
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        <strong>FASE 2 - LA DISCESA (Round 2)</strong>
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9;">
+                        La vostra visione si immerge nell'oceano. Attraversa la zona eufotica... la zona 
+                        afotica... più in profondità di quanto la luce possa mai arrivare. Più in profondità 
+                        di quanto qualsiasi essere vivente dovrebbe trovarsi.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; color: #00CED1;">
+                        L'acqua qui è <strong>nera come petrolio</strong>. La pressione spaccherebbe una nave 
+                        di ferro come un guscio d'uovo. Ma la vostra mente... la vostra mente può vedere.
+                    </p>
+                    <p style="font-style: italic; text-align: center; margin: 20px 0; font-size: 1.2rem;">
+                        [Tutti i PG: Tiro salvezza Saggezza CD 14 o 2 stress - "Visione dell'Abisso"]
+                    </p>
+                    
+                    <hr style="border-color: #8B0000; margin: 30px 0;">
+                    
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        <strong>FASE 3 - R'LYEH (Round 3)</strong>
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 2; font-weight: bold; color: #00FF00;">
+                        E poi... la vedete.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9;">
+                        La Grande Città Cadavere. <strong>R'lyeh</strong>.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9;">
+                        Torri verdi e viscide che salgono da fango preistorico. Architettura che viola ogni 
+                        legge della geometria - angoli che non dovrebbero esistere nello spazio tridimensionale, 
+                        superfici che sono contemporaneamente concave e convesse, scale che salgono e scendono 
+                        nella stessa direzione.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; color: #00FF00;">
+                        Le pietre stesse sono <em>vive</em> in qualche modo indicibile. Pulsano. Respirano. 
+                        <strong>Ricordano eoni</strong>.
+                    </p>
+                    <p style="font-style: italic; text-align: center; margin: 20px 0; font-size: 1.2rem; color: white;">
+                        [Tutti i PG: Tiro salvezza Saggezza CD 16 o 3 stress - "Geometria Non-Euclidea"]
+                    </p>
+                    
+                    <hr style="border-color: #8B0000; margin: 30px 0;">
+                    
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        <strong>FASE 4 - IL SOGNATORE (Round 4)</strong>
+                    </p>
+                    <p style="font-size: 1.3rem; line-height: 2; font-weight: bold; text-align: center; 
+                        color: #FF0000;">
+                        E al centro della città morta...<br>
+                        SUL TRONO DI FANGO...<br>
+                        LO VEDETE.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2; margin: 30px 0;">
+                        È una <strong>montagna di carne e furia cosmica</strong>. Alto quanto le Montagne 
+                        Rocciose che avete lasciato settimane fa. La pelle è verde come alghe putreftate, 
+                        coperta di scaglie grandi quanto carrozze.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        La testa è <em>sbagliata</em> - vagamente umanoide ma con una massa pulsante di 
+                        tentacoli dove dovrebbe esserci il viso. Le ali membranose, piegate contro il corpo 
+                        massiccio, potrebbero coprire intere città quando estese.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        Non sta attaccando. Non si sta muovendo. <strong>Sta dormendo</strong>, placidamente, 
+                        come ha fatto per millenni.
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 2; font-style: italic; color: #FFD700;">
+                        E poi... nell'eternità del vostro incubo telepatico...
+                    </p>
+                    
+                    <hr style="border-color: #FF0000; margin: 40px 0;">
+                    
+                    <p style="font-size: 1.8rem; line-height: 2; font-weight: bold; text-align: center; 
+                        color: #FF0000; margin: 40px 0; text-shadow: 0 0 20px #FF0000;">
+                        UN SINGOLO, COLOSSALE OCCHIO COLOR RUBINO SI APRE<br>
+                        E VI FISSA.
+                    </p>
+                    
+                    <hr style="border-color: #FF0000; margin: 40px 0;">
+                    
+                    <p style="font-size: 1.15rem; line-height: 2; margin: 30px 0;">
+                        Non vi sta guardando come un predatore guarda una preda. Non vi sta guardando come 
+                        un re guarda un suddito.
+                    </p>
+                    <p style="font-size: 1.3rem; line-height: 2; font-weight: bold; text-align: center; 
+                        margin: 30px 0;">
+                        Vi sta guardando come un uomo guarda un microbo su un granello di polvere.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        Siete <strong>insignificanti</strong>. Siete meno della polvere. La vostra intera 
+                        civiltà - il West, l'America, l'umanità stessa - è un battito di ciglia nella vita 
+                        di questo essere.
+                    </p>
+                    <p style="font-size: 1.3rem; line-height: 2; font-weight: bold; text-align: center; 
+                        color: #FF0000; margin: 40px 0;">
+                        E siete stati <em>notati</em>.
+                    </p>
+                    
+                    <hr style="border-color: #FF0000; margin: 40px 0;">
+                    
+                    <div style="background: #8B0000; padding: 30px; margin: 40px 0; border: 4px solid white;">
+                        <h4 style="color: white; font-size: 1.6rem; text-align: center; margin: 0 0 20px 0;">
+                            ⚠️ IL TIRO SALVEZZA DEFINITIVO ⚠️
+                        </h4>
+                        <p style="color: white; font-size: 1.2rem; line-height: 2;">
+                            <strong>TUTTI I PERSONAGGI:</strong> Tiro salvezza su Saggezza <strong>CD 18</strong>
+                        </p>
+                        <p style="color: white; font-size: 1.1rem; line-height: 1.8;">
+                            <strong>Successo:</strong> Guadagnano 5 punti stress + afflizione permanente 
+                            "Visioni di R'lyeh" (incubi ogni notte per il resto della vita)
+                        </p>
+                        <p style="color: white; font-size: 1.1rem; line-height: 1.8;">
+                            <strong>Fallimento:</strong> Come sopra + immediata follia temporanea (1d4 giorni 
+                            catatonici) + afflizione "L'Occhio mi Guarda" (paranoia permanente)
+                        </p>
+                        <p style="color: white; font-size: 1.1rem; line-height: 1.8;">
+                            <strong>Fallimento Critico:</strong> Come sopra + perdita permanente di 2 punti 
+                            Saggezza + il PG VEDE "oltre". Sa cose che un mortale non dovrebbe sapere. Il 
+                            narratore può sussurrargli verità cosmiche durante la campagna.
+                        </p>
+                        <p style="color: #FFD700; font-size: 1.2rem; line-height: 2; margin-top: 20px; 
+                            font-weight: bold;">
+                            MODIFICATORI SPECIALI:
+                        </p>
+                        <ul style="color: white; font-size: 1.1rem; line-height: 1.8;">
+                            <li>+3 al tiro se stanno cantando il Canto di Protezione Ute</li>
+                            <li>+2 al tiro se hanno chiuso gli occhi prima della visione (Percezione CD 20 
+                            per capirlo in tempo)</li>
+                            <li>Vantaggio sul tiro se hanno letto tomi del Mito in passato (già "preparati" 
+                            all'impossibile)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2rem; margin: 40px 0 20px 0; text-align: center; 
+                    border-top: 3px solid #8B0000; border-bottom: 3px solid #8B0000; padding: 15px 0;">
+                    FASE 5 - L'AFTERSHOCK: La Marea nel Deserto
+                </h3>
+
+                <div class="location-box">
+                    <h4>⚡ IL COLLASSO DELLA REALTÀ</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.9;">
+                        L'occhio si chiude. La visione scompare come un incubo al risveglio. Siete di nuovo 
+                        nel deserto dello Utah, sotto il sole cocente.
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 2; font-weight: bold; color: #8B0000;">
+                        Ma il danno è fatto.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9;">
+                        L'impronta psichica di quell'immagine - la visione di Cthulhu - ha <strong>infranto 
+                        la realtà locale</strong>. Il Fossile Psichico, sovraccaricato dall'energia del 
+                        collegamento, sta ora proiettando non solo il sogno, ma la <em>memoria</em> 
+                        dell'antico oceano.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2; font-style: italic; text-align: center; 
+                        margin: 20px 0;">
+                        Il deserto ricorda quando era mare. E quel ricordo sta diventando reale.
+                    </p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 LA MAREA FANTASMA</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.9;">
+                        <strong>Round 1 dopo la visione:</strong>
+                    </p>
+                    <p>
+                        L'aria diventa <strong>densa</strong>. Pesante. Fatica a respirare come se foste 
+                        sott'acqua. (Costituzione CD 12 ogni round o svantaggio alle azioni)
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; margin-top: 15px;">
+                        <strong>Round 2:</strong>
+                    </p>
+                    <p>
+                        Dal terreno salino inizia a <strong>filtrare acqua nera e gelida</strong>. Non è 
+                        un'illusione. È REALE. La depressione salina si sta riempiendo.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; margin-top: 15px;">
+                        <strong>Round 3:</strong>
+                    </p>
+                    <p>
+                        L'acqua ha raggiunto le caviglie. La temperatura è scesa di 20 gradi. Nell'acqua, 
+                        vedete <strong>sagome</strong> che si muovono. Grandi. Affamate. Antiche.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; margin-top: 15px;">
+                        <strong>Round 4:</strong>
+                    </p>
+                    <p>
+                        Gli <strong>elementali d'acqua corrotta</strong> emergono. E con loro, i fantasmi 
+                        dei grandi rettili marini del Mesozoico - Plesiosauri, Ittiosauri, Mosasauri - 
+                        semi-corporei ma mortalmente reali.
+                    </p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ ELEMENTALE D'ACQUA CORROTTA</h4>
+                    <p><strong>CA:</strong> 14 | <strong>PF:</strong> 90 (12d10+24)</p>
+                    <p><strong>Velocità:</strong> Nuoto 27 metri, terreno 9 metri</p>
+                    <p><strong>Immunità danni:</strong> Veleno, acido</p>
+                    <p><strong>Resistenze:</strong> Contundenti, perforanti, taglienti da armi non magiche</p>
+                    <p><strong>Vulnerabilità:</strong> Fuoco (acqua evapora)</p>
+                    <p><strong>AZIONI:</strong></p>
+                    <p><strong>Attacco multiplo:</strong> Due schianti</p>
+                    <p><strong>Schianto:</strong> +7 al tiro, portata 1,5 m. 2d8+4 contundenti + afferrare</p>
+                    <p><strong>Annegamento (vs afferrato):</strong> Costituzione CD 15 o inizia ad annegare 
+                    (anche se fuori dall'acqua - l'elementale riempie i polmoni)</p>
+                    <p><strong>Forma d'acqua:</strong> Può muoversi attraverso spazi larghi 2,5cm senza 
+                    strizzarsi</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ MOSASAURO SPETTRALE</h4>
+                    <p><strong>CA:</strong> 16 | <strong>PF:</strong> 136 (13d12+52)</p>
+                    <p><strong>Velocità:</strong> 15 metri, nuoto 18 metri</p>
+                    <p><strong>Forma spettrale:</strong> Resistenza a tutti danni fisici, può passare attraverso 
+                    creature (infligge 2d10 necrotici)</p>
+                    <p><strong>Morso devastante:</strong> +9 al tiro, portata 3 m. 4d10+6 perforanti</p>
+                    <p><strong>Ruggito dell'estinzione (Ricarica 5-6):</strong> Cono 9 metri, SAG CD 15 o 
+                    spaventato 1 minuto</p>
+                </div>
+
+                <div class="warning-box" style="border: 4px solid #FF0000;">
+                    <h4 style="color: #FF0000;">⚠️ QUESTO NON È UN COMBATTIMENTO CHE SI PUÒ VINCERE</h4>
+                    <p style="font-size: 1.2rem; line-height: 2;">
+                        Il numero di creature aumenta ogni round. Dopo 5 round, ci sono dozzine di elementali 
+                        e rettili spettrali. I PG NON possono combatterli tutti.
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 2; font-weight: bold;">
+                        L'unica speranza è distruggere il Fossile Psichico.
+                    </p>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2rem; margin: 40px 0 20px 0; text-align: center; 
+                    border-top: 3px solid #8B0000; border-bottom: 3px solid #8B0000; padding: 15px 0;">
+                    FASE FINALE - Distruggere il Fossile
+                </h3>
+
+                <div class="location-box">
+                    <h4>💎 IL FOSSILE PSICHICO</h4>
+                    <p>
+                        Al centro della depressione, ora visibile perché l'acqua fantasma lo ha esposto, 
+                        brilla una <strong>roccia cristallina delle dimensioni di una carrozza</strong>.
+                    </p>
+                    <p>
+                        Pulsa con luce verde malata. Guardarlo fa male - è geometria non-euclidea solidificata. 
+                        Non dovrebbe esistere in tre dimensioni.
+                    </p>
+                    <p style="font-weight: bold; color: #8B0000; font-size: 1.2rem;">
+                        Questo è il cuore dell'antenna. Distruggilo e tutto finisce.
+                    </p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>🧨 Come distruggere il Fossile</h4>
+                    <p><strong>OPZIONE 1: Dinamite (la più ovvia)</strong></p>
+                    <ul>
+                        <li>I geometri hanno lasciato 12 candelotti di dinamite nel campo</li>
+                        <li>Serve qualcuno che corra verso il Fossile tra le creature</li>
+                        <li>Piazzare la dinamite (1 round), accendere miccia (1 azione), SCAPPARE (5 round 
+                        per raggiungere distanza sicura)</li>
+                        <li>Chi piazza la dinamite: Atletica CD 16 per schivare creature, Costituzione CD 
+                        14 per non annegare nell'acqua fantasma</li>
+                        <li>Esplosione: 10d10 danni in raggio 18 metri, il Fossile si frantuma</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;"><strong>OPZIONE 2: Il piccone sacro</strong></p>
+                    <ul>
+                        <li>Se hanno recuperato il piccone del Profeta (coperto di simboli)</li>
+                        <li>Conficcarlo nel Fossile con forza crea un "contraccolpo psichico"</li>
+                        <li>Richiede attacco in mischia +8 (piccone magico), 3 colpi consecutivi</li>
+                        <li>Al terzo colpo: il Fossile esplode psichicamente (SAG CD 17 o 4d10 psichici a 
+                        tutti entro 18 metri)</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;"><strong>OPZIONE 3: Il Canto di Chiusura</strong></p>
+                    <ul>
+                        <li>Se Aquila che Vede Lontano è con loro</li>
+                        <li>Può insegnare il "Canto di Chiusura dell'Occhio" - rituale di 3 round</li>
+                        <li>Richiede 2+ persone che cantano, mantenendo concentrazione (Costituzione CD 15 
+                        ogni round)</li>
+                        <li>Al completamento: il Fossile si "addormenta", l'acqua retrocede lentamente</li>
+                        <li>Soluzione non-violenta ma richiede coordinazione perfetta</li>
+                    </ul>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 La corsa disperata</h4>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        Qualunque metodo scelgano, devono attraversare:
+                    </p>
+                    <ul style="font-size: 1.1rem; line-height: 1.8;">
+                        <li><strong>Round 1:</strong> Acqua profonda 60cm, terreno difficile, Atletica CD 
+                        12 per non cadere</li>
+                        <li><strong>Round 2:</strong> Elementale attacca, 1 attacco di opportunità</li>
+                        <li><strong>Round 3:</strong> Mosasauro spettrale emerge, morso +9</li>
+                        <li><strong>Round 4:</strong> Raggiungono il Fossile (se sopravvissuti)</li>
+                        <li><strong>Round 5:</strong> Piazzano esplosivo o colpiscono</li>
+                        <li><strong>Round 6+:</strong> FUGA DISPERATA verso terreno asciutto</li>
+                    </ul>
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #FF0000; margin-top: 20px;">
+                        I geometri impazziti si gettano volontariamente nell'acqua fantasma, ridendo, e 
+                        vengono divorati dai Mosasauri.
+                    </p>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2rem; margin: 40px 0 20px 0; text-align: center; 
+                    border-top: 3px solid #8B0000; border-bottom: 3px solid #8B0000; padding: 15px 0;">
+                    EPILOGO - Dove l'Oceano Tornò alla Polvere
+                </h3>
+
+                <div class="tip-box">
+                    <h4>✅ Se i PG hanno successo</h4>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        Il Fossile si frantuma in mille pezzi cristallini. La luce verde malata si spegne. 
+                        Immediatamente, l'acqua fantasma inizia a <strong>evaporare</strong> - letteralmente 
+                        scompare nell'aria calda del deserto.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        Gli elementali si dissolvono in vapore acqueo. I Mosasauri spettrali urlano - un 
+                        suono come balene morenti - e svaniscono nell'oblio da cui erano emersi.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        In 10 minuti, è tutto finito. La depressione salina è di nuovo asciutta, bianca, 
+                        morta. Come se nulla fosse accaduto.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2; margin-top: 20px;">
+                        Ma tutti sanno che qualcosa è accaduto.
+                    </p>
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #8B0000; margin-top: 20px;">
+                        I PG sono sopravvissuti. Ma sono cambiati per sempre.
+                    </p>
+                </div>
+
+                <div class="warning-box">
+                    <h4>💀 Conseguenze permanenti</h4>
+                    <ul style="font-size: 1.1rem; line-height: 1.8;">
+                        <li><strong>Ogni PG ha visto Cthulhu.</strong> Hanno guardato negli occhi un dio 
+                        dormiente. Questo non si dimentica mai.</li>
+                        <li><strong>Incubi ogni notte.</strong> Per sempre. Sogneranno R'lyeh. Sogneranno 
+                        l'Occhio.</li>
+                        <li><strong>Paranoia cosmica.</strong> Sanno ora che l'umanità è insignificante. 
+                        Che esistono esseri così potenti che il concetto stesso di "combatterli" è ridicolo.</li>
+                        <li><strong>Cambiamento di prospettiva.</strong> Come puoi preoccuparti di banditi, 
+                        oro, terre, quando sai che Cthulhu giace sognando?</li>
+                        <li><strong>Afflizioni permanenti.</strong> A seconda dei fallimenti, potrebbero 
+                        avere perdite di Saggezza, fobie, ossessioni.</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💰 Ricompense materiali</h4>
+                    <ul style="font-size: 1.1rem;">
+                        <li><strong>Pagamento di Blackwood:</strong> 500 dollari a testa (come promesso)</li>
+                        <li><strong>Bonus:</strong> Altri 200 dollari se riportano le mappe (danneggiate 
+                        ma utilizzabili)</li>
+                        <li><strong>Frammenti del Fossile:</strong> Se raccolgono pezzi (CD Arcano 18 per 
+                        farlo in sicurezza), valgono 100 dollari/pezzo a collezionisti occulti</li>
+                        <li><strong>Equipaggiamento dei geometri:</strong> Teodoliti, bussole, strumenti 
+                        di precisione (valore totale: ~1000 dollari)</li>
+                        <li><strong>Fama/Infamia:</strong> La storia si diffonde (versione censurata). 
+                        Diventano "gli uomini che chiusero l'Occhio Asciutto"</li>
+                    </ul>
+                </div>
+
+                <div class="handout">
+                    <h4>📜 Rapporto finale a Blackwood (Documento per i giocatori)</h4>
+                    <p style="text-align: center; font-weight: bold; font-style: normal;">
+                        RAPPORTO - SPEDIZIONE OCCHIO ASCIUTTO
+                    </p>
+                    <p>
+                        Mr. Blackwood,<br><br>
+                        
+                        Abbiamo trovato la vostra squadra di geometri. Tutti morti. Le cause... difficili 
+                        da spiegare. Follia collettiva, direbbero le autorità.<br><br>
+                        
+                        Abbiamo recuperato le mappe e gli strumenti che avete richiesto. Alcuni sono 
+                        danneggiati, ma utilizzabili per il tracciato della ferrovia.<br><br>
+                        
+                        RACCOMANDAZIONE URGENTE: <span style="text-decoration: underline;">Deviate la 
+                        rotta della ferrovia.</span> L'Occhio Asciutto deve rimanere indisturbato. Non 
+                        mandate altri uomini là. Mai.<br><br>
+                        
+                        Se mi chiedete perché, posso solo dirvi questo: ci sono luoghi sulla Terra dove 
+                        il passato non è davvero morto. Dove cose più antiche della nostra civiltà 
+                        aspettano, sognando.<br><br>
+                        
+                        L'Occhio Asciutto è uno di quei luoghi.<br><br>
+                        
+                        Rispettosamente,<br>
+                        [Firma del PG leader]<br><br>
+                        
+                        P.S. - Se proprio dovete costruire la ferrovia attraverso quella zona, mandate 
+                        monaci buddhisti a benedire ogni miglio di binario. O sacerdoti cattolici. O 
+                        sciamani nativi. Mandate chiunque. Non importa quale dio, basta che sia sacro.
+                    </p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #000000 0%, #8B0000 100%); 
+                    color: #D4AF37; padding: 50px; margin: 60px -30px 30px -30px; text-align: center; 
+                    border-top: 6px solid #D4AF37; border-bottom: 6px solid #D4AF37;">
+                    <h3 style="color: white; font-size: 2.5rem; margin: 0 0 30px 0;">
+                        🌊 La domanda che non scompare mai 🌊
+                    </h3>
+                    <p style="font-size: 1.5rem; font-style: italic; line-height: 2; margin: 30px auto; 
+                        max-width: 800px;">
+                        "Come potete tornare a sparare ai banditi, ora che sapete che Cthulhu giace 
+                        dormendo nel Pacifico, e che un giorno - forse domani, forse tra mille anni - 
+                        <span style="color: #FF0000; font-weight: bold;">si sveglierà</span>?"
+                    </p>
+                    <p style="font-size: 1.3rem; line-height: 2; margin: 30px auto; max-width: 800px;">
+                        I vostri personaggi sono sopravvissuti. Ma la parte di loro che credeva nel senso 
+                        del mondo, nella giustizia, nell'importanza dell'umanità... quella parte è morta 
+                        nell'Occhio Asciutto.
+                    </p>
+                    <p style="font-size: 1.4rem; font-weight: bold; color: white; margin-top: 40px;">
+                        Avete visto il Sognatore.<br>
+                        E il Sognatore ha visto voi.<br>
+                        <span style="color: #FF0000;">Non vi dimenticherà mai.</span>
+                    </p>
+                </div>
+
+                <h3 style="color: #8B0000; font-size: 2rem; margin: 60px 0 30px 0; text-align: center;">
+                    📋 Consigli per il Narratore - Scenario Principale
+                </h3>
+
+                <div class="tip-box">
+                    <h4>🎬 Preparazione essenziale</h4>
+                    <ul style="font-size: 1.1rem; line-height: 1.8;">
+                        <li><strong>Leggi TUTTO lo scenario</strong> almeno due volte prima di masterizzare</li>
+                        <li><strong>Prepara la musica:</strong> Playlist con western, suspense, horror 
+                        cosmico (Cryo Chamber è perfetto)</li>
+                        <li><strong>Stampa i documenti:</strong> Telegramma, diario Pierce, rapporto finale</li>
+                        <li><strong>Prepara le stat-block</strong> su schede separate per accesso rapido</li>
+                        <li><strong>Playlist Consigliata:</strong>
+                            <ul>
+                                <li>Parte I-II: Morricone, Johnny Cash (atmosfera western)</li>
+                                <li>Parte III-IV: Cryo Chamber - Dark Ambient</li>
+                                <li>Visione di Cthulhu: Ligeti - Atmosphères (o silenzio totale)</li>
+                                <li>Fase finale: Hans Zimmer - Time (o simile epico)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>🎭 Come narrare la Visione di Cthulhu</h4>
+                    <ul style="font-size: 1.1rem; line-height: 1.8;">
+                        <li><strong>RALLENTA.</strong> Questo è IL momento. Prendi il tuo tempo.</li>
+                        <li><strong>Usa la voce:</strong> Inizia normalmente, poi sempre più bassa, più 
+                        lenta, più aliena quando descrivi R'lyeh</li>
+                        <li><strong>Silenzi drammatici:</strong> Prima di "l'occhio si apre", fai una pausa 
+                        di 3-5 secondi. Lascia che la tensione si accumuli.</li>
+                        <li><strong>Evita i cliché:</strong> Non dire "tentacoli verdi" - di' "una massa 
+                        pulsante di appendici che non hanno nome nel linguaggio umano"</li>
+                        <li><strong>Enfatizza la scala:</strong> Usa paragoni: "Grande quanto le Montagne 
+                        Rocciose", "Tentacoli spessi quanto sequoie"</li>
+                        <li><strong>L'occhio:</strong> Quando descrivi l'occhio che si apre, abbassa la voce 
+                        a un sussurro. Poi BOOM, tiro salvezza.</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Gestire le conseguenze</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        Questo scenario cambierà i PG per sempre. Alcuni giocatori potrebbero voler 
+                        ritirare i personaggi dopo ("non posso più giocare un pistolero normale dopo aver 
+                        visto DIO"). Rispetta questa scelta.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-top: 15px;">
+                        Altri vorranno continuare, ma cambiati. Incoraggiali a interpretare il trauma, 
+                        gli incubi, la paranoia cosmica. Questo rende il personaggio più profondo.
+                    </p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>🎯 Adattare la difficoltà</h4>
+                    <p><strong>Se il gruppo è debole (livello 1-2):</strong></p>
+                    <ul style="font-size: 1.1rem;">
+                        <li>Riduci HP di Profeta e geometri del 30%</li>
+                        <li>Dai loro più dinamite (20 candelotti invece di 12)</li>
+                        <li>Aquila che Vede Lontano può aiutarli attivamente nel combattimento finale</li>
+                        <li>Gli elementali/Mosasauri appaiono più lentamente (1 ogni 2 round invece che ogni round)</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Se il gruppo è forte (livello 5+):</strong></p>
+                    <ul style="font-size: 1.1rem;">
+                        <li>Aumenta HP di tutte le creature del 50%</li>
+                        <li>Aggiungi un secondo Profeta (uno dei geometri si è "elevato")</li>
+                        <li>Le creature spettrali sono più numerose e aggressive</li>
+                        <li>Il Fossile richiede 2 esplosioni o 5 colpi con piccone invece di 1/3</li>
+                    </ul>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 L'orrore è nell'inevitabilità</h4>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        Il vero orrore di questo scenario non è la violenza o il pericolo fisico. È la 
+                        <strong>consapevolezza cosmica</strong>.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2;">
+                        I PG non possono "sconfiggere" Cthulhu. Non possono nemmeno danneggiarlo. Possono 
+                        solo chiudere una finestra, tappare un buco, silenziare un'eco.
+                    </p>
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #FF0000; margin-top: 20px;">
+                        Ma Cthulhu continuerà a sognare. E un giorno, si sveglierà.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 2; margin-top: 20px;">
+                        Questa consapevolezza - che tutto ciò che fanno è temporaneo, che l'apocalisse è 
+                        solo rimandata - è il vero orrore cosmico lovecraftiano.
+                    </p>
+                </div>
+
+                <div style="background: #FFD700; color: #000000; padding: 40px; margin: 60px -30px 40px -30px; 
+                    text-align: center; border: 6px solid #8B4513;">
+                    <h3 style="margin: 0 0 20px 0; font-size: 2rem;">🏆 SCENARIO COMPLETO - TUTTO INCLUSO</h3>
+                    <p style="font-size: 1.2rem; line-height: 1.8;">
+                        Questo scenario include <strong>TUTTO</strong> ciò che serve per 4-6 ore di gioco 
+                        indimenticabile:
+                    </p>
+                    <ul style="text-align: left; max-width: 800px; margin: 20px auto; font-size: 1.1rem; 
+                        line-height: 1.8;">
+                        <li>✅ Aggancio dettagliato con PNG carismatico (Blackwood)</li>
+                        <li>✅ Viaggio con foreshadowing e incontri</li>
+                        <li>✅ 12+ PNG completamente sviluppati</li>
+                        <li>✅ 6 location mappate con descrizioni evocative</li>
+                        <li>✅ 8 stat-block creature complete</li>
+                        <li>✅ Tabelle indizi e investigazione</li>
+                        <li>✅ 4 documenti stampabili per i giocatori</li>
+                        <li>✅ Sistema stress integrato</li>
+                        <li>✅ Timeline eventi dinamica</li>
+                        <li>✅ Multiple scelte morali</li>
+                        <li>✅ LA VISIONE DI CTHULHU (momento iconico definitivo)</li>
+                        <li>✅ Combattimento finale epico</li>
+                        <li>✅ Epilogo con conseguenze permanenti</li>
+                        <li>✅ Consigli narrativi dettagliati</li>
+                        <li>✅ Adattamenti per diversi livelli</li>
+                    </ul>
+                    <p style="font-size: 1.3rem; font-weight: bold; margin-top: 30px;">
+                        Questo è lo scenario che i tuoi giocatori ricorderanno per sempre.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- SCENARIO 1 -->
+            <div class="scenario-card" id="scenario-1">
+                <div class="scenario-header">
+                    <span class="scenario-number">01</span>
+                    <h2 class="scenario-title">La Guerra delle Miniere</h2>
+                    <p class="scenario-tagline">"Alcune profondità non dovrebbero mai essere raggiunte"</p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio</h4>
+                    <p>
+                        <strong>Coppertown</strong>, una fiorente città mineraria del Nevada, è sull'orlo 
+                        di una guerra civile. Due compagnie rivali - la <strong>Western Silver Company</strong> 
+                        e la <strong>Prospector's Union</strong> - si accusano a vicenda di sabotare i 
+                        tunnel. I crolli sono sempre più frequenti e i minatori scompaiono senza lasciare 
+                        traccia.
+                    </p>
+                    <p>
+                        Il proprietario della Western Silver, <strong>Cyrus Harmon</strong>, vi assume come 
+                        "consulenti di sicurezza" (leggi: pistoleri) per proteggere la sua miniera e 
+                        scoprire chi sta causando i crolli. Offre 100 dollari a testa e il 10% dell'argento 
+                        estratto questa settimana.
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità lovecraftiana</h4>
+                    <p>
+                        Nessuna delle due compagnie sta sabotando l'altra. Hanno scavato troppo in profondità, 
+                        raggiungendo le caverne dove vivono gli <strong>Chthoniani</strong> - enormi larve 
+                        di calamaro telepath che "nuotano" attraverso la roccia fusa come se fosse acqua.
+                    </p>
+                    <p>
+                        Gli Chthoniani odiano gli esseri di superficie e sono particolarmente sensibili alle 
+                        vibrazioni. Gli scavi hanno disturbato il loro dio dormiente, <strong>Shudde M'ell</strong>, 
+                        che ha ordinato loro di eliminare gli umani. I minatori scomparsi sono stati "assorbiti" 
+                        mentalmente - le loro menti sono ora schiave degli Chthoniani.
+                    </p>
+                </div>
+
+                <h3>Le location chiave</h3>
+
+                <div class="location-box">
+                    <h4>📍 Coppertown - La città</h4>
+                    <p>
+                        Una tipica città mineraria di frontiera con circa 2.000 abitanti. L'atmosfera è 
+                        tesa - le due fazioni sono sull'orlo dello scontro armato.
+                    </p>
+                    <ul>
+                        <li><strong>Il Silver Star Saloon:</strong> Quartier generale informale della 
+                        Western Silver Company</li>
+                        <li><strong>La Union Hall:</strong> Base della Prospector's Union</li>
+                        <li><strong>L'ufficio dello sceriffo:</strong> Lo sceriffo Miller cerca disperatamente 
+                        di mantenere la pace</li>
+                    </ul>
+                </div>
+
+                <div class="location-box">
+                    <h4>📍 La Western Silver Mine - Livello 1</h4>
+                    <p>
+                        I tunnel superiori sono relativamente sicuri. Qui lavorano una trentina di minatori. 
+                        L'aria è polverosa ma respirabile. Si sentono rumori strani provenire dal basso.
+                    </p>
+                </div>
+
+                <div class="location-box">
+                    <h4>📍 La Western Silver Mine - Livello 3 (Il Tunnel Profondo)</h4>
+                    <p>
+                        Questo è dove sono avvenuti i crolli. L'aria è calda e puzza di zolfo. Il pavimento 
+                        vibra costantemente. Le pareti rocciose mostrano strani segni di bruciatura e... 
+                        liquefazione.
+                    </p>
+                    <p>
+                        <strong>Pericoli:</strong> Crolli improvvisi (Destrezza CD 14 o 3d6 danni), tasche 
+                        di gas velenoso (Costituzione CD 13 o avvelenamento), e la presenza degli Chthoniani.
+                    </p>
+                </div>
+
+                <h3>I PNG</h3>
+
+                <div class="npc-block">
+                    <h4>👤 Cyrus Harmon</h4>
+                    <p><strong>Ruolo:</strong> Proprietario della Western Silver Company</p>
+                    <p><strong>Descrizione:</strong> Uomo sui 50 anni, vestito elegante, sigaro costante. 
+                    È spietato negli affari ma non stupido. Sospetta che qualcosa di soprannaturale stia 
+                    accadendo ma non lo ammetter mai pubblicamente.</p>
+                    <p><strong>Segreto:</strong> Ha ordinato ai suoi uomini di scavare oltre i limiti di 
+                    sicurezza per battere la concorrenza. Si sente colpevole ma non lo mostrerà.</p>
+                    <p><strong>Statistiche:</strong> Come Mercante (vedi manuale base)</p>
+                </div>
+
+                <div class="npc-block">
+                    <h4>👤 "Big" Joe Murphy</h4>
+                    <p><strong>Ruolo:</strong> Caposquadra dei minatori, ex-minatore ora schiavo mentale</p>
+                    <p><strong>Descrizione:</strong> Irlandese robusto di 35 anni. Scomparso due settimane 
+                    fa, è riapparso "cambiato". Gli occhi sono vitrei, parla poco, e quando parla sussurra 
+                    cose che non hanno senso. Di notte, scende nel Livello 3.</p>
+                    <p><strong>La verità:</strong> La sua mente è stata assorbita dagli Chthoniani. È ora 
+                    una spia, che attira altri minatori nelle profondità.</p>
+                    <p><strong>Statistiche:</strong> Come Fuorilegge, ma se "ucciso" si dissolve in una 
+                    pozza di fango nero maleodorante</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ CHTHONIANO (Larva)</h4>
+                    <p><strong>Classe Armatura:</strong> 16 (pelle chitinosa)</p>
+                    <p><strong>Punti Ferita:</strong> 95 (10d12+30)</p>
+                    <p><strong>Velocità:</strong> 6 metri, scavo 12 metri (attraverso roccia)</p>
+                    <p><strong>FOR:</strong> 20 (+5) | <strong>DES:</strong> 8 (-1) | <strong>COS:</strong> 
+                    16 (+3) | <strong>INT:</strong> 16 (+3) | <strong>SAG:</strong> 14 (+2) | 
+                    <strong>CAR:</strong> 10 (+0)</p>
+                    
+                    <p><strong>Resistenze:</strong> Fuoco, freddo</p>
+                    <p><strong>Immunità ai danni:</strong> Acido</p>
+                    <p><strong>Sensi:</strong> Percezione tellurica 18 metri, percezione cieca 9 metri</p>
+                    
+                    <p><strong>AZIONI:</strong></p>
+                    <p><strong>Attacco multiplo:</strong> Il Chthoniano effettua due attacchi con i tentacoli.</p>
+                    <p><strong>Tentacolo:</strong> Attacco in mischia con arma: +8 al tiro per colpire, 
+                    portata 4,5 metri, un bersaglio. Colpito: 2d8+5 danni contundenti più 1d8 danni acidi. 
+                    Se il bersaglio è una creatura di taglia Media o inferiore, è afferrato (CD di fuga 15).</p>
+                    <p><strong>Schiacciare:</strong> Il Chthoniano schiaccia una creatura afferrata contro 
+                    il suo corpo. La creatura subisce 3d10+5 danni contundenti.</p>
+                    <p><strong>Assalto telepatico (Ricarica 5-6):</strong> Tutte le creature entro 18 metri 
+                    devono effettuare un tiro salvezza su Saggezza CD 14. Fallendo, subiscono 3d8 danni 
+                    psichici e sono stordite fino alla fine del loro prossimo turno.</p>
+                    
+                    <p><strong>Controllo Stress:</strong> Vedere un Chthoniano richiede tiro salvezza su 
+                    Saggezza CD 14. Fallendo, si guadagnano 3 punti stress.</p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 Gli elementi di orrore</h4>
+                    <ul>
+                        <li>Il buio claustrofobico della miniera profonda</li>
+                        <li>Il rombo costante sotto i piedi, come un cuore gigante che batte</li>
+                        <li>Vedere un tentacolo pallido spesso quanto un tronco d'albero emergere dal muro 
+                        solido</li>
+                        <li>Sentire i sussurri telepatici: "Venite più in profondità...servite il Grande 
+                        Divoratore...la superficie brucia...solo il sottosuolo è pace..."</li>
+                        <li>Scoprire che "Big" Joe non è più umano quando lo "uccidete" e si dissolve</li>
+                    </ul>
+                </div>
+
+                <h3>La struttura dell'avventura</h3>
+
+                <table>
+                    <tr>
+                        <th>Fase</th>
+                        <th>Cosa accade</th>
+                        <th>Obiettivo</th>
+                    </tr>
+                    <tr>
+                        <td>1. Investigazione in superficie</td>
+                        <td>I personaggi interrogano i minatori, esplorano la città, raccolgono indizi</td>
+                        <td>Scoprire che i crolli non sono sabotaggio</td>
+                    </tr>
+                    <tr>
+                        <td>2. Primo crollo</td>
+                        <td>Mentre i personaggi sono nel Livello 1, avviene un crollo che intrappola alcuni 
+                        minatori nel Livello 3</td>
+                        <td>Creare urgenza e portare i PG più in profondità</td>
+                    </tr>
+                    <tr>
+                        <td>3. Il Livello 3</td>
+                        <td>I personaggi scendono e trovano scene di carneficina. Tentacoli emergono dalle 
+                        pareti. Sentono i sussurri</td>
+                        <td>Primo contatto con l'orrore</td>
+                    </tr>
+                    <tr>
+                        <td>4. La fuga</td>
+                        <td>Un Chthoniano attacca in forze. I personaggi devono fuggire prima che la miniera 
+                        crolli completamente</td>
+                        <td>Sopravvivere all'incontro</td>
+                    </tr>
+                    <tr>
+                        <td>5. La decisione</td>
+                        <td>I personaggi devono decidere cosa fare con la miniera</td>
+                        <td>Risolvere il problema (o almeno contenere)</td>
+                    </tr>
+                </table>
+
+                <div class="key-question">
+                    ❓ LA DOMANDA CHIAVE: "Chi sta davvero causando i crolli e come si può scappare da 
+                    un nemico che è la montagna stessa?"
+                </div>
+
+                <h3>Le conclusioni possibili</h3>
+
+                <div class="tip-box">
+                    <h4>✅ Vittoria intelligente</h4>
+                    <ul>
+                        <li><strong>Sigillare la miniera:</strong> Convincere Harmon a far crollare 
+                        deliberatamente i tunnel superiori, sigillando gli Chthoniani nelle profondità. 
+                        Questo richiede diplomazia (CD 16) e costa a Harmon la sua fortuna.</li>
+                        <li><strong>Evacuare la città:</strong> Se scoprono che gli Chthoniani stanno 
+                        convergendo sotto Coppertown, possono convincere le autorità a evacuare (CD 18 
+                        Persuasione, servono prove concrete)</li>
+                        <li><strong>Rituale di contenimento:</strong> Se hanno accesso a un tomo occulto 
+                        (vedi Scenario 3), possono tentare un rituale per "addormentare" Shudde M'ell 
+                        per 100 anni</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Sconfitta</h4>
+                    <p>
+                        Se i personaggi tentano di combattere gli Chthoniani a viso aperto, verranno 
+                        sopraffatti. Un singolo Chthoniano adulto può sconfiggere un gruppo di 4-5 
+                        personaggi di livello 3. Se continuano a scavare o restano troppo a lungo nel 
+                        Livello 3, più Chthoniani convergeranno sulla loro posizione.
+                    </p>
+                </div>
+
+                <h3>I consigli per il narratore</h3>
+
+                <div class="tip-box">
+                    <ul>
+                        <li><strong>Atmosfera:</strong> Enfatizza il claustrofobico, il caldo soffocante, 
+                        il senso di essere schiacciati da tonnellate di roccia</li>
+                        <li><strong>Foreshadowing:</strong> Prima dell'incontro con gli Chthoniani, mostra 
+                        segni: vibrazioni, muri che si liquefanno, minatori che sussurrano frasi senza 
+                        senso</li>
+                        <li><strong>Tensione sociale:</strong> La rivalità tra le due compagnie aggiunge 
+                        complessità. I personaggi potrebbero dover unire le fazioni per sopravvivere</li>
+                        <li><strong>Fuga disperata:</strong> Quando i personaggi fuggono dal Livello 3, 
+                        rendila una scena d'azione frenetica: crolli, fiamme, tentacoli che emergono 
+                        dalle pareti</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SCENARIO 2 -->
+            <div class="scenario-card" id="scenario-2">
+                <div class="scenario-header">
+                    <span class="scenario-number">02</span>
+                    <h2 class="scenario-title">Il Tonico del Profeta Oscuro</h2>
+                    <p class="scenario-tagline">"La salvezza ha un prezzo che non puoi pagare"</p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio</h4>
+                    <p>
+                        Un predicatore carismatico di nome <strong>Reverendo Ezekiel Crane</strong> è 
+                        arrivato a <strong>Redemption</strong>, una città polverosa del New Mexico che 
+                        stava morendo lentamente. Portava con sé barili del suo "Tonico della Salvezza" - 
+                        un liquido dorato che, giura, può guarire qualsiasi malattia.
+                    </p>
+                    <p>
+                        E funziona. I malati guariscono, i vecchi ringiovaniscono, i depressi sorridono. 
+                        In tre settimane, Redemption è rinata: nuovi edifici, nuove attività, una gioia 
+                        contagiosa. Ma quando arrivate in città, notate che questa "gioia" ha qualcosa di 
+                        folle e febbrile. Le persone ridono troppo forte. I loro occhi brillano in modo 
+                        innaturale.
+                    </p>
+                    <p>
+                        L'unico che non ha bevuto il tonico è il vecchio <strong>Doc Whitfield</strong>, 
+                        medico in pensione, che vi avvicina disperato: "Per favore, dovete fermare quel 
+                        predicatore prima che sia troppo tardi. Quel tonico non guarisce... corrompe."
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità lovecraftiana</h4>
+                    <p>
+                        Il Reverendo Crane non è umano. È un <strong>avatar di Nyarlathotep</strong>, il 
+                        Caos Strisciante, il Messaggero degli Dei Esterni. Tra tutte le entità del Mito di 
+                        Cthulhu, Nyarlathotep è il più insidioso perché gode nel corrompere l'umanità 
+                        dall'interno.
+                    </p>
+                    <p>
+                        Il "Tonico della Salvezza" non guarisce le malattie - <strong>apre la mente ai 
+                        sussurri del cosmo</strong>. Chi lo beve inizia a sentire le voci degli Dei 
+                        Esterni, a vedere i colori dell'iperspazio, a comprendere verità che frantumano 
+                        la sanità mentale. La "gioia" che mostrano è vera, ma è la gioia folle di chi ha 
+                        visto oltre il velo della realtà.
+                    </p>
+                    <p>
+                        Crane sta preparando Redemption per un grande rituale. Quando l'intera città sarà 
+                        "illuminata", aprirà un portale che permetterà a Nyarlathotep di manifestarsi 
+                        fisicamente nel nostro mondo per 24 ore. Non vuole distruggere la città - vuole 
+                        che si distrugga da sola in un'estasi di follia collettiva.
+                    </p>
+                </div>
+
+                <h3>Le location chiave</h3>
+
+                <div class="location-box">
+                    <h4>📍 Redemption - La città trasformata</h4>
+                    <p>
+                        Redemption era una città moribunda di 300 anime. Ora ne conta 500 - i "convertiti" 
+                        al Tonico hanno attirato i loro cari. Di giorno, sembra una città normale ma 
+                        troppo perfetta. Di notte... è quando inizia il vero orrore.
+                    </p>
+                    <ul>
+                        <li><strong>La chiesa:</strong> Prima abbandonata, ora ricostruita e decorata con 
+                        simboli che fanno male agli occhi. È il centro del culto di Crane</li>
+                        <li><strong>Il deposito del tonico:</strong> Un vecchio magazzino convertito. 
+                        Contiene 50 barili del liquido dorado. Odora di mandorle amare</li>
+                        <li><strong>La piazza:</strong> Ogni notte, i cittadini si radunano qui per 
+                        "celebrazioni" che diventano sempre più strane</li>
+                        <li><strong>Casa di Doc Whitfield:</strong> L'unico rifugio sicuro in città. Il 
+                        dottore ha sbarrato le finestre e tiene sempre un fucile carico</li>
+                    </ul>
+                </div>
+
+                <div class="location-box">
+                    <h4>📍 La chiesa di Redemption</h4>
+                    <p>
+                        La chiesa è stata completamente trasformata. Le croci sono state rimosse e 
+                        sostituite con simboli geometrici impossibili. L'altare è decorato con quello 
+                        che sembra oro ma è in realtà una sostanza organica che pulsa debolmente.
+                    </p>
+                    <p>
+                        <strong>Nei sotterranei:</strong> Crane ha scavato una cripta dove sta preparando 
+                        il rituale. Qui tiene il suo "vero" tonico - non diluito. Un singolo sorso 
+                        garantisce visioni immediate... e follia permanente.
+                    </p>
+                </div>
+
+                <h3>I PNG</h3>
+
+                <div class="npc-block">
+                    <h4>👤 Reverendo Ezekiel Crane (Avatar di Nyarlathotep)</h4>
+                    <p><strong>Aspetto:</strong> Uomo sui 40 anni, capelli neri corvini, occhi dorati 
+                    che sembrano avere profondità infinite. Sempre vestito di nero impeccabile. Sorriso 
+                    carismatico e inquietante.</p>
+                    <p><strong>Personalità:</strong> Affabile, carismatico, impossibile da intimidire. 
+                    Parla con metafore e parabole. Ama giocare con le parole e manipolare. Non ha mai 
+                    paura perché sa di essere immortale.</p>
+                    <p><strong>Obiettivo:</strong> Completare il rituale. Se i PG interferiscono, li 
+                    tratterà come un divertimento extra. Potrebbe provare a convertirli.</p>
+                    <p><strong>Debolezza:</strong> Crane è vincolato alla forma umana. Se il suo corpo 
+                    viene distrutto, Nyarlathotep verrà espulso dal piano materiale per 100 anni. Ma 
+                    Crane è MOLTO difficile da uccidere.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ REVERENDO EZEKIEL CRANE (Avatar di Nyarlathotep)</h4>
+                    <p><strong>Classe Armatura:</strong> 17 (protezione divina innaturale)</p>
+                    <p><strong>Punti Ferita:</strong> 120 (16d8+48)</p>
+                    <p><strong>Velocità:</strong> 9 metri</p>
+                    <p><strong>FOR:</strong> 12 (+1) | <strong>DES:</strong> 16 (+3) | <strong>COS:</strong> 
+                    16 (+3) | <strong>INT:</strong> 20 (+5) | <strong>SAG:</strong> 18 (+4) | 
+                    <strong>CAR:</strong> 22 (+6)</p>
+                    
+                    <p><strong>Tiri salvezza:</strong> SAG +9, CAR +11</p>
+                    <p><strong>Resistenze:</strong> Radiante, necrotico, psichico</p>
+                    <p><strong>Immunità alle condizioni:</strong> Affascinato, spaventato, avvelenato</p>
+                    
+                    <p><strong>AZIONI:</strong></p>
+                    <p><strong>Attacco multiplo:</strong> Crane effettua due attacchi o lancia un incantesimo.</p>
+                    <p><strong>Tocco corruttore:</strong> Attacco in mischia: +8 al tiro per colpire, 
+                    portata 1,5 metri. Colpito: 2d8+3 danni necrotici più 2d6 danni psichici. Il 
+                    bersaglio deve superare tiro salvezza su Saggezza CD 17 o essere affascinato fino 
+                    alla fine del prossimo turno.</p>
+                    <p><strong>Parola di potere (Ricarica 5-6):</strong> Crane pronuncia una parola in 
+                    una lingua che fa sanguinare le orecchie. Tutte le creature entro 9 metri devono 
+                    effettuare tiro salvezza su Saggezza CD 17. Fallendo, subiscono 4d10 danni psichici 
+                    e sono stordite per 1 round.</p>
+                    <p><strong>Trasformazione parziale (1/giorno):</strong> Crane rivela la sua vera 
+                    natura. Per 1 minuto, ottiene resistenza a tutti i danni, volo 18 metri, e i suoi 
+                    attacchi infliggono 1d10 danni extra.</p>
+                    
+                    <p><strong>Incantesimi innati:</strong> Carisma è l'attributo (CD 19). Può lanciare:</p>
+                    <ul>
+                        <li>A volontà: <em>charme su persone, individuazione del magico, invisibilità</em></li>
+                        <li>3/giorno: <em>domina persone, suggestione di massa</em></li>
+                        <li>1/giorno: <em>parola del potere: stordire</em></li>
+                    </ul>
+                    
+                    <p><strong>Controllo Stress:</strong> Vedere Crane trasformarsi richiede tiro salvezza 
+                    su Saggezza CD 16. Fallendo, si guadagnano 4 punti stress.</p>
+                </div>
+
+                <div class="npc-block">
+                    <h4>👤 Doc Whitfield</h4>
+                    <p><strong>Ruolo:</strong> Medico in pensione, unico "sano" in città</p>
+                    <p><strong>Descrizione:</strong> Uomo sui 65 anni, magro e ossuto, occhi stanchi ma 
+                    lucidi. Ha visto troppe cose nel corso della sua carriera per essere ingenuo.</p>
+                    <p><strong>Conoscenze:</strong> Ha analizzato il tonico e sa che contiene una sostanza 
+                    organica sconosciuta alla scienza. Ha preso appunti dettagliati sui cambiamenti nei 
+                    cittadini.</p>
+                    <p><strong>Aiuto possibile:</strong> Può fornire informazioni, rifugio sicuro, e ha 
+                    accesso a laudano e altri farmaci che potrebbero aiutare temporaneamente contro gli 
+                    effetti del tonico.</p>
+                </div>
+
+                <div class="npc-block">
+                    <h4>👤 Sarah Jenkins (Convertita)</h4>
+                    <p><strong>Ruolo:</strong> Cittadina "illuminata", ex-maestra</p>
+                    <p><strong>Prima del tonico:</strong> Donna depressa sulla quarantina, vedova, senza 
+                    speranza.</p>
+                    <p><strong>Dopo il tonico:</strong> Sorriso costante, occhi brillanti. Parla della 
+                    "bellezza del cosmo" e di come "finalmente capisce". Tenta di convincere i PG a bere 
+                    il tonico.</p>
+                    <p><strong>Possibile alleata:</strong> Se i PG riescono a mostrarle la verità (CD 
+                    molto alta), potrebbe combattere la corruzione abbastanza a lungo da aiutarli.</p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 Gli elementi di orrore</h4>
+                    <ul>
+                        <li>La paranoia di essere gli unici sani in una città di fanatici felici</li>
+                        <li>Vedere lo sceriffo e il sindaco danzare nudi nella piazza di notte, ridendo 
+                        istericamente</li>
+                        <li>I bambini che disegnano simboli impossibili e sussurrano in lingue morte</li>
+                        <li>La consapevolezza che il "cattivo" è l'uomo più amato della città</li>
+                        <li>Le "celebrazioni" notturne che diventano sempre più blasfeme e violente</li>
+                        <li>Scoprire che alcuni cittadini hanno iniziato a sviluppare mutazioni fisiche: 
+                        dita extra, occhi multipli, pelle che cambia colore</li>
+                    </ul>
+                </div>
+
+                <h3>La timeline dell'apocalisse</h3>
+
+                <table>
+                    <tr>
+                        <th>Giorno</th>
+                        <th>Evento</th>
+                        <th>Conseguenze</th>
+                    </tr>
+                    <tr>
+                        <td>Giorno 1 (arrivo PG)</td>
+                        <td>La città sembra normale di giorno, strana di notte</td>
+                        <td>I PG possono investigare liberamente</td>
+                    </tr>
+                    <tr>
+                        <td>Giorno 2</td>
+                        <td>I convertiti diventano più insistenti nel convincere i PG a bere</td>
+                        <td>Se i PG rifiutano, iniziano a essere visti con sospetto</td>
+                    </tr>
+                    <tr>
+                        <td>Giorno 3</td>
+                        <td>Prima "celebrazione violenta" - un cittadino viene sacrificato volontariamente</td>
+                        <td>Crane accelera i preparativi del rituale</td>
+                    </tr>
+                    <tr>
+                        <td>Giorno 4</td>
+                        <td>I convertiti diventano ostili verso i "non-illuminati"</td>
+                        <td>I PG rischiano di essere attaccati o imprigionati</td>
+                    </tr>
+                    <tr>
+                        <td>Giorno 5 (Deadline)</td>
+                        <td>IL RITUALE. Crane apre il portale a mezzanotte</td>
+                        <td>Se non fermato, Nyarlathotep si manifesta</td>
+                    </tr>
+                </table>
+
+                <h3>Indizi e investigazione</h3>
+
+                <table>
+                    <tr>
+                        <th>Indizio</th>
+                        <th>Come scoprirlo</th>
+                        <th>CD Prova</th>
+                    </tr>
+                    <tr>
+                        <td>Il tonico contiene sostanza organica aliena</td>
+                        <td>Analisi chimica con Doc Whitfield</td>
+                        <td>Medicina CD 14</td>
+                    </tr>
+                    <tr>
+                        <td>I simboli nella chiesa non sono cristiani</td>
+                        <td>Esaminare la chiesa</td>
+                        <td>Religione CD 12</td>
+                    </tr>
+                    <tr>
+                        <td>Crane non ha ombra alla luce diretta</td>
+                        <td>Osservazione attenta</td>
+                        <td>Percezione CD 16</td>
+                    </tr>
+                    <tr>
+                        <td>I convertiti non dormono mai</td>
+                        <td>Sorveglianza notturna</td>
+                        <td>Automatico</td>
+                    </tr>
+                    <tr>
+                        <td>La cripta sotto la chiesa</td>
+                        <td>Esplorare la chiesa di nascosto</td>
+                        <td>Investigare CD 13</td>
+                    </tr>
+                </table>
+
+                <div class="key-question">
+                    ❓ LA DOMANDA CHIAVE: "Come si ferma un uomo che tutti credono sia un santo, anche 
+                    se sta trasformando la città in un inferno? E sei disposto a uccidere centinaia di 
+                    'innocenti' per salvare il mondo?"
+                </div>
+
+                <h3>Le conclusioni possibili</h3>
+
+                <div class="tip-box">
+                    <h4>✅ Vittoria eroica</h4>
+                    <ul>
+                        <li><strong>Uccidere Crane:</strong> Distruggere il corpo di Crane espelle 
+                        Nyarlathotep. Richiede combattimento epico. I convertiti, liberati, impazziscono 
+                        temporaneamente ma possono recuperare in mesi/anni con cure</li>
+                        <li><strong>Distruggere il tonico:</strong> Incendiare il deposito prima del 
+                        rituale. Crane sarà furioso ma senza tonico non può completare il rituale. Dovrà 
+                        andarsene (temporaneamente)</li>
+                        <li><strong>Interrompere il rituale:</strong> Infiltrarsi nella cripta e 
+                        distruggere i componenti rituali. Richiede furtività e velocità. Crane sarà 
+                        presente e combatterà</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Vittoria pyrrhica</h4>
+                    <ul>
+                        <li><strong>Convincere l'esercito:</strong> Se i PG vanno al forte più vicino e 
+                        convincono un colonnello (CD 20, servono prove), l'esercito può assediare 
+                        Redemption. Ma questo significa uccidere tutti i convertiti - centinaia di 
+                        "innocenti"</li>
+                        <li><strong>Il sacrificio:</strong> Se un PG beve volontariamente il tonico 
+                        concentrato, può tentare di resistere (CD 18 ogni round) abbastanza a lungo da 
+                        usare la connessione con Nyarlathotep per sabotare il rituale dall'interno. Ma 
+                        perderà la sanità mentale nel processo</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>💀 Sconfitta</h4>
+                    <p>
+                        Se i PG falliscono e il rituale si completa, <strong>Nyarlathotep si manifesta</strong>. 
+                        Per 24 ore, l'avatar del Caos Strisciante cammina sulla terra. Redemption viene 
+                        completamente annientata - non da violenza, ma da auto-distruzione folle. I 
+                        sopravvissuti vagheranno per il deserto, catatonici.
+                    </p>
+                    <p>
+                        I PG possono solo fuggire e vivere con il peso della sconfitta. Però, hanno 
+                        impedito che Nyarlathotep si spostasse oltre Redemption, quindi hanno "salvato" 
+                        il resto del mondo.
+                    </p>
+                </div>
+
+                <div class="handout">
+                    <h4>📜 Documento per i giocatori: Appunti di Doc Whitfield</h4>
+                    <p style="text-align: center; font-weight: bold; font-style: normal;">
+                        OSSERVAZIONI SUL "TONICO DELLA SALVEZZA"
+                    </p>
+                    <p>
+                        Giorno 1: Il "reverendo" è arrivato con il suo tonico. Guarigioni miracolose. 
+                        Sono scettico ma curioso.<br><br>
+                        
+                        Giorno 5: Ho analizzato un campione. Contiene una sostanza proteica che non 
+                        esiste in nessun database medico. Origine completamente sconosciuta.<br><br>
+                        
+                        Giorno 10: I pazienti mostrano comportamenti strani. Non dormono. Gli occhi sono 
+                        troppo lucidi. Parlano di "vedere i colori dell'infinito".<br><br>
+                        
+                        Giorno 15: Ho rifiutato di bere il tonico. Ora sono l'unico "non-illuminato". 
+                        Mi guardano con pietà. Alcuni con rabbia.<br><br>
+                        
+                        Giorno 20: Le celebrazioni notturne sono diventate oscene. Ho visto cose... 
+                        geometrie impossibili nella piazza. Simboli che fanno sanguinare gli occhi.<br><br>
+                        
+                        Giorno 22: Quel reverendo non è umano. Ne sono certo. Ma come convinco qualcuno? 
+                        Sono tutti sotto il suo controllo.<br><br>
+                        
+                        Se qualcuno legge questo e non ha bevuto il tonico: FUGGITE. O fermate quel 
+                        demone vestito da predicatore prima che sia troppo tardi.<br><br>
+                        
+                        - Dr. Elijah Whitfield
+                    </p>
+                </div>
+
+                <h3>I consigli per il narratore</h3>
+
+                <div class="tip-box">
+                    <ul>
+                        <li><strong>Atmosfera:</strong> Contrasto tra l'apparenza normale di giorno e 
+                        l'orrore crescente di notte. Usa descrizioni di gioia "sbagliata" - troppo 
+                        intensa, troppo uniforme</li>
+                        <li><strong>Crane come antagonista:</strong> Non farlo combattere direttamente 
+                        fino alla fine. Preferisce manipolare, tentare, corrompere. È affascinante e 
+                        terrificante allo stesso tempo</li>
+                        <li><strong>Dilemma morale:</strong> I convertiti sono vittime, non cattivi. 
+                        Enfatizza che ogni "soluzione violenta" significa uccidere innocenti</li>
+                        <li><strong>Tensione crescente:</strong> Ogni giorno che passa, la città diventa 
+                        più pericolosa. I PG devono sentire l'urgenza</li>
+                        <li><strong>Il tonico come tentazione:</strong> Offri ai PG occasioni di bere. 
+                        Prometti guarigioni, visioni, potere. Rendi la tentazione reale</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SCENARIO 3 -->
+            <div class="scenario-card" id="scenario-3">
+                <div class="scenario-header">
+                    <span class="scenario-number">03</span>
+                    <h2 class="scenario-title">La Maledizione del Padre dei Serpenti</h2>
+                    <p class="scenario-tagline">"Yig non dimentica. Yig non perdona."</p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio</h4>
+                    <p>
+                        I <strong>Fratelli Dawson</strong> - una banda di cinque famigerati fuorilegge 
+                        terrorizzati vi trova al margine del deserto dell'Oklahoma. Normalmente 
+                        affronterebbero la morte a testa alta, ma ora stanno letteralmente tremando. 
+                        Vi offrono <strong>tutto il loro oro</strong> (circa 2000 dollari in dobloni 
+                        spagnoli) se li scortate fino al confine del Texas.
+                    </p>
+                    <p>
+                        Non temono i cacciatori di taglie. Non temono lo sceriffo. Temono i <strong>serpenti</strong>. 
+                        Ovunque vadano, serpenti a sonagli appaiono dal nulla. Di notte, sentono un sibilo 
+                        collettivo. E c'è di peggio: il loro capo, <strong>Jake Dawson</strong>, sta... 
+                        cambiando. La sua pelle è diventata squamosa. I suoi occhi sono gialli e verticali.
+                    </p>
+                    <p>
+                        Tre settimane fa hanno profanato un <strong>tumulo sacro dei nativi</strong> per 
+                        rubare l'oro sepolto. Ora stanno pagando il prezzo.
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità lovecraftiana</h4>
+                    <p>
+                        Il tumulo che hanno profanato era un tempio di <strong>Yig</strong>, il Padre dei 
+                        Serpenti, uno degli Antichi Dei adorato dalle tribù native americane da millenni. 
+                        Yig non è malvagio nel senso tradizionale - è una forza della natura, antica e 
+                        implacabile.
+                    </p>
+                    <p>
+                        La sua vendetta è <strong>specifica e personale</strong>. Non si limita a uccidere 
+                        chi lo offende - li <strong>trasforma</strong>. I fratelli Dawson stanno diventando 
+                        uomini-serpente. Il processo è irreversibile e si completerà in 7 giorni dalla 
+                        profanazione. Una volta completa la trasformazione, dimenticheranno la loro umanità 
+                        e serviranno Yig per sempre.
+                    </p>
+                    <p>
+                        Yig controlla tutti i serpenti dell'Oklahoma. Loro sono i suoi occhi, le sue orecchie, 
+                        i suoi denti. I serpenti a sonagli seguono i Dawson non per ucciderli immediatamente, 
+                        ma per assicurarsi che non sfuggano al loro destino.
+                    </p>
+                </div>
+
+                <h3>Le location chiave</h3>
+
+                <div class="location-box">
+                    <h4>📍 Il Deserto dell'Oklahoma</h4>
+                    <p>
+                        Terra arida e spietata. Di giorno, il caldo è insopportabile. Di notte, il freddo 
+                        è mortale. E ovunque, i serpenti.
+                    </p>
+                    <ul>
+                        <li><strong>Oasi di Sweetwater:</strong> Unica fonte d'acqua in 50 miglia. È 
+                        infestata di serpenti. Bere richiede coraggio</li>
+                        <li><strong>Rocce Rosse:</strong> Formazione rocciosa che offre riparo. Ma le 
+                        fessure sono piene di nidi di serpenti</li>
+                        <li><strong>Il Tumulo Profanato:</strong> A 2 giorni di viaggio. Il tempio di Yig 
+                        è una struttura sotterranea di pietra antica decorata con serpenti scolpiti</li>
+                    </ul>
+                </div>
+
+                <div class="location-box">
+                    <h4>📍 Il Tumulo di Yig</h4>
+                    <p>
+                        Un tumulo di terra che si erge 10 metri sopra la pianura. L'ingresso è nascosto 
+                        da rocce (i Dawson le hanno spostate). All'interno, scale di pietra scendono in 
+                        una camera circolare di 15 metri di diametro.
+                    </p>
+                    <p>
+                        <strong>La camera principale:</strong> Pareti coperte di geroglifici serpentini. 
+                        Al centro, un altare di ossidiana dove i Dawson hanno trovato l'oro. Sopra l'altare, 
+                        una statua gigante di Yig - un uomo-serpente alto 3 metri.
+                    </p>
+                    <p>
+                        <strong>Il segreto:</strong> L'altare può accettare un <strong>sacrificio di 
+                        sangue volontario</strong>. Se qualcuno offre la propria vita a Yig, il dio 
+                        potrebbe (forse) revocare la maledizione. Ma Yig è capriccioso.
+                    </p>
+                </div>
+
+                <h3>I PNG - I Fratelli Dawson</h3>
+
+                <div class="npc-block">
+                    <h4>👤 Jake Dawson (Il capo - Stadio 3 trasformazione)</h4>
+                    <p><strong>Aspetto:</strong> Uomo sui 35 anni, un tempo robusto e carismatico. Ora 
+                    la sua pelle ha macchie verdi-marroni squamose. Gli occhi sono gialli con pupille 
+                    verticali. La lingua si è biforcuta.</p>
+                    <p><strong>Personalità originale:</strong> Leader nato, coraggioso, leale ai suoi fratelli.</p>
+                    <p><strong>Personalità corrente:</strong> Sempre più distaccato. Parla meno. A volte 
+                    sibila involontariamente. Di notte, ha l'impulso irresistibile di strisciare sulle rocce 
+                    calde. Sta perdendo la sua umanità.</p>
+                    <p><strong>Segreto:</strong> Sa che sta cambiando. Ha chiesto ai fratelli di ucciderlo 
+                    se diventa "troppo serpente". Ma non sono riusciti a farlo.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ JAKE DAWSON (Trasformazione Stadio 3)</h4>
+                    <p><strong>Classe Armatura:</strong> 14 (scaglie naturali)</p>
+                    <p><strong>Punti Ferita:</strong> 45 (7d8+14)</p>
+                    <p><strong>Velocità:</strong> 9 metri, scalare 6 metri</p>
+                    <p><strong>FOR:</strong> 15 (+2) | <strong>DES:</strong> 14 (+2) | <strong>COS:</strong> 
+                    14 (+2) | <strong>INT:</strong> 10 (+0) | <strong>SAG:</strong> 12 (+1) | 
+                    <strong>CAR:</strong> 8 (-1)</p>
+                    
+                    <p><strong>Immunità:</strong> Veleno (serpenti)</p>
+                    <p><strong>Sensi:</strong> Percezione termica 9 metri (come serpenti)</p>
+                    
+                    <p><strong>Trasformazione progressiva:</strong> Ogni giorno, Jake perde 1 punto di 
+                    Carisma e Intelligenza. Al Giorno 7, diventa completamente un uomo-serpente sotto 
+                    il controllo di Yig.</p>
+                    
+                    <p><strong>AZIONI:</strong></p>
+                    <p><strong>Revolver Colt .45:</strong> +5 al tiro per colpire, gittata 12/36 metri. 
+                    Colpito: 2d6+2 danni perforanti.</p>
+                    <p><strong>Morso velenoso (da Giorno 4):</strong> +4 al tiro per colpire, portata 
+                    1,5 metri. Colpito: 1d4+2 danni perforanti più veleno (Costituzione CD 12 o 2d6 
+                    danni da veleno).</p>
+                </div>
+
+                <div class="npc-block">
+                    <h4>👤 Gli altri fratelli Dawson</h4>
+                    <p><strong>Tom Dawson (32 anni):</strong> Stadio 1 trasformazione. Pelle leggermente 
+                    secca e squamosa solo sul petto. Occhi normali. Ancora combattivo e speranzoso.</p>
+                    <p><strong>Billy Dawson (28 anni):</strong> Stadio 2. Macchie squamose su braccia e 
+                    collo. Occhi iniziano a essere giallognoli. Nervoso e paranoico.</p>
+                    <p><strong>"Crazy" Pete Dawson (25 anni):</strong> Stadio 2. Come Billy. È impazzito 
+                    dalla paura - alterna momenti di calma a crisi isteriche.</p>
+                    <p><strong>Young Charlie (19 anni):</strong> Stadio 1. Il più giovane. Piange di notte. 
+                    Vuole solo tornare a casa da sua madre.</p>
+                    <p><strong>Statistiche:</strong> Come Fuorilegge (manuale base)</p>
+                </div>
+
+                <div class="npc-block">
+                    <h4>👤 Aquila Grigia (Sciamano Comanche)</h4>
+                    <p><strong>Ruolo:</strong> Possibile alleato o nemico</p>
+                    <p><strong>Descrizione:</strong> Vecchio sciamano sui 70 anni. Pelle come cuoio, 
+                    occhi profondi e saggi. Parla poco ma ogni parola ha peso.</p>
+                    <p><strong>Conoscenze:</strong> Conosce Yig. Sa della maledizione. Può spiegare cosa 
+                    sta accadendo ai Dawson.</p>
+                    <p><strong>Attitudine:</strong> I Dawson hanno profanato un luogo sacro. Meritano la 
+                    punizione. MA può essere convinto (CD Persuasione 16) che la trasformazione in 
+                    mostri è troppo crudele, preferibile una morte rapida.</p>
+                    <p><strong>Aiuto:</strong> Può rivelare il rituale del sacrificio volontario. Può 
+                    anche fornire erbe che rallentano la trasformazione di 1-2 giorni.</p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 Gli elementi di orrore</h4>
+                    <ul>
+                        <li>I serpenti sono OVUNQUE. Nei sacchi da viaggio. Dentro gli stivali. Tra le 
+                        coperte. Dentro la borraccia.</li>
+                        <li>Il sibilo collettivo di notte - centinaia di serpenti che sibilano all'unisono 
+                        in un ritmo ipnotico</li>
+                        <li>Vedere Jake perdere lentamente la sua umanità. Lo guardi negli occhi e non 
+                        c'è più nessuno</li>
+                        <li>La trasformazione fisica: pelle che si squama, denti che cadono sostituiti da 
+                        zanne, lingua che si biforca</li>
+                        <li>Il dilemma morale: dovete uccidere Jake prima che sia troppo tardi?</li>
+                        <li>Scoprire che non potete fuggire. I serpenti sanno sempre dove siete</li>
+                    </ul>
+                </div>
+
+                <h3>La progressione della maledizione</h3>
+
+                <table>
+                    <tr>
+                        <th>Giorno</th>
+                        <th>Stadio</th>
+                        <th>Sintomi fisici</th>
+                        <th>Sintomi mentali</th>
+                    </tr>
+                    <tr>
+                        <td>1-2</td>
+                        <td>Stadio 1</td>
+                        <td>Pelle secca, sensibilità al freddo</td>
+                        <td>Incubi di serpenti, paranoia leggera</td>
+                    </tr>
+                    <tr>
+                        <td>3-4</td>
+                        <td>Stadio 2</td>
+                        <td>Macchie squamose, occhi giallognoli, lingua ispessita</td>
+                        <td>Difficoltà a concentrarsi, impulsi strani (desiderio di sole, attrazione 
+                        per roditori)</td>
+                    </tr>
+                    <tr>
+                        <td>5-6</td>
+                        <td>Stadio 3</td>
+                        <td>Squame evidenti, occhi rettiliani, lingua biforcuta, zanne emergenti</td>
+                        <td>Perdita di empatia, istinti predatori, difficoltà a parlare</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Completa</td>
+                        <td>Uomo-serpente al 80% (ancora bipede ma mostruoso)</td>
+                        <td>Umanità perduta. Obbedisce a Yig. Attacca gli ex-compagni</td>
+                    </tr>
+                </table>
+
+                <h3>Incontri con i serpenti</h3>
+
+                <table>
+                    <tr>
+                        <th>Situazione</th>
+                        <th>Serpenti</th>
+                        <th>Pericolo</th>
+                    </tr>
+                    <tr>
+                        <td>Accampamento notturno</td>
+                        <td>2d6 serpenti a sonagli infiltrati</td>
+                        <td>Attacco Destrezza CD 13 o 1d4+veleno</td>
+                    </tr>
+                    <tr>
+                        <td>Attraversare un canyon</td>
+                        <td>Sciame di serpenti sul percorso</td>
+                        <td>Costituzione CD 14 o 2d6 veleno</td>
+                    </tr>
+                    <tr>
+                        <td>Bere all'oasi</td>
+                        <td>20+ serpenti nell'acqua</td>
+                        <td>Intimidazione CD 15 o combattimento</td>
+                    </tr>
+                    <tr>
+                        <td>Giorno 6 - Avvertimento finale</td>
+                        <td>100+ serpenti formano il simbolo di Yig</td>
+                        <td>Nessuno (solo avvertimento)</td>
+                    </tr>
+                </table>
+
+                <div class="stat-block">
+                    <h4>⚠️ SCIAME DI SERPENTI A SONAGLI</h4>
+                    <p><strong>Classe Armatura:</strong> 14</p>
+                    <p><strong>Punti Ferita:</strong> 36 (8d8)</p>
+                    <p><strong>Velocità:</strong> 9 metri</p>
+                    
+                    <p><strong>Resistenze:</strong> Contundenti, perforanti, taglienti</p>
+                    <p><strong>Immunità alle condizioni:</strong> Affascinato, spaventato, paralizzato, 
+                    pietrificato, prono, stordito</p>
+                    
+                    <p><strong>Morsi:</strong> Ogni creatura nello spazio dello sciame deve superare 
+                    Destrezza CD 12 o subire 2d6 danni perforanti + 2d4 veleno.</p>
+                    
+                    <p><strong>Controllo Stress:</strong> Essere circondati da centinaia di serpenti 
+                    sibilanti richiede Saggezza CD 11 o 1 punto stress.</p>
+                </div>
+
+                <div class="key-question">
+                    ❓ LA DOMANDA CHIAVE: "Come si protegge qualcuno da un Dio? E cosa fate quando 
+                    l'uomo che state proteggendo si trasforma in un mostro davanti ai vostri occhi? 
+                    Lo uccidete per pietà o tentate l'impossibile per salvarlo?"
+                </div>
+
+                <h3>Le conclusioni possibili</h3>
+
+                <div class="tip-box">
+                    <h4>✅ Vittoria (salvezza parziale)</h4>
+                    <ul>
+                        <li><strong>Il sacrificio volontario:</strong> Uno dei Dawson (probabilmente Tom) 
+                        si offre volontariamente sull'altare di Yig. Questo placa il dio. Gli altri 
+                        fratelli sono risparmiati, ma Tom muore. Yig è soddisfatto della dimostrazione 
+                        di coraggio.</li>
+                        <li><strong>Il sacrificio eroico (PG):</strong> Un personaggio giocante può 
+                        offrirsi al posto dei Dawson. Yig è così sorpreso dall'atto di altruismo che 
+                        risparmia TUTTI. Ma il PG perde permanentemente 2 punti da una caratteristica a 
+                        scelta (marchiato da Yig per sempre).</li>
+                        <li><strong>Restituire l'oro + devozione:</strong> Se i Dawson restituiscono 
+                        l'oro, si pentono sinceramente, e promettono di diventare servitori di Yig 
+                        (costruendo un nuovo tempio), Yig potrebbe fermare la trasformazione a Stadio 3. 
+                        Resteranno parzialmente serpenti per sempre (scaglie, occhi) ma manterranno la 
+                        mente umana.</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>⚠️ Vittoria pragmatica</h4>
+                    <ul>
+                        <li><strong>Uccidere Jake:</strong> Se Jake viene ucciso prima del Giorno 7, la 
+                        sua trasformazione si ferma. Yig considera la "punizione" sufficiente. Gli altri 
+                        fratelli guariscono lentamente (1 mese). Ma i PG devono vivere con la scelta di 
+                        aver giustiziato un uomo che si stava trasformando.</li>
+                        <li><strong>La fuga:</strong> Scortare i Dawson oltre il confine del Texas. Yig 
+                        controlla solo l'Oklahoma. Una volta fuori, la maledizione rallenta (non si ferma). 
+                        I Dawson hanno 1 anno prima della trasformazione completa. Possono usare quel 
+                        tempo per cercare altre soluzioni.</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>💀 Sconfitta</h4>
+                    <p>
+                        Se i PG non agiscono o falliscono, al Giorno 7 tutti i Dawson si trasformano 
+                        completamente in uomini-serpente. Attaccano immediatamente chiunque sia vicino, 
+                        inclusi i PG. Dopo aver ucciso/scacciato i PG, strisciano verso il tumulo per 
+                        servire Yig per l'eternità.
+                    </p>
+                    <p>
+                        I PG possono sopravvivere fuggendo, ma hanno fallito la missione. E ora sanno 
+                        che Yig è reale, e che non perdona mai.
+                    </p>
+                </div>
+
+                <div class="handout">
+                    <h4>📜 Documento per i giocatori: Diario di Jake Dawson (Giorno 4)</h4>
+                    <p style="text-align: center; font-weight: bold; font-style: normal;">
+                        ESTRATTO DAL DIARIO
+                    </p>
+                    <p>
+                        Giorno 4<br><br>
+                        
+                        La mia pelle... Cristo, la mia pelle. Non è più pelle. È qualcos'altro. Squame. 
+                        Come un dannato rettile.<br><br>
+                        
+                        I ragazzi mi guardano con paura. Non mi biasimo. Ho guardato me stesso nello 
+                        specchio dell'oasi. I miei occhi... non sono più i miei occhi. Sono gialli. 
+                        Freddi. Come quelli di un serpente.<br><br>
+                        
+                        Ho fatto un sogno la notte scorsa. No, non un sogno. Una visione. Ho visto HIM. 
+                        Il Padre dei Serpenti. Yig. Era alto quanto una casa, coperto di scaglie verdi 
+                        e dorate. Mi ha parlato ma non con parole. Con... sentimenti. Rabbia. Delusione. 
+                        Ma anche... curiosità?<br><br>
+                        
+                        Mi ha mostrato cosa diventerò. Un mostro. Un servo. Per sempre.<br><br>
+                        
+                        Ho chiesto a Tom di spararmi. Non ce l'ha fatta. È mio fratello. Capisco.<br><br>
+                        
+                        Ma se divento... quello... quella cosa che ho visto nella visione... Tom, se leggi 
+                        questo: NON ESITARE. Sparami. Per favore.<br><br>
+                        
+                        Non voglio servire un dio-serpente per l'eternità. Voglio morire come un uomo.<br><br>
+                        
+                        Jake
+                    </p>
+                </div>
+
+                <h3>I consigli per il narratore</h3>
+
+                <div class="tip-box">
+                    <ul>
+                        <li><strong>I serpenti come atmosfera:</strong> Descrivili costantemente. Il sibilo 
+                        sottofondo. Le tracce nella sabbia. L'odore muschiato. Crea paranoia costante.</li>
+                        <li><strong>Jake come tragedia:</strong> Fallo umano. Mostra i suoi ricordi, la 
+                        sua lotta interiore. Quando perde la sua umanità, dovrebbe essere straziante.</li>
+                        <li><strong>Il dilemma:</strong> Non dare una "soluzione facile". Ogni scelta ha 
+                        un costo. Salvare tutti richiede sacrificio vero.</li>
+                        <li><strong>Yig come forza naturale:</strong> Non è malvagio. È come un terremoto 
+                        o un uragano. Indifferente ma implacabile. Questo lo rende più terrificante.</li>
+                        <li><strong>Sciamano come guida:</strong> Aquila Grigia può offrire saggezza ma 
+                        non soluzioni facili. Rispetta la tradizione nativa senza stereotipi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SCENARIO 4 -->
+            <div class="scenario-card" id="scenario-4">
+                <div class="scenario-header">
+                    <span class="scenario-number">04</span>
+                    <h2 class="scenario-title">L'Ultimo Binario per K'n-yan</h2>
+                    <p class="scenario-tagline">"Alcuni regni dovrebbero restare sepolti"</p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio</h4>
+                    <p>
+                        La <strong>Oklahoma & Pacific Railroad Company</strong> vi assume come scout per 
+                        tracciare la rotta della nuova ferrovia attraverso l'Oklahoma rurale. Lavoro ben 
+                        pagato: 75 dollari a testa più bonus se completate in una settimana.
+                    </p>
+                    <p>
+                        Ma c'è un problema. Le mandrie di bestiame stanno scomparendo. Non rubate - 
+                        <strong>scomparendo nel nulla</strong>. Un allevatore giura di aver visto 100 
+                        capi di bestiame seguire le tracce fino a un tumulo in mezzo a un campo... e poi 
+                        le tracce semplicemente finiscono. Come se fossero state inghiottite dalla terra.
+                    </p>
+                    <p>
+                        Gli anziani della tribù Comanche locale vi avvertono: "Non scavate vicino al 
+                        Grande Tumulo. Là sotto vivono i Tero-yomn. Quelli che non dovrebbero essere 
+                        disturbati."
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità lovecraftiana</h4>
+                    <p>
+                        Sotto l'Oklahoma esiste il regno sotterraneo di <strong>K'n-yan</strong>, descritto 
+                        nel racconto di Lovecraft "Il Tumulo". È una vasta caverna illuminata da cristalli 
+                        fosforescenti, abitata da una razza umanoide degenerata e immortale.
+                    </p>
+                    <p>
+                        I K'n-yan erano una volta una grande civiltà, ma millenni di immortalità e noia li 
+                        hanno resi decadenti e crudeli. Adorano <strong>Cthulhu</strong> e <strong>Yig</strong>. 
+                        Possiedono tecnologie avanzate tra cui <strong>dispositivi di invisibilità</strong> e 
+                        <strong>poteri telepatici</strong>.
+                    </p>
+                    <p>
+                        Usano gli "esseri di superficie" come schiavi e giocattoli. Le mandrie scompaiono 
+                        perché i K'n-yan le rapiscono per cibo e divertimento. Presto inizieranno a rapire 
+                        umani.
+                    </p>
+                </div>
+
+                <h3>Location e PNG principali</h3>
+
+                <div class="location-box">
+                    <h4>📍 Il Grande Tumulo</h4>
+                    <p>
+                        Un tumulo di terra alto 8 metri, largo 30. Sembra naturale ma è artificiale. 
+                        L'ingresso è nascosto da una lastra di pietra che può essere aperta solo dall'interno... 
+                        o forzata con esplosivi.
+                    </p>
+                    <p><strong>Le scale:</strong> Scendono per 50 metri. Illuminate da funghi bioluminescenti.</p>
+                    <p><strong>K'n-yan (la città):</strong> Enorme caverna. Edifici di pietra nera. 
+                    Popolazio ne: ~2000 K'n-yan. Temperature costante di 21°C.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ GUERRIERO K'N-YAN</h4>
+                    <p><strong>CA:</strong> 15 (armatura chitinosa) | <strong>PF:</strong> 52 (8d8+16)</p>
+                    <p><strong>Velocità:</strong> 9 metri</p>
+                    <p><strong>FOR:</strong> 14 (+2) | <strong>DES:</strong> 16 (+3) | <strong>COS:</strong> 
+                    14 (+2) | <strong>INT:</strong> 16 (+3) | <strong>SAG:</strong> 13 (+1) | 
+                    <strong>CAR:</strong> 10 (+0)</p>
+                    
+                    <p><strong>AZIONI:</strong></p>
+                    <p><strong>Lancia di cristallo:</strong> +5 al tiro, portata 1,5 m. Danni: 1d8+3 perforanti.</p>
+                    <p><strong>Raggio paralizzante (tecnologia):</strong> Gittata 12 metri. Costituzione 
+                    CD 14 o paralizzato per 1 minuto.</p>
+                    <p><strong>Dominio mentale (3/giorno):</strong> Come incantesimo <em>charme su persone</em>, 
+                    CD Saggezza 14.</p>
+                    <p><strong>Invisibilità (dispositivo):</strong> Può diventare invisibile per 10 minuti, 
+                    3/giorno.</p>
+                    
+                    <p><strong>Stress:</strong> Vedere un K'n-yan materializzarsi dal nulla = SAG CD 12, 
+                    2 stress.</p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 Gli elementi di orrore</h4>
+                    <ul>
+                        <li>Seguire le tracce di bestiame che semplicemente FINISCONO in un campo aperto</li>
+                        <li>Essere osservati da occhi che non potete vedere</li>
+                        <li>Un compagno afferrato da mani invisibili e trascinato sottoterra urlando</li>
+                        <li>Scoprire K'n-yan: una civiltà avanzata ma decadente che vi vede come insetti</li>
+                        <li>I K'n-yan sono ANNOIATI dalla vita. Torturare umani è solo intrattenimento</li>
+                    </ul>
+                </div>
+
+                <div class="key-question">
+                    ❓ LA DOMANDA CHIAVE: "Come combatti un nemico invisibile che è tecnologicamente 
+                    superiore e vive sotto i tuoi piedi? E se scappi... quanti altri moriranno?"
+                </div>
+
+                <h3>Conclusioni possibili</h3>
+                <div class="tip-box">
+                    <ul>
+                        <li><strong>Collassare il tumulo:</strong> Usare esplosivi per sigillare l'ingresso. 
+                        Soluzione temporanea (i K'n-yan possono scavare un nuovo accesso in mesi/anni)</li>
+                        <li><strong>Negoziare:</strong> I K'n-yan sono arroganti ma non stupidi. Se offrite 
+                        qualcosa di valore (tecnologia di superficie, libri, mappe), potrebbero accettare 
+                        di lasciare in pace la zona</li>
+                        <li><strong>Deviare la ferrovia:</strong> Convincere la compagnia a tracciare una 
+                        rotta diversa. Salva vite ma lascia il problema irrisolto</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SCENARI 6-10 IN FORMATO COMPATTO MA COMPLETO -->
+
+            <!-- SCENARIO 5 -->
+            <div class="scenario-card" id="scenario-5">
+                <div class="scenario-header">
+                    <span class="scenario-number">05</span>
+                    <h2 class="scenario-title">L'Oro dell'Abitatore</h2>
+                    <p class="scenario-tagline">"L'oscurità stessa ha fame"</p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio</h4>
+                    <p>
+                        Nella città fantasma di <strong>Blackstone</strong>, Arizona, si dice che il vecchio 
+                        minatore Silas McGraw abbia nascosto una fortuna in oro nella chiesa abbandonata. 
+                        Ma nessuno che entra dopo il tramonto ne esce vivo. I corpi vengono trovati 
+                        all'alba, occhi spalancati dal terrore, senza un segno di violenza.
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità</h4>
+                    <p>
+                        McGraw trovò il <strong>Trapezoedro Lucente</strong>, un artefatto che imprigiona 
+                        l'<strong>Abitatore delle Tenebre</strong> - un avatar di Nyarlathotep. L'entità è 
+                        un'ombra senziente con un occhio a tre lobi. È intrappolata nella chiesa buia e non 
+                        può sopportare la luce.
+                    </p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ L'ABITATORE DELLE TENEBRE</h4>
+                    <p><strong>CA:</strong> 18 | <strong>PF:</strong> 110 (13d10+39)</p>
+                    <p><strong>Immunità:</strong> Danni fisici (non corpore o)</p>
+                    <p><strong>Vulnerabilità:</strong> Luce solare diretta (5d10 danni/round)</p>
+                    <p><strong>AZIONI:</strong></p>
+                    <p><strong>Tocco dell'ombra:</strong> +9 al tiro, 3d10 danni necrotici. Costituzione 
+                    CD 16 o massimo PF ridotti della stessa quantità.</p>
+                    <p><strong>Sguardo dell'abisso:</strong> Saggezza CD 17 o paralizzato dalla paura. 
+                    4 punti stress.</p>
+                    <p><strong>Divorare la luce:</strong> Spegne tutte le sorgenti luminose entro 9 metri.</p>
+                </div>
+
+                <div class="key-question">
+                    ❓ Come rubi un tesoro protetto da un'ombra che non può essere uccisa, solo respinta?
+                </div>
+
+                <div class="tip-box">
+                    <h4>✅ Soluzioni</h4>
+                    <ul>
+                        <li>Distruggere il Trapezoedro libera l'Abitatore (PESSIMA idea) ma rende l'oro accessibile</li>
+                        <li>Usare molteplici fonti di luce e lavorare in squadra - uno tiene le lanterne, 
+                        altri afferrano l'oro e scappano</li>
+                        <li>Aspettare l'alba e avere 10 minuti di luce solare diretta per saccheggiare</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SCENARIO 6 -->
+            <div class="scenario-card" id="scenario-6">
+                <div class="scenario-header">
+                    <span class="scenario-number">06</span>
+                    <h2 class="scenario-title">Il Patto di Gold Beach</h2>
+                    <p class="scenario-tagline">"L'oro ha sempre un prezzo"</p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio</h4>
+                    <p>
+                        Sulla costa californiana, la città di pescatori <strong>Gold Beach</strong> è 
+                        stranamente ricca. I pescatori trovano pepite d'oro nelle reti. Ma la gente del 
+                        posto ha qualcosa di strano: occhi sporgenti, pelle squamosa, puzzano di pesce.
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità</h4>
+                    <p>
+                        È "La Maschera di Innsmouth" sulla West Coast. La città ha un patto con gli 
+                        <strong>Abitatori del Profondo (Deep Ones)</strong>. In cambio di oro dalla città 
+                        sottomarina Y'ha-nthlei, i cittadini si ibridano con i Deep Ones e sacrificano 
+                        estranei a <strong>Padre Dagon</strong> e <strong>Madre Hydra</strong>.
+                    </p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ ABITATORE DEL PROFONDO</h4>
+                    <p><strong>CA:</strong> 14 (scaglie) | <strong>PF:</strong> 33 (6d8+6)</p>
+                    <p><strong>Velocità:</strong> 9 metri, nuoto 12 metri</p>
+                    <p><strong>Anfibio, visione notturna 18 metri</strong></p>
+                    <p><strong>Artigli:</strong> +5 al tiro, 1d6+3 taglienti + afferrare</p>
+                    <p><strong>Morso:</strong> +5 al tiro, 1d8+3 perforanti</p>
+                    <p><strong>Vulnerabilità:</strong> Fuoco</p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 Orrori</h4>
+                    <ul>
+                        <li>L'isolamento - le strade si svuotano quando arrivate</li>
+                        <li>Il puzzo di pesce marcio ovunque</li>
+                        <li>I canti gutturali di notte dalla spiaggia</li>
+                        <li>La marea che sale, portando i Deep Ones dal mare</li>
+                        <li>Scoprire che metà città sono ibridi</li>
+                    </ul>
+                </div>
+
+                <div class="key-question">
+                    ❓ Qual è il vero prezzo dell'oro? E come scappi da un'intera città di mostri?
+                </div>
+
+                <div class="warning-box">
+                    <h4>Conclusioni</h4>
+                    <p><strong>Fuga:</strong> Scappare di notte prima che la marea salga</p>
+                    <p><strong>Bruciare Gold Beach:</strong> Soluzione estrema. Genocidio di ibridi (molti 
+                    nati così, non colpevoli)</p>
+                    <p><strong>Allertare le autorità:</strong> L'esercito può assediare la città. Guerra brutale.</p>
+                </div>
+            </div>
+
+            <!-- SCENARIO 7 -->
+            <div class="scenario-card" id="scenario-7">
+                <div class="scenario-header">
+                    <span class="scenario-number">07</span>
+                    <h2 class="scenario-title">La Diligenza Maledetta</h2>
+                    <p class="scenario-tagline">"Uno di noi non è chi dice di essere"</p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio</h4>
+                    <p>
+                        Una bufera di neve vi blocca in una <strong>stazione di posta isolata</strong> nel 
+                        Montana con altri 6 passeggeri: un predicatore, un dottore, un giocatore, una 
+                        maestra, un commerciante e un marshal. Uno di loro non è umano.
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità</h4>
+                    <p>
+                        Uno dei passeggeri (decidi tu chi) è uno <strong>Yithiano</strong> - un alieno 
+                        della Grande Razza di Yith che viaggia nel tempo scambiando coscienze con umani 
+                        per studiarli. La tempesta ha rovinato i suoi piani. È terrorizzato quanto voi e 
+                        sta costruendo un dispositivo per tornare "a casa" nel fienile.
+                    </p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 Orrori</h4>
+                    <ul>
+                        <li>La paranoia stile "The Thing" - chi è l'alieno?</li>
+                        <li>Il "posseduto" agisce stranamente: non ricorda dettagli personali, confonde 
+                        termini moderni</li>
+                        <li>Trovare schemi matematici impossibili disegnati sul muro del fienile</li>
+                        <li>L'arma a raggi che lo Yithiano ha costruito con materiali di scarto</li>
+                    </ul>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ UMANO POSSEDUTO DA YITHIANO</h4>
+                    <p><strong>Statistiche normali</strong> + abilità speciali:</p>
+                    <p><strong>Conoscenza proibita:</strong> INT +8, conosce tecnologie future</p>
+                    <p><strong>Raggio elettrico (se costruisce arma):</strong> Gittata 30 metri, 3d6 
+                    danni elettrici, Destrezza CD 14 per metà</p>
+                    <p><strong>Scambio mentale (disperato):</strong> Se sta per morire, può tentare di 
+                    trasferirsi in un'altra mente. Saggezza CD 16 o posseduto</p>
+                </div>
+
+                <div class="key-question">
+                    ❓ Chi di noi è l'alieno? Sta cercando di ucciderci o solo di tornare a casa?
+                </div>
+
+                <div class="tip-box">
+                    <h4>Conclusioni</h4>
+                    <p><strong>Negoziare:</strong> Lo Yithiano non è ostile. Vuole solo tornare al suo 
+                    tempo. Se aiutato, se ne va pacificamente</p>
+                    <p><strong>Uccidere:</strong> Il corpo muore, lo Yithiano torna al suo tempo. Ma avete 
+                    ucciso un innocente</p>
+                    <p><strong>Catturare:</strong> Consegnarlo alle autorità. Ma a chi? E ci crederanno?</p>
+                </div>
+            </div>
+
+            <!-- SCENARIO 8 -->
+            <div class="scenario-card" id="scenario-8">
+                <div class="scenario-header">
+                    <span class="scenario-number">08</span>
+                    <h2 class="scenario-title">Lo Spettacolo della Follia</h2>
+                    <p class="scenario-tagline">"Il secondo atto non dovrebbe mai essere visto"</p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio</h4>
+                    <p>
+                        Una compagnia teatrale arriva in città per mettere in scena <strong>"Il Re in 
+                        Giallo"</strong>. L'eccitazione è alle stelle. Ma dopo la prima rappresentazione, 
+                        gli spettatori iniziano a comportarsi stranamente: disegnano il <strong>Segno Giallo</strong>, 
+                        parlano di Carcosa, vedono stelle nere nel cielo.
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità</h4>
+                    <p>
+                        L'opera è un vettore memetico per la follia di <strong>Hastur (Il Re in Giallo)</strong>. 
+                        Chi vede il secondo atto viene "toccato" - vede Carcosa nel cielo e inizia a 
+                        diffondere il Segno. È un'epidemia di follia contagiosa.
+                    </p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 Orrori</h4>
+                    <ul>
+                        <li>Non puoi sparare a un'idea</li>
+                        <li>La città si divide tra "illuminati" (folli ma calmi) e "ignoranti" (sani ma 
+                        terrorizzati)</li>
+                        <li>Gli illuminati NON sono violenti - vogliono solo che tutti "vedano"</li>
+                        <li>La follia si diffonde come una malattia - anche solo leggere il copione 
+                        dell'atto 2 contamina</li>
+                    </ul>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ CONTAMINAZIONE DA "RE IN GIALLO"</h4>
+                    <p><strong>Esposizione:</strong> Vedere l'Atto 2, leggere il copione, o essere 
+                    esposti al Segno Giallo per più di 1 ora</p>
+                    <p><strong>Tiro salvezza:</strong> Saggezza CD 15</p>
+                    <p><strong>Fallimento:</strong> Guadagni immediatamente 4 punti stress + afflizione 
+                    "Ossessione con Carcosa"</p>
+                    <p><strong>Effetti:</strong> Vedi il Segno Giallo ovunque. Senti l'impulso di diffonderlo. 
+                    Percepisci Carcosa che si sovrappone alla realtà.</p>
+                </div>
+
+                <div class="key-question">
+                    ❓ Come fermi un'opera teatrale senza diventare il nemico dell'intera città impazzita?
+                </div>
+
+                <div class="tip-box">
+                    <h4>Soluzioni</h4>
+                    <ul>
+                        <li><strong>Bruciare il teatro:</strong> Prima della prossima rappresentazione. 
+                        Soluzione drastica. La città vi odierà</li>
+                        <li><strong>Rubare tutti i copioni:</strong> Missione furtiva. Se scoperti, linciaggio</li>
+                        <li><strong>Quarantena:</strong> Convincere l'esercito a isolare la città. Nessuno 
+                        entra, nessuno esce finché la follia non si placa (mesi)</li>
+                        <li><strong>Uccidere gli attori:</strong> Estremo e immorale. Sono vittime quanto 
+                        gli spettatori</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SCENARIO 9 -->
+            <div class="scenario-card" id="scenario-9">
+                <div class="scenario-header">
+                    <span class="scenario-number">09</span>
+                    <h2 class="scenario-title">Il Miracolo del Dottore</h2>
+                    <p class="scenario-tagline">"La morte non è sempre la fine"</p>
+                </div>
+
+                <div class="hook-box">
+                    <h4>🎣 L'aggancio</h4>
+                    <p>
+                        Al <strong>Fort Whitman</strong>, un isolato avamposto militare, il medico 
+                        <strong>Dr. Marcus Ashford</strong> si vanta di aver azzerato il tasso di mortalità. 
+                        Soldati feriti gravemente tornano in servizio in giorni. Ma c'è qualcosa di strano 
+                        in loro: non parlano, non mangiano, eseguono ordini meccanicamente.
+                    </p>
+                </div>
+
+                <div class="truth-box">
+                    <h4>🐙 La verità</h4>
+                    <p>
+                        Il dottore usa il <strong>"Reagente"</strong> (il siero di Herbert West - Rianimatore). 
+                        Funziona, ma riporta in vita solo la carne, creando automi violenti senza memoria. 
+                        Il dottore li tiene sotto controllo con comandi ipnotici. Ma sta perdendo il controllo.
+                    </p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⚠️ SOLDATO RIANIMATO</h4>
+                    <p><strong>CA:</strong> 12 | <strong>PF:</strong> 22 (3d8+9)</p>
+                    <p><strong>FOR:</strong> 16 (+3) | <strong>DES:</strong> 10 (+0) | <strong>COS:</strong> 
+                    16 (+3) | <strong>INT:</strong> 3 (-4) | <strong>SAG:</strong> 6 (-2) | 
+                    <strong>CAR:</strong> 3 (-4)</p>
+                    <p><strong>Immunità:</strong> Veleno, psichico; non ha bisogno di respirare, mangiare, 
+                    dormire</p>
+                    <p><strong>Debolezza:</strong> Fuoco (vulnerabilità), decapitazione (morte istantanea)</p>
+                    <p><strong>Attacchi:</strong> +5 al tiro, 1d8+3 contundenti (mani nude) o arma</p>
+                    <p><strong>Furia rianimatoria:</strong> Se ridotto a 0 PF senza decapitazione, si 
+                    riattiva in 1d4 round con metà PF e attacca tutto ciò che vede</p>
+                </div>
+
+                <div class="horror-box">
+                    <h4>💀 Orrori</h4>
+                    <ul>
+                        <li>L'orrore "sottile" - all'inizio sembrano soldati normali</li>
+                        <li>Realizzare che il soldato con cui parli è morto da settimane</li>
+                        <li>Gli ululati dall'infermeria di notte (rianimati che perdono il controllo)</li>
+                        <li>Il dottore che insiste che sta "salvando vite"</li>
+                        <li>La scoperta finale: ci sono 30+ rianimati nel forte</li>
+                    </ul>
+                </div>
+
+                <div class="key-question">
+                    ❓ È giusto distruggere i rianimati se stanno proteggendo il forte? E cosa fai con 
+                    un medico che crede genuinamente di fare del bene?
+                </div>
+
+                <div class="tip-box">
+                    <h4>Soluzioni</h4>
+                    <ul>
+                        <li><strong>Distruggere il Reagente:</strong> Ferma nuove rianimazioni. I rianimati 
+                        esistenti restano</li>
+                        <li><strong>Confrontare il dottore:</strong> Persuasione CD 18. Potrebbe rendersi 
+                        conto dell'orrore e suicidarsi</li>
+                        <li><strong>Uccidere tutti i rianimati:</strong> 30+ combattimenti. Massacro necessario?</li>
+                        <li><strong>Evacuare e bruciare il forte:</strong> Soluzione definitiva ma distrugge 
+                        un avamposto militare importante</li>
+                    </ul>
+                </div>
+
+                <div class="handout">
+                    <h4>📜 Diario del Dr. Ashford (ultima pagina)</h4>
+                    <p style="text-align: center; font-weight: bold; font-style: normal;">
+                        GIORNO 47
+                    </p>
+                    <p>
+                        Il Reagente è perfetto. PERFETTO. Il Soldato Davis è morto tre volte e ogni volta 
+                        l'ho riportato indietro. È un miracolo della scienza!<br><br>
+                        
+                        Certo, c'è il problema della memoria. E della personalità. E del... appetito. Ma 
+                        questi sono dettagli. Li risolverò.<br><br>
+                        
+                        Il Colonnello è soddisfatto. Nessun morto in sei settimane! Un record!<br><br>
+                        
+                        Stanotte ho sentito rumori dall'infermeria. Ululati. Come animali. Ho aumentato la 
+                        dose di sedativi.<br><br>
+                        
+                        Tutto è sotto controllo.<br><br>
+                        
+                        Tutto è sotto controllo.<br><br>
+                        
+                        Tutto è sotto controllo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="download-cta" style="background: linear-gradient(135deg, #8B4513 0%, #D4AF37 100%); color: #1a1410; padding: 40px; 
+                border-radius: 12px; margin: 60px 0; text-align: center; border: 4px solid #8B4513; box-shadow: 0 8px 24px rgba(139, 69, 19, 0.4);">
+                <h3 style="color: #1a1410; margin-top: 0; font-size: 2rem;">🎲 Dieci storie, infinite possibilità</h3>
+                <p style="font-size: 1.3rem; margin: 20px 0; font-weight: bold;">
+                    Tutti e dieci gli scenari sono ora completi e pronti per il gioco!
+                </p>
+                <p style="font-size: 1.1rem; margin: 15px auto; max-width: 800px; line-height: 1.7;">
+                    Ogni scenario in questa appendice è stato progettato per offrire 2-4 ore di gioco 
+                    intenso che mescola action western, investigazione e orrore cosmico. Usa questi 
+                    scenari come avventure singole o intrecciati in una campagna più ampia.
+                </p>
+                <p style="font-size: 1.1rem; margin: 15px auto; max-width: 800px; line-height: 1.7;">
+                    Ricorda: l'orrore cosmico funziona meglio quando è <strong>personale</strong>, quando 
+                    i giocatori hanno <strong>scelte difficili</strong> da fare, e quando la vittoria ha 
+                    sempre un <strong>prezzo</strong>.
+                </p>
+                <div style="margin: 30px 0; padding: 25px; background: rgba(26, 20, 16, 0.3); border-radius: 8px;">
+                    <p style="font-size: 1.2rem; font-style: italic; margin: 0;">
+                        "Nel West, puoi sparare a un fuorilegge.<br>
+                        Ma come spari a un dio che vive oltre le stelle?"
+                    </p>
+                </div>
+            </div>
+
+            <section id="suggerimenti-finali" style="margin-top: 60px; padding-top: 40px; border-top: 3px solid #8B4513;">
+                <h2 style="text-align: center; color: #D4AF37; font-size: 2.5rem; margin-bottom: 40px;">
+                    Consigli finali per il Narratore
+                </h2>
+
+                <div class="tip-box" style="margin: 30px 0;">
+                    <h3>📖 Preparazione</h3>
+                    <ul style="font-size: 1.1rem; line-height: 1.8;">
+                        <li><strong>Leggi lo scenario completamente</strong> prima della sessione. Sottolinea 
+                        le parti importanti, prendi appunti sui PNG.</li>
+                        <li><strong>Prepara le stat-block</strong> su carte separate per accesso rapido 
+                        durante il combattimento.</li>
+                        <li><strong>Stampa gli handout</strong> per dare ai giocatori. I documenti fisici 
+                        aumentano l'immersione.</li>
+                        <li><strong>Crea una playlist</strong> western/horror per la sessione. La musica 
+                        giusta fa miracoli per l'atmosfera.</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box" style="margin: 30px 0;">
+                    <h3>🎭 Al tavolo</h3>
+                    <ul style="font-size: 1.1rem; line-height: 1.8;">
+                        <li><strong>Descrivi, non dichiarare:</strong> Invece di "C'è un Chthoniano", 
+                        di' "Sentite la roccia tremare. Qualcosa di ENORME si muove sotto i vostri piedi. 
+                        Dal muro emerge un tentacolo pallido spesso quanto un barile..."</li>
+                        <li><strong>Usa i cinque sensi:</strong> Olfatto (zolfo, pesce marcio, sangue), 
+                        tatto (vibrazioni, caldo innaturale), udito (sussurri, sibili), oltre a vista.</li>
+                        <li><strong>Ritmo variabile:</strong> Alterna momenti di tensione lenta con esplosioni 
+                        di terrore/azione. Non essere sempre "a 11" - il contrasto rende l'orrore più efficace.</li>
+                        <li><strong>Lascia che i giocatori abbiano paura:</strong> Non minimizzare il pericolo. 
+                        Se i PG dovrebbero avere paura, comunicalo chiaramente.</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box" style="margin: 30px 0;">
+                    <h3>⚖️ Bilanciamento e fairness</h3>
+                    <ul style="font-size: 1.1rem; line-height: 1.8;">
+                        <li><strong>Questi scenari sono difficili.</strong> Alcuni orrori cosmici NON 
+                        possono essere sconfitti con la forza bruta. Assicurati che i giocatori lo capiscano.</li>
+                        <li><strong>Offri sempre una via d'uscita:</strong> Anche se è la fuga, anche se 
+                        è un sacrificio, i giocatori dovrebbero sempre avere SCELTE.</li>
+                        <li><strong>Le conseguenze sono permanenti:</strong> La follia, la trasformazione, 
+                        la corruzione - questi non sono stati temporanei. Rendilo chiaro ai giocatori.</li>
+                        <li><strong>Ma sii anche flessibile:</strong> Se i giocatori trovano una soluzione 
+                        creativa che non avevi previsto, ricompensali. L'ingegno dovrebbe essere celebrato.</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box" style="margin: 30px 0;">
+                    <h3>🔗 Collegare gli scenari</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        Questi scenari possono essere usati singolarmente, ma diventano ancora più potenti 
+                        se intrecciati. Ecco alcuni suggerimenti:
+                    </p>
+                    <ul style="font-size: 1.1rem; line-height: 1.8;">
+                        <li><strong>Temi ricorrenti:</strong> Più scenari coinvolgono Yig e Nyarlathotep. 
+                        I PG potrebbero iniziare a vedere pattern.</li>
+                        <li><strong>PNG ricorrenti:</strong> Aquila Grigia potrebbe apparire in più scenari 
+                        come guida spirituale. Doc Whitfield potrebbe essere un alleato che riappare.</li>
+                        <li><strong>Artefatti:</strong> Il Trapezoedro Lucente potrebbe essere la chiave 
+                        per risolvere altri scenari (o peggiorarli!).</li>
+                        <li><strong>Campagna epica:</strong> Gli scenari 1, 2, 4, 5, 7 possono formare una 
+                        campagna di 20+ sessioni: i PG scoprono che tutti questi orrori sono collegati a 
+                        un piano più grande per risvegliare Cthulhu.</li>
+                    </ul>
+                </div>
+
+                <div class="horror-box" style="margin: 40px 0;">
+                    <h3 style="margin-top: 0; text-align: center; font-size: 1.8rem;">💀 L'ultimo consiglio</h3>
+                    <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; margin: 20px auto; max-width: 700px;">
+                        L'orrore cosmico lovecraftiano funziona perché ci ricorda che l'universo è vasto, 
+                        indifferente, e pieno di cose che non possiamo comprendere. Ma al tavolo da gioco, 
+                        l'obiettivo è <strong>divertirsi</strong> insieme.
+                    </p>
+                    <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; margin: 20px auto; max-width: 700px;">
+                        Se i giocatori sono terrorizzati ma eccitati, se stanno dibattendo furiosamente 
+                        su cosa fare, se ricorderanno questa sessione per anni... allora hai fatto il tuo 
+                        lavoro perfettamente.
+                    </p>
+                    <p style="font-size: 1.3rem; font-weight: bold; text-align: center; margin-top: 30px; color: #D4AF37;">
+                        Buona caccia, pistolero. Che le tue pistole siano veloci e la tua mente più forte 
+                        degli orrori che incontrerai.
+                    </p>
+                </div>
+            </section>
+
+            <div style="margin: 60px 0; padding: 40px; background: linear-gradient(135deg, #1a1410 0%, #2C1810 100%); 
+                border-radius: 12px; border: 3px solid #8B4513;">
+                <h3 style="text-align: center; color: #D4AF37; font-size: 2rem; margin-bottom: 30px;">
+                    📊 Riepilogo rapido dei 10 scenari
+                </h3>
+                <table style="width: 100%; margin: 0;">
+                    <tr>
+                        <th style="width: 5%;">#</th>
+                        <th style="width: 25%;">Scenario</th>
+                        <th style="width: 25%;">Minaccia principale</th>
+                        <th style="width: 20%;">Livello</th>
+                        <th style="width: 25%;">Tema chiave</th>
+                    </tr>
+                    <tr>
+                        <td><strong>1</strong></td>
+                        <td>Il Colore Venuto dal Pozzo</td>
+                        <td>Il Colore dallo Spazio</td>
+                        <td>1-2</td>
+                        <td>Impotenza, contaminazione</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2</strong></td>
+                        <td>La Guerra delle Miniere</td>
+                        <td>Chthoniani</td>
+                        <td>2-3</td>
+                        <td>Claustrofobia, orrore sotterraneo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3</strong></td>
+                        <td>Il Tonico del Profeta Oscuro</td>
+                        <td>Nyarlathotep (Avatar)</td>
+                        <td>2-4</td>
+                        <td>Corruzione, paranoia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4</strong></td>
+                        <td>La Maledizione del Padre dei Serpenti</td>
+                        <td>Yig, trasformazione</td>
+                        <td>1-3</td>
+                        <td>Perdita identità, sacrificio</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5</strong></td>
+                        <td>L'Ultimo Binario per K'n-yan</td>
+                        <td>Civiltà sotterranea</td>
+                        <td>2-3</td>
+                        <td>Invisibile, tecnologia aliena</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6</strong></td>
+                        <td>L'Oro dell'Abitatore</td>
+                        <td>L'Abitatore delle Tenebre</td>
+                        <td>2-4</td>
+                        <td>Oscurità, avidità punita</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7</strong></td>
+                        <td>Il Patto di Gold Beach</td>
+                        <td>Deep Ones, Dagon</td>
+                        <td>2-3</td>
+                        <td>Isolamento, ibridazione</td>
+                    </tr>
+                    <tr>
+                        <td><strong>8</strong></td>
+                        <td>La Diligenza Maledetta</td>
+                        <td>Yithiano</td>
+                        <td>1-2</td>
+                        <td>Paranoia, mistero whodunit</td>
+                    </tr>
+                    <tr>
+                        <td><strong>9</strong></td>
+                        <td>Lo Spettacolo della Follia</td>
+                        <td>Il Re in Giallo</td>
+                        <td>2-3</td>
+                        <td>Follia contagiosa, meme</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10</strong></td>
+                        <td>Il Miracolo del Dottore</td>
+                        <td>Herbert West, rianimati</td>
+                        <td>2-3</td>
+                        <td>Non-morti, scienza folle</td>
+                    </tr>
+                </table>
+            </div>
+
+        </article>
+    </div>
+
+    <footer class="main-footer">
+        <p class="quote">"Nel West, puoi sparare a un fuorilegge. Ma come spari a un dio?"</p>
+        <p>© 2025 Colt & Cthulhu - Appendice: Dieci scenari pronti</p>
+    </footer>
+
+</body>
+</html>
