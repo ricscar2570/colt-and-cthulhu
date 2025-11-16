@@ -4,6 +4,778 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colt & Cthulhu - Manuale di Gioco</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #1a1410;
+            color: #E8DCC0;
+            font-family: 'Georgia', serif;
+            overflow-x: hidden;
+        }
+        
+        /* HERO ANIMATO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: radial-gradient(ellipse at center, #2C1810 0%, #1a1410 70%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '🤠';
+            position: absolute;
+            font-size: 30rem;
+            opacity: 0.03;
+            animation: float 20s ease-in-out infinite;
+            left: -5%;
+            top: 10%;
+        }
+        
+        .hero::after {
+            content: '🐙';
+            position: absolute;
+            font-size: 30rem;
+            opacity: 0.03;
+            animation: float 25s ease-in-out infinite reverse;
+            right: -5%;
+            bottom: 10%;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+        
+        .hero-title {
+            font-size: clamp(3rem, 10vw, 7rem);
+            color: #D4AF37;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            text-shadow: 
+                0 0 10px rgba(212, 175, 55, 0.5),
+                0 0 20px rgba(212, 175, 55, 0.3),
+                0 0 30px rgba(212, 175, 55, 0.2),
+                3px 3px 0 rgba(139, 69, 19, 0.5);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { 
+                text-shadow: 
+                    0 0 10px rgba(212, 175, 55, 0.5),
+                    0 0 20px rgba(212, 175, 55, 0.3),
+                    0 0 30px rgba(212, 175, 55, 0.2),
+                    3px 3px 0 rgba(139, 69, 19, 0.5);
+            }
+            to { 
+                text-shadow: 
+                    0 0 20px rgba(212, 175, 55, 0.8),
+                    0 0 30px rgba(212, 175, 55, 0.5),
+                    0 0 40px rgba(212, 175, 55, 0.3),
+                    3px 3px 0 rgba(139, 69, 19, 0.5);
+            }
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: #8B4513;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-style: italic;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-description {
+            max-width: 700px;
+            text-align: center;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            line-height: 1.8;
+            padding: 0 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #D4AF37;
+            font-size: 2rem;
+            animation: bounce 2s ease-in-out infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+        
+        /* CONTAINER PRINCIPALE */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        /* SEZIONE */
+        .section {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: #D4AF37;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #D4AF37, transparent);
+        }
+        
+        /* GRID CARDS */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, #2C1810 0%, #1a1410 100%);
+            border: 2px solid #8B4513;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .card:hover::before {
+            left: 100%;
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            color: #D4AF37;
+            margin-bottom: 15px;
+        }
+        
+        .card-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #C4B5A0;
+        }
+        
+        /* INTRO TEXT */
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #C4B5A0;
+        }
+        
+        /* DOWNLOAD CTA */
+        .download-cta {
+            background: linear-gradient(135deg, #8B4513 0%, #D4AF37 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 80px 0;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4);
+        }
+        
+        .download-cta h2 {
+            font-size: 2.5rem;
+            color: #1a1410;
+            margin-bottom: 20px;
+        }
+        
+        .download-cta p {
+            font-size: 1.3rem;
+            color: #2C1810;
+            margin-bottom: 30px;
+        }
+        
+        .download-button {
+            display: inline-block;
+            background: #1a1410;
+            color: #D4AF37;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            border: 3px solid #1a1410;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .download-button:hover {
+            background: transparent;
+            color: #1a1410;
+            transform: scale(1.05);
+        }
+        
+        /* FOOTER */
+        .footer {
+            background: #0d0a08;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 2px solid #8B4513;
+        }
+        
+        .footer p {
+            color: #8B4513;
+            font-size: 0.9rem;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            /* Card appendice scenari responsive */
+            a.card[style*="grid-column"] > div {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            
+            a.card[style*="grid-column"] span {
+                font-size: 4rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1 class="hero-title">COLT & CTHULHU</h1>
+        <p class="hero-subtitle">Dove il western incontra l'orrore cosmico</p>
+        <p class="hero-description">
+            Un gioco di ruolo ambientato nel West del 1885, dove pistoleri coraggiosi affrontano 
+            non solo fuorilegge e nativi ostili, ma anche orrori indicibili che strisciano oltre 
+            la realtà conosciuta. Preparati a un'avventura dove la tua mente è fragile quanto il 
+            tuo corpo, e dove la follia può essere il prezzo della sopravvivenza.
+        </p>
+        <div class="scroll-indicator" onclick="document.getElementById('content').scrollIntoView({behavior: 'smooth'});">
+            ⬇
+        </div>
+    </section>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <div id="content" class="container">
+        
+        <!-- BANNER APPENDICE SCENARI -->
+        <section style="margin: -40px 0 80px 0;">
+            <div style="background: linear-gradient(135deg, #8B0000 0%, #000000 50%, #8B0000 100%); 
+                padding: 50px 40px; border-radius: 20px; border: 6px solid #D4AF37; 
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.6), inset 0 0 60px rgba(139, 0, 0, 0.3); 
+                position: relative; overflow: hidden;">
+                
+                <div style="position: absolute; top: -50px; right: -50px; font-size: 15rem; opacity: 0.05;">🐙</div>
+                <div style="position: absolute; bottom: -50px; left: -50px; font-size: 15rem; opacity: 0.05;">🤠</div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <h2 style="color: #D4AF37; font-size: clamp(2rem, 5vw, 3.5rem); text-align: center; 
+                        margin: 0 0 20px 0; text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);">
+                        ⭐ APPENDICE: DIECI SCENARI PRONTI ⭐
+                    </h2>
+                    
+                    <p style="color: white; font-size: clamp(1.1rem, 2.5vw, 1.5rem); text-align: center; 
+                        line-height: 1.8; max-width: 900px; margin: 0 auto 30px;">
+                        <strong>Il contenuto più importante del manuale!</strong> Dieci avventure complete che 
+                        intrecciano l'azione western con l'orrore cosmico, incluso <em>lo scenario definitivo</em> 
+                        in cui i personaggi vedranno <strong style="color: #FF0000; font-size: 1.3em;">CTHULHU</strong> 
+                        stesso e comprenderanno l'insignificanza dell'umanità.
+                    </p>
+                    
+                    <div style="text-align: center; margin: 30px 0 20px;">
+                        <a href="appendice-scenari.html" style="display: inline-block; background: #D4AF37; 
+                            color: #000000; padding: 20px 50px; font-size: 1.5rem; font-weight: bold; 
+                            text-decoration: none; border-radius: 15px; border: 4px solid white; 
+                            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.6); 
+                            transition: all 0.3s ease; font-family: 'Georgia', serif;">
+                            📖 ESPLORA I 10 SCENARI
+                        </a>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+                        gap: 15px; margin-top: 30px; font-size: 0.95rem;">
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
+                            border: 2px solid rgba(212, 175, 55, 0.3);">
+                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">🌊</div>
+                            <strong style="color: #D4AF37;">Scenario 0</strong><br>
+                            <span style="color: white;">Visione di Cthulhu</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
+                            border: 2px solid rgba(212, 175, 55, 0.3);">
+                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">⛏️</div>
+                            <strong style="color: #D4AF37;">3.000+ righe</strong><br>
+                            <span style="color: white;">Contenuto dettagliato</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
+                            border: 2px solid rgba(212, 175, 55, 0.3);">
+                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">📜</div>
+                            <strong style="color: #D4AF37;">25+ creature</strong><br>
+                            <span style="color: white;">Stat-block completi</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
+                            border: 2px solid rgba(212, 175, 55, 0.3);">
+                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">⏰</div>
+                            <strong style="color: #D4AF37;">40-60 ore</strong><br>
+                            <span style="color: white;">Di gioco epico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- IL SISTEMA DI GIOCO -->
+        <section class="section">
+            <h2 class="section-title">Il sistema di gioco</h2>
+            
+            <p class="intro-text">
+                Colt & Cthulhu usa un sistema d20 familiare e accessibile, arricchito da meccaniche 
+                innovative per gestire la sanità mentale e l'orrore cosmico. Un perfetto equilibrio 
+                tra azione western e terrore lovecraftiano.
+            </p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <span class="card-icon">🎲</span>
+                    <h3 class="card-title">Un sistema familiare e accessibile</h3>
+                    <p class="card-description">
+                        Basato sul sistema d20, utilizzato da milioni di giocatori in tutto il mondo. 
+                        Se hai giocato a Dungeons & Dragons o Pathfinder, ti sentirai subito a casa. 
+                        Le meccaniche sono intuitive ma offrono profondità tattica.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🧠</span>
+                    <h3 class="card-title">Le meccaniche dello stress</h3>
+                    <p class="card-description">
+                        Il sistema di stress simula realisticamente gli effetti dell'orrore cosmico 
+                        sulla mente umana. Ogni incontro con l'indicibile lascia un segno, 
+                        accumulando stress che può portare a afflizioni permanenti o alla follia.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🤠</span>
+                    <h3 class="card-title">Sei archetipi iconici</h3>
+                    <p class="card-description">
+                        Interpreta il pistolero veloce, il reverendo determinato, il dottore pragmatico, 
+                        il cacciatore di taglie implacabile, il giocatore d'azzardo fortunato, o lo 
+                        sciamano mistico. Ogni archetipo offre un'esperienza di gioco unica.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">👹</span>
+                    <h3 class="card-title">Un bestiario vasto e terrificante</h3>
+                    <p class="card-description">
+                        Affronta non-morti del West, creature lovecraftiane, culti oscuri e antichi 
+                        dei. Ogni mostro presenta sfide uniche che richiedono strategia oltre alla 
+                        forza bruta.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">✨</span>
+                    <h3 class="card-title">La magia oscura e proibita</h3>
+                    <p class="card-description">
+                        Alcuni personaggi possono accedere a poteri soprannaturali, ma ogni uso della 
+                        magia ha un prezzo. La corruzione si insinua lentamente, trasformando chi osa 
+                        toccare il proibito.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-icon">🏜️</span>
+                    <h3 class="card-title">Un'ambientazione che respira</h3>
+                    <p class="card-description">
+                        Il West del 1885 è storicamente accurato ma arricchito da elementi weird. 
+                        Città minerarie, tribù native, la ferrovia transcontinentale e segreti sepolti 
+                        nel deserto creano un setting ricco e evocativo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- IL MANUALE COMPLETO -->
+        <section class="section">
+            <h2 class="section-title">📖 Il Manuale Completo</h2>
+            
+            <p class="intro-text">
+                I 14 capitoli del manuale di Colt & Cthulhu, dalle regole base alle meccaniche avanzate. 
+                Tutto ciò che serve per masterizzare e giocare campagne epiche nel Weird West.
+            </p>
+
+            <div class="card-grid">
+                <a href="capitolo_01.html" class="card">
+                    <span class="card-icon">📜</span>
+                    <h3 class="card-title">Capitolo 1: Introduzione</h3>
+                    <p class="card-description">
+                        Cos'è Colt & Cthulhu, il contratto sociale, gli strumenti necessari e come 
+                        usare questo manuale per le tue avventure nel Weird West.
+                    </p>
+                </a>
+
+                <a href="capitolo_02.html" class="card">
+                    <span class="card-icon">✨</span>
+                    <h3 class="card-title">Capitolo 2: Creazione Personaggio</h3>
+                    <p class="card-description">
+                        La guida passo-passo per creare il tuo eroe del West: dalle caratteristiche 
+                        agli archetipi, dal background alle competenze iniziali.
+                    </p>
+                </a>
+
+                <a href="capitolo_03.html" class="card">
+                    <span class="card-icon">🤠</span>
+                    <h3 class="card-title">Capitolo 3: Archetipi</h3>
+                    <p class="card-description">
+                        I sei archetipi iconici: Pistolero, Reverendo, Dottore, Giocatore d'Azzardo, 
+                        Cacciatore di Taglie e Sciamano. Abilità uniche e percorsi di crescita.
+                    </p>
+                </a>
+
+                <a href="capitolo_04.html" class="card">
+                    <span class="card-icon">🎯</span>
+                    <h3 class="card-title">Capitolo 4: Abilità e Competenze</h3>
+                    <p class="card-description">
+                        Il sistema di abilità completo: dall'Atletica alla Percezione, dalla Persuasione 
+                        alla Sopravvivenza. Come funzionano i tiri e le prove.
+                    </p>
+                </a>
+
+                <a href="capitolo_05.html" class="card">
+                    <span class="card-icon">🧠</span>
+                    <h3 class="card-title">Capitolo 5: Stress e Sanità Mentale</h3>
+                    <p class="card-description">
+                        Il cuore dell'orrore cosmico: sistema stress, afflizioni, follia temporanea e 
+                        permanente, recupero della sanità mentale.
+                    </p>
+                </a>
+
+                <a href="capitolo_06.html" class="card">
+                    <span class="card-icon">🔫</span>
+                    <h3 class="card-title">Capitolo 6: Equipaggiamento e Armi</h3>
+                    <p class="card-description">
+                        Colt, Winchester, dinamite e molto altro. Tutte le armi del West con statistiche 
+                        complete, più equipaggiamento generale e oggetti speciali.
+                    </p>
+                </a>
+
+                <a href="capitolo_07.html" class="card">
+                    <span class="card-icon">⚔️</span>
+                    <h3 class="card-title">Capitolo 7: Sistema di Combattimento</h3>
+                    <p class="card-description">
+                        Iniziativa, azioni, movimenti, coperture, duelli western e combattimento tattico. 
+                        Tutto ciò che serve per gestire scontri a fuoco epici.
+                    </p>
+                </a>
+
+                <a href="capitolo_08.html" class="card">
+                    <span class="card-icon">🔮</span>
+                    <h3 class="card-title">Capitolo 8: Sistema Magia</h3>
+                    <p class="card-description">
+                        Magia oscura e proibita: rituali, incantesimi, corruzione e il prezzo del potere. 
+                        Per chi osa sfidare le leggi della natura.
+                    </p>
+                </a>
+
+                <a href="capitolo_09.html" class="card">
+                    <span class="card-icon">💫</span>
+                    <h3 class="card-title">Capitolo 9: Talenti e Abilità Speciali</h3>
+                    <p class="card-description">
+                        Oltre 50 talenti per personalizzare il tuo personaggio: da "Pistolero Veloce" 
+                        a "Visioni Profetiche", ogni archetipo ha le sue specializzazioni.
+                    </p>
+                </a>
+
+                <a href="capitolo_10.html" class="card">
+                    <span class="card-icon">👹</span>
+                    <h3 class="card-title">Capitolo 10: Bestiario</h3>
+                    <p class="card-description">
+                        Creature del West e del Mito di Cthulhu: non-morti, culti, Grandi Antichi e 
+                        orrori cosmici. Stat-block completi per oltre 40 mostri.
+                    </p>
+                </a>
+
+                <a href="capitolo_11.html" class="card">
+                    <span class="card-icon">🗺️</span>
+                    <h3 class="card-title">Capitolo 11: Avventure e Campagne</h3>
+                    <p class="card-description">
+                        Come strutturare avventure one-shot e campagne a lungo termine. Archi narrativi, 
+                        PNG ricorrenti e gestione della progressione.
+                    </p>
+                </a>
+
+                <a href="capitolo_12.html" class="card">
+                    <span class="card-icon">🎲</span>
+                    <h3 class="card-title">Capitolo 12: Guida del Master</h3>
+                    <p class="card-description">
+                        Consigli per il narratore: gestire l'orrore, bilanciare incontri, creare atmosfera, 
+                        improvvisazione e quando tirare i dadi.
+                    </p>
+                </a>
+
+                <a href="capitolo_13.html" class="card">
+                    <span class="card-icon">💰</span>
+                    <h3 class="card-title">Capitolo 13: Equipaggiamento ed Economia</h3>
+                    <p class="card-description">
+                        Prezzi, disponibilità, equipaggiamento speciale e l'economia del West. Dal cavallo 
+                        alla dinamite, tutto ha un prezzo.
+                    </p>
+                </a>
+
+                <a href="capitolo_14.html" class="card">
+                    <span class="card-icon">⚙️</span>
+                    <h3 class="card-title">Capitolo 14: Regole Avanzate</h3>
+                    <p class="card-description">
+                        Regole opzionali per gruppi esperti: inseguimenti, veleno, malattie, 
+                        corruzione estesa e meccaniche narrative avanzate.
+                    </p>
+                </a>
+            </div>
+
+            <!-- APPENDICI -->
+            <h3 style="color: #D4AF37; font-size: 2rem; margin: 60px 0 30px 0; text-align: center;">
+                📑 Appendici
+            </h3>
+
+            <div class="card-grid">
+                <a href="appendice_a.html" class="card">
+                    <span class="card-icon">⚡</span>
+                    <h3 class="card-title">Appendice A: Quick Reference</h3>
+                    <p class="card-description">
+                        Riferimento rapido: tabelle, CD comuni, azioni in combattimento, condizioni e 
+                        tutto ciò che serve a portata di mano durante la sessione.
+                    </p>
+                </a>
+
+                <a href="appendice_b.html" class="card">
+                    <span class="card-icon">📚</span>
+                    <h3 class="card-title">Appendice B: Indice e Risorse</h3>
+                    <p class="card-description">
+                        Indice analitico completo, bibliografia, risorse online e letture consigliate 
+                        su Lovecraft e il West.
+                    </p>
+                </a>
+
+                <a href="appendice_c.html" class="card">
+                    <span class="card-icon">📋</span>
+                    <h3 class="card-title">Appendice C: Schede Personaggio</h3>
+                    <p class="card-description">
+                        Schede stampabili in vari formati: versione completa, versione semplificata, 
+                        scheda PNG e tracker stress.
+                    </p>
+                </a>
+            </div>
+        </section>
+
+        <!-- ESPLORA I CONTENUTI -->
+        <section class="section">
+            <h2 class="section-title">Esplora i contenuti</h2>
+            
+            <p class="intro-text">
+                Tutto ciò di cui hai bisogno per giocare a Colt & Cthulhu. Dalle regole rapide 
+                gratuite agli scenari completi, dalle schede personaggio alle guide per il narratore.
+            </p>
+
+            <div class="card-grid">
+                <!-- APPENDICE SCENARI - CARD PRINCIPALE -->
+                <a href="appendice-scenari.html" class="card" style="grid-column: 1 / -1; 
+                    border: 4px solid #8B0000; background: linear-gradient(135deg, #2C1810 0%, #1a0f00 100%); 
+                    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);">
+                    <div style="display: flex; align-items: center; gap: 30px;">
+                        <span style="font-size: 5rem; flex-shrink: 0;">📚</span>
+                        <div style="flex-grow: 1;">
+                            <h3 style="color: #D4AF37; font-size: 2rem; margin-bottom: 15px;">
+                                ⭐ Appendice: Dieci Scenari Pronti ⭐
+                            </h3>
+                            <p style="font-size: 1.2rem; line-height: 1.7; color: #E8DCC0;">
+                                <strong>IL CONTENUTO ESSENZIALE!</strong> Dieci avventure complete (3.000+ righe) 
+                                che includono lo <strong style="color: #FF6B6B;">scenario definitivo</strong> dove 
+                                i personaggi vedranno <strong style="color: #FF0000;">Cthulhu stesso</strong>. 
+                                Include 25+ creature dettagliate, 15+ PNG con background completo, documenti 
+                                stampabili, e tutto ciò che serve per 40-60 ore di gioco indimenticabile. 
+                                <em>Dalla Guerra delle Miniere al Risveglio del Sognatore.</em>
+                            </p>
+                            <div style="margin-top: 15px; font-size: 1.1rem; color: #D4AF37; font-weight: bold;">
+                                → Scenario 0: "Dove l'Oceano Incontra la Polvere" - La visione di Cthulhu<br>
+                                → Scenari 1-9: Chthoniani, Nyarlathotep, Yig, K'n-yan, Deep Ones e altro...
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="quickstart-rules.html" class="card">
+                    <span class="card-icon">⚡</span>
+                    <h3 class="card-title">Le regole rapide</h3>
+                    <p class="card-description">
+                        Tutto ciò che serve per giocare la tua prima partita in due-tre ore. Include 
+                        le regole essenziali, due personaggi pronti e uno scenario introduttivo. 
+                        Completamente gratuito!
+                    </p>
+                </a>
+
+                <a href="scenario_introduttivo.html" class="card">
+                    <span class="card-icon">🌵</span>
+                    <h3 class="card-title">Lo scenario introduttivo</h3>
+                    <p class="card-description">
+                        "Il pozzo maledetto" - Un'avventura completa per personaggi di primo livello 
+                        ambientata nel piccolo villaggio minerario di Dusty Creek. Misteriose 
+                        sparizioni, culti oscuri e orrori sotterranei.
+                    </p>
+                </a>
+
+                <a href="campagna-serpente.html" class="card">
+                    <span class="card-icon">🐍</span>
+                    <h3 class="card-title">La campagna del serpente</h3>
+                    <p class="card-description">
+                        "Il risveglio del serpente" - Una campagna epica per portare i personaggi 
+                        dal livello 1 al livello 10. Dieci avventure interconnesse che culminano 
+                        in uno scontro apocalittico con un antico dio serpente.
+                    </p>
+                </a>
+
+                <a href="personaggi_pregens.html" class="card">
+                    <span class="card-icon">👥</span>
+                    <h3 class="card-title">I personaggi pre-generati</h3>
+                    <p class="card-description">
+                        Sei personaggi completi e pronti all'uso: Sarah McCarthy (pistolera), 
+                        Reverendo Josiah Stone, Dottoressa Elena Vasquez, Jack "Ace" Malone (giocatore), 
+                        Marcus "Iron Hand" Cole (cacciatore) e Aquila Grigia (sciamano).
+                    </p>
+                </a>
+
+                <a href="quickstart-character-sheets.html" class="card">
+                    <span class="card-icon">📄</span>
+                    <h3 class="card-title">Le schede personaggio</h3>
+                    <p class="card-description">
+                        Schede personaggio stampabili e compilabili per creare i tuoi eroi del West. 
+                        Include versioni vuote, pre-compilate per i sei archetipi, e versioni 
+                        ottimizzate per la stampa.
+                    </p>
+                </a>
+
+                <a href="safety-tools.html" class="card">
+                    <span class="card-icon">🛡️</span>
+                    <h3 class="card-title">Gli strumenti di sicurezza</h3>
+                    <p class="card-description">
+                        Guida completa agli strumenti di sicurezza emotiva per il tuo tavolo: X-Card, 
+                        Lines & Veils, Stars & Wishes, e consigli per una rappresentazione culturale 
+                        rispettosa. Giocare in sicurezza è fondamentale.
+                    </p>
+                </a>
+
+                <a href="esempio-gioco.html" class="card">
+                    <span class="card-icon">🎬</span>
+                    <h3 class="card-title">Un esempio di gioco</h3>
+                    <p class="card-description">
+                        Il transcript completo di una sessione reale di Colt & Cthulhu. Vedi come 
+                        funzionano le meccaniche al tavolo, come il narratore gestisce le scene e 
+                        come i giocatori interagiscono con il mondo weird west.
+                    </p>
+                </a>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <div class="download-cta">
+            <h2>🤠 Pronto per l'avventura? 🐙</h2>
+            <p>
+                Scarica le regole rapide gratuite e inizia a giocare oggi stesso. 
+                Il West ti aspetta, ma attento: non tutto ciò che vive nel deserto è umano.
+            </p>
+            <a href="quickstart-rules.html" class="download-button">📖 Leggi le regole rapide</a>
+            <a href="scenario_introduttivo.html" class="download-button">🌵 Inizia a giocare</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Colt & Cthulhu - Un gioco di ruolo weird west</p>
+        <p style="margin-top: 10px; font-style: italic;">
+            "Nel West, la tua mente è fragile quanto il tuo corpo"
+        </p>
+    </footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colt & Cthulhu - Manuale di Gioco</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
