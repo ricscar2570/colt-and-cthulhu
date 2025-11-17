@@ -290,6 +290,98 @@
             color: #8B4513;
             font-size: 0.9rem;
         }
+
+        /* PAGINE IMMAGINE A TUTTA PAGINA */
+        .fullpage-image {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: #1a1410;
+            margin: 0;
+            padding: 0;
+        }
+
+        .fullpage-image img {
+            max-width: 100%;
+            max-height: 100vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .fullpage-image.placeholder {
+            background: linear-gradient(135deg, #2C1810 0%, #1a0f00 100%);
+            border: 5px dashed #D4AF37;
+            box-sizing: border-box;
+        }
+
+        .placeholder-content {
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+        }
+
+        .placeholder-content h2 {
+            color: #D4AF37;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .placeholder-content p {
+            color: #B8956A;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .placeholder-content .icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .placeholder-content code {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 3px 10px;
+            border-radius: 4px;
+            color: #D4AF37;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .placeholder-content ul {
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .placeholder-content li {
+            padding: 8px 0;
+            color: #C4B5A0;
+        }
+
+        .placeholder-content li:before {
+            content: "→ ";
+            color: #D4AF37;
+            font-weight: bold;
+        }
+
+        @media print {
+            .fullpage-image {
+                page-break-before: always;
+                page-break-after: always;
+                min-height: 100vh;
+            }
+            .no-print {
+                display: none;
+            }
+        }
         
         /* RESPONSIVE */
         @media (max-width: 768px) {
@@ -317,9 +409,9 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <h1 class="hero-title">COLT & CTHULHU</h1>
-        <p class="hero-subtitle">Dove il western di Sergio Leone incontra l'orrore cosmico di H.P. Lovecraft</p>
+        <p class="hero-subtitle">Dove il western incontra l'orrore cosmico</p>
         <p class="hero-description">
-            Un gioco di ruolo ambientato nel West del 1885, dove un gruppo di pistoleri affrontano 
+            Un gioco di ruolo ambientato nel West del 1885, dove pistoleri coraggiosi affrontano 
             non solo fuorilegge e nativi ostili, ma anche orrori indicibili che strisciano oltre 
             la realtà conosciuta. Preparati a un'avventura dove la tua mente è fragile quanto il 
             tuo corpo, e dove la follia può essere il prezzo della sopravvivenza.
@@ -329,8 +421,91 @@
         </div>
     </section>
 
+    <!-- PAGINA IMMAGINE #1 - OPENING -->
+    <section class="fullpage-image placeholder">
+        <div class="placeholder-content">
+            <div class="icon">🌵👻🤠</div>
+            <h2>Immagine Opening</h2>
+            <p>Qui va la tua immagine a tutta pagina di apertura</p>
+            <p style="font-size: 1rem; color: #8B4513;">
+                <strong>Per sostituire questo placeholder:</strong>
+            </p>
+            <ul>
+                <li>Prepara un'immagine (consigliato: 1920x1080px o superiore)</li>
+                <li>Formato: JPG, PNG o WebP</li>
+                <li>Temi suggeriti: paesaggio western, città fantasma, deserto al tramonto</li>
+                <li>Sostituisci questa sezione con: <code>&lt;img src="coltfront.png" alt="Opening"&gt;</code></li>
+            </ul>
+        </div>
+    </section>
+
     <!-- CONTENUTO PRINCIPALE -->
     <div id="content" class="container">
+        
+        <!-- BANNER APPENDICE SCENARI -->
+        <section style="margin: -40px 0 80px 0;">
+            <div style="background: linear-gradient(135deg, #8B0000 0%, #000000 50%, #8B0000 100%); 
+                padding: 50px 40px; border-radius: 20px; border: 6px solid #D4AF37; 
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.6), inset 0 0 60px rgba(139, 0, 0, 0.3); 
+                position: relative; overflow: hidden;">
+                
+                <div style="position: absolute; top: -50px; right: -50px; font-size: 15rem; opacity: 0.05;">🐙</div>
+                <div style="position: absolute; bottom: -50px; left: -50px; font-size: 15rem; opacity: 0.05;">🤠</div>
+                
+                <div style="position: relative; z-index: 1;">
+                    <h2 style="color: #D4AF37; font-size: clamp(2rem, 5vw, 3.5rem); text-align: center; 
+                        margin: 0 0 20px 0; text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);">
+                        ⭐ APPENDICE: DIECI SCENARI PRONTI ⭐
+                    </h2>
+                    
+                    <p style="color: white; font-size: clamp(1.1rem, 2.5vw, 1.5rem); text-align: center; 
+                        line-height: 1.8; max-width: 900px; margin: 0 auto 30px;">
+                        <strong>Il contenuto più importante del manuale!</strong> Dieci avventure complete che 
+                        intrecciano l'azione western con l'orrore cosmico, incluso <em>lo scenario definitivo</em> 
+                        in cui i personaggi vedranno <strong style="color: #FF0000; font-size: 1.3em;">CTHULHU</strong> 
+                        stesso e comprenderanno l'insignificanza dell'umanità.
+                    </p>
+                    
+                    <div style="text-align: center; margin: 30px 0 20px;">
+                        <a href="appendice-scenari.html" style="display: inline-block; background: #D4AF37; 
+                            color: #000000; padding: 20px 50px; font-size: 1.5rem; font-weight: bold; 
+                            text-decoration: none; border-radius: 15px; border: 4px solid white; 
+                            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.6); 
+                            transition: all 0.3s ease; font-family: 'Georgia', serif;">
+                            📖 ESPLORA I 10 SCENARI
+                        </a>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+                        gap: 15px; margin-top: 30px; font-size: 0.95rem;">
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
+                            border: 2px solid rgba(212, 175, 55, 0.3);">
+                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">🌊</div>
+                            <strong style="color: #D4AF37;">Scenario 0</strong><br>
+                            <span style="color: white;">Visione di Cthulhu</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
+                            border: 2px solid rgba(212, 175, 55, 0.3);">
+                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">⛏️</div>
+                            <strong style="color: #D4AF37;">3.000+ righe</strong><br>
+                            <span style="color: white;">Contenuto dettagliato</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
+                            border: 2px solid rgba(212, 175, 55, 0.3);">
+                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">📜</div>
+                            <strong style="color: #D4AF37;">25+ creature</strong><br>
+                            <span style="color: white;">Stat-block completi</span>
+                        </div>
+                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
+                            border: 2px solid rgba(212, 175, 55, 0.3);">
+                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">⏰</div>
+                            <strong style="color: #D4AF37;">40-60 ore</strong><br>
+                            <span style="color: white;">Di gioco epico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- IL SISTEMA DI GIOCO -->
         <section class="section">
@@ -411,7 +586,7 @@
             
             <p class="intro-text">
                 I 14 capitoli del manuale di Colt & Cthulhu, dalle regole base alle meccaniche avanzate. 
-                Tutto ciò che serve per masterare e giocare campagne epiche nel Weird West.
+                Tutto ciò che serve per masterizzare e giocare campagne epiche nel Weird West.
             </p>
 
             <div class="card-grid">
@@ -455,7 +630,7 @@
                     <span class="card-icon">🧠</span>
                     <h3 class="card-title">Capitolo 5: Stress e Sanità Mentale</h3>
                     <p class="card-description">
-                        Sistema stress, afflizioni, follia temporanea e 
+                        Il cuore dell'orrore cosmico: sistema stress, afflizioni, follia temporanea e 
                         permanente, recupero della sanità mentale.
                     </p>
                 </a>
@@ -482,8 +657,8 @@
                     <span class="card-icon">🔮</span>
                     <h3 class="card-title">Capitolo 8: Sistema Magia</h3>
                     <p class="card-description">
-                        Magia oscura e proibita: rituali, incantesimi, corruzione e il prezzo del potere... 
-                        per chi osa sfidare le leggi della natura.
+                        Magia oscura e proibita: rituali, incantesimi, corruzione e il prezzo del potere. 
+                        Per chi osa sfidare le leggi della natura.
                     </p>
                 </a>
 
@@ -582,15 +757,44 @@
             <h2 class="section-title">Esplora i contenuti</h2>
             
             <p class="intro-text">
-                Tutto ciò di cui hai bisogno per giocare a Colt & Cthulhu. Dal quickstart agli scenari completi, dalle schede personaggio alle guide per il narratore.
+                Tutto ciò di cui hai bisogno per giocare a Colt & Cthulhu. Dalle regole rapide 
+                gratuite agli scenari completi, dalle schede personaggio alle guide per il narratore.
             </p>
 
-               <a href="quickstart-rules.html" class="card">
+            <div class="card-grid">
+                <!-- APPENDICE SCENARI - CARD PRINCIPALE -->
+                <a href="appendice-scenari.html" class="card" style="grid-column: 1 / -1; 
+                    border: 4px solid #8B0000; background: linear-gradient(135deg, #2C1810 0%, #1a0f00 100%); 
+                    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);">
+                    <div style="display: flex; align-items: center; gap: 30px;">
+                        <span style="font-size: 5rem; flex-shrink: 0;">📚</span>
+                        <div style="flex-grow: 1;">
+                            <h3 style="color: #D4AF37; font-size: 2rem; margin-bottom: 15px;">
+                                ⭐ Appendice: Dieci Scenari Pronti ⭐
+                            </h3>
+                            <p style="font-size: 1.2rem; line-height: 1.7; color: #E8DCC0;">
+                                <strong>IL CONTENUTO ESSENZIALE!</strong> Dieci avventure complete (3.000+ righe) 
+                                che includono lo <strong style="color: #FF6B6B;">scenario definitivo</strong> dove 
+                                i personaggi vedranno <strong style="color: #FF0000;">Cthulhu stesso</strong>. 
+                                Include 25+ creature dettagliate, 15+ PNG con background completo, documenti 
+                                stampabili, e tutto ciò che serve per 40-60 ore di gioco indimenticabile. 
+                                <em>Dalla Guerra delle Miniere al Risveglio del Sognatore.</em>
+                            </p>
+                            <div style="margin-top: 15px; font-size: 1.1rem; color: #D4AF37; font-weight: bold;">
+                                → Scenario 0: "Dove l'Oceano Incontra la Polvere" - La visione di Cthulhu<br>
+                                → Scenari 1-9: Chthoniani, Nyarlathotep, Yig, K'n-yan, Deep Ones e altro...
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="quickstart-rules.html" class="card">
                     <span class="card-icon">⚡</span>
-                    <h3 class="card-title">Il quickstart</h3>
+                    <h3 class="card-title">Le regole rapide</h3>
                     <p class="card-description">
                         Tutto ciò che serve per giocare la tua prima partita in due-tre ore. Include 
-                        le regole essenziali, due personaggi pronti e uno scenario di prova!
+                        le regole essenziali, due personaggi pronti e uno scenario introduttivo. 
+                        Completamente gratuito!
                     </p>
                 </a>
 
@@ -624,6 +828,16 @@
                     </p>
                 </a>
 
+                <a href="quickstart-character-sheets.html" class="card">
+                    <span class="card-icon">📄</span>
+                    <h3 class="card-title">Le schede personaggio</h3>
+                    <p class="card-description">
+                        Schede personaggio stampabili e compilabili per creare i tuoi eroi del West. 
+                        Include versioni vuote, pre-compilate per i sei archetipi, e versioni 
+                        ottimizzate per la stampa.
+                    </p>
+                </a>
+
                 <a href="safety-tools.html" class="card">
                     <span class="card-icon">🛡️</span>
                     <h3 class="card-title">Gli strumenti di sicurezza</h3>
@@ -638,7 +852,7 @@
                     <span class="card-icon">🎬</span>
                     <h3 class="card-title">Un esempio di gioco</h3>
                     <p class="card-description">
-                        Il transcript completo di una sessione di Colt & Cthulhu. Vedi come 
+                        Il transcript completo di una sessione reale di Colt & Cthulhu. Vedi come 
                         funzionano le meccaniche al tavolo, come il narratore gestisce le scene e 
                         come i giocatori interagiscono con il mondo weird west.
                     </p>
@@ -646,85 +860,38 @@
             </div>
         </section>
 
-
-     <div class="card-grid">
-                <!-- APPENDICE SCENARI - CARD PRINCIPALE -->
-                 <!-- BANNER APPENDICE SCENARI -->
-        <section style="margin: -40px 0 80px 0;">
-            <div style="background: linear-gradient(135deg, #8B0000 0%, #000000 50%, #8B0000 100%); 
-                padding: 50px 40px; border-radius: 20px; border: 6px solid #D4AF37; 
-                box-shadow: 0 0 40px rgba(212, 175, 55, 0.6), inset 0 0 60px rgba(139, 0, 0, 0.3); 
-                position: relative; overflow: hidden;">
-                
-                <div style="position: absolute; top: -50px; right: -50px; font-size: 15rem; opacity: 0.05;">🐙</div>
-                <div style="position: absolute; bottom: -50px; left: -50px; font-size: 15rem; opacity: 0.05;">🤠</div>
-                
-                <div style="position: relative; z-index: 1;">
-                    <h2 style="color: #D4AF37; font-size: clamp(2rem, 5vw, 3.5rem); text-align: center; 
-                        margin: 0 0 20px 0; text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);">
-                        ⭐ APPENDICE D: DIECI SCENARI PRONTI ⭐
-                    </h2>
-                    
-                    <p style="color: white; font-size: clamp(1.1rem, 2.5vw, 1.5rem); text-align: center; 
-                        line-height: 1.8; max-width: 900px; margin: 0 auto 30px;">
-                        <strong>Il contenuto più importante del manuale!</strong> Dieci avventure complete che 
-                        intrecciano l'azione western con l'orrore cosmico, incluso <em>lo scenario definitivo</em> 
-                        in cui i personaggi vedranno lo stesso<strong style="color: #FF0000; font-size: 1.3em;">CTHULHU</strong>. 
-                        
-                    </p>
-                    
-                    <div style="text-align: center; margin: 30px 0 20px;">
-                        <a href="appendice-scenari.html" style="display: inline-block; background: #D4AF37; 
-                            color: #000000; padding: 20px 50px; font-size: 1.5rem; font-weight: bold; 
-                            text-decoration: none; border-radius: 15px; border: 4px solid white; 
-                            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.6); 
-                            transition: all 0.3s ease; font-family: 'Georgia', serif;">
-                            📖 ESPLORA I 10 SCENARI
-                        </a>
-                    </div>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-                        gap: 15px; margin-top: 30px; font-size: 0.95rem;">
-                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
-                            border: 2px solid rgba(212, 175, 55, 0.3);">
-                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">🌊</div>
-                            <strong style="color: #D4AF37;">Scenario 0</strong><br>
-                            <span style="color: white;">Visione di Cthulhu</span>
-                        </div>
-                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
-                            border: 2px solid rgba(212, 175, 55, 0.3);">
-                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">⛏️</div>
-                            <strong style="color: #D4AF37;">3.000+ righe</strong><br>
-                            <span style="color: white;">Contenuto dettagliato</span>
-                        </div>
-                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
-                            border: 2px solid rgba(212, 175, 55, 0.3);">
-                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">📜</div>
-                            <strong style="color: #D4AF37;">25+ creature</strong><br>
-                            <span style="color: white;">Stat-block completi</span>
-                        </div>
-                        <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; 
-                            border: 2px solid rgba(212, 175, 55, 0.3);">
-                            <div style="color: #D4AF37; font-size: 2rem; margin-bottom: 5px;">⏰</div>
-                            <strong style="color: #D4AF37;">40-60 ore</strong><br>
-                            <span style="color: white;">Di gioco epico</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
         <!-- CALL TO ACTION -->
         <div class="download-cta">
             <h2>🤠 Pronto per l'avventura? 🐙</h2>
             <p>
-                Scarica il quickstart e inizia a giocare oggi stesso. 
+                Scarica le regole rapide gratuite e inizia a giocare oggi stesso. 
                 Il West ti aspetta, ma attento: non tutto ciò che vive nel deserto è umano.
             </p>
-            <a href="quickstart-rules.html" class="download-button">📖 Leggi il quickstart</a>
+            <a href="quickstart-rules.html" class="download-button">📖 Leggi le regole rapide</a>
             <a href="scenario_introduttivo.html" class="download-button">🌵 Inizia a giocare</a>
         </div>
     </div>
+
+    <!-- PAGINA IMMAGINE #2 - CLOSING -->
+    <section class="fullpage-image placeholder">
+        <div class="placeholder-content">
+            <div class="icon">🐙⭐🌌</div>
+            <h2>Immagine Closing</h2>
+            <p>Qui va la tua immagine a tutta pagina finale</p>
+            <p style="font-size: 1rem; color: #8B4513;">
+                <strong>Per sostituire questo placeholder:</strong>
+            </p>
+            <ul>
+                <li>Prepara un'immagine (consigliato: 1920x1080px o superiore)</li>
+                <li>Formato: JPG, PNG o WebP</li>
+                <li>Temi suggeriti: Cthulhu, tentacoli cosmici, stelle aliene, abisso</li>
+                <li>Sostituisci questa sezione con: <code>&lt;img src="tua-immagine-finale.jpg" alt="Closing"&gt;</code></li>
+            </ul>
+            <p style="margin-top: 25px; font-style: italic; color: #D4AF37;">
+                "Nel West, la mente è fragile quanto il corpo..."
+            </p>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">
