@@ -229,8 +229,84 @@
                 </ul>
             </div>
 
+            <!-- INDICE NAVIGABILE -->
+            <div style="margin: 40px 0;">
+                <h3 style="text-align: center; color: #8B4513; font-size: 1.8rem; margin-bottom: 30px;">
+                    🗂️ Scegli il tuo personaggio
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    
+                    <a href="#sarah-mccarthy" style="text-decoration: none; color: inherit; 
+                        background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%); 
+                        border: 3px solid #8B4513; border-radius: 12px; padding: 20px; 
+                        transition: all 0.3s ease; display: block;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 10px;">🤠</div>
+                            <h4 style="color: #8B4513; margin: 0 0 5px 0; font-size: 1.2rem;">Sarah McCarthy</h4>
+                            <p style="color: #5D4E37; margin: 0; font-size: 0.9rem;">Il Pistolero</p>
+                        </div>
+                    </a>
+
+                    <a href="#josiah-stone" style="text-decoration: none; color: inherit; 
+                        background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%); 
+                        border: 3px solid #8B4513; border-radius: 12px; padding: 20px; 
+                        transition: all 0.3s ease; display: block;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 10px;">⛪</div>
+                            <h4 style="color: #8B4513; margin: 0 0 5px 0; font-size: 1.2rem;">Reverendo Josiah Stone</h4>
+                            <p style="color: #5D4E37; margin: 0; font-size: 0.9rem;">Il Reverendo</p>
+                        </div>
+                    </a>
+
+                    <a href="#elena-vasquez" style="text-decoration: none; color: inherit; 
+                        background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%); 
+                        border: 3px solid #8B4513; border-radius: 12px; padding: 20px; 
+                        transition: all 0.3s ease; display: block;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 10px;">⚕️</div>
+                            <h4 style="color: #8B4513; margin: 0 0 5px 0; font-size: 1.2rem;">Dottoressa Elena Vasquez</h4>
+                            <p style="color: #5D4E37; margin: 0; font-size: 0.9rem;">Il Dottore</p>
+                        </div>
+                    </a>
+
+                    <a href="#jack-malone" style="text-decoration: none; color: inherit; 
+                        background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%); 
+                        border: 3px solid #8B4513; border-radius: 12px; padding: 20px; 
+                        transition: all 0.3s ease; display: block;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 10px;">🎰</div>
+                            <h4 style="color: #8B4513; margin: 0 0 5px 0; font-size: 1.2rem;">Jack "Ace" Malone</h4>
+                            <p style="color: #5D4E37; margin: 0; font-size: 0.9rem;">Il Giocatore d'Azzardo</p>
+                        </div>
+                    </a>
+
+                    <a href="#marcus-cole" style="text-decoration: none; color: inherit; 
+                        background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%); 
+                        border: 3px solid #8B4513; border-radius: 12px; padding: 20px; 
+                        transition: all 0.3s ease; display: block;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 10px;">🎯</div>
+                            <h4 style="color: #8B4513; margin: 0 0 5px 0; font-size: 1.2rem;">Marcus "Iron Hand" Cole</h4>
+                            <p style="color: #5D4E37; margin: 0; font-size: 0.9rem;">Il Cacciatore di Taglie</p>
+                        </div>
+                    </a>
+
+                    <a href="#aquila-grigia" style="text-decoration: none; color: inherit; 
+                        background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%); 
+                        border: 3px solid #8B4513; border-radius: 12px; padding: 20px; 
+                        transition: all 0.3s ease; display: block;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 10px;">🦅</div>
+                            <h4 style="color: #8B4513; margin: 0 0 5px 0; font-size: 1.2rem;">Aquila Grigia</h4>
+                            <p style="color: #5D4E37; margin: 0; font-size: 0.9rem;">Lo Sciamano</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
             <!-- PERSONAGGIO 1: SARAH MCCARTHY - IL PISTOLERO -->
-            <div class="character-sheet">
+            <div class="character-sheet" id="sarah-mccarthy">
                 <div class="char-header">
                     <div class="char-portrait">🤠</div>
                     <h2 class="char-name">Sarah McCarthy</h2>
@@ -392,7 +468,7 @@
             </div>
 
             <!-- PERSONAGGIO 2: REVERENDO STONE - IL REVERENDO -->
-            <div class="character-sheet">
+            <div class="character-sheet" id="josiah-stone">
                 <div class="char-header">
                     <div class="char-portrait">✝️</div>
                     <h2 class="char-name">Reverendo Josiah Stone</h2>
@@ -560,46 +636,10 @@
                 </div>
             </div>
 
-            <p style="text-align: center; margin: 40px 0; font-style: italic; color: #5D4E37;">
-                [I personaggi rimanenti seguono la stessa struttura: il dottore, il cacciatore di 
-                taglie, il giocatore d'azzardo e lo sciamano. Per brevità mostro solo i primi due 
-                come esempio della struttura completa.]
-            </p>
-
-            <div class="download-cta" style="background: #3d5a3d; color: white; padding: 30px; 
-                border-radius: 12px; margin: 40px 0; text-align: center; border: 3px solid #D4AF37;">
-                <h3 style="color: #D4AF37; margin-top: 0;">👥 Pronti a giocare!</h3>
-                <p style="font-size: 1.2rem;">
-                    Questi personaggi sono completi e pronti per l'avventura. Stampali, scegli il 
-                    tuo preferito e inizia a esplorare i misteri del West maledetto!
-                </p>
-                
-                <div style="margin-top: 30px;">
-                    <a href="index.html" class="download-button" style="display: inline-block; 
-                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
-                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
-                        border: 2px solid #8B4513;">📖 Torna alla home</a>
-                    <a href="scenario_introduttivo.html" class="download-button" style="display: inline-block; 
-                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
-                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
-                        border: 2px solid #8B4513;">🌵 Lo scenario introduttivo</a>
-                </div>
-            </div>
-
-        </article>
-    </div>
-
-    <footer class="main-footer">
-        <p class="quote">"Ogni eroe ha una storia. Ogni storia ha un inizio. E ogni inizio nel West 
-        porta con sé pericoli inimmaginabili."</p>
-        <p>© 2025 Colt & Cthulhu - I personaggi pre-generati</p>
-    </footer>
-
-</body>
-</html>
+            
 
             <!-- PERSONAGGIO 3: DR. ELENA VASQUEZ - IL DOTTORE -->
-            <div class="character-sheet">
+            <div class="character-sheet" id="elena-vasquez">
                 <div class="char-header">
                     <div class="char-portrait">⚕️</div>
                     <h2 class="char-name">Dottoressa Elena Vasquez</h2>
@@ -771,7 +811,7 @@
             </div>
 
             <!-- PERSONAGGIO 4: JACK "ACE" MALONE - IL GIOCATORE D'AZZARDO -->
-            <div class="character-sheet">
+            <div class="character-sheet" id="jack-malone">
                 <div class="char-header">
                     <div class="char-portrait">🎰</div>
                     <h2 class="char-name">Jack "Ace" Malone</h2>
@@ -947,7 +987,7 @@
             </div>
 
             <!-- PERSONAGGIO 5: MARCUS "IRON HAND" COLE - IL CACCIATORE DI TAGLIE -->
-            <div class="character-sheet">
+            <div class="character-sheet" id="marcus-cole">
                 <div class="char-header">
                     <div class="char-portrait">⭐</div>
                     <h2 class="char-name">Marcus "Iron Hand" Cole</h2>
@@ -1124,7 +1164,7 @@
             </div>
 
             <!-- PERSONAGGIO 6: AQUILA GRIGIA - LO SCIAMANO -->
-            <div class="character-sheet">
+            <div class="character-sheet" id="aquila-grigia">
                 <div class="char-header">
                     <div class="char-portrait">🦅</div>
                     <h2 class="char-name">Aquila Grigia</h2>
@@ -1311,3 +1351,176 @@
                     </p>
                 </div>
             </div>
+
+
+            <!-- TABELLA COMPARATIVA -->
+            <div style="margin: 60px 0; padding: 40px; background: linear-gradient(135deg, #2C1810 0%, #1a0f00 100%); 
+                border-radius: 12px; border: 4px solid #D4AF37;">
+                
+                <h3 style="text-align: center; color: #D4AF37; font-size: 2rem; margin-bottom: 30px;">
+                    📊 Tabella comparativa dei personaggi
+                </h3>
+
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; color: #E8DCC0;">
+                        <thead>
+                            <tr style="background: rgba(212, 175, 55, 0.2); border-bottom: 2px solid #D4AF37;">
+                                <th style="padding: 15px; text-align: left; color: #D4AF37;">Personaggio</th>
+                                <th style="padding: 15px; text-align: center; color: #D4AF37;">Archetipo</th>
+                                <th style="padding: 15px; text-align: center; color: #D4AF37;">Caratteristica Principale</th>
+                                <th style="padding: 15px; text-align: center; color: #D4AF37;">Ruolo nel Gruppo</th>
+                                <th style="padding: 15px; text-align: center; color: #D4AF37;">Difficoltà</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                                <td style="padding: 15px;"><strong>🤠 Sarah McCarthy</strong></td>
+                                <td style="padding: 15px; text-align: center;">Pistolero</td>
+                                <td style="padding: 15px; text-align: center;">Destrezza (16)</td>
+                                <td style="padding: 15px; text-align: center;">Attaccante a distanza</td>
+                                <td style="padding: 15px; text-align: center;">⭐⭐ Facile</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                                <td style="padding: 15px;"><strong>⛪ Reverendo Josiah Stone</strong></td>
+                                <td style="padding: 15px; text-align: center;">Reverendo</td>
+                                <td style="padding: 15px; text-align: center;">Saggezza (16)</td>
+                                <td style="padding: 15px; text-align: center;">Supporto e cura</td>
+                                <td style="padding: 15px; text-align: center;">⭐⭐ Facile</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                                <td style="padding: 15px;"><strong>⚕️ Dottoressa Elena Vasquez</strong></td>
+                                <td style="padding: 15px; text-align: center;">Dottore</td>
+                                <td style="padding: 15px; text-align: center;">Intelligenza (16)</td>
+                                <td style="padding: 15px; text-align: center;">Cura e investigazione</td>
+                                <td style="padding: 15px; text-align: center;">⭐⭐⭐ Media</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                                <td style="padding: 15px;"><strong>🎰 Jack "Ace" Malone</strong></td>
+                                <td style="padding: 15px; text-align: center;">Giocatore</td>
+                                <td style="padding: 15px; text-align: center;">Carisma (16)</td>
+                                <td style="padding: 15px; text-align: center;">Faccia del gruppo</td>
+                                <td style="padding: 15px; text-align: center;">⭐⭐⭐ Media</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                                <td style="padding: 15px;"><strong>🎯 Marcus "Iron Hand" Cole</strong></td>
+                                <td style="padding: 15px; text-align: center;">Cacciatore</td>
+                                <td style="padding: 15px; text-align: center;">Destrezza (16)</td>
+                                <td style="padding: 15px; text-align: center;">Inseguitore versatile</td>
+                                <td style="padding: 15px; text-align: center;">⭐⭐⭐⭐ Avanzata</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px;"><strong>🦅 Aquila Grigia</strong></td>
+                                <td style="padding: 15px; text-align: center;">Sciamano</td>
+                                <td style="padding: 15px; text-align: center;">Saggezza (16)</td>
+                                <td style="padding: 15px; text-align: center;">Magia e supporto</td>
+                                <td style="padding: 15px; text-align: center;">⭐⭐⭐⭐ Avanzata</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- CONSIGLI PER LA SCELTA -->
+            <div style="margin: 40px 0; padding: 30px; background: #FFF8DC; border: 3px solid #8B4513; 
+                border-radius: 12px;">
+                
+                <h3 style="text-align: center; color: #8B4513; font-size: 1.8rem; margin-bottom: 25px;">
+                    💭 Quale personaggio fa per te?
+                </h3>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    
+                    <div style="padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #8B4513;">
+                        <h4 style="color: #8B4513; margin: 0 0 10px 0;">🎯 Se ti piace l'azione diretta</h4>
+                        <p style="margin: 0; color: #5D4E37;">
+                            Scegli <strong>Sarah McCarthy</strong> (Pistolero). Veloce, letale, e sempre pronta 
+                            allo scontro. Ideale per chi ama il combattimento a distanza e i duelli western.
+                        </p>
+                    </div>
+
+                    <div style="padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #8B4513;">
+                        <h4 style="color: #8B4513; margin: 0 0 10px 0;">🛡️ Se vuoi proteggere gli altri</h4>
+                        <p style="margin: 0; color: #5D4E37;">
+                            Scegli <strong>Reverendo Josiah Stone</strong> (Reverendo). Cura, benedizioni e 
+                            capacità di tenere in vita il gruppo. Perfetto per chi ama il ruolo di supporto.
+                        </p>
+                    </div>
+
+                    <div style="padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #8B4513;">
+                        <h4 style="color: #8B4513; margin: 0 0 10px 0;">🧠 Se ami risolvere misteri</h4>
+                        <p style="margin: 0; color: #5D4E37;">
+                            Scegli <strong>Dottoressa Elena Vasquez</strong> (Dottore). Intelligente, analitica 
+                            e capace di trovare indizi che gli altri perdono. Ottima per investigazioni.
+                        </p>
+                    </div>
+
+                    <div style="padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #8B4513;">
+                        <h4 style="color: #8B4513; margin: 0 0 10px 0;">🎭 Se preferisci la diplomazia</h4>
+                        <p style="margin: 0; color: #5D4E37;">
+                            Scegli <strong>Jack "Ace" Malone</strong> (Giocatore). Carismatico, fortunato e 
+                            capace di parlare per uscire dai guai. La faccia del gruppo nei negoziati.
+                        </p>
+                    </div>
+
+                    <div style="padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #8B4513;">
+                        <h4 style="color: #8B4513; margin: 0 0 10px 0;">🏹 Se vuoi essere versatile</h4>
+                        <p style="margin: 0; color: #5D4E37;">
+                            Scegli <strong>Marcus "Iron Hand" Cole</strong> (Cacciatore). Esperto di 
+                            sopravvivenza, tracciamento e combattimento. Un tuttofare del West.
+                        </p>
+                    </div>
+
+                    <div style="padding: 20px; background: white; border-radius: 8px; border-left: 4px solid #8B4513;">
+                        <h4 style="color: #8B4513; margin: 0 0 10px 0;">✨ Se ti affascina la magia</h4>
+                        <p style="margin: 0; color: #5D4E37;">
+                            Scegli <strong>Aquila Grigia</strong> (Sciamano). Connessione con gli spiriti, 
+                            magia naturale e saggezza antica. Per chi vuole esplorare il soprannaturale.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div style="margin-top: 25px; padding: 20px; background: rgba(139, 69, 19, 0.1); 
+                    border-radius: 8px; text-align: center;">
+                    <p style="margin: 0; color: #8B4513; font-size: 1.1rem; line-height: 1.7;">
+                        <strong>💡 Consiglio:</strong> Se è la tua prima volta con Colt & Cthulhu, 
+                        ti consigliamo di iniziare con <strong>Sarah</strong> o <strong>Josiah</strong>. 
+                        Sono i personaggi più semplici da giocare e ti permetteranno di concentrarti 
+                        sulla storia senza preoccuparti troppo delle meccaniche complesse.
+                    </p>
+                </div>
+            </div>
+
+            </div>
+
+        </article>
+    </div>
+
+     <div class="download-cta" style="background: #3d5a3d; color: white; padding: 30px; 
+                border-radius: 12px; margin: 40px 0; text-align: center; border: 3px solid #D4AF37;">
+                <h3 style="color: #D4AF37; margin-top: 0;">👥 Pronti a giocare!</h3>
+                <p style="font-size: 1.2rem;">
+                    Questi personaggi sono completi e pronti per l'avventura. Stampali, scegli il 
+                    tuo preferito e inizia a esplorare i misteri del West maledetto!
+                </p>
+                
+                <div style="margin-top: 30px;">
+                    <a href="index.html" class="download-button" style="display: inline-block; 
+                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
+                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
+                        border: 2px solid #8B4513;">📖 Torna alla home</a>
+                    <a href="scenario_introduttivo.html" class="download-button" style="display: inline-block; 
+                        background: #D4AF37; color: #2C1810; padding: 15px 40px; border-radius: 8px; 
+                        font-weight: bold; font-size: 1.2rem; text-decoration: none; margin: 15px 10px; 
+                        border: 2px solid #8B4513;">🌵 Lo scenario introduttivo</a>
+                </div>
+            </div>
+
+    <footer class="main-footer">
+        <p class="quote">"Ogni eroe ha una storia. Ogni storia ha un inizio. E ogni inizio nel West 
+        porta con sé pericoli inimmaginabili."</p>
+        <p>© 2025 Colt & Cthulhu - I personaggi pre-generati</p>
+    </footer>
+
+</body>
+</html>
